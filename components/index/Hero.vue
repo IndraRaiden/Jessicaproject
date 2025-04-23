@@ -4,22 +4,15 @@
       <!-- Video placeholder with overlay text -->
       <div class="overlay-text">HORIZON</div>
       <div class="plus-icon" @click="toggleSidebar">+</div>
-      <Sidebar :isOpen="sidebarOpen" @close="closeSidebar" />
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-
-const sidebarOpen = ref(false);
+const emit = defineEmits(['toggle-sidebar']);
 
 const toggleSidebar = () => {
-  sidebarOpen.value = !sidebarOpen.value;
-};
-
-const closeSidebar = () => {
-  sidebarOpen.value = false;
+  emit('toggle-sidebar');
 };
 </script>
 

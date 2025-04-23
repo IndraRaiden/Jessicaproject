@@ -254,7 +254,7 @@ const closeSidebar = () => {
   color: #000;
 }
 
-/* Media query for tablet devices */
+/* Media queries for responsive design */
 @media (max-width: 1024px) {
   .contact-section {
     flex-direction: column;
@@ -266,7 +266,6 @@ const closeSidebar = () => {
   }
 }
 
-/* Media query for mobile devices */
 @media (max-width: 640px) {
   .nav-links {
     flex-direction: column;

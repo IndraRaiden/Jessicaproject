@@ -1,13 +1,7 @@
 <template>
   <div class="app">
     <NuxtRouteAnnouncer />
-    <Hero />
-    <div class="content">
-      <div class="section">
-        <h2>COLLECTION</h2>
-        <IconDemo />
-      </div>
-    </div>
+    <NuxtPage />
   </div>
 </template>
 
