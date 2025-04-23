@@ -8,6 +8,12 @@
 
     <!-- WindowTwo Component -->
     <WindowTwo />
+    
+    <!-- WindowThree Component -->
+    <WindowThree />
+
+    <!-- WindowFour Component -->
+    <WindowFour />
 
     <!-- CTA Component -->
     <Cta />
@@ -20,6 +26,8 @@ import { ref } from 'vue';
 import Hero from '~/components/index/Hero.vue';
 import Sidebar from '~/components/index/Sidebar.vue';
 import WindowTwo from '~/components/index/WindowTwo.vue';
+import WindowThree from '~/components/index/WindowThree.vue';
+import WindowFour from '~/components/index/WindowFour.vue';
 import Cta from '~/components/index/Cta.vue';
 
 const sidebarOpen = ref(false);

@@ -2,8 +2,8 @@
   <div class="window-container">
     <div class="video-placeholder">
       <!-- Video placeholder with overlay text -->
-      <div class="overlay-text">VOYAGES</div>
-      <div class="scroll-indicator">SCROLL</div>
+      <div class="overlay-text">NORDIC</div>
+      <div class="scroll-indicator">DISCOVER</div>
     </div>
   </div>
 </template>
@@ -31,7 +31,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+  background-image: url('https://images.unsplash.com/photo-1516466723877-e4ec1d736c8a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2134&q=80');
   background-size: cover;
   background-position: center;
 }
@@ -42,8 +42,9 @@
   font-weight: 400;
   color: white;
   position: absolute;
-  bottom: 10%;
-  right: 5%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   letter-spacing: 0.1em;
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: default;
@@ -51,15 +52,15 @@
 
 .overlay-text:hover {
   letter-spacing: 0.15em;
-  transform: translateX(-10px);
+  transform: translate(-50%, -50%) scale(1.05);
   opacity: 0.9;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
 .scroll-indicator {
   position: absolute;
-  bottom: 5%;
-  left: 2%;
+  top: 5%;
+  right: 5%;
   font-size: 1rem;
   font-family: 'Roboto Condensed', sans-serif;
   color: white;
@@ -67,20 +68,16 @@
   cursor: pointer;
   z-index: 100;
   transition: transform 0.3s ease;
-  writing-mode: vertical-lr;
-  text-orientation: mixed;
-  transform: rotate(180deg);
 }
 
 .scroll-indicator:hover {
-  transform: translateY(-10px) rotate(180deg);
+  transform: translateX(-10px);
 }
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
   .overlay-text {
     font-size: 3rem;
-    bottom: 15%;
   }
 }
 </style>
