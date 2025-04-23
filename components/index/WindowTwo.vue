@@ -1,15 +1,45 @@
 <template>
-  <div class="window-container">
+  <div class="window-container" ref="windowContainer">
     <div class="video-placeholder">
       <!-- Video placeholder with overlay text -->
-      <div class="overlay-text">VOYAGES</div>
-      <div class="scroll-indicator">SCROLL</div>
+      <div class="overlay-text" :class="{ 'visible': isVisible }">FOOD AND BEVERAGE</div>
+      <div class="scroll-indicator" :class="{ 'visible': isVisible }">SCROLL</div>
     </div>
   </div>
 </template>
 
 <script setup>
-// Component logic can be added here if needed
+import { ref, onMounted, onUnmounted } from 'vue';
+
+const windowContainer = ref(null);
+const isVisible = ref(false);
+let observer = null;
+
+onMounted(() => {
+  // Create an Intersection Observer to detect when the section is in view
+  observer = new IntersectionObserver((entries) => {
+    const [entry] = entries;
+    if (entry.isIntersecting) {
+      isVisible.value = true;
+      // Once it's visible, we don't need to observe anymore
+      observer.disconnect();
+    }
+  }, {
+    threshold: 0.2 // Trigger when 20% of the element is visible
+  });
+
+  // Start observing the section
+  if (windowContainer.value) {
+    observer.observe(windowContainer.value);
+  }
+});
+
+onUnmounted(() => {
+  // Clean up the observer when the component is unmounted
+  if (observer) {
+    observer.disconnect();
+  }
+});
 </script>
 
 <style scoped>
@@ -45,8 +75,15 @@
   bottom: 10%;
   right: 5%;
   letter-spacing: 0.1em;
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 1.5s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: default;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.overlay-text.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .overlay-text:hover {
@@ -66,10 +103,16 @@
   letter-spacing: 0.2em;
   cursor: pointer;
   z-index: 100;
-  transition: transform 0.3s ease;
+  transition: all 1.8s cubic-bezier(0.16, 1, 0.3, 1);
   writing-mode: vertical-lr;
   text-orientation: mixed;
-  transform: rotate(180deg);
+  transform: rotate(180deg) translateY(20px);
+  opacity: 0;
+}
+
+.scroll-indicator.visible {
+  opacity: 1;
+  transform: rotate(180deg) translateY(0);
 }
 
 .scroll-indicator:hover {

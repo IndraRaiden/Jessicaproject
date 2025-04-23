@@ -61,14 +61,19 @@ const toggleSidebar = () => {
 
 .plus-icon {
   position: absolute;
-  top: 5%;
-  right: 2%;
-  font-size: 2rem;
+  top: 40px;
+  right: 40px;
+  font-size: 3.5rem;
   color: white;
   font-weight: 300;
   cursor: pointer;
   z-index: 100;
   transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
 }
 
 .plus-icon:hover {

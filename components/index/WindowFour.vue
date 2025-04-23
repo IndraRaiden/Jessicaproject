@@ -1,15 +1,45 @@
 <template>
-  <div class="window-container">
+  <div class="window-container" ref="windowContainer">
     <div class="video-placeholder">
       <!-- Video placeholder with overlay text -->
-      <div class="overlay-text">NORDIC</div>
-      <div class="scroll-indicator">DISCOVER</div>
+      <div class="overlay-text" data-hover="COMING SOON" :class="{ 'visible': isVisible }">WELLNESS</div>
+      <div class="scroll-indicator" :class="{ 'visible': isVisible }">DISCOVER</div>
     </div>
   </div>
 </template>
 
 <script setup>
-// Component logic can be added here if needed
+import { ref, onMounted, onUnmounted } from 'vue';
+
+const windowContainer = ref(null);
+const isVisible = ref(false);
+let observer = null;
+
+onMounted(() => {
+  // Create an Intersection Observer to detect when the section is in view
+  observer = new IntersectionObserver((entries) => {
+    const [entry] = entries;
+    if (entry.isIntersecting) {
+      isVisible.value = true;
+      // Once it's visible, we don't need to observe anymore
+      observer.disconnect();
+    }
+  }, {
+    threshold: 0.2 // Trigger when 20% of the element is visible
+  });
+
+  // Start observing the section
+  if (windowContainer.value) {
+    observer.observe(windowContainer.value);
+  }
+});
+
+onUnmounted(() => {
+  // Clean up the observer when the component is unmounted
+  if (observer) {
+    observer.disconnect();
+  }
+});
 </script>
 
 <style scoped>
@@ -44,10 +74,16 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0.8);
   letter-spacing: 0.1em;
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 1.8s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: default;
+  opacity: 0;
+}
+
+.overlay-text.visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .overlay-text:hover {
@@ -55,6 +91,25 @@
   transform: translate(-50%, -50%) scale(1.05);
   opacity: 0.9;
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.overlay-text:hover::after {
+  content: attr(data-hover);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  white-space: nowrap;
+  opacity: 0;
+  animation: fadeIn 1.2s forwards 0.3s;
+  pointer-events: none;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 .scroll-indicator {
@@ -67,7 +122,14 @@
   letter-spacing: 0.2em;
   cursor: pointer;
   z-index: 100;
-  transition: transform 0.3s ease;
+  transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.scroll-indicator.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .scroll-indicator:hover {

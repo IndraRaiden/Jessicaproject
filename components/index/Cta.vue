@@ -62,6 +62,7 @@ onUnmounted(() => {
   overflow: hidden;
   margin: 0;
   height: auto;
+  background-color: #1e1e1e;
 }
 
 .cta-container {
@@ -182,7 +183,12 @@ onUnmounted(() => {
 
 @media (max-width: 768px) {
   .cta-section {
-    padding: 5rem 0;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .cta-container {
+    padding: 4rem 1.5rem;
   }
   
   .cta-title {

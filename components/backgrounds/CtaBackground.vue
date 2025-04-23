@@ -54,10 +54,11 @@ onMounted(() => {
 .background-container {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 100%;
   overflow: hidden;
   margin: 0;
   padding: 0;
+  min-height: 600px;
 }
 
 .background-container.visible .background-image {
@@ -78,6 +79,8 @@ onMounted(() => {
   transform: scale(1.1);
   transition: transform 1.5s ease-out, filter 1.5s ease-out;
   z-index: 1;
+  margin: 0;
+  padding: 0;
 }
 
 .overlay {
@@ -88,6 +91,8 @@ onMounted(() => {
   height: 100%;
   background-color: rgba(30, 30, 30, 0.5);
   z-index: 2;
+  margin: 0;
+  padding: 0;
 }
 
 .animated-border {
