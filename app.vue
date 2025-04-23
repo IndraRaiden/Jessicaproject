@@ -1,8 +1,5 @@
 <template>
-  <div class="app">
-    <NuxtRouteAnnouncer />
-    <NuxtPage />
-  </div>
+  <NuxtPage />
 </template>
 
 <style>
@@ -14,6 +11,8 @@
 
 html, body {
   overflow-x: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 body {
@@ -21,12 +20,6 @@ body {
   color: #333;
   background-color: #f5f5f5;
   position: relative;
-}
-
-.app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 .content {
