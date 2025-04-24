@@ -47,7 +47,7 @@ onUnmounted(() => {
   width: 100%;
   height: 100vh; /* Match Hero component height */
   position: relative;
-  overflow: hidden;
+  overflow: visible; /* Changed from hidden to visible */
   margin: 0;
   padding: 0;
   display: block;
@@ -75,10 +75,11 @@ onUnmounted(() => {
   top: 10%;
   left: 5%;
   letter-spacing: 0.1em;
-  transition: all 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1), transform 1.5s cubic-bezier(0.16, 1, 0.3, 1); /* Separated properties */
   cursor: default;
   opacity: 0;
   transform: translateX(-30px);
+  z-index: 10; /* Added z-index to ensure visibility */
 }
 
 .overlay-text.visible {
@@ -103,9 +104,10 @@ onUnmounted(() => {
   letter-spacing: 0.2em;
   cursor: pointer;
   z-index: 100;
-  transition: all 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 1.8s cubic-bezier(0.16, 1, 0.3, 1), transform 1.8s cubic-bezier(0.16, 1, 0.3, 1); /* Separated properties */
   opacity: 0;
   transform: translateX(20px);
+  pointer-events: auto; /* Ensure clickability */
 }
 
 .scroll-indicator.visible {

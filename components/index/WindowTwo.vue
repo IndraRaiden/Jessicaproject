@@ -1,8 +1,10 @@
 <template>
   <div class="window-container" ref="windowContainer">
-    <div class="video-placeholder">
+    <div class="video-placeholder" @click="navigateToFoodPage">
       <!-- Video placeholder with overlay text -->
-      <div class="overlay-text" :class="{ 'visible': isVisible }">FOOD AND BEVERAGE</div>
+      <div class="text-container">
+        <div class="overlay-text" :class="{ 'visible': isVisible }">FOOD AND BEVERAGE</div>
+      </div>
       <div class="scroll-indicator" :class="{ 'visible': isVisible }">SCROLL</div>
     </div>
   </div>
@@ -10,10 +12,16 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
 const windowContainer = ref(null);
 const isVisible = ref(false);
 let observer = null;
+
+const navigateToFoodPage = () => {
+  router.push('/foodnbeverage');
+};
 
 onMounted(() => {
   // Create an Intersection Observer to detect when the section is in view
@@ -47,7 +55,7 @@ onUnmounted(() => {
   width: 100%;
   height: 100vh; /* Match Hero component height */
   position: relative;
-  overflow: hidden;
+  overflow: visible; /* Changed from hidden to visible */
   margin: 0;
   padding: 0;
   display: block;
@@ -64,6 +72,7 @@ onUnmounted(() => {
   background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
   background-size: cover;
   background-position: center;
+  cursor: pointer; /* Add pointer cursor to indicate clickability */
 }
 
 .overlay-text {
@@ -71,12 +80,9 @@ onUnmounted(() => {
   font-size: 3.5rem;
   font-weight: 400;
   color: white;
-  position: absolute;
-  bottom: 10%;
-  right: 5%;
   letter-spacing: 0.1em;
   transition: all 1.5s cubic-bezier(0.16, 1, 0.3, 1);
-  cursor: default;
+  cursor: pointer;
   opacity: 0;
   transform: translateY(30px);
 }
@@ -103,11 +109,12 @@ onUnmounted(() => {
   letter-spacing: 0.2em;
   cursor: pointer;
   z-index: 100;
-  transition: all 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 1.8s cubic-bezier(0.16, 1, 0.3, 1), transform 1.8s cubic-bezier(0.16, 1, 0.3, 1); /* Separated properties for better performance */
   writing-mode: vertical-lr;
   text-orientation: mixed;
   transform: rotate(180deg) translateY(20px);
   opacity: 0;
+  pointer-events: auto; /* Ensure clickability */
 }
 
 .scroll-indicator.visible {
@@ -118,6 +125,15 @@ onUnmounted(() => {
 .scroll-indicator:hover {
   transform: translateY(-10px) rotate(180deg);
 }
+
+.text-container {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  z-index: 20;
+}
+
+
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {

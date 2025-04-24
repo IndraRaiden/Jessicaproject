@@ -47,7 +47,7 @@ onUnmounted(() => {
   width: 100%;
   height: 100vh; /* Match Hero component height */
   position: relative;
-  overflow: hidden;
+  overflow: visible; /* Changed from hidden to visible */
   margin: 0;
   padding: 0;
   display: block;
@@ -76,9 +76,10 @@ onUnmounted(() => {
   left: 50%;
   transform: translate(-50%, -50%) scale(0.8);
   letter-spacing: 0.1em;
-  transition: all 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 1.8s cubic-bezier(0.16, 1, 0.3, 1), transform 1.8s cubic-bezier(0.16, 1, 0.3, 1); /* Separated properties */
   cursor: default;
   opacity: 0;
+  z-index: 10; /* Added z-index to ensure visibility */
 }
 
 .overlay-text.visible {
@@ -97,14 +98,19 @@ onUnmounted(() => {
   content: attr(data-hover);
   position: absolute;
   top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  transform: none;
   font-size: 1.5rem;
   margin-top: 1rem;
   white-space: nowrap;
   opacity: 0;
   animation: fadeIn 1.2s forwards 0.3s;
   pointer-events: none;
+  z-index: 20;
+  text-align: center;
+  width: 100%;
+  letter-spacing: 0.1em;
 }
 
 @keyframes fadeIn {
@@ -122,9 +128,10 @@ onUnmounted(() => {
   letter-spacing: 0.2em;
   cursor: pointer;
   z-index: 100;
-  transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 2s cubic-bezier(0.16, 1, 0.3, 1), transform 2s cubic-bezier(0.16, 1, 0.3, 1); /* Separated properties */
   opacity: 0;
   transform: translateY(-10px);
+  pointer-events: auto; /* Ensure clickability */
 }
 
 .scroll-indicator.visible {

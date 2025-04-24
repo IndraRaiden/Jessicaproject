@@ -3,5 +3,7 @@ export default defineNuxtConfig({
   css: [
     '~/assets/css/fonts.css'
   ],
-  devtools: { enabled: true }
+
+  devtools: { enabled: true },
+  compatibilityDate: '2025-04-24'
 })

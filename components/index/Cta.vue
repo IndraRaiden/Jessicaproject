@@ -59,7 +59,7 @@ onUnmounted(() => {
 .cta-section {
   padding: 0;
   position: relative;
-  overflow: hidden;
+  overflow: visible; /* Changed from hidden to visible */
   margin: 0;
   height: auto;
   background-color: #1e1e1e;
@@ -90,6 +90,7 @@ onUnmounted(() => {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease, transform 1s ease;
+  z-index: 10; /* Added z-index to ensure visibility */
 }
 
 .cta-title.visible {
@@ -105,6 +106,7 @@ onUnmounted(() => {
   opacity: 0;
   transform: scaleX(0);
   transition: opacity 0.8s ease 0.3s, transform 1s ease 0.3s;
+  z-index: 10; /* Added z-index to ensure visibility */
 }
 
 .cta-divider.visible {
@@ -124,6 +126,7 @@ onUnmounted(() => {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease 0.6s, transform 1s ease 0.6s;
+  z-index: 10; /* Added z-index to ensure visibility */
 }
 
 .cta-text.visible {
@@ -138,6 +141,8 @@ onUnmounted(() => {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease 0.9s, transform 1s ease 0.9s;
+  z-index: 10; /* Added z-index to ensure visibility */
+  position: relative; /* Added position to work with z-index */
 }
 
 .cta-buttons.visible {

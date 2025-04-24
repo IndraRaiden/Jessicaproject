@@ -55,7 +55,7 @@ onMounted(() => {
   position: relative;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow: visible; /* Changed from hidden to visible */
   margin: 0;
   padding: 0;
   min-height: 600px;
@@ -193,6 +193,6 @@ onMounted(() => {
 /* Slot content will be positioned above everything */
 :slotted(*) {
   position: relative;
-  z-index: 4;
+  z-index: 10; /* Increased z-index to ensure visibility */
 }
 </style>
