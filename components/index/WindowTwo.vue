@@ -95,9 +95,11 @@ onUnmounted(() => {
 
 .overlay-text:hover {
   letter-spacing: 0.15em;
-  transform: translateX(-10px);
+  transform: translateY(-5px);
   opacity: 0.9;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+  color: #f8f8f8;
+  transition: all 0.4s ease-out;
 }
 
 .scroll-indicator {

@@ -4,15 +4,14 @@
       <div class="cta-container">
         <div class="cta-content" :class="{ 'visible': isVisible }">
           <h2 class="cta-title" :class="{ 'visible': isVisible }">
-            EXPLORE THE HORIZON
+            ABOUT OARA
           </h2>
           <div class="cta-divider" :class="{ 'visible': isVisible }"></div>
           <p class="cta-text" :class="{ 'visible': isVisible }">
-            Join us on a visual journey through Nordic landscapes and cinematic experiences.
+            Discover our story, our passion for excellence, and the unique experiences we create for our guests.
           </p>
           <div class="cta-buttons" :class="{ 'visible': isVisible }">
-            <NuxtLink to="/about" class="btn-primary">DISCOVER</NuxtLink>
-            <button class="btn-secondary">CONTACT</button>
+            <NuxtLink to="/about" class="btn-primary">OUR STORY</NuxtLink>
           </div>
         </div>
       </div>
