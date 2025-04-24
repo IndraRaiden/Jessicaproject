@@ -11,7 +11,7 @@
             Join us on a visual journey through Nordic landscapes and cinematic experiences.
           </p>
           <div class="cta-buttons" :class="{ 'visible': isVisible }">
-            <button class="btn-primary">DISCOVER</button>
+            <NuxtLink to="/about" class="btn-primary">DISCOVER</NuxtLink>
             <button class="btn-secondary">CONTACT</button>
           </div>
         </div>
@@ -162,6 +162,8 @@ onUnmounted(() => {
   letter-spacing: 0.2em;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .btn-primary:hover {
