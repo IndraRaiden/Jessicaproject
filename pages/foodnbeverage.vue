@@ -29,12 +29,14 @@
         </div>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script setup>
 import { onMounted } from 'vue';
 import Navbar from '~/components/Navbar.vue';
+import Footer from '~/components/Footer.vue';
 
 onMounted(() => {
   // Animation or initialization logic can be added here

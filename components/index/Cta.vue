@@ -29,13 +29,14 @@ const isVisible = ref(false);
 let observer = null;
 
 onMounted(() => {
+  // Reset visibility state when component is mounted
+  isVisible.value = false;
+  
   // Create an Intersection Observer to detect when the section is in view
   observer = new IntersectionObserver((entries) => {
     const [entry] = entries;
     if (entry.isIntersecting) {
       isVisible.value = true;
-      // Once it's visible, we don't need to observe anymore
-      observer.disconnect();
     }
   }, {
     threshold: 0.2 // Trigger when 20% of the element is visible

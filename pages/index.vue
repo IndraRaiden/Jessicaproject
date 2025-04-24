@@ -18,6 +18,8 @@
     <!-- CTA Component -->
     <Cta />
 
+    <!-- Footer Component -->
+    <Footer />
   </div>
 </template>
 
@@ -29,6 +31,7 @@ import WindowTwo from '~/components/index/WindowTwo.vue';
 import WindowThree from '~/components/index/WindowThree.vue';
 import WindowFour from '~/components/index/WindowFour.vue';
 import Cta from '~/components/index/Cta.vue';
+import Footer from '~/components/Footer.vue';
 
 const sidebarOpen = ref(false);
 
