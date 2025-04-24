@@ -14,7 +14,12 @@
           </div>
           
           <div class="grid-item">
-            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Food image 2" />
+            <NuxtLink to="/projectone" class="project-link">
+              <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Food image 2" />
+              <div class="overlay">
+                <span>Project One</span>
+              </div>
+            </NuxtLink>
           </div>
         </div>
         
@@ -129,6 +134,39 @@ onMounted(() => {
 
 .grid-item:hover img {
   transform: scale(1.05);
+}
+
+.project-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-decoration: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay span {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.project-link:hover .overlay {
+  opacity: 1;
 }
 
 /* Media queries for responsiveness */
