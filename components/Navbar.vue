@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar" :class="{ 'scrolled': isScrolled }">
       <div class="navbar-container">
-        <NuxtLink to="/" class="navbar-logo">JESSICA</NuxtLink>
+        <NuxtLink to="/" class="navbar-logo">OARA</NuxtLink>
         <div class="navbar-links">
           <NuxtLink to="/foodnbeverage" class="navbar-link">FOOD & BEVERAGE</NuxtLink>
           <NuxtLink to="/" class="navbar-link">HOME</NuxtLink>

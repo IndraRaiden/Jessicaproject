@@ -1,9 +1,13 @@
 <template>
   <div class="hero-container">
     <div class="video-placeholder">
-      <!-- Video placeholder with overlay text -->
-      <div class="overlay-text">HORIZON</div>
-      <div class="plus-icon" @click="toggleSidebar">+</div>
+      <!-- Header with logo and menu icon -->
+      <div class="header">
+        <div class="overlay-logo">
+          <img src="/index/OARA-MARCA-SITE.svg" alt="OARA Logo" />
+        </div>
+        <div class="plus-icon" @click="toggleSidebar">+</div>
+      </div>
     </div>
   </div>
 </template>
@@ -39,41 +43,47 @@ const toggleSidebar = () => {
   background-position: center;
 }
 
-.overlay-text {
-  font-family: 'Space Mono', monospace;
-  font-size: 5rem;
-  font-weight: 400;
-  color: white;
+.header {
   position: absolute;
-  top: 2%;
-  left: 2%;
-  letter-spacing: 0.1em;
+  top: 40px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  z-index: 100;
+}
+
+.overlay-logo {
+  width: 300px;
+  max-width: 30%;
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: default;
 }
 
-.overlay-text:hover {
-  letter-spacing: 0.15em;
+.overlay-logo img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3)) brightness(0) invert(1);
+}
+
+.overlay-logo:hover {
   transform: translateX(10px);
-  opacity: 0.9;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .plus-icon {
-  position: absolute;
-  top: 40px;
-  right: 40px;
-  font-size: 3.5rem;
+  font-size: 5rem;
   color: white;
   font-weight: 300;
   cursor: pointer;
-  z-index: 100;
   transition: transform 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
+  margin-top: -20px;
 }
 
 .plus-icon:hover {
@@ -82,8 +92,13 @@ const toggleSidebar = () => {
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
-  .overlay-text {
-    font-size: 3rem;
+  .header {
+    padding: 0 20px;
+  }
+  
+  .overlay-logo {
+    width: 200px;
+    max-width: 40%;
   }
 }
 </style>

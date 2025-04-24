@@ -40,7 +40,7 @@ import Footer from '~/components/Footer.vue';
 
 onMounted(() => {
   // Animation or initialization logic can be added here
-  document.title = "Food & Beverage | Jessica Project";
+  document.title = "Food & Beverage | OARA";
 });
 </script>
 
@@ -77,6 +77,8 @@ onMounted(() => {
   object-fit: cover;
   object-position: center;
 }
+
+
 
 .content-section {
   padding: 5rem 10%;
@@ -137,6 +139,8 @@ onMounted(() => {
     height: 50vh;
     margin-top: 160px; /* Doubled gap for mobile navbar */
   }
+  
+
   
   .content-section {
     padding: 3rem 5%;

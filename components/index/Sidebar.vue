@@ -2,7 +2,9 @@
   <div class="sidebar" :class="{ 'open': isOpen }">
     <div class="sidebar-content">
       <div class="header">
-        <div class="logo">HORIZON</div>
+        <div class="logo">
+          <img src="/index/OARA-MARCA-SITE.svg" alt="OARA Logo" class="logo-img" />
+        </div>
         <div class="close-btn" @click="closeSidebar">+</div>
       </div>
       
@@ -118,12 +120,18 @@ const closeSidebar = () => {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 5rem;
+  padding: 1rem 0;
 }
 
 .logo {
-  font-family: 'Space Mono', monospace;
-  font-size: 2rem;
-  color: #000;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 120px;
+  width: auto;
+  filter: brightness(0);
 }
 
 .close-btn {
