@@ -11,42 +11,15 @@
       <div class="sidebar-layout">
         <!-- Main Navigation -->
         <div class="nav-section">
-          <div class="nav-group">
-            <h3>EXPLORE</h3>
-            <div class="nav-links">
-              <a href="#" class="nav-link">VOYAGES</a>
-              <a href="#" class="nav-link">VISUALS</a>
-              <a href="#" class="nav-link">JOURNAL</a>
-              <a href="#" class="nav-link">EXHIBITS</a>
-            </div>
-          </div>
-          
+
           <div class="nav-group">
             <h3>CATEGORIES</h3>
-            <div class="category-grid">
-              <div class="category">
-                <h4>CINEMA</h4>
-                <a href="#">DOCUMENTARIES</a>
-                <a href="#">SHORT FILMS</a>
-                <a href="#">NARRATIVES</a>
-                <a href="#">EXPERIMENTAL</a>
-              </div>
-              
-              <div class="category">
-                <h4>EXPEDITIONS</h4>
-                <a href="#">NORTHERN LIGHTS</a>
-                <a href="#">ALPINE SERIES</a>
-                <a href="#">COASTAL STUDIES</a>
-                <a href="#">URBAN SPACES</a>
-              </div>
-              
-              <div class="category">
-                <h4>COLLECTIONS</h4>
-                <a href="#">WINTER 2025</a>
-                <a href="#">MONOCHROME</a>
-                <a href="#">ETHEREAL</a>
-                <a href="#">PERSPECTIVES</a>
-              </div>
+            <div class="nav-links">
+              <NuxtLink to="/" class="nav-link">HOME</NuxtLink>
+              <NuxtLink to="/hotels" class="nav-link">HOTELS</NuxtLink>
+              <NuxtLink to="/foodnbeverage" class="nav-link">FOOD AND BEVERAGE</NuxtLink>
+              <NuxtLink to="/wellness" class="nav-link">WELLNESS</NuxtLink>
+              <NuxtLink to="/about" class="nav-link">ABOUT US</NuxtLink>
             </div>
           </div>
         </div>

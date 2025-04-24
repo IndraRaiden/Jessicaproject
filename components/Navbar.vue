@@ -2,21 +2,36 @@
   <div>
     <nav class="navbar" :class="{ 'scrolled': isScrolled }">
       <div class="navbar-container">
-        <NuxtLink to="/" class="navbar-logo">OARA</NuxtLink>
+        <NuxtLink to="/" class="navbar-logo">
+          <img src="/index/OARA-MARCA-SITE.svg" alt="OARA Logo" class="logo-img" />
+        </NuxtLink>
         <div class="navbar-links">
+          <NuxtLink to="/hotels" class="navbar-link">HOTELS</NuxtLink>
           <NuxtLink to="/foodnbeverage" class="navbar-link">FOOD & BEVERAGE</NuxtLink>
-          <NuxtLink to="/" class="navbar-link">HOME</NuxtLink>
+          <NuxtLink to="/wellness" class="navbar-link">WELLNESS</NuxtLink>
         </div>
+        <button class="sidebar-toggle" @click="toggleSidebar">
+          <Menu class="menu-icon" size="24" />
+        </button>
       </div>
     </nav>
+    <SidebarIndex :isOpen="sidebarOpen" @close="closeSidebar" />
   </div>
 </template>
 
 <script>
+import { Menu } from 'lucide-vue-next';
+import SidebarIndex from './index/Sidebar.vue';
+
 export default {
+  components: {
+    Menu,
+    SidebarIndex
+  },
   data() {
     return {
-      isScrolled: false
+      isScrolled: false,
+      sidebarOpen: false
     };
   },
   mounted() {
@@ -33,6 +48,12 @@ export default {
     handleScroll() {
       this.isScrolled = window.scrollY > 10;
       console.log('Scroll position:', window.scrollY, 'Scrolled:', this.isScrolled);
+    },
+    toggleSidebar() {
+      this.sidebarOpen = !this.sidebarOpen;
+    },
+    closeSidebar() {
+      this.sidebarOpen = false;
     }
   }
 };
@@ -69,22 +90,26 @@ export default {
 }
 
 .navbar-logo {
-  font-family: 'Space Mono', monospace;
-  font-size: 2.5rem;
-  font-weight: 400;
-  letter-spacing: 0.15em;
-  color: #333;
   text-decoration: none;
-  transition: font-size 0.4s ease;
+  display: flex;
+  align-items: center;
+  transition: transform 0.4s ease;
 }
 
-.navbar.scrolled .navbar-logo {
-  font-size: 1.5rem;
+.logo-img {
+  height: 60px;
+  width: auto;
+  filter: brightness(0);
+  transition: height 0.4s ease;
+}
+
+.navbar.scrolled .logo-img {
+  height: 40px;
 }
 
 .navbar-links {
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   transition: gap 0.4s ease;
 }
 
@@ -122,6 +147,25 @@ export default {
   width: 100%;
 }
 
+.sidebar-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-icon {
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-toggle:hover .menu-icon {
+  transform: scale(1.1);
+}
+
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
   .navbar {
@@ -140,6 +184,12 @@ export default {
   
   .navbar.scrolled .navbar-container {
     gap: 0.8rem;
+  }
+  
+  .navbar-links {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 </style>
