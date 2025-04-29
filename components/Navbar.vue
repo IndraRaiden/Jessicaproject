@@ -118,7 +118,7 @@ export default {
 }
 
 .navbar-link {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 1.2rem;
   letter-spacing: 0.1em;
   color: #333;

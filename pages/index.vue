@@ -15,11 +15,9 @@
     <!-- WindowFour Component -->
     <WindowFour />
 
-    <!-- CTA Component -->
-    <Cta />
+    <!-- CTA component removed from main index -->
 
-    <!-- Footer Component -->
-    <Footer />
+    <!-- Footer removed from main index -->
   </div>
 </template>
 
@@ -30,8 +28,8 @@ import Sidebar from '~/components/index/Sidebar.vue';
 import WindowTwo from '~/components/index/WindowTwo.vue';
 import WindowThree from '~/components/index/WindowThree.vue';
 import WindowFour from '~/components/index/WindowFour.vue';
-import Cta from '~/components/index/Cta.vue';
-import Footer from '~/components/Footer.vue';
+// CTA import removed from main index
+// Footer import removed from main index
 
 const sidebarOpen = ref(false);
 

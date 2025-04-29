@@ -80,7 +80,7 @@ onUnmounted(() => {
 }
 
 .cta-title {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 4rem;
   font-weight: 400;
   margin-bottom: 2rem;
@@ -115,7 +115,7 @@ onUnmounted(() => {
 }
 
 .cta-text {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 1.4rem;
   line-height: 1.6;
   margin-bottom: 4rem;
@@ -155,7 +155,7 @@ onUnmounted(() => {
   border: 1px solid white;
   color: #111;
   padding: 1rem 3rem;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -175,7 +175,7 @@ onUnmounted(() => {
   border: 1px solid white;
   color: white;
   padding: 1rem 3rem;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;

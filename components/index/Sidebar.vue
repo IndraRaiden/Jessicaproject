@@ -13,7 +13,6 @@
         <div class="nav-section">
 
           <div class="nav-group">
-            <h3>CATEGORIES</h3>
             <div class="nav-links">
               <NuxtLink to="/" class="nav-link">HOME</NuxtLink>
               <NuxtLink to="/hotels" class="nav-link">HOTELS</NuxtLink>
@@ -80,9 +79,9 @@ const closeSidebar = () => {
 }
 
 .sidebar-content {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 3rem 2rem;
+  width: 100%;
+  margin: 0;
+  padding: 3rem 4rem;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -135,7 +134,7 @@ const closeSidebar = () => {
 }
 
 .nav-group h3 {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 0.9rem;
   font-weight: 400;
   margin-bottom: 1.5rem;
@@ -146,12 +145,14 @@ const closeSidebar = () => {
 .nav-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 2.5rem;
   margin-bottom: 3rem;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .nav-link {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 1.8rem;
   color: #000;
   text-decoration: none;
@@ -160,7 +161,8 @@ const closeSidebar = () => {
 }
 
 .nav-link:hover {
-  opacity: 0.7;
+  opacity: 0.85;
+  color: #444;
 }
 
 .category-grid {
@@ -170,7 +172,7 @@ const closeSidebar = () => {
 }
 
 .category h4 {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 1rem;
   margin-bottom: 1rem;
   color: #000;
@@ -178,7 +180,7 @@ const closeSidebar = () => {
 
 .category a {
   display: block;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 0.9rem;
   color: #333;
   text-decoration: none;
@@ -199,7 +201,7 @@ const closeSidebar = () => {
 }
 
 .contact-info p {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 0.9rem;
   color: #333;
   margin-bottom: 0.3rem;
@@ -211,7 +213,7 @@ const closeSidebar = () => {
 
 .contact-links a {
   display: block;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 0.8rem;
   color: #000;
   text-decoration: none;
@@ -224,7 +226,7 @@ const closeSidebar = () => {
 }
 
 .social-link {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 0.8rem;
   color: #666;
   text-decoration: none;
@@ -251,11 +253,16 @@ const closeSidebar = () => {
   .nav-links {
     flex-direction: column;
     gap: 1rem;
+    justify-content: flex-start;
   }
   
   .category-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+  
+  .sidebar-content {
+    padding: 2rem 1.5rem;
   }
 }
 </style>

@@ -3,6 +3,8 @@
 </template>
 
 <style>
+/* Import Be Vietnam Pro font */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +18,7 @@ html, body {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   color: #333;
   background-color: #f5f5f5;
   position: relative;
@@ -37,6 +39,6 @@ h2 {
   letter-spacing: 0.1em;
   margin-bottom: 2rem;
   color: #333;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
 }
 </style>

@@ -50,19 +50,19 @@ const toggleSidebar = () => {
 
 .header {
   position: absolute;
-  top: 40px;
+  top: 40px; /* Restored to original position */
   left: 0;
   right: 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; /* Restored to center alignment */
   padding: 0 40px;
   z-index: 100;
 }
 
 .overlay-logo {
-  width: 330px; /* Increased from 300px */
-  max-width: 32%; /* Slightly increased from 30% */
+  width: 400px; /* Increased from 330px */
+  max-width: 40%; /* Increased from 32% */
   cursor: default;
   display: flex;
   align-items: center;
@@ -104,8 +104,8 @@ const toggleSidebar = () => {
   justify-content: center;
   width: 80px;
   height: 80px;
-  align-self: center; /* Align with the logo's central axis */
-  margin: 0; /* Removed margin-top */
+  align-self: center; /* Restored to center alignment */
+  margin-top: -5px; /* Slight adjustment to align with logo */
 }
 
 .plus-icon:hover {
@@ -119,8 +119,8 @@ const toggleSidebar = () => {
   }
   
   .overlay-logo {
-    width: 220px; /* Increased from 200px */
-    max-width: 42%; /* Slightly increased from 40% */
+    width: 280px; /* Increased from 220px */
+    max-width: 50%; /* Increased from 42% */
   }
   
   .plus-icon {
