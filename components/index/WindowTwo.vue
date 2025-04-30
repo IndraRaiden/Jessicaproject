@@ -169,11 +169,11 @@ onUnmounted(() => {
 }
 
 .hotels-title {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Abril Fatface', serif;
   font-size: 4.5rem;
   font-weight: 400;
   color: white;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
   margin-bottom: 2rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
