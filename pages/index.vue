@@ -14,6 +14,9 @@
 
     <!-- WindowFour Component -->
     <WindowFour />
+    
+    <!-- WindowFive Component -->
+    <WindowFive />
 
     <!-- CTA component removed from main index -->
 
@@ -28,6 +31,7 @@ import Sidebar from '~/components/index/Sidebar.vue';
 import WindowTwo from '~/components/index/WindowTwo.vue';
 import WindowThree from '~/components/index/WindowThree.vue';
 import WindowFour from '~/components/index/WindowFour.vue';
+import WindowFive from '~/components/index/WindowFive.vue';
 // CTA import removed from main index
 // Footer import removed from main index
 

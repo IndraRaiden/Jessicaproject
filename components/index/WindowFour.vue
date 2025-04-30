@@ -1,19 +1,26 @@
 <template>
-  <div class="window-container" ref="windowContainer">
-    <div class="video-placeholder">
-      <!-- Video placeholder with overlay text -->
-      <div class="overlay-text" data-hover="COMING SOON" :class="{ 'visible': isVisible }">WELLNESS</div>
-      <div class="scroll-indicator" :class="{ 'visible': isVisible }">DISCOVER</div>
+  <div class="window-container" ref="windowContainer">    
+    <!-- Wellness section with image -->
+    <div class="wellness-section" @click="navigateToWellnessPage">
+      <div class="wellness-image">
+        <div class="wellness-title">WELLNESS</div>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
 const windowContainer = ref(null);
 const isVisible = ref(false);
 let observer = null;
+
+const navigateToWellnessPage = () => {
+  router.push('/wellness');
+};
 
 onMounted(() => {
   // Reset visibility state when component is mounted
@@ -46,109 +53,82 @@ onUnmounted(() => {
 <style scoped>
 .window-container {
   width: 100%;
-  height: 100vh; /* Match Hero component height */
   position: relative;
-  overflow: visible; /* Changed from hidden to visible */
+  overflow: visible;
   margin: 0;
   padding: 0;
-  display: block;
 }
 
-.video-placeholder {
+/* Wellness section */
+.wellness-section {
   width: 100%;
-  height: 100%;
-  background-color: #2c3e50; /* Darker blue-gray for contrast with Hero */
+  height: 90vh; /* Same height as WindowThree */
+  position: relative;
+  cursor: pointer;
+  background-color: #f2eee3;
+  padding: 1.5% 0;
+}
+
+.wellness-image {
+  width: 98%; /* Same width as WindowThree */
+  height: 98%; /* Same height as WindowThree */
+  margin: 0 auto;
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: center; /* Changed from flex-end to center for vertical alignment */
   justify-content: flex-start;
+  padding: 3rem;
+  border: 1px solid rgba(29, 42, 41, 0.2);
+  overflow: hidden;
   background-image: url('https://images.unsplash.com/photo-1516466723877-e4ec1d736c8a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2134&q=80');
   background-size: cover;
   background-position: center;
 }
 
-.overlay-text {
+/* Hover effect without corner brackets */
+.wellness-image {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wellness-section:hover .wellness-image {
+  /* Subtle brightness change on hover */
+  filter: brightness(1.05);
+}
+
+.wellness-title {
   font-family: 'Space Mono', monospace;
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   font-weight: 400;
   color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.8);
-  letter-spacing: 0.1em;
-  transition: opacity 1.8s cubic-bezier(0.16, 1, 0.3, 1), transform 1.8s cubic-bezier(0.16, 1, 0.3, 1); /* Separated properties */
-  cursor: default;
-  opacity: 0;
-  z-index: 10; /* Added z-index to ensure visibility */
-}
-
-.overlay-text.visible {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.overlay-text:hover {
-  letter-spacing: 0.15em;
-  transform: translate(-50%, -50%) scale(1.05) translateY(-5px);
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   opacity: 0.9;
-  text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
-  color: #f8f8f8;
-  transition: all 0.4s ease-out;
+  position: relative;
+  z-index: 2;
 }
 
-.overlay-text:hover::after {
-  content: attr(data-hover);
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  transform: none;
-  font-size: 1.5rem;
-  margin-top: 1rem;
-  white-space: nowrap;
-  opacity: 0;
-  animation: fadeIn 1.2s forwards 0.3s;
-  pointer-events: none;
-  z-index: 20;
-  text-align: center;
-  width: 100%;
-  letter-spacing: 0.1em;
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(10px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-.scroll-indicator {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  font-size: 1rem;
-  font-family: 'Roboto Condensed', sans-serif;
-  color: white;
-  letter-spacing: 0.2em;
-  cursor: pointer;
-  z-index: 100;
-  transition: opacity 2s cubic-bezier(0.16, 1, 0.3, 1), transform 2s cubic-bezier(0.16, 1, 0.3, 1); /* Separated properties */
-  opacity: 0;
-  transform: translateY(-10px);
-  pointer-events: auto; /* Ensure clickability */
-}
-
-.scroll-indicator.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.scroll-indicator:hover {
-  transform: translateX(-10px);
+.wellness-section:hover .wellness-title {
+  letter-spacing: 0.08em;
+  transform: translateY(-5px);
 }
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
-  .overlay-text {
+  .wellness-section {
+    height: 80vh; /* Same as WindowThree mobile */
+  }
+  
+  .wellness-image {
+    width: 98%;
+    height: 98%;
+    padding: 2rem;
+  }
+  
+  .wellness-title {
     font-size: 3rem;
   }
 }

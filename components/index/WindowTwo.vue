@@ -127,20 +127,20 @@ onUnmounted(() => {
 /* Hotels section */
 .hotels-section {
   width: 100%;
-  height: 80vh;
+  height: 90vh; /* Increased height */
   position: relative;
   cursor: pointer;
   background-color: #f2eee3;
-  padding: 2.5% 0;
+  padding: 1.5% 0; /* Reduced padding to give more space to image */
 }
 
 .hotels-image {
-  width: 95%;
-  height: 95%;
+  width: 98%; /* Increased width */
+  height: 98%; /* Increased height */
   margin: 0 auto;
   position: relative;
   display: flex;
-  align-items: flex-end;
+  align-items: center; /* Changed from flex-end to center for vertical alignment */
   justify-content: flex-start;
   padding: 3rem;
   border: 1px solid rgba(29, 42, 41, 0.2);
@@ -152,42 +152,14 @@ onUnmounted(() => {
 
 
 
-/* Horizontal and vertical lines for the grid pattern */
-.hotels-image::before,
-.hotels-image::after {
-  content: '';
-  position: absolute;
-  background-color: #ffffff;
-  opacity: 0.15;
+/* Hover effect without grid lines */
+.hotels-image {
   transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Horizontal line */
-.hotels-image::before {
-  width: 100%;
-  height: 1px;
-  top: 50%;
-  left: 0;
-  transform: scaleX(0.8);
-}
-
-/* Vertical line */
-.hotels-image::after {
-  width: 1px;
-  height: 100%;
-  left: 50%;
-  top: 0;
-  transform: scaleY(0.8);
-}
-
-.hotels-section:hover .hotels-image::before {
-  transform: scaleX(1);
-  opacity: 0.25;
-}
-
-.hotels-section:hover .hotels-image::after {
-  transform: scaleY(1);
-  opacity: 0.25;
+.hotels-section:hover .hotels-image {
+  /* Subtle brightness change on hover */
+  filter: brightness(1.05);
 }
 
 .hotels-title {
@@ -224,12 +196,12 @@ onUnmounted(() => {
   }
   
   .hotels-section {
-    height: 70vh;
+    height: 80vh; /* Adjusted for mobile but still larger than before */
   }
   
   .hotels-image {
-    width: 95%;
-    height: 95%;
+    width: 98%;
+    height: 98%;
     padding: 2rem;
   }
   
