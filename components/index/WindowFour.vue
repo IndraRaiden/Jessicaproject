@@ -3,7 +3,10 @@
     <!-- Wellness section with image -->
     <div class="wellness-section" @click="navigateToWellnessPage">
       <div class="wellness-image">
-        <div class="wellness-title">WELLNESS</div>
+        <div class="title-container">
+          <div class="wellness-title">WELLNESS</div>
+          <div class="coming-soon">( Coming Soon )</div>
+        </div>
       </div>
     </div>
   </div>
@@ -97,13 +100,19 @@ onUnmounted(() => {
   filter: brightness(1.05);
 }
 
+.title-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .wellness-title {
   font-family: 'Space Mono', monospace;
   font-size: 4.5rem;
   font-weight: 400;
   color: white;
   letter-spacing: 0.05em;
-  margin-bottom: 2rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   opacity: 0.9;
@@ -114,6 +123,24 @@ onUnmounted(() => {
 .wellness-section:hover .wellness-title {
   letter-spacing: 0.08em;
   transform: translateY(-5px);
+}
+
+.coming-soon {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: white;
+  letter-spacing: 0.05em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-top: 0.5rem;
+}
+
+.wellness-section:hover .coming-soon {
+  opacity: 0.9;
+  transform: translateY(0);
 }
 
 /* Media query for mobile devices */
@@ -130,6 +157,11 @@ onUnmounted(() => {
   
   .wellness-title {
     font-size: 3rem;
+  }
+  
+  .coming-soon {
+    font-size: 1rem;
+    margin-top: 0.3rem;
   }
 }
 </style>

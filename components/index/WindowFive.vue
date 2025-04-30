@@ -5,7 +5,7 @@
         <h2>We craft immersive real estate destinations</h2>
         <h3>that maximize asset value and make people feel alive</h3>
         <div class="find-out-more">
-          <a href="#">Find out more.</a>
+          <a @click="navigateToAboutPage" class="about-link">Find out more.</a>
         </div>
       </div>
     </div>
@@ -14,10 +14,17 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
 const windowContainer = ref(null);
 const isVisible = ref(false);
 let observer = null;
+
+const navigateToAboutPage = () => {
+  // Use window.location for a full page navigation that resets scroll position
+  window.location.href = '/about';
+};
 
 onMounted(() => {
   // Reset visibility state when component is mounted
@@ -97,6 +104,7 @@ onUnmounted(() => {
   transition: all 0.3s ease;
   display: inline-block;
   position: relative;
+  cursor: pointer;
 }
 
 .find-out-more a:hover {

@@ -6,7 +6,7 @@
         <h2>We craft immersive real estate destinations</h2>
         <h3>that maximize asset value and make people feel alive.</h3>
         <div class="find-out-more">
-          <a href="#">Find out more. <span class="number">(1)</span></a>
+          <a @click="navigateToAboutPage" class="about-link">Find out more. <span class="number">(1)</span></a>
         </div>
       </div>
     </div>
@@ -31,6 +31,11 @@ let observer = null;
 
 const navigateToHotelsPage = () => {
   router.push('/hotels');
+};
+
+const navigateToAboutPage = () => {
+  // Use window.location for a full page navigation that resets scroll position
+  window.location.href = '/about';
 };
 
 onMounted(() => {
@@ -114,6 +119,7 @@ onUnmounted(() => {
   transition: all 0.3s ease;
   display: inline-block;
   position: relative;
+  cursor: pointer;
 }
 
 .find-out-more a:hover {
