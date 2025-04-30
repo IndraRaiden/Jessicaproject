@@ -1,11 +1,21 @@
 <template>
   <div class="window-container" ref="windowContainer">
-    <div class="video-placeholder" @click="navigateToFoodPage">
-      <!-- Video placeholder with overlay text -->
-      <div class="text-container">
-        <div class="overlay-text" :class="{ 'visible': isVisible }">FOOD AND BEVERAGE</div>
+    <!-- Real estate intro section -->
+    <div class="real-estate-intro">
+      <div class="intro-content">
+        <h2>We craft immersive real estate destinations</h2>
+        <h3>that maximize asset value and make people feel alive.</h3>
+        <div class="find-out-more">
+          <a href="#">Find out more. <span class="number">(1)</span></a>
+        </div>
       </div>
-      <div class="scroll-indicator" :class="{ 'visible': isVisible }">SCROLL</div>
+    </div>
+    
+    <!-- Hotels section with image -->
+    <div class="hotels-section" @click="navigateToHotelsPage">
+      <div class="hotels-image">
+        <div class="hotels-title">HOTELS</div>
+      </div>
     </div>
   </div>
 </template>
@@ -19,8 +29,8 @@ const windowContainer = ref(null);
 const isVisible = ref(false);
 let observer = null;
 
-const navigateToFoodPage = () => {
-  router.push('/foodnbeverage');
+const navigateToHotelsPage = () => {
+  router.push('/hotels');
 };
 
 onMounted(() => {
@@ -54,95 +64,177 @@ onUnmounted(() => {
 <style scoped>
 .window-container {
   width: 100%;
-  height: 100vh; /* Match Hero component height */
   position: relative;
-  overflow: visible; /* Changed from hidden to visible */
+  overflow: visible;
   margin: 0;
   padding: 0;
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
-.video-placeholder {
+/* Real estate intro section */
+.real-estate-intro {
   width: 100%;
-  height: 100%;
-  background-color: #2c3e50; /* Darker blue-gray for contrast with Hero */
-  position: relative;
+  min-height: 40vh;
+  background-color: #f2eee3;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+  padding: 5% 10%;
+}
+
+.intro-content {
+  max-width: 800px;
+}
+
+.intro-content h2 {
+  font-family: 'Space Mono', monospace;
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #1d2a29;
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.intro-content h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: #1d2a29;
+  margin-bottom: 2.5rem;
+  line-height: 1.3;
+}
+
+.find-out-more a {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #1d2a29;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+}
+
+.find-out-more a:hover {
+  opacity: 0.7;
+}
+
+.number {
+  font-style: italic;
+}
+
+/* Hotels section */
+.hotels-section {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  cursor: pointer;
+  background-color: #f2eee3;
+  padding: 2.5% 0;
+}
+
+.hotels-image {
+  width: 95%;
+  height: 95%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 3rem;
+  border: 1px solid rgba(29, 42, 41, 0.2);
+  overflow: hidden;
+  background-image: url('/swimming-dark.jpg');
   background-size: cover;
   background-position: center;
-  cursor: pointer; /* Add pointer cursor to indicate clickability */
 }
 
-.overlay-text {
+
+
+/* Horizontal and vertical lines for the grid pattern */
+.hotels-image::before,
+.hotels-image::after {
+  content: '';
+  position: absolute;
+  background-color: #ffffff;
+  opacity: 0.15;
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Horizontal line */
+.hotels-image::before {
+  width: 100%;
+  height: 1px;
+  top: 50%;
+  left: 0;
+  transform: scaleX(0.8);
+}
+
+/* Vertical line */
+.hotels-image::after {
+  width: 1px;
+  height: 100%;
+  left: 50%;
+  top: 0;
+  transform: scaleY(0.8);
+}
+
+.hotels-section:hover .hotels-image::before {
+  transform: scaleX(1);
+  opacity: 0.25;
+}
+
+.hotels-section:hover .hotels-image::after {
+  transform: scaleY(1);
+  opacity: 0.25;
+}
+
+.hotels-title {
   font-family: 'Space Mono', monospace;
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   font-weight: 400;
   color: white;
-  letter-spacing: 0.1em;
-  transition: all 1.5s cubic-bezier(0.16, 1, 0.3, 1);
-  cursor: pointer;
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.overlay-text.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.overlay-text:hover {
-  letter-spacing: 0.15em;
-  transform: translateY(-5px);
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   opacity: 0.9;
-  text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
-  color: #f8f8f8;
-  transition: all 0.4s ease-out;
+  transform: translateY(5px);
 }
 
-.scroll-indicator {
-  position: absolute;
-  bottom: 5%;
-  left: 2%;
-  font-size: 1rem;
-  font-family: 'Roboto Condensed', sans-serif;
-  color: white;
-  letter-spacing: 0.2em;
-  cursor: pointer;
-  z-index: 100;
-  transition: opacity 1.8s cubic-bezier(0.16, 1, 0.3, 1), transform 1.8s cubic-bezier(0.16, 1, 0.3, 1); /* Separated properties for better performance */
-  writing-mode: vertical-lr;
-  text-orientation: mixed;
-  transform: rotate(180deg) translateY(20px);
-  opacity: 0;
-  pointer-events: auto; /* Ensure clickability */
+.hotels-section:hover .hotels-title {
+  transform: translateY(-5px);
+  letter-spacing: 0.08em;
 }
-
-.scroll-indicator.visible {
-  opacity: 1;
-  transform: rotate(180deg) translateY(0);
-}
-
-.scroll-indicator:hover {
-  transform: translateY(-10px) rotate(180deg);
-}
-
-.text-container {
-  position: absolute;
-  bottom: 10%;
-  right: 5%;
-  z-index: 20;
-}
-
-
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
-  .overlay-text {
+  .real-estate-intro {
+    padding: 10% 8%;
+  }
+  
+  .intro-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .intro-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hotels-section {
+    height: 70vh;
+  }
+  
+  .hotels-image {
+    width: 95%;
+    height: 95%;
+    padding: 2rem;
+  }
+  
+  .hotels-title {
     font-size: 3rem;
-    bottom: 15%;
   }
 }
 </style>
