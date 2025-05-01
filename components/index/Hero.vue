@@ -74,7 +74,7 @@ const toggleSidebar = () => {
 }
 
 #oara-logo {
-  width: 220px;
+  width: 280px;
   height: auto;
 }
 
@@ -93,7 +93,7 @@ const toggleSidebar = () => {
 }
 
 .plus-icon {
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   color: #1d2a29;
   font-weight: 400;
   cursor: pointer;
@@ -101,8 +101,8 @@ const toggleSidebar = () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   position: absolute;
   right: 60px;
   top: 50%;
