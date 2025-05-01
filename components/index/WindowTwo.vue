@@ -2,13 +2,15 @@
   <div class="window-container" ref="windowContainer">
     <!-- Real estate intro section -->
     <div class="real-estate-intro">
+      <div class="left-spacer"></div>
       <div class="intro-content">
         <h2>We craft immersive real estate destinations</h2>
         <h3>that maximize asset value and make people feel alive.</h3>
         <div class="find-out-more">
-          <a @click="navigateToAboutPage" class="about-link">Find out more. <span class="number">(1)</span></a>
+          <a @click="navigateToAboutPage" class="about-link">Find out more.</a>
         </div>
       </div>
+      <div class="right-spacer"></div>
     </div>
     
     <!-- Hotels section with image -->
@@ -81,15 +83,24 @@ onUnmounted(() => {
 .real-estate-intro {
   width: 100%;
   min-height: 40vh;
-  background-color: #f2eee3;
+  background-color: transparent;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding: 5% 10%;
+  justify-content: space-between;
+  padding: 5% 0;
+}
+
+.left-spacer {
+  width: 3%;
+}
+
+.right-spacer {
+  width: 70%;
 }
 
 .intro-content {
   max-width: 800px;
+  padding: 0;
 }
 
 .intro-content h2 {
@@ -126,17 +137,13 @@ onUnmounted(() => {
   opacity: 0.7;
 }
 
-.number {
-  font-style: italic;
-}
-
 /* Hotels section */
 .hotels-section {
   width: 100%;
   height: 90vh; /* Increased height */
   position: relative;
   cursor: pointer;
-  background-color: #f2eee3;
+  background-color: transparent;
   padding: 1.5% 0; /* Reduced padding to give more space to image */
 }
 
@@ -189,7 +196,15 @@ onUnmounted(() => {
 /* Media query for mobile devices */
 @media (max-width: 768px) {
   .real-estate-intro {
-    padding: 10% 8%;
+    padding: 10% 0;
+  }
+  
+  .left-spacer {
+    width: 3%;
+  }
+  
+  .right-spacer {
+    width: 50%;
   }
   
   .intro-content h2 {

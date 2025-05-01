@@ -68,7 +68,7 @@ onUnmounted(() => {
   height: 90vh; /* Same height as WindowThree */
   position: relative;
   cursor: pointer;
-  background-color: #f2eee3;
+  background-color: transparent;
   padding: 1.5% 0;
 }
 

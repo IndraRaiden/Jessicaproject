@@ -1,6 +1,7 @@
 <template>
   <div class="window-container" ref="windowContainer">
     <div class="real-estate-message">
+      <div class="left-spacer"></div>
       <div class="message-content">
         <h2>We craft immersive real estate destinations</h2>
         <h3>that maximize asset value and make people feel alive</h3>
@@ -8,6 +9,7 @@
           <a @click="navigateToAboutPage" class="about-link">Find out more.</a>
         </div>
       </div>
+      <div class="right-spacer"></div>
     </div>
   </div>
 </template>
@@ -66,15 +68,24 @@ onUnmounted(() => {
 .real-estate-message {
   width: 100%;
   min-height: 40vh;
-  background-color: #f2eee3;
+  background-color: transparent;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding: 5% 10%;
+  justify-content: space-between;
+  padding: 5% 0;
+}
+
+.left-spacer {
+  width: 5%;
+}
+
+.right-spacer {
+  width: 70%;
 }
 
 .message-content {
   max-width: 800px;
+  padding: 0;
 }
 
 .message-content h2 {
@@ -114,7 +125,15 @@ onUnmounted(() => {
 /* Media query for mobile devices */
 @media (max-width: 768px) {
   .real-estate-message {
-    padding: 10% 8%;
+    padding: 10% 0;
+  }
+  
+  .left-spacer {
+    width: 3%;
+  }
+  
+  .right-spacer {
+    width: 50%;
   }
   
   .message-content h2 {

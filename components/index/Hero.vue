@@ -38,6 +38,8 @@ const toggleSidebar = () => {
   padding: 0;
   display: flex;
   flex-direction: column;
+  top: 0;
+  left: 0;
 }
 
 .logo-header {
@@ -54,7 +56,6 @@ const toggleSidebar = () => {
 .swimming-image {
   width: 100%;
   height: calc(100vh - 120px);
-  background-color: #000;
   position: relative;
   overflow: hidden;
 }

@@ -65,7 +65,7 @@ onUnmounted(() => {
   height: 90vh; /* Increased height to match WindowTwo */
   position: relative;
   cursor: pointer;
-  background-color: #f2eee3;
+  background-color: transparent;
   padding: 1.5% 0;
 }
 

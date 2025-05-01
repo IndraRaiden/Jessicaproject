@@ -11,16 +11,26 @@
   box-sizing: border-box;
 }
 
+html {
+  background-image: url('/index/background_1920x1080_F2EEE3_horizontal.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 html, body {
   overflow-x: hidden;
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: 'Be Vietnam Pro', sans-serif;
   color: #333;
-  background-color: #f5f5f5;
+  background-color: transparent;
   position: relative;
 }
 

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="layout-container">
     <slot />
   </div>
 </template>
@@ -9,5 +9,10 @@
 </script>
 
 <style scoped>
-/* Default layout styles */
+.layout-container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
 </style>
