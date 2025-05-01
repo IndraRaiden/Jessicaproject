@@ -31,48 +31,93 @@
             <div class="capability-list">
               <div class="capability-item">
                 <span class="capability-name">Spatial Storytelling</span>
-                <span class="read-more">read more <span class="arrow">↓</span></span>
+                <span class="read-more" @click="toggleDescription(0)">read more <span class="arrow" :class="{ 'arrow-up': expandedItems[0] }">{{ expandedItems[0] ? '↑' : '↓' }}</span></span>
               </div>
+              <transition name="slide-fade">
+                <div class="capability-description" v-if="expandedItems[0]">
+                  <p>We embed narratives into every layout, guiding guests through memorable journeys that resonate with your brand and honor the site's heritage.</p>
+                </div>
+              </transition>
               
               <div class="capability-item">
                 <span class="capability-name">Architecture & Interior Design</span>
-                <span class="read-more">read more <span class="arrow">↓</span></span>
+                <span class="read-more" @click="toggleDescription(1)">read more <span class="arrow" :class="{ 'arrow-up': expandedItems[1] }">{{ expandedItems[1] ? '↑' : '↓' }}</span></span>
               </div>
+              <transition name="slide-fade">
+                <div class="capability-description" v-if="expandedItems[1]">
+                  <p>We create buildings and interiors that balance form and function—enhancing asset value and guest satisfaction while reflecting local context and roots.</p>
+                </div>
+              </transition>
               
               <div class="capability-item">
                 <span class="capability-name">Operator Interface & Owner's Representation</span>
-                <span class="read-more">read more <span class="arrow">↓</span></span>
+                <span class="read-more" @click="toggleDescription(2)">read more <span class="arrow" :class="{ 'arrow-up': expandedItems[2] }">{{ expandedItems[2] ? '↑' : '↓' }}</span></span>
               </div>
+              <transition name="slide-fade">
+                <div class="capability-description" v-if="expandedItems[2]">
+                  <p>We serve as your dedicated liaison—synchronizing investors, operators, and design teams for seamless execution that respects site-specific traditions.</p>
+                </div>
+              </transition>
               
               <div class="capability-item">
                 <span class="capability-name">Placemaking & Concept Development</span>
-                <span class="read-more">read more <span class="arrow">↓</span></span>
+                <span class="read-more" @click="toggleDescription(3)">read more <span class="arrow" :class="{ 'arrow-up': expandedItems[3] }">{{ expandedItems[3] ? '↑' : '↓' }}</span></span>
               </div>
+              <transition name="slide-fade">
+                <div class="capability-description" v-if="expandedItems[3]">
+                  <p>We uncover each site's unique character and translate it into concepts that captivate guests and investors alike, rooted in local culture and history.</p>
+                </div>
+              </transition>
               
               <div class="capability-item">
                 <span class="capability-name">F&B Strategy & Curation</span>
-                <span class="read-more">read more <span class="arrow">↓</span></span>
+                <span class="read-more" @click="toggleDescription(4)">read more <span class="arrow" :class="{ 'arrow-up': expandedItems[4] }">{{ expandedItems[4] ? '↑' : '↓' }}</span></span>
               </div>
+              <transition name="slide-fade">
+                <div class="capability-description" v-if="expandedItems[4]">
+                  <p>We craft culinary programs that marry operational efficiency with inspired menus—driving revenue and delight while celebrating regional flavors.</p>
+                </div>
+              </transition>
               
               <div class="capability-item">
                 <span class="capability-name">Brand Strategy & Market Positioning</span>
-                <span class="read-more">read more <span class="arrow">↓</span></span>
+                <span class="read-more" @click="toggleDescription(5)">read more <span class="arrow" :class="{ 'arrow-up': expandedItems[5] }">{{ expandedItems[5] ? '↑' : '↓' }}</span></span>
               </div>
+              <transition name="slide-fade">
+                <div class="capability-description" v-if="expandedItems[5]">
+                  <p>We define clear brand frameworks and market tactics that set your project apart and fuel growth, grounded in the project's local narrative.</p>
+                </div>
+              </transition>
               
               <div class="capability-item">
                 <span class="capability-name">Feasibility Studies</span>
-                <span class="read-more">read more <span class="arrow">↓</span></span>
+                <span class="read-more" @click="toggleDescription(6)">read more <span class="arrow" :class="{ 'arrow-up': expandedItems[6] }">{{ expandedItems[6] ? '↑' : '↓' }}</span></span>
               </div>
+              <transition name="slide-fade">
+                <div class="capability-description" v-if="expandedItems[6]">
+                  <p>We perform thorough analysis to determine project viability, considering market conditions, financial projections, and operational requirements.</p>
+                </div>
+              </transition>
               
               <div class="capability-item">
                 <span class="capability-name">Back of the House Design</span>
-                <span class="read-more">read more <span class="arrow">↓</span></span>
+                <span class="read-more" @click="toggleDescription(7)">read more <span class="arrow" :class="{ 'arrow-up': expandedItems[7] }">{{ expandedItems[7] ? '↑' : '↓' }}</span></span>
               </div>
+              <transition name="slide-fade">
+                <div class="capability-description" v-if="expandedItems[7]">
+                  <p>We streamline support zones—optimizing staff flow and comfort to underpin flawless service delivery with respect for local operational heritage.</p>
+                </div>
+              </transition>
               
               <div class="capability-item">
                 <span class="capability-name">Architecture Peer Review</span>
-                <span class="read-more">read more <span class="arrow">↓</span></span>
+                <span class="read-more" @click="toggleDescription(8)">read more <span class="arrow" :class="{ 'arrow-up': expandedItems[8] }">{{ expandedItems[8] ? '↑' : '↓' }}</span></span>
               </div>
+              <transition name="slide-fade">
+                <div class="capability-description" v-if="expandedItems[8]">
+                  <p>We perform in-depth technical checks, ensuring compliance, quality, and consistency with your brand standards and the authenticity of place.</p>
+                </div>
+              </transition>
             </div>
           </div>
         </div>
@@ -83,9 +128,17 @@
 </template>
 
 <script setup>
-import { onMounted, nextTick } from 'vue';
+import { ref, onMounted, nextTick } from 'vue';
 import Navbar from '~/components/Navbar.vue';
 import Footer from '~/components/Footer.vue';
+
+// Create a reactive array to track which descriptions are expanded
+const expandedItems = ref(Array(9).fill(false));
+
+// Function to toggle the visibility of a description
+const toggleDescription = (index) => {
+  expandedItems.value[index] = !expandedItems.value[index];
+};
 
 onMounted(() => {
   // Set page title
@@ -224,6 +277,51 @@ onMounted(() => {
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.read-more:hover {
+  color: #000;
+}
+
+.capability-description {
+  padding: 1rem 0;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  max-width: 90%;
+}
+
+.arrow-up {
+  transform: rotate(180deg);
+}
+
+/* Animation styles */
+.slide-fade-enter-active {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 0.5rem;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateY(-10px);
+  opacity: 0;
+  max-height: 0;
+  margin-top: 0;
+  overflow: hidden;
 }
 
 .arrow {
