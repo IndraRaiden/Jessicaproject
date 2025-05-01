@@ -58,7 +58,7 @@ import Navbar from '~/components/Navbar.vue';
 import Footer from '~/components/Footer.vue';
 
 onMounted(() => {
-  document.title = "Project One | OARA";
+  // Title is now set globally in nuxt.config.js
 });
 </script>
 

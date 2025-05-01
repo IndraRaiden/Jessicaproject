@@ -14,11 +14,11 @@
 
           <div class="nav-group">
             <div class="nav-links">
-              <NuxtLink to="/" class="nav-link">HOME</NuxtLink>
-              <NuxtLink to="/hotels" class="nav-link">HOTELS</NuxtLink>
-              <NuxtLink to="/foodnbeverage" class="nav-link">FOOD AND BEVERAGE</NuxtLink>
-              <NuxtLink to="/wellness" class="nav-link">WELLNESS</NuxtLink>
-              <NuxtLink to="/about" class="nav-link">ABOUT US</NuxtLink>
+              <a @click.prevent="navigateTo('/hotels')" class="nav-link">HOTELS</a>
+              <a @click.prevent="navigateTo('/foodnbeverage')" class="nav-link">FOOD</a>
+              <a @click.prevent="navigateTo('/wellness')" class="nav-link">WELLNESS</a>
+              <a @click.prevent="navigateTo('/about')" class="nav-link">ABOUT US</a>
+              <a @click.prevent="navigateTo('/')" class="nav-link">HOME</a>
             </div>
           </div>
         </div>
@@ -47,6 +47,9 @@
 </template>
 
 <script setup>
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
 const props = defineProps({
   isOpen: {
     type: Boolean,
@@ -59,16 +62,39 @@ const emit = defineEmits(['close']);
 const closeSidebar = () => {
   emit('close');
 };
+
+const navigateTo = (route) => {
+  // Close sidebar first
+  closeSidebar();
+  
+  // Force a reflow/repaint before navigation
+  document.body.style.display = 'none';
+  
+  // Use setTimeout to ensure the DOM has time to update
+  setTimeout(() => {
+    document.body.style.display = '';
+    
+    // Navigate to the route
+    router.push(route);
+    
+    // Force scroll to top after navigation
+    window.scrollTo(0, 0);
+  }, 50);
+};
 </script>
 
 <style scoped>
+:root {
+  --dark-green: #28332d; /* Dark green color as specified */
+}
+
 .sidebar {
   position: fixed;
   top: 0;
   right: -100%;
   width: 100%;
   height: 100vh;
-  background-color: #f5f5f5;
+  background-color: #f2eee3;
   z-index: 1000;
   transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   overflow-y: auto;
@@ -103,12 +129,12 @@ const closeSidebar = () => {
 .logo-img {
   height: 120px;
   width: auto;
-  filter: brightness(0);
+  /* Original dark green color restored */
 }
 
 .close-btn {
   font-size: 2rem;
-  color: #000;
+  color: var(--dark-green);
   cursor: pointer;
   transform: rotate(45deg);
   transition: transform 0.3s ease;
@@ -138,7 +164,7 @@ const closeSidebar = () => {
   font-size: 0.9rem;
   font-weight: 400;
   margin-bottom: 1.5rem;
-  color: #666;
+  color: var(--dark-green);
   letter-spacing: 0.1em;
 }
 
@@ -154,7 +180,7 @@ const closeSidebar = () => {
 .nav-link {
   font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 1.8rem;
-  color: #000;
+  color: var(--dark-green);
   text-decoration: none;
   letter-spacing: 0.05em;
   transition: opacity 0.2s;
@@ -162,7 +188,7 @@ const closeSidebar = () => {
 
 .nav-link:hover {
   opacity: 0.85;
-  color: #444;
+  opacity: 0.8;
 }
 
 .category-grid {
@@ -175,14 +201,14 @@ const closeSidebar = () => {
   font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 1rem;
   margin-bottom: 1rem;
-  color: #000;
+  color: var(--dark-green);
 }
 
 .category a {
   display: block;
   font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 0.9rem;
-  color: #333;
+  color: var(--dark-green);
   text-decoration: none;
   margin-bottom: 0.5rem;
   transition: opacity 0.2s;
@@ -203,7 +229,7 @@ const closeSidebar = () => {
 .contact-info p {
   font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 0.9rem;
-  color: #333;
+  color: var(--dark-green);
   margin-bottom: 0.3rem;
 }
 
@@ -215,7 +241,7 @@ const closeSidebar = () => {
   display: block;
   font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 0.8rem;
-  color: #000;
+  color: var(--dark-green);
   text-decoration: none;
   margin-bottom: 0.3rem;
 }
@@ -228,13 +254,13 @@ const closeSidebar = () => {
 .social-link {
   font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 0.8rem;
-  color: #666;
+  color: var(--dark-green);
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .social-link:hover {
-  color: #000;
+  opacity: 0.8;
 }
 
 /* Media queries for responsive design */

@@ -1,6 +1,28 @@
 <template>
-  <NuxtPage />
+  <div>
+    <NuxtPage />
+  </div>
 </template>
+
+<script>
+export default {
+  mounted() {
+    // Add event listener for browser back/forward navigation
+    window.addEventListener('popstate', this.handlePopState);
+  },
+  beforeDestroy() {
+    // Remove event listener
+    window.removeEventListener('popstate', this.handlePopState);
+  },
+  methods: {
+    handlePopState() {
+      console.log('Browser navigation detected');
+      // Force a full page reload when using browser back/forward buttons
+      window.location.reload();
+    }
+  }
+}
+</script>
 
 <style>
 /* Import Be Vietnam Pro font */

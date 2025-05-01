@@ -10,6 +10,14 @@ export default defineNuxtConfig({
   
   // Configure router to always scroll to top on page navigation
   app: {
+    head: {
+      title: 'Oara',
+      titleTemplate: 'Oara',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+      ]
+    },
     pageTransition: {
       name: 'page',
       mode: 'out-in',

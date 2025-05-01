@@ -141,8 +141,7 @@ const toggleDescription = (index) => {
 };
 
 onMounted(() => {
-  // Set page title
-  document.title = "About Us | OARA";
+  // Title is now set globally in nuxt.config.js
   
   // Force scroll to top
   window.scrollTo(0, 0);

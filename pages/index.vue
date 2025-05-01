@@ -24,26 +24,59 @@
   </div>
 </template>
 
-<script setup>
-import { ref } from 'vue';
+<script>
 import Hero from '~/components/index/Hero.vue';
 import Sidebar from '~/components/index/Sidebar.vue';
 import WindowTwo from '~/components/index/WindowTwo.vue';
 import WindowThree from '~/components/index/WindowThree.vue';
 import WindowFour from '~/components/index/WindowFour.vue';
 import WindowFive from '~/components/index/WindowFive.vue';
-// CTA import removed from main index
-// Footer import removed from main index
 
-const sidebarOpen = ref(false);
-
-const toggleSidebar = () => {
-  sidebarOpen.value = !sidebarOpen.value;
-};
-
-const closeSidebar = () => {
-  sidebarOpen.value = false;
-};
+export default {
+  components: {
+    Hero,
+    Sidebar,
+    WindowTwo,
+    WindowThree,
+    WindowFour,
+    WindowFive
+  },
+  data() {
+    return {
+      sidebarOpen: false,
+      // Track if this is a back navigation
+      fromBackNavigation: false
+    };
+  },
+  methods: {
+    toggleSidebar() {
+      this.sidebarOpen = !this.sidebarOpen;
+    },
+    closeSidebar() {
+      this.sidebarOpen = false;
+    }
+  },
+  beforeRouteEnter(to, from, next) {
+    // This hook is called before the component is created
+    // We can detect if we're coming from another page
+    next(vm => {
+      // If we're coming from another route, this might be a back navigation
+      if (from.name) {
+        vm.fromBackNavigation = true;
+      }
+    });
+  },
+  mounted() {
+    // Force scroll to top
+    window.scrollTo(0, 0);
+    
+    // If this is a back navigation, reload the page to ensure proper rendering
+    if (this.fromBackNavigation || window.performance && window.performance.navigation.type === 2) {
+      console.log('Back navigation detected - reloading page');
+      window.location.reload();
+    }
+  }
+}
 </script>
 
 <style>

@@ -2,15 +2,15 @@
   <div>
     <nav class="navbar" :class="{ 'scrolled': isScrolled }">
       <div class="navbar-container">
-        <NuxtLink to="/" class="navbar-logo">
+        <a href="#" class="navbar-logo" @click.prevent="navigateTo('/')">
           <img src="/index/OARA-MARCA-SITE.svg" alt="OARA Logo" class="logo-img" />
-        </NuxtLink>
+        </a>
         <div class="navbar-links">
-          <NuxtLink to="/hotels" class="navbar-link">HOTELS</NuxtLink>
+          <a href="#" class="navbar-link" @click.prevent="navigateTo('/hotels')">HOTELS</a>
           <div class="spacer"></div>
-          <NuxtLink to="/foodnbeverage" class="navbar-link">FOOD</NuxtLink>
+          <a href="#" class="navbar-link" @click.prevent="navigateTo('/foodnbeverage')">FOOD</a>
           <div class="spacer"></div>
-          <NuxtLink to="/wellness" class="navbar-link">WELLNESS</NuxtLink>
+          <a href="#" class="navbar-link" @click.prevent="navigateTo('/wellness')">WELLNESS</a>
         </div>
         <div class="plus-icon" @click="toggleSidebar">+</div>
       </div>
@@ -53,6 +53,26 @@ export default {
     },
     closeSidebar() {
       this.sidebarOpen = false;
+    },
+    navigateTo(route) {
+      // Force a reflow/repaint before navigation
+      document.body.style.display = 'none';
+      
+      // Use setTimeout to ensure the DOM has time to update
+      setTimeout(() => {
+        document.body.style.display = '';
+        
+        // Navigate to the route
+        this.$router.push(route);
+        
+        // Force scroll to top after navigation
+        window.scrollTo(0, 0);
+        
+        // Add a slight delay to ensure scroll happens after any transitions
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+        }, 100);
+      }, 50);
     }
   }
 };

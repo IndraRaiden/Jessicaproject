@@ -45,7 +45,7 @@ import Footer from '~/components/Footer.vue';
 
 onMounted(() => {
   // Animation or initialization logic can be added here
-  document.title = "Food & Beverage | OARA";
+  // Title is now set globally in nuxt.config.js
 });
 </script>
 
