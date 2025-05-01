@@ -1,64 +1,69 @@
 <template>
-  <div class="page-background"></div>
-  <div class="projectone-page">
-    <Navbar />
-    
-    <div class="project-header">
-      <div class="project-meta">
-        <div class="client-info">
-          <p>CLIENT: ANGEL</p>
-          <p>SERVICES: VISUAL IDENTITY / ART DIRECTION / WEB / SIGNAGE / PRINT</p>
-        </div>
-      </div>
+  <div>
+    <div class="page-background"></div>
+    <div class="projectone-page">
+      <Navbar />
       
-      <div class="project-headline">
-        <h1>THE CULTURAL HERITAGE AND ROMANCE OF FLORENCE COMBINED WITH A CREATIVE AND CONTEMPORARY ENERGY.</h1>
-      </div>
-      
-      <div class="controls">
-        <button class="control-btn">▶</button>
-        <button class="control-btn">II</button>
-      </div>
-    </div>
-    
-    <div class="project-content">
-      <div class="content-section">
-        <h2 class="section-title">ROOFBAR & DINING. PERCHED ATOP THE...</h2>
-        
-        <div class="image-container">
-          <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Rooftop dining" class="feature-image" />
+      <div class="project-header">
+        <div class="project-meta">
+          <div class="client-info">
+            <p>CLIENT: ANGEL</p>
+            <p>SERVICES: VISUAL IDENTITY / ART DIRECTION / WEB / SIGNAGE / PRINT</p>
+          </div>
         </div>
         
-        <div class="content-footer">
-          <a href="#" class="external-link">ANGELROOFBAR.COM</a>
-          <button class="read-more">READ MORE</button>
+        <div class="project-headline">
+          <h1>THE CULTURAL HERITAGE AND ROMANCE OF FLORENCE COMBINED WITH A CREATIVE AND CONTEMPORARY ENERGY.</h1>
+        </div>
+        
+        <div class="controls">
+          <button class="control-btn">▶</button>
+          <button class="control-btn">II</button>
         </div>
       </div>
-      
-      <div class="content-section">
-        <div class="image-grid">
-          <div class="grid-item">
-            <img src="https://images.unsplash.com/photo-1470549638415-0a0755be0619?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Food image 1" />
+    
+      <div class="project-content">
+        <div class="content-section">
+          <h2 class="section-title">ROOFBAR & DINING. PERCHED ATOP THE...</h2>
+          
+          <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Rooftop dining" class="feature-image" />
           </div>
           
-          <div class="grid-item">
-            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Food image 2" />
+          <div class="content-footer">
+            <a href="#" class="external-link">ANGELROOFBAR.COM</a>
+            <button class="read-more">READ MORE</button>
+          </div>
+        </div>
+        
+        <div class="content-section">
+          <div class="image-grid">
+            <div class="grid-item">
+              <img src="https://images.unsplash.com/photo-1470549638415-0a0755be0619?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Food image 1" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Food image 2" />
+            </div>
           </div>
         </div>
       </div>
+      
+      <Footer />
     </div>
-    
-    <Footer />
   </div>
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import { onMounted, nextTick } from 'vue';
 import Navbar from '~/components/Navbar.vue';
 import Footer from '~/components/Footer.vue';
 
-onMounted(() => {
-  // Title is now set globally in nuxt.config.js
+onMounted(async () => {
+  // Force a DOM update and ensure all components are properly mounted
+  await nextTick();
+  // Force scroll to top
+  window.scrollTo(0, 0);
 });
 </script>
 
@@ -71,6 +76,7 @@ onMounted(() => {
   height: 100%;
   background-color: #ffffff;
   z-index: -1;
+  opacity: 1;
 }
 
 .projectone-page {

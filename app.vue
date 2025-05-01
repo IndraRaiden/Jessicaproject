@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NuxtPage />
+    <NuxtPage :key="$route.fullPath" />
   </div>
 </template>
 
@@ -9,6 +9,9 @@ export default {
   mounted() {
     // Add event listener for browser back/forward navigation
     window.addEventListener('popstate', this.handlePopState);
+    
+    // Force initial scroll to top
+    window.scrollTo(0, 0);
   },
   beforeDestroy() {
     // Remove event listener
@@ -19,6 +22,9 @@ export default {
       console.log('Browser navigation detected');
       // Force a full page reload when using browser back/forward buttons
       window.location.reload();
+      
+      // Ensure we're at the top of the page
+      window.scrollTo(0, 0);
     }
   }
 }

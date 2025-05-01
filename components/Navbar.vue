@@ -55,24 +55,8 @@ export default {
       this.sidebarOpen = false;
     },
     navigateTo(route) {
-      // Force a reflow/repaint before navigation
-      document.body.style.display = 'none';
-      
-      // Use setTimeout to ensure the DOM has time to update
-      setTimeout(() => {
-        document.body.style.display = '';
-        
-        // Navigate to the route
-        this.$router.push(route);
-        
-        // Force scroll to top after navigation
-        window.scrollTo(0, 0);
-        
-        // Add a slight delay to ensure scroll happens after any transitions
-        setTimeout(() => {
-          window.scrollTo(0, 0);
-        }, 100);
-      }, 50);
+      // Use window.location for a hard navigation that ensures full page reload
+      window.location.href = route;
     }
   }
 };

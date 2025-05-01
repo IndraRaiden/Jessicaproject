@@ -14,12 +14,12 @@
           </div>
           
           <div class="grid-item">
-            <NuxtLink to="/projectone" class="project-link">
+            <div class="project-link" @click="navigateToProject('/projectone')">
               <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Food image 2" />
               <div class="overlay">
                 <span>Project One</span>
               </div>
-            </NuxtLink>
+            </div>
           </div>
         </div>
         
@@ -40,8 +40,16 @@
 
 <script setup>
 import { onMounted } from 'vue';
+import { useRouter } from 'vue-router';
 import Navbar from '~/components/Navbar.vue';
 import Footer from '~/components/Footer.vue';
+
+const router = useRouter();
+
+const navigateToProject = (route) => {
+  // Use window.location for a hard navigation that ensures full page reload
+  window.location.href = route;
+};
 
 onMounted(() => {
   // Animation or initialization logic can be added here
@@ -142,6 +150,7 @@ onMounted(() => {
   height: 100%;
   position: relative;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .overlay {
