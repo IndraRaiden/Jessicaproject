@@ -26,19 +26,19 @@
         <!-- Contact Information -->
         <div class="contact-section">
           <div class="contact-info">
-            <p>HORIZON COLLECTIVE</p>
-            <p>118 MERIDIAN AVENUE</p>
-            <p>OSLO, NORWAY</p>
+            <p style="color: #29332e !important;">HORIZON COLLECTIVE</p>
+            <p style="color: #29332e !important;">118 MERIDIAN AVENUE</p>
+            <p style="color: #29332e !important;">OSLO, NORWAY</p>
             <div class="contact-links">
-              <a href="mailto:hello@horizon.co">HELLO@HORIZON.CO</a>
-              <a href="tel:+4721558899">+47 215 588 99</a>
+              <a href="mailto:hello@horizon.co" style="color: #29332e !important;">HELLO@HORIZON.CO</a>
+              <a href="tel:+4721558899" style="color: #29332e !important;">+47 215 588 99</a>
             </div>
           </div>
           
           <div class="social-links">
-            <a href="#" class="social-link">BEHANCE</a>
-            <a href="#" class="social-link">JOURNAL</a>
-            <a href="#" class="social-link">ARCHIVE</a>
+            <a href="#" class="social-link" style="color: #29332e !important;">BEHANCE</a>
+            <a href="#" class="social-link" style="color: #29332e !important;">JOURNAL</a>
+            <a href="#" class="social-link" style="color: #29332e !important;">ARCHIVE</a>
           </div>
         </div>
       </div>
@@ -133,15 +133,21 @@ const navigateTo = (route) => {
 }
 
 .close-btn {
-  font-size: 2rem;
-  color: var(--dark-green);
+  font-size: 5rem;
+  color: #29332e;
   cursor: pointer;
   transform: rotate(45deg);
-  transition: transform 0.3s ease;
+  transition: transform 0.6s ease;
+  margin-top: -0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
 }
 
 .close-btn:hover {
-  transform: rotate(135deg);
+  transform: rotate(90deg);
 }
 
 .sidebar-layout {
@@ -164,7 +170,7 @@ const navigateTo = (route) => {
   font-size: 0.9rem;
   font-weight: 400;
   margin-bottom: 1.5rem;
-  color: var(--dark-green);
+  color: #29332e;
   letter-spacing: 0.1em;
 }
 
@@ -180,15 +186,15 @@ const navigateTo = (route) => {
 .nav-link {
   font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 1.8rem;
-  color: var(--dark-green);
+  color: #29332e;
   text-decoration: none;
   letter-spacing: 0.05em;
-  transition: opacity 0.2s;
+  transition: color 0.2s ease;
+  display: inline-block;
 }
 
 .nav-link:hover {
-  opacity: 0.85;
-  opacity: 0.8;
+  color: #a67c52;
 }
 
 .category-grid {
@@ -201,14 +207,14 @@ const navigateTo = (route) => {
   font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 1rem;
   margin-bottom: 1rem;
-  color: var(--dark-green);
+  color: #29332e;
 }
 
 .category a {
   display: block;
   font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 0.9rem;
-  color: var(--dark-green);
+  color: #29332e;
   text-decoration: none;
   margin-bottom: 0.5rem;
   transition: opacity 0.2s;
@@ -229,7 +235,7 @@ const navigateTo = (route) => {
 .contact-info p {
   font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 0.9rem;
-  color: var(--dark-green);
+  color: #29332e;
   margin-bottom: 0.3rem;
 }
 
@@ -241,7 +247,7 @@ const navigateTo = (route) => {
   display: block;
   font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 0.8rem;
-  color: var(--dark-green);
+  color: #29332e;
   text-decoration: none;
   margin-bottom: 0.3rem;
 }
@@ -254,7 +260,7 @@ const navigateTo = (route) => {
 .social-link {
   font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 0.8rem;
-  color: var(--dark-green);
+  color: #29332e;
   text-decoration: none;
   transition: color 0.2s;
 }
