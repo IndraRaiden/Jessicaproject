@@ -98,6 +98,7 @@ const navigateTo = (route) => {
   z-index: 1000;
   transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   overflow-y: auto;
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
 }
 
 .sidebar.open {
@@ -144,10 +145,13 @@ const navigateTo = (route) => {
   align-items: center;
   width: 5rem;
   height: 5rem;
+  overflow: hidden; /* Prevent content overflow */
+  position: relative; /* Ensure positioning context */
 }
 
 .close-btn:hover {
   transform: rotate(90deg);
+  /* No additional transformations that could cause layout shifts */
 }
 
 .sidebar-layout {

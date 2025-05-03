@@ -1,70 +1,207 @@
 <template>
   <footer class="footer">
-    <div class="social-icons">
-      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-        </svg>
-      </a>
-      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-        </svg>
-      </a>
-      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
-        </svg>
-      </a>
-      <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" class="social-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
-          <path d="M21 12c0 4.418 -4.03 8 -9 8a9.76 9.76 0 0 1 -3.24 -.55"></path>
-          <path d="M12.866 21.496c-.413 -2.02 -.588 -3.257 -1.457 -4.496c-.444 -.624 -1.187 -1.106 -2.021 -1.106c-1.95 0 -1.953 1.908 -1.953 2.25c0 2.167 1.677 2.855 3.775 2.855c.486 0 .98 -.045 1.656 -.097z"></path>
-        </svg>
-      </a>
+    <div class="footer-top">
+      <div class="footer-section">
+        <h2 style="color: #e0e0e0;">Got a project?</h2>
+        <button class="footer-button">
+          Let's talk <span class="dropdown-arrow">▼</span>
+        </button>
+      </div>
+      <div class="footer-section">
+        <h2 style="color: #e0e0e0;">Work with us</h2>
+        <button class="footer-button">
+          Get in touch <span class="dropdown-arrow">▼</span>
+        </button>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="footer-content">
+        <div class="find-us">
+          <h3>Find us:</h3>
+          <div class="social-links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">linkedin</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">instagram</a>
+          </div>
+        </div>
+        
+        <div class="contact-info">
+          <h3>Contact:</h3>
+          <a href="mailto:hello@wearecara.com" class="email">hello@wearecara.com</a>
+          <div class="phone-numbers">
+            <div class="phone-location">
+              <span class="phone">+1 646 651 7126</span> | <span class="location">New York</span>
+            </div>
+            <div class="phone-location">
+              <span class="phone">+55 11 xxxxx xxxx</span> | <span class="location">São Paulo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>©2025 FutureRoofBrand. All rights reserved.</p>
+        <div class="legal-links">
+          <a href="/cookies-and-privacy">Cookies and privacy</a> | 
+          <a href="/modern-slavery-act">Modern Slavery Act 2015</a> | 
+          <a href="/transparency-statement">Transparency Statement</a> | 
+          <a href="/ccpa-privacy-notice">CCPA Privacy Notice</a>
+        </div>
+      </div>
     </div>
   </footer>
 </template>
 
 <script setup>
-// Footer component with social media icons
+// Footer component with contact information and social links
 </script>
 
 <style scoped>
 .footer {
   width: 100%;
-  height: 40px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
-  padding: 10px 0;
-  margin-top: 20px;
-  border-top: 1px solid rgba(51, 51, 51, 0.1);
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
 }
 
-.social-icons {
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+  background-color: #000;
+  color: #e0e0e0;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.footer-section h2 {
+  font-weight: 400;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+.footer-button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.dropdown-arrow {
+  font-size: 0.7rem;
+  margin-left: 5px;
+}
+
+.footer-bottom {
+  padding: 60px 0 20px;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+
+.find-us h3,
+.contact-info h3 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.social-links {
   display: flex;
   gap: 20px;
 }
 
-.social-icon {
+.social-links a {
+  text-decoration: none;
   color: #333;
-  opacity: 0.7;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
-.social-icon:hover {
-  opacity: 1;
-  transform: translateY(-2px);
+.contact-info {
+  text-align: right;
+}
+
+.email {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.phone-numbers {
+  font-size: 0.9rem;
+}
+
+.phone-location {
+  margin-bottom: 5px;
+}
+
+.phone {
+  font-weight: 500;
+}
+
+.location {
+  font-weight: 400;
+}
+
+.copyright {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: #666;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.legal-links a {
+  text-decoration: none;
+  color: #666;
 }
 
 @media (max-width: 768px) {
-  .social-icons {
-    gap: 15px;
+  .footer-content,
+  .copyright {
+    flex-direction: column;
+  }
+  
+  .contact-info {
+    text-align: left;
+    margin-top: 30px;
+  }
+  
+  .copyright {
+    gap: 10px;
+  }
+  
+  .legal-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
   }
 }
 </style>

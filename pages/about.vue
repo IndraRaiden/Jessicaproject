@@ -29,95 +29,168 @@
             <h3 class="capabilities-title">Our capabilities:</h3>
             
             <div class="capability-list">
-              <div class="capability-item">
-                <span class="capability-name">Spatial Storytelling</span>
-                <span class="read-more" @click="toggleDescription(0)">read more <span class="arrow" :class="{ 'arrow-up': expandedItems[0] }">{{ expandedItems[0] ? '↑' : '↓' }}</span></span>
+              <!-- DESIGN SECTION -->
+              <div class="capability-category">
+                <h2 class="category-title">DESIGN</h2>
+                <p class="category-description">We craft tailored environments that blend bold aesthetics with seamless operations, ensuring spaces inspire and perform.</p>
               </div>
-              <transition name="slide-fade">
-                <div class="capability-description" v-if="expandedItems[0]">
-                  <p>We embed narratives into every layout, guiding guests through memorable journeys that resonate with your brand and honor the site's heritage.</p>
-                </div>
-              </transition>
               
               <div class="capability-item">
                 <span class="capability-name">Architecture & Interior Design</span>
-                <span class="read-more" @click="toggleDescription(1)">read more <span class="arrow" :class="{ 'arrow-up': expandedItems[1] }">{{ expandedItems[1] ? '↑' : '↓' }}</span></span>
+                <span class="read-more" @click="toggleItem(0)">read more <span class="plus-icon" :class="{ 'rotated': expandedItems[0] }">+</span></span>
+              </div>
+              <transition name="slide-fade">
+                <div class="capability-description" v-if="expandedItems[0]">
+                  <p>We identify and source furnishings and equipment that align precisely with your design vision and operational needs.</p>
+                </div>
+              </transition>
+              
+              <div class="capability-item">
+                <span class="capability-name">FF&E Design and Specification Package</span>
+                <span class="read-more" @click="toggleItem(1)">read more <span class="plus-icon" :class="{ 'rotated': expandedItems[1] }">+</span></span>
               </div>
               <transition name="slide-fade">
                 <div class="capability-description" v-if="expandedItems[1]">
-                  <p>We create buildings and interiors that balance form and function—enhancing asset value and guest satisfaction while reflecting local context and roots.</p>
+                  <p>We streamline service-area layouts to enhance workflow, safety and staff productivity.</p>
                 </div>
               </transition>
               
               <div class="capability-item">
-                <span class="capability-name">Operator Interface & Owner's Representation</span>
-                <span class="read-more" @click="toggleDescription(2)">read more <span class="arrow" :class="{ 'arrow-up': expandedItems[2] }">{{ expandedItems[2] ? '↑' : '↓' }}</span></span>
+                <span class="capability-name">Back of House Optimization & Design</span>
+                <span class="read-more" @click="toggleItem(2)">read more <span class="plus-icon" :class="{ 'rotated': expandedItems[2] }">+</span></span>
               </div>
               <transition name="slide-fade">
                 <div class="capability-description" v-if="expandedItems[2]">
-                  <p>We serve as your dedicated liaison—synchronizing investors, operators, and design teams for seamless execution that respects site-specific traditions.</p>
+                  <p>We optimize back-of-house spaces to improve operational efficiency and staff comfort.</p>
                 </div>
               </transition>
               
+              <!-- STRATEGY SECTION -->
+              <div class="capability-category">
+                <h2 class="category-title">STRATEGY</h2>
+                <p class="category-description">We articulate compelling brand stories and design guest journeys that foster loyalty and differentiation.</p>
+              </div>
+              
               <div class="capability-item">
-                <span class="capability-name">Placemaking & Concept Development</span>
-                <span class="read-more" @click="toggleDescription(3)">read more <span class="arrow" :class="{ 'arrow-up': expandedItems[3] }">{{ expandedItems[3] ? '↑' : '↓' }}</span></span>
+                <span class="capability-name">Brand Strategy & Experience Design</span>
+                <span class="read-more" @click="toggleItem(3)">read more <span class="plus-icon" :class="{ 'rotated': expandedItems[3] }">+</span></span>
               </div>
               <transition name="slide-fade">
                 <div class="capability-description" v-if="expandedItems[3]">
-                  <p>We uncover each site's unique character and translate it into concepts that captivate guests and investors alike, rooted in local culture and history.</p>
+                  <p>We develop site-specific concepts that weave local culture into immersive destination experiences.</p>
                 </div>
               </transition>
               
               <div class="capability-item">
-                <span class="capability-name">F&B Strategy & Curation</span>
-                <span class="read-more" @click="toggleDescription(4)">read more <span class="arrow" :class="{ 'arrow-up': expandedItems[4] }">{{ expandedItems[4] ? '↑' : '↓' }}</span></span>
+                <span class="capability-name">Placemaking, Spatial Concepts & Storytelling</span>
+                <span class="read-more" @click="toggleItem(4)">read more <span class="plus-icon" :class="{ 'rotated': expandedItems[4] }">+</span></span>
               </div>
               <transition name="slide-fade">
                 <div class="capability-description" v-if="expandedItems[4]">
-                  <p>We craft culinary programs that marry operational efficiency with inspired menus—driving revenue and delight while celebrating regional flavors.</p>
+                  <p>We create compelling spatial narratives that engage guests and enhance the sense of place.</p>
                 </div>
               </transition>
               
               <div class="capability-item">
-                <span class="capability-name">Brand Strategy & Market Positioning</span>
-                <span class="read-more" @click="toggleDescription(5)">read more <span class="arrow" :class="{ 'arrow-up': expandedItems[5] }">{{ expandedItems[5] ? '↑' : '↓' }}</span></span>
+                <span class="capability-name">Service Design</span>
+                <span class="read-more" @click="toggleItem(5)">read more <span class="plus-icon" :class="{ 'rotated': expandedItems[5] }">+</span></span>
               </div>
               <transition name="slide-fade">
                 <div class="capability-description" v-if="expandedItems[5]">
-                  <p>We define clear brand frameworks and market tactics that set your project apart and fuel growth, grounded in the project's local narrative.</p>
+                  <p>We design service frameworks that align guest journeys with operational efficiency and brand promise.</p>
                 </div>
               </transition>
               
+              <!-- CONSULTING SECTION -->
+              <div class="capability-category">
+                <h2 class="category-title">CONSULTING</h2>
+                <p class="category-description">We advocate for owners' interests and coordinate with operators to synchronize goals and execution.</p>
+              </div>
+              
               <div class="capability-item">
-                <span class="capability-name">Feasibility Studies</span>
-                <span class="read-more" @click="toggleDescription(6)">read more <span class="arrow" :class="{ 'arrow-up': expandedItems[6] }">{{ expandedItems[6] ? '↑' : '↓' }}</span></span>
+                <span class="capability-name">Owners Representation & Operator Interface</span>
+                <span class="read-more" @click="toggleItem(6)">read more <span class="plus-icon" :class="{ 'rotated': expandedItems[6] }">+</span></span>
               </div>
               <transition name="slide-fade">
                 <div class="capability-description" v-if="expandedItems[6]">
-                  <p>We perform thorough analysis to determine project viability, considering market conditions, financial projections, and operational requirements.</p>
+                  <p>We evaluate design proposals against best practices, optimizing quality and compliance from concept through delivery.</p>
                 </div>
               </transition>
               
               <div class="capability-item">
-                <span class="capability-name">Back of the House Design</span>
-                <span class="read-more" @click="toggleDescription(7)">read more <span class="arrow" :class="{ 'arrow-up': expandedItems[7] }">{{ expandedItems[7] ? '↑' : '↓' }}</span></span>
+                <span class="capability-name">Architecture & Interiors Peer Review</span>
+                <span class="read-more" @click="toggleItem(7)">read more <span class="plus-icon" :class="{ 'rotated': expandedItems[7] }">+</span></span>
               </div>
               <transition name="slide-fade">
                 <div class="capability-description" v-if="expandedItems[7]">
-                  <p>We streamline support zones—optimizing staff flow and comfort to underpin flawless service delivery with respect for local operational heritage.</p>
+                  <p>We provide expert review of architectural and interior design plans to ensure quality and compliance.</p>
                 </div>
               </transition>
               
               <div class="capability-item">
-                <span class="capability-name">Architecture Peer Review</span>
-                <span class="read-more" @click="toggleDescription(8)">read more <span class="arrow" :class="{ 'arrow-up': expandedItems[8] }">{{ expandedItems[8] ? '↑' : '↓' }}</span></span>
+                <span class="capability-name">Advisory & Design Guidelines</span>
+                <span class="read-more" @click="toggleItem(8)">read more <span class="plus-icon" :class="{ 'rotated': expandedItems[8] }">+</span></span>
               </div>
               <transition name="slide-fade">
                 <div class="capability-description" v-if="expandedItems[8]">
-                  <p>We perform in-depth technical checks, ensuring compliance, quality, and consistency with your brand standards and the authenticity of place.</p>
+                  <p>We provide strategic counsel and develop design guidelines that ensure consistency and excellence at every project phase.</p>
                 </div>
               </transition>
+            </div>
+          </div>
+          
+          <!-- Team Section -->
+          <div class="team-section">
+            <h3 class="team-title">Meet our team:</h3>
+            
+            <div class="team-members">
+              <!-- Team Member 1 -->
+              <div class="team-member">
+                <div class="member-photo">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Nick Sykes" />
+                  <div class="member-position">Global CEO</div>
+                </div>
+                <div class="member-info">
+                  <h4 class="member-name">Jon Tipple</h4>
+                  <p class="member-bio">Jon is passionate about bringing category-redefining creativity to the world's most significant brands and businesses.</p>
+                </div>
+              </div>
+              
+              <!-- Team Member 2 -->
+              <div class="team-member">
+                <div class="member-photo">
+                  <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80" alt="Jon Tipple" />
+                  <div class="member-position">Global Chief Strategy Officer</div>
+                </div>
+                <div class="member-info">
+                  <h4 class="member-name">Jon Tipple</h4>
+                  <p class="member-bio">Jon is passionate about bringing category-redefining creativity to the world's most significant brands and businesses.</p>
+                </div>
+              </div>
+              
+              <!-- Team Member 3 -->
+              <div class="team-member">
+                <div class="member-photo">
+                  <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=922&q=80" alt="Lauren Maynard" />
+                  <div class="member-position">Global Chief Growth Officer</div>
+                </div>
+                <div class="member-info">
+                  <h4 class="member-name">Jon Tipple</h4>
+                  <p class="member-bio">Jon is passionate about bringing category-redefining creativity to the world's most significant brands and businesses.</p>
+                </div>
+              </div>
+              
+              <!-- Team Member 4 -->
+              <div class="team-member">
+                <div class="member-photo">
+                  <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=922&q=80" alt="Lauren Maynard" />
+                  <div class="member-position">Global Chief Growth Officer</div>
+                </div>
+                <div class="member-info">
+                  <h4 class="member-name">Jon Tipple</h4>
+                  <p class="member-bio">Jon is passionate about bringing category-redefining creativity to the world's most significant brands and businesses.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -136,7 +209,7 @@ import Footer from '~/components/Footer.vue';
 const expandedItems = ref(Array(9).fill(false));
 
 // Function to toggle the visibility of a description
-const toggleDescription = (index) => {
+const toggleItem = (index) => {
   expandedItems.value[index] = !expandedItems.value[index];
 };
 
@@ -238,6 +311,7 @@ onMounted(() => {
 /* Capabilities Section Styles */
 .capabilities-section {
   margin-top: 4rem;
+  max-width: 1000px;
 }
 
 .capabilities-title {
@@ -248,29 +322,55 @@ onMounted(() => {
   color: #333;
 }
 
+.capability-category {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.capability-category:first-child {
+  margin-top: 1rem;
+}
+
+.category-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.category-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: #333;
+  margin-bottom: 1.5rem;
+  max-width: 90%;
+}
+
 .capability-list {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
 }
 
 .capability-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 0.7rem 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .capability-name {
   font-family: 'Space Mono', monospace;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #333;
+  font-weight: 400;
 }
 
 .read-more {
   font-family: 'Inter', sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #555;
   display: flex;
   align-items: center;
@@ -279,19 +379,38 @@ onMounted(() => {
   transition: color 0.3s ease;
 }
 
+.plus-icon {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.plus-icon.rotated {
+  transform: rotate(45deg);
+}
+
 .read-more:hover {
   color: #000;
 }
 
 .capability-description {
-  padding: 1rem 0;
-  margin-bottom: 0.5rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 0.5rem 0 1rem 2rem;
+  margin-bottom: 0;
   font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 0.95rem;
+  line-height: 1.5;
   color: #333;
   max-width: 90%;
+  position: relative;
+}
+
+.capability-description::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1.2rem;
+  width: 1.5rem;
+  height: 1px;
+  background-color: #333;
 }
 
 .arrow-up {
@@ -303,28 +422,104 @@ onMounted(() => {
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   max-height: 200px;
   opacity: 1;
-  margin-top: 0.5rem;
 }
 
 .slide-fade-leave-active {
   transition: all 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
   max-height: 0;
   opacity: 0;
-  margin-top: 0;
   overflow: hidden;
 }
 
 .slide-fade-enter-from,
 .slide-fade-leave-to {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
   opacity: 0;
   max-height: 0;
-  margin-top: 0;
   overflow: hidden;
 }
 
 .arrow {
   font-size: 0.8rem;
+}
+
+/* Team Section Styles */
+.team-section {
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+}
+
+.team-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.team-members {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.team-member {
+  display: flex;
+  gap: 2rem;
+}
+
+.member-photo {
+  width: 200px;
+  position: relative;
+}
+
+.member-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.member-position {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  color: #333;
+  padding: 0.3rem 0.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.member-info {
+  flex: 1;
+}
+
+.member-name {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.member-bio {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Media queries for team section */
+@media (max-width: 768px) {
+  .team-member {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .member-photo {
+    width: 100%;
+    max-width: 300px;
+  }
 }
 
 /* Media queries for responsiveness */

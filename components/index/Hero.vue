@@ -125,7 +125,12 @@ const toggleSidebar = () => {
   }
   
   .plus-icon {
-    font-size: 2rem;
+    font-size: 4.5rem; /* Maintain the same size as desktop */
+    width: 60px;
+    height: 60px;
+    right: 20px; /* Adjust position for mobile */
+    min-width: 60px; /* Ensure minimum width */
+    min-height: 60px; /* Ensure minimum height */
   }
 }
 </style>

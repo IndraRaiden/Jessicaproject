@@ -17,6 +17,9 @@
     
     <!-- WindowFive Component -->
     <WindowFive />
+    
+    <!-- Capabilities Component -->
+    <Capabilities />
 
     <!-- CTA component removed from main index -->
 
@@ -31,6 +34,7 @@ import WindowTwo from '~/components/index/WindowTwo.vue';
 import WindowThree from '~/components/index/WindowThree.vue';
 import WindowFour from '~/components/index/WindowFour.vue';
 import WindowFive from '~/components/index/WindowFive.vue';
+import Capabilities from '~/components/index/Capabilities.vue';
 
 export default {
   components: {
@@ -39,7 +43,8 @@ export default {
     WindowTwo,
     WindowThree,
     WindowFour,
-    WindowFive
+    WindowFive,
+    Capabilities
   },
   data() {
     return {
