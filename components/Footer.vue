@@ -27,7 +27,7 @@
         
         <div class="contact-info">
           <h3>Contact:</h3>
-          <a href="mailto:hello@wearecara.com" class="email">hello@wearecara.com</a>
+          <a href="mailto:hello@weareoara.com" class="email">hello@weareoara.com</a>
           <div class="phone-numbers">
             <div class="phone-location">
               <span class="phone">+1 646 651 7126</span> | <span class="location">New York</span>

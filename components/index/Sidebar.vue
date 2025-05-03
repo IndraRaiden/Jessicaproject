@@ -2,7 +2,7 @@
   <div class="sidebar" :class="{ 'open': isOpen }">
     <div class="sidebar-content">
       <div class="header">
-        <div class="logo">
+        <div class="logo" @click="navigateTo('/')" style="cursor: pointer;">
           <img src="/index/OARA-MARCA-SITE.svg" alt="OARA Logo" class="logo-img" />
         </div>
         <div class="close-btn" @click="closeSidebar">+</div>

@@ -23,7 +23,8 @@
 
     <!-- CTA component removed from main index -->
 
-    <!-- Footer removed from main index -->
+    <!-- Footer component -->
+    <Footer />
   </div>
 </template>
 
@@ -35,6 +36,7 @@ import WindowThree from '~/components/index/WindowThree.vue';
 import WindowFour from '~/components/index/WindowFour.vue';
 import WindowFive from '~/components/index/WindowFive.vue';
 import Capabilities from '~/components/index/Capabilities.vue';
+import Footer from '~/components/Footer.vue';
 
 export default {
   components: {
@@ -44,7 +46,8 @@ export default {
     WindowThree,
     WindowFour,
     WindowFive,
-    Capabilities
+    Capabilities,
+    Footer
   },
   data() {
     return {

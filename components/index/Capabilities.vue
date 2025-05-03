@@ -2,9 +2,13 @@
   <div class="capabilities-section">
     <!-- Testimonial Section -->
     <div class="testimonial">
-      <p class="quote">"Jessica has added...xxxxx xxxxxxxxxxx"</p>
-      <p class="author">Rachel Ratterman:</p>
-      <p class="projects">Worked together on projects like:<br>Equinox Hotel Chicago, Legendre Hotel, Edition Tampa</p>
+      <div class="scroll-arrow left-arrow">◀</div>
+      <div class="testimonial-content">
+        <p class="quote">"Jessica has added...xxxxx<br>xxxxxxxxxxxxx"</p>
+        <p class="author">Rachel Ratterman:</p>
+        <p class="projects">Worked together on projects like:<br>Equinox Hotel Chicago, Legendre Hotel, Edition Tampa</p>
+      </div>
+      <div class="scroll-arrow right-arrow">▶</div>
     </div>
     
     <!-- Capabilities Section -->
@@ -94,22 +98,49 @@ export default {
 
 /* Testimonial Section */
 .testimonial {
-  background-color: #2c3631;
-  color: white;
-  padding: 3rem 2rem;
+  background-color: #1F1B1A;
+  color: #E9EFC9;
+  padding: 4rem 2rem;
   text-align: center;
   font-family: 'Inter', sans-serif;
+  min-height: 35vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.testimonial-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.scroll-arrow {
+  font-size: 1.5rem;
+  color: #E9EFC9;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0 1.5rem;
+}
+
+.scroll-arrow:hover {
+  opacity: 1;
 }
 
 .quote {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
   font-weight: 300;
+  line-height: 1.4;
 }
 
 .author {
   font-size: 1.2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
   font-weight: 500;
 }
 
@@ -118,6 +149,7 @@ export default {
   line-height: 1.5;
   max-width: 600px;
   margin: 0 auto;
+  font-weight: 300;
 }
 
 /* Capabilities Container */
@@ -196,11 +228,17 @@ export default {
   }
   
   .testimonial {
-    padding: 2rem 1rem;
+    padding: 4rem 1rem;
+    min-height: 35vh;
+  }
+  
+  .scroll-arrow {
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
   }
   
   .quote {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 }
 </style>
