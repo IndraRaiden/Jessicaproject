@@ -13,9 +13,16 @@
       <div class="plus-icon" @click="toggleSidebar">+</div>
     </div>
     
-    <!-- Swimming people image -->
+    <!-- Video background section -->
     <div class="swimming-image">
-      <img src="/swimming-dark.jpg" alt="People swimming in dark water" class="swimming-img" />
+      <div class="video-container">
+        <iframe 
+          src="https://www.youtube.com/embed/vYmuxcy5YU0?autoplay=1&mute=1&loop=1&playlist=vYmuxcy5YU0&controls=0&showinfo=0&rel=0" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen
+        ></iframe>
+      </div>
     </div>
   </div>
 </template>
@@ -60,11 +67,25 @@ const toggleSidebar = () => {
   overflow: hidden;
 }
 
-.swimming-img {
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Allows clicks to pass through to parent */
   object-fit: cover;
-  object-position: center;
+  transform: scale(1.5); /* Make the video appear larger */
 }
 
 .overlay-logo {
