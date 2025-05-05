@@ -17,6 +17,14 @@
     <div class="hotels-section" @click="navigateToHotelsPage">
       <div class="hotels-image">
         <div class="hotels-title">HOTELS</div>
+        <div class="video-container">
+          <iframe 
+            src="https://www.youtube.com/embed/1ksLFMF-MGw?autoplay=1&mute=1&loop=1&playlist=1ksLFMF-MGw&controls=0&showinfo=0&rel=0" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
     </div>
   </div>
@@ -144,23 +152,21 @@ onUnmounted(() => {
   position: relative;
   cursor: pointer;
   background-color: transparent;
-  padding: 1.5% 0; /* Reduced padding to give more space to image */
+  padding: 0; /* Remove padding for full-screen effect */
 }
 
 .hotels-image {
-  width: 98%; /* Increased width */
-  height: 98%; /* Increased height */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
   margin: 0 auto;
   position: relative;
   display: flex;
   align-items: center; /* Changed from flex-end to center for vertical alignment */
   justify-content: flex-start;
   padding: 3rem;
-  border: 1px solid rgba(29, 42, 41, 0.2);
+  border: none; /* Remove border for full-screen effect */
   overflow: hidden;
-  background-image: url('/swimming-dark.jpg');
-  background-size: cover;
-  background-position: center;
+  position: relative;
 }
 
 
@@ -175,6 +181,27 @@ onUnmounted(() => {
   filter: brightness(1.05);
 }
 
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Allows clicks to pass through to parent */
+  object-fit: cover;
+  transform: scale(1.5); /* Make the video appear larger */
+}
+
 .hotels-title {
   font-family: 'Abril Fatface', serif;
   font-size: 4.5rem;
@@ -186,6 +213,8 @@ onUnmounted(() => {
   transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   opacity: 0.9;
   transform: translateY(5px);
+  position: relative;
+  z-index: 1; /* Ensure title appears above the video */
 }
 
 .hotels-section:hover .hotels-title {
