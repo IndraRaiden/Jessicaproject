@@ -25,6 +25,66 @@
             </p>
           </div>
           
+          <!-- Founder Section -->
+          <div class="founder-section">
+            <h2 class="founder-title">Meet the founder</h2>
+            
+            <div class="founder-content">
+              <div class="founder-photo">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Jessica Lianza" />
+                <div class="founder-position">Global CEO</div>
+              </div>
+              <div class="founder-bio">
+                <p>Jessica Lianza moves between structure and soul. Raised in São Paulo by an Israeli psychologist mother and a Brazilian Italian father who managed buildings and people, she was immersed early on in the emotional and operational layers of how we live. Her world has always balanced the visible and invisible — the architecture of feeling, the precision of systems. At 14, a psychosomatic illness led her inward. Yoga, stillness, and the rituals of well-being became her compass. That inward turn was the start of a life devoted to designing spaces that offer care, clarity, and presence.</p>
+                <p>Born in New York and shaped by four cultures, Jessica's instinct is global and her gaze, personal. She's guided architecture, interior design, service innovation, and project management across São Paulo, New York, London, and Southeast Asia — always seeking to understand how people move through space and how space moves people. Her time in ecological schools and remote retreats sharpened a sensitivity that remains central to her work.</p>
+                <p>Over the past 15 years, she has led hospitality, cultural, and residential projects across four continents, working with names like Gerber Collection, W Hotels, Edition, Hilton, and Hard Rock, as well as quieter, deeply personal ventures where story, memory, and experience guide every line. From narrative to layout, operations to atmosphere, Jessica designs places meant to last — spaces that make us feel human.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Team Section -->
+          <div class="team-section">
+            <h3 class="team-title">Meet our team:</h3>
+            
+            <div class="team-members">
+              <!-- Team Member 2 -->
+              <div class="team-member">
+                <div class="member-photo">
+                  <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80" alt="Team Member 2" />
+                  <div class="member-position">DESIGN DIRECTOR</div>
+                </div>
+                <div class="member-info">
+                  <h4 class="member-name">Sarah Chen</h4>
+                  <p class="member-bio">Sarah's innovative approach to spatial design has earned international recognition, with a portfolio spanning luxury hotels, restaurants, and retail environments.</p>
+                </div>
+              </div>
+              
+              <!-- Team Member 3 -->
+              <div class="team-member">
+                <div class="member-photo">
+                  <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" alt="Team Member 3" />
+                  <div class="member-position">STRATEGY DIRECTOR</div>
+                </div>
+                <div class="member-info">
+                  <h4 class="member-name">Miguel Cortez</h4>
+                  <p class="member-bio">Miguel specializes in translating brand narratives into compelling spatial experiences, with expertise in concept development and strategic positioning.</p>
+                </div>
+              </div>
+              
+              <!-- Team Member 4 -->
+              <div class="team-member">
+                <div class="member-photo">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Team Member 4" />
+                  <div class="member-position">CREATIVE DIRECTOR</div>
+                </div>
+                <div class="member-info">
+                  <h4 class="member-name">Jon Park</h4>
+                  <p class="member-bio">Jon is passionate about bringing category-redefining creativity to the world's most significant brands and businesses.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
           <div class="capabilities-section">
             <h3 class="capabilities-title">Our capabilities:</h3>
             
@@ -136,61 +196,6 @@
                   <p>We provide strategic counsel and develop design guidelines that ensure consistency and excellence at every project phase.</p>
                 </div>
               </transition>
-            </div>
-          </div>
-          
-          <!-- Team Section -->
-          <div class="team-section">
-            <h3 class="team-title">Meet our team:</h3>
-            
-            <div class="team-members">
-              <!-- Team Member 1 -->
-              <div class="team-member">
-                <div class="member-photo">
-                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Nick Sykes" />
-                  <div class="member-position">Global CEO</div>
-                </div>
-                <div class="member-info">
-                  <h4 class="member-name">Jon Tipple</h4>
-                  <p class="member-bio">Jon is passionate about bringing category-redefining creativity to the world's most significant brands and businesses.</p>
-                </div>
-              </div>
-              
-              <!-- Team Member 2 -->
-              <div class="team-member">
-                <div class="member-photo">
-                  <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80" alt="Jon Tipple" />
-                  <div class="member-position">Global Chief Strategy Officer</div>
-                </div>
-                <div class="member-info">
-                  <h4 class="member-name">Jon Tipple</h4>
-                  <p class="member-bio">Jon is passionate about bringing category-redefining creativity to the world's most significant brands and businesses.</p>
-                </div>
-              </div>
-              
-              <!-- Team Member 3 -->
-              <div class="team-member">
-                <div class="member-photo">
-                  <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=922&q=80" alt="Lauren Maynard" />
-                  <div class="member-position">Global Chief Growth Officer</div>
-                </div>
-                <div class="member-info">
-                  <h4 class="member-name">Jon Tipple</h4>
-                  <p class="member-bio">Jon is passionate about bringing category-redefining creativity to the world's most significant brands and businesses.</p>
-                </div>
-              </div>
-              
-              <!-- Team Member 4 -->
-              <div class="team-member">
-                <div class="member-photo">
-                  <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=922&q=80" alt="Lauren Maynard" />
-                  <div class="member-position">Global Chief Growth Officer</div>
-                </div>
-                <div class="member-info">
-                  <h4 class="member-name">Jon Tipple</h4>
-                  <p class="member-bio">Jon is passionate about bringing category-redefining creativity to the world's most significant brands and businesses.</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -443,9 +448,94 @@ onMounted(() => {
   font-size: 0.8rem;
 }
 
+/* Founder Section Styles */
+.founder-section {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  max-width: 1000px;
+}
+
+.founder-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+  color: #333;
+  position: relative;
+}
+
+.founder-content {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.founder-photo {
+  width: 220px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.founder-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.founder-position {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  color: #333;
+  padding: 0.3rem 0.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.founder-bio {
+  flex: 1;
+  padding-top: 0.5rem;
+}
+
+.founder-bio p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* Media queries for founder section */
+@media (max-width: 768px) {
+  .founder-content {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+  
+  .founder-photo {
+    width: 180px;
+  }
+  
+  .founder-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .founder-content {
+    flex-direction: column;
+  }
+  
+  .founder-photo {
+    width: 100%;
+    max-width: 220px;
+  }
+}
+
 /* Team Section Styles */
 .team-section {
-  margin-top: 6rem;
+  margin-top: 4rem;
   margin-bottom: 4rem;
 }
 

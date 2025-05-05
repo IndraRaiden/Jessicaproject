@@ -7,6 +7,14 @@
           <div class="wellness-title">WELLNESS</div>
           <div class="coming-soon">( Coming Soon )</div>
         </div>
+        <div class="video-container">
+          <iframe 
+            src="https://www.youtube.com/embed/grp4C6if5qA?autoplay=1&mute=1&loop=1&playlist=grp4C6if5qA&controls=0&showinfo=0&rel=0" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
     </div>
   </div>
@@ -69,23 +77,21 @@ onUnmounted(() => {
   position: relative;
   cursor: pointer;
   background-color: transparent;
-  padding: 1.5% 0;
+  padding: 0; /* Remove padding for full-screen effect */
 }
 
 .wellness-image {
-  width: 98%; /* Same width as WindowThree */
-  height: 98%; /* Same height as WindowThree */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
   margin: 0 auto;
   position: relative;
   display: flex;
   align-items: center; /* Changed from flex-end to center for vertical alignment */
   justify-content: flex-start;
   padding: 3rem;
-  border: 1px solid rgba(29, 42, 41, 0.2);
+  border: none; /* Remove border for full-screen effect */
   overflow: hidden;
-  background-image: url('https://images.unsplash.com/photo-1516466723877-e4ec1d736c8a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2134&q=80');
-  background-size: cover;
-  background-position: center;
+  position: relative;
 }
 
 /* Hover effect without corner brackets */
@@ -100,11 +106,33 @@ onUnmounted(() => {
   filter: brightness(1.05);
 }
 
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Allows clicks to pass through to parent */
+  object-fit: cover;
+  transform: scale(1.5); /* Make the video appear larger */
+}
+
 .title-container {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  z-index: 1; /* Ensure title container appears above the video */
 }
 
 .wellness-title {
