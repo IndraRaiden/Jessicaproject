@@ -62,6 +62,9 @@
   display: flex;
   flex-direction: column;
   font-family: 'Inter', sans-serif;
+  position: relative;
+  z-index: 10;
+  margin-top: 60px;
 }
 
 .footer-top {

@@ -2,14 +2,12 @@
   <div>
     <div class="page-background"></div>
     <div class="about-page">
-      <Navbar />
-      <!-- Header Section with spacing preserved -->
-      <div class="oara-header">
-      </div>
-      
-      <!-- Main Image Section -->
-      <div class="desk-image-container">
-        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Architecture Desk" class="desk-image" />
+      <!-- Hero Section that matches the image -->
+      <div class="hero-section">
+        <div class="hero-background">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Architecture Desk" class="desk-image" />
+        </div>
+        <Navbar />
       </div>
       
       <!-- About Content Section -->
@@ -200,6 +198,7 @@
           </div>
         </div>
       </div>
+      <!-- Footer Section -->
       <Footer />
     </div>
   </div>
@@ -251,6 +250,8 @@ onMounted(() => {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
 }
 
 /* OARA Header Styles */
@@ -612,16 +613,31 @@ onMounted(() => {
   }
 }
 
+/* Hero Section Styles */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.desk-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
-  .oara-header {
-    margin-top: 160px; /* Doubled gap for mobile navbar */
-    padding: 1rem 5%;
-  }
-  
-  .desk-image-container {
-    height: 50vh;
-  }
   
   .content-section {
     padding: 3rem 5%;
