@@ -40,7 +40,7 @@
       </div>
       
       <div class="copyright">
-        <p>©2025 FutureRoofBrand. All rights reserved.</p>
+        <p>©2025 oara hospitality strategy + design. All rights reserved.</p>
         <div class="legal-links">
           <a href="/cookies-and-privacy">Cookies and privacy</a> | 
           <a href="/modern-slavery-act">Modern Slavery Act 2015</a> | 
@@ -174,7 +174,8 @@
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
   font-size: 0.7rem;
   color: #666;
   border-top: 1px solid #ddd;
@@ -190,21 +191,43 @@
   .footer-content,
   .copyright {
     flex-direction: column;
+    align-items: center;
   }
   
+  .find-us,
   .contact-info {
-    text-align: left;
+    text-align: center;
     margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .find-us {
+    margin-top: 0;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  .phone-numbers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .copyright {
     gap: 10px;
+    text-align: center;
+    justify-content: center;
   }
   
   .legal-links {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
+    justify-content: center;
   }
 }
 </style>

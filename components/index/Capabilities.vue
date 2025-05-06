@@ -2,7 +2,12 @@
   <div class="capabilities-section">
     <!-- Testimonial Section -->
     <div class="testimonial">
-      <div class="scroll-arrow left-arrow">◀</div>
+      <div class="scroll-arrow left-arrow">
+        <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.5 6H23.5" stroke="#E9EFC9" stroke-width="1" />
+          <path d="M6 1L1 6L6 11" stroke="#E9EFC9" stroke-width="1" />
+        </svg>
+      </div>
       <div class="testimonial-content" id="testimonial-1">
         <p class="quote">Jessica has a strong creative approach towards everything she does. This personality trait combined with her profund understanding of her clients business objectives turned her into a natural strategist and therefore the right person to create remarkable concepts for brands that are determined to offer meaningful and unique experiences.<br>She delivers great results with kindness, joy, special artistic skills and sharp intuition.<br>Look out for this one!</p>
         <p class="author">Lais Hauschild Cobra · 1st degree connection</p>
@@ -33,7 +38,12 @@
         <p class="author">Marcos Bastos · 1st degree connection</p>
         <p class="projects">Partner at VOALB Ltda<br>February 8, 2022, Marcos worked with Jessica on the same team</p>
       </div>
-      <div class="scroll-arrow right-arrow">▶</div>
+      <div class="scroll-arrow right-arrow">
+        <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.5 6H23.5" stroke="#E9EFC9" stroke-width="1" />
+          <path d="M18 1L23 6L18 11" stroke="#E9EFC9" stroke-width="1" />
+        </svg>
+      </div>
     </div>
     
     <!-- Capabilities Section -->
@@ -210,12 +220,13 @@ export default {
 }
 
 .scroll-arrow {
-  font-size: 1.5rem;
-  color: #E9EFC9;
-  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
   padding: 0 1.5rem;
+  opacity: 0.7;
 }
 
 .scroll-arrow:hover {
@@ -239,6 +250,13 @@ export default {
   color: #f2eee3;
 }
 
+@media (max-width: 768px) {
+  .author {
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+  }
+}
+
 .projects {
   font-size: 0.9rem;
   line-height: 1.5;
@@ -247,6 +265,14 @@ export default {
   font-weight: 300;
   color: #E9EFC9;
   opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .projects {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    max-width: 100%;
+  }
 }
 
 /* Capabilities Container */
@@ -330,12 +356,17 @@ export default {
   }
   
   .scroll-arrow {
-    font-size: 1.5rem;
     padding: 0 0.5rem;
   }
   
+  .scroll-arrow svg {
+    width: 20px;
+    height: 10px;
+  }
+  
   .quote {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
   }
 }
 </style>
