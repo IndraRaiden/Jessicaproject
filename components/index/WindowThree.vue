@@ -4,6 +4,16 @@
     <div class="food-section" @click="navigateToFoodPage">
       <div class="food-image">
         <div class="food-title">FOOD</div>
+        <div class="video-container">
+          <div class="video-foreground">
+            <iframe 
+              src="https://www.youtube.com/embed/e7IfmJAdhDk?autoplay=1&mute=1&loop=1&playlist=e7IfmJAdhDk&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&enablejsapi=1" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -66,23 +76,21 @@ onUnmounted(() => {
   position: relative;
   cursor: pointer;
   background-color: transparent;
-  padding: 1.5% 0;
+  padding: 0; /* Remove padding for full-screen effect */
 }
 
 .food-image {
-  width: 98%; /* Increased width */
-  height: 98%; /* Increased height */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
   margin: 0 auto;
   position: relative;
   display: flex;
   align-items: center; /* Changed from flex-end to center for vertical alignment */
   justify-content: flex-start;
   padding: 3rem;
-  border: 1px solid rgba(29, 42, 41, 0.2);
+  border: none; /* Remove border for full-screen effect */
   overflow: hidden;
-  background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80');
-  background-size: cover;
-  background-position: center;
+  position: relative;
 }
 
 /* Hover effect without grid lines */
@@ -93,6 +101,38 @@ onUnmounted(() => {
 .food-section:hover .food-image {
   /* Subtle brightness change on hover */
   filter: brightness(1.05);
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  background: #000;
+}
+
+.video-foreground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.video-foreground iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 110vw; /* Slightly wider to avoid dark edges */
+  height: 61.875vw; /* Maintain 16:9 aspect ratio (56.25vw * 1.1) */
+  min-height: 110%; /* Slightly taller to avoid dark edges */
+  min-width: 195.55vh; /* Maintain 16:9 aspect ratio (177.77vh * 1.1) */
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
 .food-title {
@@ -106,6 +146,8 @@ onUnmounted(() => {
   transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   opacity: 0.9;
   transform: translateY(5px);
+  position: relative;
+  z-index: 1; /* Ensure title appears above the video */
 }
 
 .food-section:hover .food-title {
@@ -120,13 +162,20 @@ onUnmounted(() => {
   }
   
   .food-image {
-    width: 98%;
-    height: 98%;
+    width: 100%;
+    height: 100%;
     padding: 2rem;
   }
   
   .food-title {
     font-size: 3rem;
+  }
+  
+  .video-foreground iframe {
+    width: 120vw; /* Even wider on mobile to ensure coverage */
+    height: 67.5vw; /* Maintain 16:9 aspect ratio (56.25vw * 1.2) */
+    min-height: 120%; /* Even taller on mobile to ensure coverage */
+    min-width: 213.32vh; /* Maintain 16:9 aspect ratio (177.77vh * 1.2) */
   }
 }
 </style>

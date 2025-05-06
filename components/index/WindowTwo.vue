@@ -18,12 +18,14 @@
       <div class="hotels-image">
         <div class="hotels-title">HOTELS</div>
         <div class="video-container">
-          <iframe 
-            src="https://www.youtube.com/embed/1ksLFMF-MGw?autoplay=1&mute=1&loop=1&playlist=1ksLFMF-MGw&controls=0&showinfo=0&rel=0" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen
-          ></iframe>
+          <div class="video-foreground">
+            <iframe 
+              src="https://www.youtube.com/embed/1ksLFMF-MGw?autoplay=1&mute=1&loop=1&playlist=1ksLFMF-MGw&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&enablejsapi=1" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>
@@ -189,17 +191,28 @@ onUnmounted(() => {
   height: 100%;
   overflow: hidden;
   z-index: 0;
+  background: #000;
 }
 
-.video-container iframe {
+.video-foreground {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none; /* Allows clicks to pass through to parent */
-  object-fit: cover;
-  transform: scale(1.5); /* Make the video appear larger */
+  pointer-events: none;
+}
+
+.video-foreground iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 110vw; /* Slightly wider to avoid dark edges */
+  height: 61.875vw; /* Maintain 16:9 aspect ratio (56.25vw * 1.1) */
+  min-height: 110%; /* Slightly taller to avoid dark edges */
+  min-width: 195.55vh; /* Maintain 16:9 aspect ratio (177.77vh * 1.1) */
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
 .hotels-title {
@@ -250,13 +263,20 @@ onUnmounted(() => {
   }
   
   .hotels-image {
-    width: 98%;
-    height: 98%;
+    width: 100%;
+    height: 100%;
     padding: 2rem;
   }
   
   .hotels-title {
     font-size: 3rem;
+  }
+  
+  .video-foreground iframe {
+    width: 120vw; /* Even wider on mobile to ensure coverage */
+    height: 67.5vw; /* Maintain 16:9 aspect ratio (56.25vw * 1.2) */
+    min-height: 120%; /* Even taller on mobile to ensure coverage */
+    min-width: 213.32vh; /* Maintain 16:9 aspect ratio (177.77vh * 1.2) */
   }
 }
 </style>
