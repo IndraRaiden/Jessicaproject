@@ -3,14 +3,14 @@
     <!-- Video background section -->
     <div class="swimming-image">
       <div class="video-container">
-        <div class="video-foreground">
-          <iframe 
-            src="https://www.youtube.com/embed/vYmuxcy5YU0?autoplay=1&mute=1&loop=1&playlist=vYmuxcy5YU0&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&enablejsapi=1" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen
-          ></iframe>
-        </div>
+        <YoutubeEmbed 
+          videoId="vYmuxcy5YU0" 
+          :autoplay="true" 
+          :mute="true" 
+          :loop="true" 
+          :controls="false" 
+          :showInfo="false"
+        />
       </div>
       
       <!-- Logo overlay on video -->
@@ -34,6 +34,8 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
+
 const emit = defineEmits(['toggle-sidebar']);
 
 const toggleSidebar = () => {
@@ -82,27 +84,6 @@ const toggleSidebar = () => {
   overflow: hidden;
   z-index: 0;
   background: #000;
-}
-
-.video-foreground {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-.video-foreground iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 110vw; /* Slightly wider to avoid dark edges */
-  height: 61.875vw; /* Maintain 16:9 aspect ratio (56.25vw * 1.1) */
-  min-height: 110%; /* Slightly taller to avoid dark edges */
-  min-width: 195.55vh; /* Maintain 16:9 aspect ratio (177.77vh * 1.1) */
-  transform: translate(-50%, -50%);
-  pointer-events: none;
 }
 
 .hero-text-overlay {
@@ -227,11 +208,6 @@ const toggleSidebar = () => {
     font-size: 0.7rem;
   }
   
-  .video-foreground iframe {
-    width: 120vw; /* Even wider on mobile to ensure coverage */
-    height: 67.5vw; /* Maintain 16:9 aspect ratio (56.25vw * 1.2) */
-    min-height: 120%; /* Even taller on mobile to ensure coverage */
-    min-width: 213.32vh; /* Maintain 16:9 aspect ratio (177.77vh * 1.2) */
-  }
+  /* Mobile video styling is now handled by the YoutubeEmbed component */
 }
 </style>

@@ -4,8 +4,7 @@
     <div class="real-estate-intro">
       <div class="left-spacer"></div>
       <div class="intro-content">
-        <h2>We craft immersive real estate destinations</h2>
-        <h3>that maximize asset value and make people feel alive.</h3>
+        <p class="main-text">We craft immersive real estate destinations that maximize asset value and make people feel alive</p>
         <div class="find-out-more">
           <a @click="navigateToAboutPage" class="about-link">Find out more.</a>
         </div>
@@ -18,14 +17,14 @@
       <div class="hotels-image">
         <div class="hotels-title">HOTELS</div>
         <div class="video-container">
-          <div class="video-foreground">
-            <iframe 
-              src="https://www.youtube.com/embed/1ksLFMF-MGw?autoplay=1&mute=1&loop=1&playlist=1ksLFMF-MGw&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&enablejsapi=1" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowfullscreen
-            ></iframe>
-          </div>
+          <YoutubeEmbed 
+            videoId="1ksLFMF-MGw" 
+            :autoplay="true" 
+            :mute="true" 
+            :loop="true" 
+            :controls="false" 
+            :showInfo="false"
+          />
         </div>
       </div>
     </div>
@@ -113,28 +112,19 @@ onUnmounted(() => {
   padding: 0;
 }
 
-.intro-content h2 {
-  font-family: 'Space Mono', monospace;
-  font-size: 2.2rem;
-  font-weight: 400;
-  color: #1d2a29;
-  margin-bottom: 0.8rem;
-  line-height: 1.3;
-  letter-spacing: -0.01em;
-}
-
-.intro-content h3 {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.7rem;
+.intro-content .main-text {
+  font-family: 'Vietnam Pro', sans-serif;
+  font-size: 2rem;
   font-weight: 400;
   color: #1d2a29;
   margin-bottom: 2.5rem;
   line-height: 1.3;
+  letter-spacing: -0.01em;
 }
 
 .find-out-more a {
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
+  font-family: 'Vietnam Pro', sans-serif;
+  font-size: 1.2rem;
   color: #1d2a29;
   text-decoration: underline;
   transition: all 0.3s ease;
@@ -194,29 +184,8 @@ onUnmounted(() => {
   background: #000;
 }
 
-.video-foreground {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-.video-foreground iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 110vw; /* Slightly wider to avoid dark edges */
-  height: 61.875vw; /* Maintain 16:9 aspect ratio (56.25vw * 1.1) */
-  min-height: 110%; /* Slightly taller to avoid dark edges */
-  min-width: 195.55vh; /* Maintain 16:9 aspect ratio (177.77vh * 1.1) */
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}
-
 .hotels-title {
-  font-family: 'Abril Fatface', serif;
+  font-family: 'Vietnam Pro', sans-serif;
   font-size: 4.5rem;
   font-weight: 400;
   color: white;
@@ -249,12 +218,8 @@ onUnmounted(() => {
     width: 50%;
   }
   
-  .intro-content h2 {
-    font-size: 1.8rem;
-  }
-  
-  .intro-content h3 {
-    font-size: 1.3rem;
+  .intro-content .main-text {
+    font-size: 1.6rem;
     margin-bottom: 2rem;
   }
   
@@ -272,11 +237,6 @@ onUnmounted(() => {
     font-size: 3rem;
   }
   
-  .video-foreground iframe {
-    width: 120vw; /* Even wider on mobile to ensure coverage */
-    height: 67.5vw; /* Maintain 16:9 aspect ratio (56.25vw * 1.2) */
-    min-height: 120%; /* Even taller on mobile to ensure coverage */
-    min-width: 213.32vh; /* Maintain 16:9 aspect ratio (177.77vh * 1.2) */
-  }
+  /* Mobile video styling is now handled by the YoutubeEmbed component */
 }
 </style>

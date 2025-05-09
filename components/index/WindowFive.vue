@@ -1,16 +1,5 @@
 <template>
   <div class="window-container" ref="windowContainer">
-    <div class="real-estate-message">
-      <div class="left-spacer"></div>
-      <div class="message-content">
-        <h2>We craft immersive real estate destinations</h2>
-        <h3>that maximize asset value and make people feel alive</h3>
-        <div class="find-out-more">
-          <a @click="navigateToAboutPage" class="about-link">Find out more.</a>
-        </div>
-      </div>
-      <div class="right-spacer"></div>
-    </div>
   </div>
 </template>
 
@@ -65,84 +54,15 @@ onUnmounted(() => {
   padding: 0;
 }
 
-.real-estate-message {
-  width: 100%;
-  min-height: 40vh;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5% 0;
-}
 
-.left-spacer {
-  width: 5%;
-}
 
-.right-spacer {
-  width: 70%;
-}
 
-.message-content {
-  max-width: 800px;
-  padding: 0;
-}
 
-.message-content h2 {
-  font-family: 'Space Mono', monospace;
-  font-size: 2.2rem;
-  font-weight: 400;
-  color: #1d2a29;
-  margin-bottom: 0.8rem;
-  line-height: 1.3;
-  letter-spacing: -0.01em;
-}
 
-.message-content h3 {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.7rem;
-  font-weight: 400;
-  color: #1d2a29;
-  margin-bottom: 2.5rem;
-  line-height: 1.3;
-}
 
-.find-out-more a {
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  color: #1d2a29;
-  text-decoration: underline;
-  transition: all 0.3s ease;
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-}
 
-.find-out-more a:hover {
-  opacity: 0.7;
-}
 
-/* Media query for mobile devices */
-@media (max-width: 768px) {
-  .real-estate-message {
-    padding: 10% 0;
-  }
-  
-  .left-spacer {
-    width: 3%;
-  }
-  
-  .right-spacer {
-    width: 50%;
-  }
-  
-  .message-content h2 {
-    font-size: 1.8rem;
-  }
-  
-  .message-content h3 {
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
-  }
-}
+
+
+
 </style>

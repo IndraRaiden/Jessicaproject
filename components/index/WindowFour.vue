@@ -1,21 +1,21 @@
 <template>
   <div class="window-container" ref="windowContainer">    
-    <!-- Wellness section with image -->
-    <div class="wellness-section" @click="navigateToWellnessPage">
-      <div class="wellness-image">
+    <!-- Santuaries and Cultural section with image -->
+    <div class="santuaries-section" @click="navigateToSantuariesPage">
+      <div class="santuaries-image">
         <div class="title-container">
-          <div class="wellness-title">WELLNESS</div>
-          <div class="coming-soon">( Coming Soon )</div>
+          <div class="santuaries-title">SANTUARIES AND CULTURAL</div>
+          <div class="coming-soon">COMING SOON</div>
         </div>
         <div class="video-container">
-          <div class="video-foreground">
-            <iframe 
-              src="https://www.youtube.com/embed/grp4C6if5qA?autoplay=1&mute=1&loop=1&playlist=grp4C6if5qA&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&enablejsapi=1" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowfullscreen
-            ></iframe>
-          </div>
+          <YoutubeEmbed 
+            videoId="grp4C6if5qA" 
+            :autoplay="true" 
+            :mute="true" 
+            :loop="true" 
+            :controls="false" 
+            :showInfo="false"
+          />
         </div>
       </div>
     </div>
@@ -31,8 +31,8 @@ const windowContainer = ref(null);
 const isVisible = ref(false);
 let observer = null;
 
-const navigateToWellnessPage = () => {
-  router.push('/wellness');
+const navigateToSantuariesPage = () => {
+  router.push('/santuaries-and-cultural');
 };
 
 onMounted(() => {
@@ -72,8 +72,8 @@ onUnmounted(() => {
   padding: 0;
 }
 
-/* Wellness section */
-.wellness-section {
+/* Santuaries and Cultural section */
+.santuaries-section {
   width: 100%;
   height: 90vh; /* Same height as WindowThree */
   position: relative;
@@ -82,7 +82,7 @@ onUnmounted(() => {
   padding: 0; /* Remove padding for full-screen effect */
 }
 
-.wellness-image {
+.santuaries-image {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   margin: 0 auto;
@@ -97,13 +97,13 @@ onUnmounted(() => {
 }
 
 /* Hover effect without corner brackets */
-.wellness-image {
+.santuaries-image {
   position: relative;
   overflow: hidden;
   transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.wellness-section:hover .wellness-image {
+.santuaries-section:hover .santuaries-image {
   /* Subtle brightness change on hover */
   filter: brightness(1.05);
 }
@@ -119,26 +119,7 @@ onUnmounted(() => {
   background: #000;
 }
 
-.video-foreground {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-.video-foreground iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 110vw; /* Slightly wider to avoid dark edges */
-  height: 61.875vw; /* Maintain 16:9 aspect ratio (56.25vw * 1.1) */
-  min-height: 110%; /* Slightly taller to avoid dark edges */
-  min-width: 195.55vh; /* Maintain 16:9 aspect ratio (177.77vh * 1.1) */
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}
+/* Video foreground styling is now handled by the YoutubeEmbed component */
 
 .title-container {
   position: relative;
@@ -148,8 +129,8 @@ onUnmounted(() => {
   z-index: 1; /* Ensure title container appears above the video */
 }
 
-.wellness-title {
-  font-family: 'Abril Fatface', serif;
+.santuaries-title {
+  font-family: 'Vietnam Pro', sans-serif;
   font-size: 4.5rem;
   font-weight: 400;
   color: white;
@@ -161,55 +142,58 @@ onUnmounted(() => {
   z-index: 2;
 }
 
-.wellness-section:hover .wellness-title {
+.santuaries-section:hover .santuaries-title {
   letter-spacing: 0.08em;
   transform: translateY(-5px);
 }
 
 .coming-soon {
-  font-family: 'Space Mono', monospace;
-  font-size: 1.2rem;
+  font-family: 'Vietnam Pro', sans-serif;
+  font-size: 0.85rem;
   font-weight: 400;
-  color: white;
-  letter-spacing: 0.05em;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.15em;
+  margin-top: 1rem;
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 2px;
+  transition: all 0.5s ease;
   opacity: 0;
   transform: translateY(10px);
-  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  margin-top: 0.5rem;
 }
 
-.wellness-section:hover .coming-soon {
-  opacity: 0.9;
+
+
+.santuaries-section:hover .coming-soon {
+  opacity: 1;
   transform: translateY(0);
+  color: rgba(255, 255, 255, 1);
+  border-bottom-color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.2em;
 }
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
-  .wellness-section {
+  .santuaries-section {
     height: 80vh; /* Same as WindowThree mobile */
   }
   
-  .wellness-image {
+  .santuaries-image {
     width: 100%;
     height: 100%;
     padding: 2rem;
   }
   
-  .wellness-title {
+  .santuaries-title {
     font-size: 3rem;
   }
   
   .coming-soon {
-    font-size: 1rem;
-    margin-top: 0.3rem;
+    font-size: 0.75rem;
+    margin-top: 0.8rem;
   }
   
-  .video-foreground iframe {
-    width: 120vw; /* Even wider on mobile to ensure coverage */
-    height: 67.5vw; /* Maintain 16:9 aspect ratio (56.25vw * 1.2) */
-    min-height: 120%; /* Even taller on mobile to ensure coverage */
-    min-width: 213.32vh; /* Maintain 16:9 aspect ratio (177.77vh * 1.2) */
-  }
+  /* Mobile video styling is now handled by the YoutubeEmbed component */
 }
 </style>
