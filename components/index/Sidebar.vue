@@ -139,7 +139,7 @@ const navigateTo = (route) => {
   cursor: pointer;
   transform: rotate(45deg);
   transition: transform 0.6s ease;
-  margin-top: -0.75rem;
+  margin-top: -1.3rem;
   display: flex;
   justify-content: center;
   align-items: center;

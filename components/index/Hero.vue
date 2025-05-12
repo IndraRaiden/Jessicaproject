@@ -13,7 +13,7 @@
         />
       </div>
       
-      <!-- Logo overlay on video -->
+      <!-- Logo overlay on video (positioned above the text) -->
       <div class="logo-overlay">
         <svg id="oara-logo" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1227.7 534.5">
           <path class="logo-path" d="M270.6,131.8c-74.9,0-129.3,57.1-129.3,135.7s54.4,135.3,129.3,135.3,129.3-56.9,129.3-135.3-54.4-135.7-129.3-135.7ZM242.4,149.7c17.6,0,26.3,26,33.1,39.6,8.4,16.8,13.8,34.9,53.8,63,30.4,21.4,33.7,37.7,33.7,59.8s-36.7,76.8-91.6,76.8-101.5-67.9-101.5-123.3,33.2-115.9,72.4-115.9Z"/>
@@ -23,10 +23,10 @@
         </svg>
         <div class="plus-icon" @click="toggleSidebar">+</div>
       </div>
-      
+
       <div class="hero-text-overlay">
         <div class="horizontal-line top-line"></div>
-        <h2>HOSPITALITY STRATEGY + DESIGN</h2>
+        <h2>HOSPITALITY DESIGN + STRATEGY</h2>
         <div class="horizontal-line bottom-line"></div>
       </div>
     </div>
@@ -88,7 +88,7 @@ const toggleSidebar = () => {
 
 .hero-text-overlay {
   position: absolute;
-  top: 140px;
+  top: 180px;
   left: 0;
   width: 100%;
   height: 50px;
@@ -115,7 +115,7 @@ const toggleSidebar = () => {
 }
 
 .hero-text-overlay h2 {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 0.8rem;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.7);
@@ -137,7 +137,7 @@ const toggleSidebar = () => {
 }
 
 #oara-logo {
-  width: 240px;
+  width: 320px;
   height: auto;
 }
 
@@ -165,7 +165,7 @@ const toggleSidebar = () => {
   height: 60px;
   position: absolute;
   right: 60px;
-  top: 50%;
+  top: 52%;
   transform: translateY(-50%);
 }
 
@@ -197,11 +197,12 @@ const toggleSidebar = () => {
   }
   
   #oara-logo {
-    width: 180px;
+    width: 240px;
   }
   
   .hero-text-overlay {
     height: 40px;
+    top: 140px;
   }
   
   .hero-text-overlay h2 {
