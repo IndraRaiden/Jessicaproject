@@ -2,10 +2,17 @@
   <div class="sidebar" :class="{ 'open': isOpen }">
     <div class="sidebar-content">
       <div class="header">
+        <div class="spacer"></div>
         <div class="logo" @click="navigateTo('/')" style="cursor: pointer;">
           <img src="/index/OARA-MARCA-SITE.svg" alt="OARA Logo" class="logo-img" />
         </div>
         <div class="close-btn" @click="closeSidebar">+</div>
+      </div>
+      
+      <div class="hospitality-text">
+        <div class="horizontal-line top-line"></div>
+        <h2>HOSPITALITY DESIGN + STRATEGY</h2>
+        <div class="horizontal-line bottom-line"></div>
       </div>
       
       <div class="sidebar-layout">
@@ -120,11 +127,30 @@ const navigateTo = (route) => {
   align-items: center;
   margin-bottom: 5rem;
   padding: 1rem 0;
+  position: relative;
 }
 
 .logo {
   display: flex;
   align-items: center;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.logo::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #29332e;
+  transition: width 0.3s ease;
+}
+
+.logo:hover::after {
+  width: 100%;
 }
 
 .logo-img {
@@ -139,7 +165,7 @@ const navigateTo = (route) => {
   cursor: pointer;
   transform: rotate(45deg);
   transition: transform 0.6s ease;
-  margin-top: -1.3rem;
+  margin-top: -2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,6 +178,48 @@ const navigateTo = (route) => {
 .close-btn:hover {
   transform: rotate(90deg);
   /* No additional transformations that could cause layout shifts */
+}
+
+.hospitality-text {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  margin-top: -2rem;
+}
+
+.horizontal-line {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(41, 51, 46, 0.15); /* Subtle line color matching sidebar theme */
+}
+
+.top-line {
+  margin-bottom: 10px;
+}
+
+.bottom-line {
+  margin-top: 10px;
+}
+
+.hospitality-text h2 {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #29332e;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0 15px;
+  line-height: 1;
+}
+
+.spacer {
+  width: 5rem;
 }
 
 .sidebar-layout {

@@ -157,7 +157,7 @@ const toggleSidebar = () => {
   color: white;
   font-weight: 400;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.6s ease;
   display: flex;
   align-items: center;
   justify-content: center;
