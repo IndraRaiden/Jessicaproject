@@ -268,25 +268,26 @@ export default {
 }
 
 .quote {
-  font-family: 'Be Vietnam Pro', sans-serif;
+  font-family: 'Instrument Serif', serif !important;
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  font-weight: 600; /* Semi-bold */
+  font-weight: 400; /* Regular for Instrument font */
   line-height: 1.6;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-  letter-spacing: 220%; /* Spacing 220 */
-  text-transform: uppercase; /* CAPSLOCK: SIM */
+  letter-spacing: 0.05em;
+  text-transform: none;
+  color: #E9EFC9; /* Original color */
 }
 
 .author {
   font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 1.1rem;
   margin-bottom: 0.8rem;
-  font-weight: 600; /* Semi-bold */
-  color: #f2eee3;
-  letter-spacing: 220%; /* Spacing 220 */
+  font-weight: 300; /* Light Be Vietnam Pro */
+  color: #f2eee3; /* Original color */
+  letter-spacing: 220%; /* Spacing 220 - exact specification */
   text-transform: uppercase; /* CAPSLOCK: SIM */
 }
 
@@ -303,10 +304,10 @@ export default {
   line-height: 1.5;
   max-width: 700px;
   margin: 0 auto;
-  font-weight: 600; /* Semi-bold */
-  color: #E9EFC9;
+  font-weight: 300; /* Light Be Vietnam Pro */
+  color: #E9EFC9; /* Original color */
   opacity: 0.8;
-  letter-spacing: 220%; /* Spacing 220 */
+  letter-spacing: 220%; /* Spacing 220 - exact specification */
   text-transform: uppercase; /* CAPSLOCK: SIM */
 }
 

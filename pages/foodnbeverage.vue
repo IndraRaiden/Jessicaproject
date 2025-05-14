@@ -64,7 +64,11 @@ onMounted(() => {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #F9F3EF;
+  background-image: url('/index/background_1920x1080_F2EEE3_horizontal.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   z-index: -1;
 }
 
@@ -79,7 +83,7 @@ onMounted(() => {
 .hero-image-container {
   width: 100%;
   height: 80vh;
-  margin-top: 140px; /* Gap for the navbar */
+  margin-top: 0; /* Removed gap for the navbar */
   overflow: hidden;
   position: relative;
 }
@@ -98,7 +102,7 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  background-color: #F9F3EF; /* Light nude color */
+  /* Removed background color to let the page background show through */
 }
 
 .image-grid {
@@ -184,7 +188,7 @@ onMounted(() => {
   
   .hero-image-container {
     height: 50vh;
-    margin-top: 160px; /* Doubled gap for mobile navbar */
+    margin-top: 0; /* Removed gap for mobile navbar */
   }
   
 

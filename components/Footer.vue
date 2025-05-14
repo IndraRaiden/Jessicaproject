@@ -40,12 +40,14 @@
       </div>
       
       <div class="copyright">
-        <p>©2025 oara hospitality strategy + design. All rights reserved.</p>
-        <div class="legal-links">
-          <a href="/cookies-and-privacy">Cookies and privacy</a> | 
-          <a href="/modern-slavery-act">Modern Slavery Act 2015</a> | 
-          <a href="/transparency-statement">Transparency Statement</a> | 
-          <a href="/ccpa-privacy-notice">CCPA Privacy Notice</a>
+        <div class="copyright-bar">
+          <p>©2025 OARA HOSPITALITY STRATEGY + DESIGN. ALL RIGHTS RESERVED.</p>
+          <div class="legal-links">
+            <a href="/cookies-and-privacy">COOKIES AND PRIVACY</a> | 
+            <a href="/modern-slavery-act">MODERN SLAVERY ACT 2015</a> | 
+            <a href="/transparency-statement">TRANSPARENCY STATEMENT</a> | 
+            <a href="/ccpa-privacy-notice">CCPA PRIVACY NOTICE</a>
+          </div>
         </div>
       </div>
     </div>
@@ -65,6 +67,8 @@
   position: relative;
   z-index: 10;
   margin-top: 60px;
+  margin-bottom: 0;
+  padding-bottom: 0;
   letter-spacing: 220%;
   text-transform: uppercase;
   font-weight: 600; /* Semi-bold */
@@ -116,7 +120,7 @@
 }
 
 .footer-bottom {
-  padding: 60px 0 20px;
+  padding: 60px 0 0;
   background-color: #f5f5f5;
   color: #333;
 }
@@ -198,34 +202,54 @@
 }
 
 .copyright {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  width: 100%;
+  margin: 0;
   display: flex;
   justify-content: center;
-  text-align: center;
   font-size: 0.7rem;
-  color: #666;
-  border-top: 1px solid #ddd;
-  padding-top: 20px;
-  font-family: 'Instrument Serif', serif !important;
-  letter-spacing: 20px;
-  text-transform: none;
-  font-weight: 400; /* Regular */
+  color: #333;
+  padding: 0;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 300; /* Light */
+  background-color: #fff;
+  position: relative;
+  bottom: 0;
+}
+
+.copyright-bar {
+  width: 100%;
+  max-width: 100%;
+  padding: 15px 40px;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #eee;
+}
+
+.legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 5px;
 }
 
 .legal-links a {
   text-decoration: none;
-  color: #666;
-  font-family: 'Instrument Serif', serif !important;
-  letter-spacing: 20px;
-  text-transform: none;
-  font-weight: 400; /* Regular */
+  color: #333;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 300; /* Light */
+  font-size: 0.65rem;
+  white-space: nowrap;
 }
 
 @media (max-width: 768px) {
-  .footer-content,
-  .copyright {
+  .footer-content {
     flex-direction: column;
     align-items: center;
   }
@@ -253,16 +277,13 @@
     align-items: center;
   }
   
-  .copyright {
+  .copyright-bar {
+    flex-direction: column;
     gap: 10px;
-    text-align: center;
-    justify-content: center;
+    padding: 15px 20px;
   }
   
   .legal-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
     justify-content: center;
   }
 }
