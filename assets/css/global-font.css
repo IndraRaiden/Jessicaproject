@@ -1,0 +1,23 @@
+/* Global font settings for Be Vietnam Pro Semi Bold/Bold with specified spacing and capitalization */
+* {
+  font-family: 'Be Vietnam Pro', sans-serif !important;
+  font-weight: 600 !important; /* Semi-bold */
+  letter-spacing: 220% !important; /* Spacing 220 */
+  text-transform: uppercase !important; /* CAPSLOCK: SIM */
+}
+
+/* For elements that need bold instead of semibold */
+h1, h2, h3, h4, h5, h6, .bold-text, .btn, button {
+  font-weight: 700 !important; /* Bold */
+}
+
+/* Preserve icon fonts and other special fonts if needed */
+.fa, 
+.fas,
+.far,
+.fab,
+.material-icons,
+[class^="icon-"] {
+  font-family: inherit !important;
+  text-transform: none !important; /* Don't transform icons */
+}

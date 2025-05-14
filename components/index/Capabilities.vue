@@ -234,20 +234,26 @@ export default {
 }
 
 .quote {
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 1.2rem;
   margin-bottom: 1.2rem;
-  font-weight: 300;
+  font-weight: 600; /* Semi-bold */
   line-height: 1.6;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  letter-spacing: 220%; /* Spacing 220 */
+  text-transform: uppercase; /* CAPSLOCK: SIM */
 }
 
 .author {
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 1.1rem;
   margin-bottom: 0.8rem;
-  font-weight: 500;
+  font-weight: 600; /* Semi-bold */
   color: #f2eee3;
+  letter-spacing: 220%; /* Spacing 220 */
+  text-transform: uppercase; /* CAPSLOCK: SIM */
 }
 
 @media (max-width: 768px) {
@@ -258,13 +264,16 @@ export default {
 }
 
 .projects {
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 0.9rem;
   line-height: 1.5;
   max-width: 700px;
   margin: 0 auto;
-  font-weight: 300;
+  font-weight: 600; /* Semi-bold */
   color: #E9EFC9;
   opacity: 0.8;
+  letter-spacing: 220%; /* Spacing 220 */
+  text-transform: uppercase; /* CAPSLOCK: SIM */
 }
 
 @media (max-width: 768px) {
@@ -284,10 +293,12 @@ export default {
 }
 
 .section-title {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 1.5rem;
   margin-bottom: 2.5rem;
-  font-weight: 400;
+  font-weight: 700; /* Bold */
+  letter-spacing: 220%; /* Spacing 220 */
+  text-transform: uppercase; /* CAPSLOCK: SIM */
 }
 
 /* Capability Groups */
@@ -296,17 +307,22 @@ export default {
 }
 
 .capability-title {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
-  font-weight: 700;
+  font-weight: 700; /* Bold */
+  letter-spacing: 220%; /* Spacing 220 */
+  text-transform: uppercase; /* CAPSLOCK: SIM */
 }
 
 .capability-description {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
   max-width: 90%;
+  font-weight: 600; /* Semi-bold */
+  letter-spacing: 220%; /* Spacing 220 */
+  text-transform: uppercase; /* CAPSLOCK: SIM */
 }
 
 /* Capability Items */
@@ -320,14 +336,21 @@ export default {
 }
 
 .capability-item span {
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 1rem;
+  font-weight: 600; /* Semi-bold */
+  letter-spacing: 220%; /* Spacing 220 */
+  text-transform: uppercase; /* CAPSLOCK: SIM */
 }
 
 .read-more {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 0.9rem;
   color: #333;
   cursor: pointer;
+  font-weight: 600; /* Semi-bold */
+  letter-spacing: 220%; /* Spacing 220 */
+  text-transform: uppercase; /* CAPSLOCK: SIM */
 }
 
 .read-more:hover {

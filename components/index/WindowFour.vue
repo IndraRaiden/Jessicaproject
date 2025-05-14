@@ -130,29 +130,31 @@ onUnmounted(() => {
 }
 
 .santuaries-title {
-  font-family: 'Vietnam Pro', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 4.5rem;
-  font-weight: 400;
+  font-weight: 700; /* Bold */
   color: white;
-  letter-spacing: 0.02em;
+  letter-spacing: 220%; /* Spacing 220 */
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   opacity: 0.9;
   position: relative;
   z-index: 2;
+  text-transform: uppercase; /* CAPSLOCK: SIM */
 }
 
 .santuaries-section:hover .santuaries-title {
-  letter-spacing: 0.08em;
+  /* Keep the letter-spacing consistent with specs */
+  letter-spacing: 220%;
   transform: translateY(-5px);
 }
 
 .coming-soon {
-  font-family: 'Vietnam Pro', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 0.85rem;
-  font-weight: 400;
+  font-weight: 600; /* Semi-bold */
   color: rgba(255, 255, 255, 0.9);
-  letter-spacing: 0.15em;
+  letter-spacing: 220%; /* Spacing 220 */
   margin-top: 1rem;
   position: relative;
   display: inline-block;
@@ -161,6 +163,7 @@ onUnmounted(() => {
   transition: all 0.5s ease;
   opacity: 0;
   transform: translateY(10px);
+  text-transform: uppercase; /* CAPSLOCK: SIM */
 }
 
 
@@ -170,7 +173,8 @@ onUnmounted(() => {
   transform: translateY(0);
   color: rgba(255, 255, 255, 1);
   border-bottom-color: rgba(255, 255, 255, 0.7);
-  letter-spacing: 0.2em;
+  /* Keep the letter-spacing consistent with specs */
+  letter-spacing: 220%;
 }
 
 /* Media query for mobile devices */

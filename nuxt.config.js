@@ -2,7 +2,8 @@
 export default defineNuxtConfig({
   css: [
     '~/assets/css/fonts.css',
-    '~/assets/css/main.css'
+    '~/assets/css/main.css',
+    '~/assets/css/global-font.css'
   ],
 
   devtools: { enabled: true },

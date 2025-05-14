@@ -113,24 +113,28 @@ onUnmounted(() => {
 }
 
 .intro-content .main-text {
-  font-family: 'Vietnam Pro', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 600; /* Semi-bold */
   color: #1d2a29;
   margin-bottom: 2.5rem;
   line-height: 1.3;
-  letter-spacing: -0.01em;
+  letter-spacing: 220%; /* Spacing 220 */
+  text-transform: uppercase; /* CAPSLOCK: SIM */
 }
 
 .find-out-more a {
-  font-family: 'Vietnam Pro', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 1.2rem;
+  font-weight: 600; /* Semi-bold */
   color: #1d2a29;
   text-decoration: underline;
   transition: all 0.3s ease;
   display: inline-block;
   position: relative;
   cursor: pointer;
+  letter-spacing: 220%; /* Spacing 220 */
+  text-transform: uppercase; /* CAPSLOCK: SIM */
 }
 
 .find-out-more a:hover {
@@ -185,11 +189,11 @@ onUnmounted(() => {
 }
 
 .hotels-title {
-  font-family: 'Vietnam Pro', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 4.5rem;
-  font-weight: 400;
+  font-weight: 700; /* Bold */
   color: white;
-  letter-spacing: 0.02em;
+  letter-spacing: 220%; /* Spacing 220 */
   margin-bottom: 2rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
@@ -197,11 +201,13 @@ onUnmounted(() => {
   transform: translateY(5px);
   position: relative;
   z-index: 1; /* Ensure title appears above the video */
+  text-transform: uppercase; /* CAPSLOCK: SIM */
 }
 
 .hotels-section:hover .hotels-title {
   transform: translateY(-5px);
-  letter-spacing: 0.08em;
+  /* Keep the letter-spacing consistent with specs */
+  letter-spacing: 220%;
 }
 
 /* Media query for mobile devices */

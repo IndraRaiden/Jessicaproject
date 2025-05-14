@@ -57,6 +57,7 @@ html, body {
 
 body {
   font-family: 'Be Vietnam Pro', sans-serif;
+  font-weight: 600; /* Semi-bold */
   color: #333;
   background-color: transparent;
   position: relative;
@@ -73,7 +74,7 @@ body {
 
 h2 {
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 600; /* Semi-bold */
   letter-spacing: 0.1em;
   margin-bottom: 2rem;
   color: #333;

@@ -25,7 +25,6 @@
               <a @click.prevent="navigateTo('/foodnbeverage')" class="nav-link">FOOD</a>
               <a @click.prevent="navigateTo('/wellness')" class="nav-link">WELLNESS</a>
               <a @click.prevent="navigateTo('/about')" class="nav-link">ABOUT US</a>
-              <a @click.prevent="navigateTo('/')" class="nav-link">HOME</a>
             </div>
           </div>
         </div>
@@ -134,6 +133,7 @@ const navigateTo = (route) => {
   display: flex;
   align-items: center;
   margin: 0 auto;
+  margin-top: -30px;
   position: relative;
   padding-bottom: 5px;
 }
@@ -154,9 +154,9 @@ const navigateTo = (route) => {
 }
 
 .logo-img {
-  height: 120px;
+  height: 140px;
   width: auto;
-  /* Original dark green color restored */
+  /* Adjusted size to 140px */
 }
 
 .close-btn {
@@ -182,14 +182,14 @@ const navigateTo = (route) => {
 
 .hospitality-text {
   width: 100%;
-  height: 50px;
+  height: 60px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 3rem;
-  margin-top: -2rem;
+  margin-top: -6rem;
 }
 
 .horizontal-line {
@@ -208,7 +208,7 @@ const navigateTo = (route) => {
 
 .hospitality-text h2 {
   font-family: 'Be Vietnam Pro', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   font-weight: 300;
   color: #29332e;
   letter-spacing: 0.35em;

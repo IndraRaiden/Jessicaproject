@@ -61,10 +61,13 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   position: relative;
   z-index: 10;
   margin-top: 60px;
+  letter-spacing: 220%;
+  text-transform: uppercase;
+  font-weight: 600; /* Semi-bold */
 }
 
 .footer-top {
@@ -83,10 +86,13 @@
 }
 
 .footer-section h2 {
-  font-weight: 400;
+  font-weight: 700; /* Bold */
   margin-bottom: 15px;
   font-size: 1rem;
   color: #e0e0e0;
+  letter-spacing: 220%;
+  text-transform: uppercase;
+  font-family: 'Be Vietnam Pro', sans-serif;
 }
 
 .footer-button {
@@ -98,7 +104,10 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-weight: 600; /* Semi-bold */
+  letter-spacing: 220%;
+  text-transform: uppercase;
 }
 
 .dropdown-arrow {
@@ -124,8 +133,11 @@
 .find-us h3,
 .contact-info h3 {
   font-size: 0.8rem;
-  font-weight: 400;
+  font-weight: 700; /* Bold */
   margin-bottom: 10px;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  letter-spacing: 220%;
+  text-transform: uppercase;
 }
 
 .social-links {
@@ -137,7 +149,10 @@
   text-decoration: none;
   color: #333;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 600; /* Semi-bold */
+  font-family: 'Be Vietnam Pro', sans-serif;
+  letter-spacing: 220%;
+  text-transform: uppercase;
 }
 
 .contact-info {
@@ -149,12 +164,19 @@
   text-decoration: none;
   color: #333;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 600; /* Semi-bold */
   margin-bottom: 10px;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  letter-spacing: 220%;
+  text-transform: uppercase;
 }
 
 .phone-numbers {
   font-size: 0.9rem;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  letter-spacing: 220%;
+  text-transform: uppercase;
+  font-weight: 600; /* Semi-bold */
 }
 
 .phone-location {
@@ -162,11 +184,17 @@
 }
 
 .phone {
-  font-weight: 500;
+  font-weight: 600; /* Semi-bold */
+  font-family: 'Be Vietnam Pro', sans-serif;
+  letter-spacing: 220%;
+  text-transform: uppercase;
 }
 
 .location {
-  font-weight: 400;
+  font-weight: 600; /* Semi-bold */
+  font-family: 'Be Vietnam Pro', sans-serif;
+  letter-spacing: 220%;
+  text-transform: uppercase;
 }
 
 .copyright {
@@ -180,11 +208,19 @@
   color: #666;
   border-top: 1px solid #ddd;
   padding-top: 20px;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  letter-spacing: 220%;
+  text-transform: uppercase;
+  font-weight: 600; /* Semi-bold */
 }
 
 .legal-links a {
   text-decoration: none;
   color: #666;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  letter-spacing: 220%;
+  text-transform: uppercase;
+  font-weight: 600; /* Semi-bold */
 }
 
 @media (max-width: 768px) {

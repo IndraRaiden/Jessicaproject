@@ -117,11 +117,11 @@ onUnmounted(() => {
 /* Video foreground styling is now handled by the YoutubeEmbed component */
 
 .food-title {
-  font-family: 'Vietnam Pro', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 4.5rem;
-  font-weight: 400;
+  font-weight: 700; /* Bold */
   color: white;
-  letter-spacing: 0.02em;
+  letter-spacing: 220%; /* Spacing 220 */
   margin-bottom: 2rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
@@ -129,11 +129,13 @@ onUnmounted(() => {
   transform: translateY(5px);
   position: relative;
   z-index: 1; /* Ensure title appears above the video */
+  text-transform: uppercase; /* CAPSLOCK: SIM */
 }
 
 .food-section:hover .food-title {
   transform: translateY(-5px);
-  letter-spacing: 0.08em;
+  /* Keep the letter-spacing consistent with specs */
+  letter-spacing: 220%;
 }
 
 /* Media query for mobile devices */
