@@ -2,8 +2,11 @@
 * {
   font-family: 'Be Vietnam Pro', sans-serif !important;
   font-weight: 600 !important; /* Semi-bold */
-  letter-spacing: 220% !important; /* Spacing 220 */
+  letter-spacing: 0.1em !important; /* Fixed letter spacing value instead of percentage */
   text-transform: uppercase !important; /* CAPSLOCK: SIM */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* For elements that need bold instead of semibold */
@@ -20,4 +23,32 @@ h1, h2, h3, h4, h5, h6, .bold-text, .btn, button {
 [class^="icon-"] {
   font-family: inherit !important;
   text-transform: none !important; /* Don't transform icons */
+}
+
+/* iOS-specific fixes for text rendering */
+@supports (-webkit-touch-callout: none) {
+  * {
+    letter-spacing: 0.05em !important; /* Reduced letter spacing for iOS */
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: 0.06em !important;
+  }
+  
+  /* Fix for SVG rendering on iOS */
+  svg {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+  
+  /* Specific fixes for mobile iOS */
+  @media (max-width: 767px) {
+    * {
+      letter-spacing: 0.04em !important;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      letter-spacing: 0.05em !important;
+    }
+  }
 }

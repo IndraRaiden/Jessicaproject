@@ -211,4 +211,24 @@ const toggleSidebar = () => {
   
   /* Mobile video styling is now handled by the YoutubeEmbed component */
 }
+
+/* iOS-specific fixes */
+@supports (-webkit-touch-callout: none) {
+  .hero-text-overlay h2 {
+    /* Fix for iOS text rendering */
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 0.2em; /* Reduced letter spacing for iOS */
+    padding: 0 10px;
+    width: auto;
+    display: inline-block;
+  }
+  
+  #oara-logo {
+    /* Ensure SVG renders properly on iOS */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+}
 </style>
