@@ -126,7 +126,7 @@ export default {
     }
   },
   mounted() {
-    // Add event listeners for the arrows
+    // Add event listeners for arrow navigation
     const leftArrow = document.querySelector('.left-arrow');
     const rightArrow = document.querySelector('.right-arrow');
     
@@ -136,6 +136,12 @@ export default {
     
     if (rightArrow) {
       rightArrow.addEventListener('click', this.showNextTestimonial);
+    }
+    
+    // Set initial testimonial as active
+    const initialTestimonial = document.getElementById('testimonial-1');
+    if (initialTestimonial) {
+      initialTestimonial.classList.add('active');
     }
   },
   beforeDestroy() {
@@ -158,13 +164,22 @@ export default {
         const testimonial = document.getElementById(`testimonial-${i}`);
         if (testimonial) {
           testimonial.style.display = 'none';
+          testimonial.classList.remove('active');
         }
       }
       
-      // Show the selected testimonial
+      // Show the selected testimonial with animation
       const selectedTestimonial = document.getElementById(`testimonial-${index}`);
       if (selectedTestimonial) {
         selectedTestimonial.style.display = 'flex';
+        
+        // Trigger reflow to ensure animation works
+        void selectedTestimonial.offsetWidth;
+        
+        // Add active class to trigger animation
+        setTimeout(() => {
+          selectedTestimonial.classList.add('active');
+        }, 10);
       }
       
       this.currentTestimonial = index;
@@ -192,7 +207,7 @@ export default {
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #f2eee3;
+  /* Removed background-color to allow underlying image to show through */
   padding-bottom: 4rem;
 }
 
@@ -203,7 +218,8 @@ export default {
   padding: 4rem 2rem;
   text-align: center;
   font-family: 'Inter', sans-serif;
-  min-height: 40vh;
+  height: auto;
+  min-height: 90vh; /* Balanced height to accommodate review text */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -216,7 +232,23 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: opacity 0.3s ease;
+  transition: all 0.5s ease;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 6rem 6rem;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto; /* Allow scrolling if content exceeds container */
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.testimonial-content.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .scroll-arrow {
@@ -227,6 +259,8 @@ export default {
   transition: all 0.3s ease;
   padding: 0 1.5rem;
   opacity: 0.7;
+  z-index: 10;
+  position: relative;
 }
 
 .scroll-arrow:hover {
@@ -236,10 +270,10 @@ export default {
 .quote {
   font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 1.2rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 2rem;
   font-weight: 600; /* Semi-bold */
   line-height: 1.6;
-  max-width: 800px;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
   letter-spacing: 220%; /* Spacing 220 */
@@ -297,7 +331,7 @@ export default {
   font-size: 1.5rem;
   margin-bottom: 2.5rem;
   font-weight: 700; /* Bold */
-  letter-spacing: 220%; /* Spacing 220 */
+  letter-spacing: 220%; /* Spacing 220 - exact specification */
   text-transform: uppercase; /* CAPSLOCK: SIM */
 }
 
@@ -311,7 +345,7 @@ export default {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
   font-weight: 700; /* Bold */
-  letter-spacing: 220%; /* Spacing 220 */
+  letter-spacing: 220%; /* Spacing 220 - exact specification */
   text-transform: uppercase; /* CAPSLOCK: SIM */
 }
 
@@ -321,7 +355,7 @@ export default {
   margin-bottom: 1.5rem;
   max-width: 90%;
   font-weight: 600; /* Semi-bold */
-  letter-spacing: 220%; /* Spacing 220 */
+  letter-spacing: 220%; /* Spacing 220 - exact specification */
   text-transform: uppercase; /* CAPSLOCK: SIM */
 }
 
@@ -332,14 +366,14 @@ export default {
   align-items: center;
   padding: 1rem 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
 }
 
 .capability-item span {
   font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 1rem;
   font-weight: 600; /* Semi-bold */
-  letter-spacing: 220%; /* Spacing 220 */
+  letter-spacing: 220%; /* Spacing 220 - exact specification */
   text-transform: uppercase; /* CAPSLOCK: SIM */
 }
 
@@ -349,7 +383,7 @@ export default {
   color: #333;
   cursor: pointer;
   font-weight: 600; /* Semi-bold */
-  letter-spacing: 220%; /* Spacing 220 */
+  letter-spacing: 220%; /* Spacing 220 - exact specification */
   text-transform: uppercase; /* CAPSLOCK: SIM */
 }
 
@@ -375,7 +409,7 @@ export default {
   
   .testimonial {
     padding: 4rem 1rem;
-    min-height: 35vh;
+    min-height: 80vh;
   }
   
   .scroll-arrow {

@@ -42,9 +42,8 @@
           </div>
           
           <div class="social-links">
-            <a href="#" class="social-link" style="color: #29332e !important;">BEHANCE</a>
-            <a href="#" class="social-link" style="color: #29332e !important;">JOURNAL</a>
-            <a href="#" class="social-link" style="color: #29332e !important;">ARCHIVE</a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" style="color: #29332e !important;">INSTAGRAM</a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" style="color: #29332e !important;">LINKEDIN</a>
           </div>
         </div>
       </div>
@@ -335,6 +334,9 @@ const navigateTo = (route) => {
   color: #29332e;
   text-decoration: none;
   transition: color 0.2s;
+  font-weight: 600; /* Semi-bold */
+  letter-spacing: 220%; /* Spacing 220 - exact specification */
+  text-transform: uppercase; /* CAPSLOCK: SIM */
 }
 
 .social-link:hover {

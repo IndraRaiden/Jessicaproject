@@ -4,9 +4,9 @@
     <div class="real-estate-intro">
       <div class="left-spacer"></div>
       <div class="intro-content">
-        <p class="main-text">We craft immersive real estate destinations that maximize asset value and make people feel alive</p>
+        <p class="main-text instrument-text">We craft immersive real estate destinations that maximize asset value and make people feel alive</p>
         <div class="find-out-more">
-          <a @click="navigateToAboutPage" class="about-link">Find out more.</a>
+          <a @click="navigateToAboutPage" class="about-link instrument-text">Find out more.</a>
         </div>
       </div>
       <div class="right-spacer"></div>
@@ -112,29 +112,30 @@ onUnmounted(() => {
   padding: 0;
 }
 
-.intro-content .main-text {
-  font-family: 'Be Vietnam Pro', sans-serif;
+.intro-content .main-text,
+.instrument-text {
+  font-family: 'Instrument Serif', serif !important;
   font-size: 2rem;
-  font-weight: 600; /* Semi-bold */
+  font-weight: 400; /* Regular as shown in the image */
   color: #1d2a29;
   margin-bottom: 2.5rem;
   line-height: 1.3;
-  letter-spacing: 220%; /* Spacing 220 */
-  text-transform: uppercase; /* CAPSLOCK: SIM */
+  letter-spacing: 20px; /* Spacing 20 as shown in the image */
+  text-transform: none; /* CAPSLOCK: NÃO as shown in the image */
 }
 
 .find-out-more a {
-  font-family: 'Be Vietnam Pro', sans-serif;
+  font-family: 'Instrument Serif', serif !important;
   font-size: 1.2rem;
-  font-weight: 600; /* Semi-bold */
+  font-weight: 400; /* Regular as shown in the image */
   color: #1d2a29;
   text-decoration: underline;
   transition: all 0.3s ease;
   display: inline-block;
   position: relative;
   cursor: pointer;
-  letter-spacing: 220%; /* Spacing 220 */
-  text-transform: uppercase; /* CAPSLOCK: SIM */
+  letter-spacing: 20px; /* Spacing 20 as shown in the image */
+  text-transform: none; /* CAPSLOCK: NÃO as shown in the image */
 }
 
 .find-out-more a:hover {

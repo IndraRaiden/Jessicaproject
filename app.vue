@@ -31,8 +31,9 @@ export default {
 </script>
 
 <style>
-/* Import Be Vietnam Pro font */
+/* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;700&display=swap');
 * {
   margin: 0;
   padding: 0;
