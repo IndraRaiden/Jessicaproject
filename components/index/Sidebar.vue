@@ -368,5 +368,20 @@ const navigateTo = (route) => {
   .sidebar-content {
     padding: 2rem 1.5rem;
   }
+  
+  .logo-img {
+    height: 100px;
+  }
+  
+  .hospitality-text {
+    height: 50px;
+    margin-top: -5.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hospitality-text h2 {
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+  }
 }
 </style>
