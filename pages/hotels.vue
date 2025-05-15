@@ -14,7 +14,7 @@
         <!-- Hotel Project Cards will be added here -->
         <div class="hotel-card">
           <div class="hotel-image">
-            <img src="/placeholder-hotel.jpg" alt="Hotel Project" />
+            <img src="/swimming-dark.jpg" alt="Hotel Project" />
           </div>
           <div class="hotel-info">
             <h3>HORIZON RESORT</h3>
@@ -24,7 +24,7 @@
         
         <div class="hotel-card">
           <div class="hotel-image">
-            <img src="/placeholder-hotel.jpg" alt="Hotel Project" />
+            <img src="/swimming-dark.jpg" alt="Hotel Project" />
           </div>
           <div class="hotel-info">
             <h3>MERIDIAN SUITES</h3>
