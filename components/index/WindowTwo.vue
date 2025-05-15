@@ -15,7 +15,7 @@
     <!-- Hotels section with image -->
     <div class="hotels-section" @click="navigateToHotelsPage">
       <div class="hotels-image">
-        <div class="hotels-title">HOTELS</div>
+        <div class="hotels-title">Hotels</div>
         <div class="video-container">
           <YoutubeEmbed 
             videoId="1ksLFMF-MGw" 
@@ -115,7 +115,7 @@ onUnmounted(() => {
 .intro-content .main-text,
 .instrument-text {
   font-family: 'Instrument Serif', serif !important;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 400; /* Regular as shown in the image */
   color: #1d2a29;
   margin-bottom: 2.5rem;
@@ -191,7 +191,7 @@ onUnmounted(() => {
 
 .hotels-title {
   font-family: 'Be Vietnam Pro', sans-serif;
-  font-size: 4.5rem;
+  font-size: 6rem;
   font-weight: 700; /* Bold */
   color: white;
   letter-spacing: 220%; /* Spacing 220 */
@@ -202,7 +202,7 @@ onUnmounted(() => {
   transform: translateY(5px);
   position: relative;
   z-index: 1; /* Ensure title appears above the video */
-  text-transform: uppercase; /* CAPSLOCK: SIM */
+  text-transform: none; /* CAPSLOCK: NÃO */
 }
 
 .hotels-section:hover .hotels-title {
@@ -226,7 +226,7 @@ onUnmounted(() => {
   }
   
   .intro-content .main-text {
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
   }
   
@@ -241,7 +241,7 @@ onUnmounted(() => {
   }
   
   .hotels-title {
-    font-size: 3rem;
+    font-size: 4rem;
   }
   
   /* Mobile video styling is now handled by the YoutubeEmbed component */

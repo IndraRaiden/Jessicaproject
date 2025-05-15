@@ -208,10 +208,10 @@ const navigateTo = (route) => {
 .hospitality-text h2 {
   font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 0.95rem;
-  font-weight: 300;
+  font-weight: 600; /* SEMIBOLD as per specifications */
   color: #29332e;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
+  letter-spacing: 220%; /* 220 spacing as per specifications */
+  text-transform: uppercase; /* CAPSLOCK: SIM */
   margin: 0;
   padding: 0 15px;
   line-height: 1;

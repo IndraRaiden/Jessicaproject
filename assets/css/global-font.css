@@ -3,7 +3,7 @@
   font-family: 'Be Vietnam Pro', sans-serif !important;
   font-weight: 600 !important; /* Semi-bold */
   letter-spacing: 0.1em !important; /* Fixed letter spacing value instead of percentage */
-  text-transform: uppercase !important; /* CAPSLOCK: SIM */
+  /* text-transform: uppercase !important; */ /* CAPSLOCK: NÃO */
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

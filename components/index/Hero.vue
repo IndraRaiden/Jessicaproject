@@ -26,7 +26,7 @@
 
       <div class="hero-text-overlay">
         <div class="horizontal-line top-line"></div>
-        <h2>HOSPITALITY DESIGN + STRATEGY</h2>
+        <h2 style="letter-spacing: 0.6em !important;">HOSPITALITY DESIGN + STRATEGY</h2>
         <div class="horizontal-line bottom-line"></div>
       </div>
     </div>
@@ -117,10 +117,10 @@ const toggleSidebar = () => {
 .hero-text-overlay h2 {
   font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 0.8rem;
-  font-weight: 300;
+  font-weight: 600; /* SEMIBOLD as per specifications */
   color: rgba(255, 255, 255, 0.7);
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
+  letter-spacing: 0.6em !important; /* Increased letter spacing applied directly in CSS */
+  text-transform: uppercase; /* CAPSLOCK: SIM */
   margin: 0;
   position: relative;
   background-color: transparent;
@@ -219,7 +219,7 @@ const toggleSidebar = () => {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    letter-spacing: 0.2em; /* Reduced letter spacing for iOS */
+    letter-spacing: 0.6em !important; /* Increased letter spacing for iOS */
     padding: 0 10px;
     width: auto;
     display: inline-block;

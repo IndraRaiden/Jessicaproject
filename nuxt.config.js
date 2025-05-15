@@ -5,6 +5,14 @@ export default defineNuxtConfig({
     '~/assets/css/main.css',
     '~/assets/css/global-font.css'
   ],
+  
+  // Add PostCSS configuration for Tailwind
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
 
   devtools: { enabled: true },
   compatibilityDate: '2025-04-24',
