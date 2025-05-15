@@ -21,11 +21,52 @@
 
           <div class="nav-group">
             <div class="nav-links">
-              <a @click.prevent="navigateTo('/hotels')" class="nav-link">HOTELS</a>
-              <a @click.prevent="navigateTo('/foodnbeverage')" class="nav-link">FOOD</a>
-              <a @click.prevent="navigateTo('/wellness')" class="nav-link">WELLNESS</a>
-              <a @click.prevent="navigateTo('/about')" class="nav-link">ABOUT US</a>
+              <div class="nav-column hotels-column">
+                <a @click.prevent="navigateTo('/hotels')" class="nav-link hotels-link">HOTELS</a>
+              </div>
+              
+              <div class="nav-column food-column">
+                <a @click.prevent="navigateTo('/foodnbeverage')" class="nav-link food-link">FOOD</a>
+                <div class="food-list">
+                  <a @click.prevent="navigateTo('/food/matador-room')" class="food-item">MATADOR ROOM,<br>JEAN GEORGES</a>
+                  <a @click.prevent="navigateTo('/food/the-street')" class="food-item">THE STREET,<br>SOUTH SEAPORT, NY</a>
+                  <a @click.prevent="navigateTo('/food/council-oak')" class="food-item">COUNCIL OAK, GRAMADO</a>
+                  <a @click.prevent="navigateTo('/food/shinsegae')" class="food-item">SHINSEGAE FOOD HALL,<br>DAEGEON</a>
+                  <a @click.prevent="navigateTo('/food/hyatt-regency')" class="food-item">HYATT REGENCY,<br>SIGNATURE RESTAURANT</a>
+                  <a @click.prevent="navigateTo('/foodnbeverage')" class="food-item see-all">See all Food ></a>
+                </div>
+              </div>
+              
+              <div class="nav-column cultural-column">
+                <a @click.prevent="navigateTo('/santuaries-and-cultural')" class="nav-link sanctuaries-link">CULTURAL</a>
+              </div>
+              
+              <div class="nav-column about-column">
+                <a @click.prevent="navigateTo('/about')" class="nav-link about-link">ABOUT & SERVICES</a>
+              </div>
             </div>
+          </div>
+          
+
+          <div class="hotels-list">
+            <a @click.prevent="navigateTo('/hotels/equinox-chicago')" class="hotel-item">EQUINOX HOTEL, CHICAGO</a>
+            <a @click.prevent="navigateTo('/hotels/equinox-houston')" class="hotel-item">EQUINOX HOTEL, HOUSTON</a>
+            <a @click.prevent="navigateTo('/hotels/legendre-paris')" class="hotel-item">LEGENDRE 40, PARIS</a>
+            <a @click.prevent="navigateTo('/hotels/edition-tampa')" class="hotel-item">EDITION HOTEL, TAMPA</a>
+            <a @click.prevent="navigateTo('/hotels/emmons-ny')" class="hotel-item">EMMONS HOTEL, NY</a>
+            <a @click.prevent="navigateTo('/hotels/w-escapes-gramado')" class="hotel-item">W ESCAPES GRAMADO</a>
+            <a @click.prevent="navigateTo('/hotels/w-residences-gramado')" class="hotel-item">W THE RESIDENCES GRAMADO</a>
+            <a @click.prevent="navigateTo('/hotels/w-residence-sao-paulo')" class="hotel-item">W THE RESIDENCE, SÃO PAULO</a>
+            <a @click.prevent="navigateTo('/hotels/hilton-garden-inn')" class="hotel-item">HILTON GARDEN INN</a>
+            <a @click.prevent="navigateTo('/hotels/holiday-inn-rio')" class="hotel-item">HOLIDAY INN PORTO MARAVILHA,<br>RIO DE JANEIRO</a>
+            <a @click.prevent="navigateTo('/hotels/transamerica-fit')" class="hotel-item">TRANSAMERICA FIT CONCEPT</a>
+            <a @click.prevent="navigateTo('/hotels/hard-rock-sao-paulo')" class="hotel-item">HARD ROCK HOTEL, SÃO PAULO</a>
+            <a @click.prevent="navigateTo('/hotels/hard-rock-gramado')" class="hotel-item">HARD ROCK HOTEL, GRAMADO</a>
+            <a @click.prevent="navigateTo('/hotels/hard-rock-caldas-novas')" class="hotel-item">HARD ROCK HOTEL,<br>CALDAS NOVAS</a>
+            <a @click.prevent="navigateTo('/hotels/pensacola')" class="hotel-item">PENSACOLA HOTEL</a>
+            <a @click.prevent="navigateTo('/hotels/sheraton-santos')" class="hotel-item">SHERATON SANTOS</a>
+            <a @click.prevent="navigateTo('/hotels/westin-jekyll-island')" class="hotel-item">WESTIN HOTELS<br>JEKYLL ISLAND</a>
+            <a @click.prevent="navigateTo('/hotels')" class="hotel-item see-all">See all Hotels ></a>
           </div>
         </div>
         
@@ -248,10 +289,99 @@ const navigateTo = (route) => {
 .nav-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 2.5rem;
   margin-bottom: 3rem;
   width: 100%;
-  justify-content: space-between;
+  position: relative;
+  padding: 0;
+  height: 3rem;
+  align-items: flex-start;
+}
+
+.nav-column {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0 0.5rem;
+}
+
+.food-column {
+  width: 25%;
+  position: absolute;
+  left: 30%;
+}
+
+.hotels-column {
+  width: 15%;
+  position: absolute;
+  left: 0;
+}
+
+.cultural-column {
+  width: 15%;
+  position: absolute;
+  left: 58%;
+}
+
+.about-column {
+  width: 20%;
+  position: absolute;
+  right: 0;
+  text-align: right;
+}
+
+.hotels-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.hotel-item {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 1.25rem;
+  color: #29332e;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  display: block;
+  width: 100%;
+  padding: 0.2rem 0;
+  line-height: 1.3;
+}
+
+.hotel-item:hover {
+  color: #a67c52;
+}
+
+.hotel-item.see-all, .food-item.see-all {
+  color: #a67c52;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+
+
+.food-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 4rem;
+}
+
+.food-item {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 1.25rem;
+  color: #29332e;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  display: block;
+  padding: 0.2rem 0;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.food-item:hover {
+  color: #a67c52;
 }
 
 .nav-link {
@@ -266,6 +396,10 @@ const navigateTo = (route) => {
 
 .nav-link:hover {
   color: #a67c52;
+}
+
+.hotels-link, .food-link, .sanctuaries-link, .about-link {
+  position: relative;
 }
 
 .category-grid {
@@ -360,7 +494,19 @@ const navigateTo = (route) => {
     flex-direction: column;
     gap: 1rem;
     justify-content: flex-start;
+    height: auto;
   }
+  
+  .nav-column {
+    width: 100% !important;
+    margin-bottom: 1rem;
+  }
+  
+  .hotels-list {
+    padding: 0 0.5rem;
+  }
+  
+
   
   .category-grid {
     grid-template-columns: 1fr;
