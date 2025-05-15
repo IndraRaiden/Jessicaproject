@@ -28,11 +28,11 @@
               <div class="nav-column food-column">
                 <a @click.prevent="navigateTo('/foodnbeverage')" class="nav-link food-link">FOOD</a>
                 <div class="food-list">
-                  <a @click.prevent="navigateTo('/food/matador-room')" class="food-item">MATADOR ROOM,<br>JEAN GEORGES</a>
-                  <a @click.prevent="navigateTo('/food/the-street')" class="food-item">THE STREET,<br>SOUTH SEAPORT, NY</a>
-                  <a @click.prevent="navigateTo('/food/council-oak')" class="food-item">COUNCIL OAK, GRAMADO</a>
-                  <a @click.prevent="navigateTo('/food/shinsegae')" class="food-item">SHINSEGAE FOOD HALL,<br>DAEGEON</a>
-                  <a @click.prevent="navigateTo('/food/hyatt-regency')" class="food-item">HYATT REGENCY,<br>SIGNATURE RESTAURANT</a>
+                  <a @click.prevent="navigateTo('/matador-room')" class="food-item">MATADOR ROOM,<br>JEAN GEORGES</a>
+                  <a @click.prevent="navigateTo('/the-street')" class="food-item">THE STREET,<br>SOUTH SEAPORT, NY</a>
+                  <a @click.prevent="navigateTo('/council-oak')" class="food-item">COUNCIL OAK, GRAMADO</a>
+                  <a @click.prevent="navigateTo('/shinsegae-food-hall')" class="food-item">SHINSEGAE FOOD HALL,<br>DAEGON</a>
+                  <a @click.prevent="navigateTo('/hyatt-regency')" class="food-item">HYATT REGENCY,<br>SIGNATURE RESTAURANT</a>
                   <a @click.prevent="navigateTo('/foodnbeverage')" class="food-item see-all">See all Food ></a>
                 </div>
               </div>
