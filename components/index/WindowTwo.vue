@@ -15,7 +15,7 @@
     <!-- Hotels section with image -->
     <div class="hotels-section" @click="navigateToHotelsPage">
       <div class="hotels-image">
-        <div class="hotels-title">Hotels</div>
+        <div class="hotels-title">HOTELS</div>
         <div class="video-container">
           <YoutubeEmbed 
             videoId="1ksLFMF-MGw" 
@@ -202,7 +202,7 @@ onUnmounted(() => {
   transform: translateY(5px);
   position: relative;
   z-index: 1; /* Ensure title appears above the video */
-  text-transform: none; /* CAPSLOCK: NÃO */
+  text-transform: uppercase; /* CAPSLOCK: SIM - matching WindowThree */
 }
 
 .hotels-section:hover .hotels-title {

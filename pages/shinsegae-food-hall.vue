@@ -1,7 +1,6 @@
 <template>
   <div>
     <div class="page-background"></div>
-    <Navbar />
     <div class="project-page">
       <div class="project-header">
         <div class="project-meta">
@@ -54,8 +53,11 @@
 
 <script setup>
 import { onMounted, nextTick } from 'vue';
-import Navbar from '../components/Navbar.vue';
 import Footer from '../components/Footer.vue';
+
+definePageMeta({
+  layout: 'food'
+});
 
 onMounted(async () => {
   // Force a DOM update and ensure all components are properly mounted

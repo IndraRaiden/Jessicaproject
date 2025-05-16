@@ -1,7 +1,7 @@
 <template>
   <div class="page-background"></div>
   <div class="foodnbeverage-page">
-    <Navbar />
+    <NavbarV2 />
     <div class="hero-image-container">
       <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=100" alt="Food and Beverage Hero" class="hero-image" />
     </div>
@@ -10,14 +10,19 @@
       <div class="image-grid">
         <div class="grid-row">
           <div class="grid-item">
-            <img src="https://images.unsplash.com/photo-1470549638415-0a0755be0619?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Food image 1" />
+            <div class="project-link" @click="navigateToProject('/council-oak')">
+              <img src="https://images.unsplash.com/photo-1514516345957-556ca7c90a34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Council Oak" />
+              <div class="overlay">
+                <span>Council Oak</span>
+              </div>
+            </div>
           </div>
           
           <div class="grid-item">
-            <div class="project-link" @click="navigateToProject('/projectone')">
-              <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Food image 2" />
+            <div class="project-link" @click="navigateToProject('/hyatt-regency')">
+              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Hyatt Regency" />
               <div class="overlay">
-                <span>Project One</span>
+                <span>Hyatt Regency</span>
               </div>
             </div>
           </div>
@@ -25,11 +30,32 @@
         
         <div class="grid-row">
           <div class="grid-item">
-            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Food image 3" />
+            <div class="project-link" @click="navigateToProject('/shinsegae-food-hall')">
+              <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Shinsegae Food Hall" />
+              <div class="overlay">
+                <span>Shinsegae Food Hall</span>
+              </div>
+            </div>
           </div>
           
           <div class="grid-item">
-            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Food image 4" />
+            <div class="project-link" @click="navigateToProject('/matador-room')">
+              <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Matador Room" />
+              <div class="overlay">
+                <span>Matador Room</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="grid-row">
+          <div class="grid-item">
+            <div class="project-link" @click="navigateToProject('/the-street')">
+              <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="The Street" />
+              <div class="overlay">
+                <span>The Street</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -41,8 +67,12 @@
 <script setup>
 import { onMounted } from 'vue';
 import { useRouter } from 'vue-router';
-import Navbar from '~/components/Navbar.vue';
 import Footer from '~/components/Footer.vue';
+import NavbarV2 from '~/components/NavbarV2.vue';
+
+definePageMeta({
+  layout: 'food'
+});
 
 const router = useRouter();
 
@@ -83,7 +113,7 @@ onMounted(() => {
 .hero-image-container {
   width: 100%;
   height: 80vh;
-  margin-top: 0; /* Removed gap for the navbar */
+  margin-top: 70px; /* Added margin for the NavbarV2 */
   overflow: hidden;
   position: relative;
 }

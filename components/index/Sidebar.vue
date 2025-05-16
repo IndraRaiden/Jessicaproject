@@ -11,7 +11,7 @@
       
       <div class="hospitality-text">
         <div class="horizontal-line top-line"></div>
-        <h2>HOSPITALITY DESIGN + STRATEGY</h2>
+        <h2 style="letter-spacing: 0.6em !important;">HOSPITALITY DESIGN + STRATEGY</h2>
         <div class="horizontal-line bottom-line"></div>
       </div>
       
@@ -73,16 +73,16 @@
         <!-- Contact Information -->
         <div class="contact-section">
           <div class="contact-info">
-            <p style="color: #29332e !important;">HORIZON COLLECTIVE</p>
-            <p style="color: #29332e !important;">118 MERIDIAN AVENUE</p>
-            <p style="color: #29332e !important;">OSLO, NORWAY</p>
+            <p style="color: #29332e !important; margin-bottom: 10px;">HORIZON COLLECTIVE</p>
+            <p style="color: #29332e !important; margin-bottom: 10px;">118 MERIDIAN AVENUE</p>
+            <p style="color: #29332e !important; margin-bottom: 15px;">OSLO, NORWAY</p>
             <div class="contact-links">
-              <a href="mailto:hello@horizon.co" style="color: #29332e !important;">HELLO@HORIZON.CO</a>
-              <a href="tel:+4721558899" style="color: #29332e !important;">+47 215 588 99</a>
+              <a href="mailto:hello@horizon.co" style="color: #29332e !important; margin-bottom: 10px; display: block;">HELLO@HORIZON.CO</a>
+              <a href="tel:+4721558899" style="color: #29332e !important; display: block;">+47 215 588 99</a>
             </div>
           </div>
           
-          <div class="social-links">
+          <div class="social-links" style="margin-top: 15px;">
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" style="color: #29332e !important;">INSTAGRAM</a>
             <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" style="color: #29332e !important;">LINKEDIN</a>
           </div>
@@ -267,6 +267,7 @@ const navigateTo = (route) => {
   flex-direction: column;
   justify-content: space-between;
   height: calc(100% - 8rem);
+  padding-bottom: 2rem;
 }
 
 .nav-section {
@@ -435,6 +436,8 @@ const navigateTo = (route) => {
   align-items: flex-end;
   border-top: 1px solid #ddd;
   padding-top: 2rem;
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 .contact-info p {
@@ -529,7 +532,7 @@ const navigateTo = (route) => {
   
   .hospitality-text h2 {
     font-size: 0.8rem;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.6em !important;
   }
 }
 
@@ -540,7 +543,7 @@ const navigateTo = (route) => {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    letter-spacing: 0.2em; /* Reduced letter spacing for iOS */
+    letter-spacing: 0.6em !important; /* Matching hero section letter spacing */
     padding: 0 10px;
     width: auto;
     display: inline-block;
@@ -562,7 +565,7 @@ const navigateTo = (route) => {
   /* Fix for iOS text rendering in mobile */
   @media (max-width: 640px) {
     .hospitality-text h2 {
-      letter-spacing: 0.15em;
+      letter-spacing: 0.6em !important;
       font-size: 0.75rem;
     }
   }
