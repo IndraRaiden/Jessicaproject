@@ -116,30 +116,59 @@ onUnmounted(() => {
 .instrument-text {
   font-family: 'Instrument Serif', serif !important;
   font-size: 2.5rem;
-  font-weight: 400; /* Regular as shown in the image */
+  font-weight: 100; /* Thinnest possible weight */
   color: #1d2a29;
   margin-bottom: 2.5rem;
   line-height: 1.3;
   letter-spacing: 20px; /* Spacing 20 as shown in the image */
   text-transform: none; /* CAPSLOCK: NÃO as shown in the image */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: none; /* Remove any text shadow that might make text appear bolder */
+  font-variation-settings: 'wght' 100; /* For variable fonts, ensure lightest weight */
+  font-stretch: normal;
+  font-style: normal;
 }
 
 .find-out-more a {
   font-family: 'Instrument Serif', serif !important;
   font-size: 1.2rem;
-  font-weight: 400; /* Regular as shown in the image */
+  font-weight: 100; /* Thinnest possible weight */
   color: #1d2a29;
-  text-decoration: underline;
+  text-decoration: none; /* Remove default underline */
   transition: all 0.3s ease;
   display: inline-block;
   position: relative;
   cursor: pointer;
   letter-spacing: 20px; /* Spacing 20 as shown in the image */
   text-transform: none; /* CAPSLOCK: NÃO as shown in the image */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: none; /* Remove any text shadow that might make text appear bolder */
+  font-variation-settings: 'wght' 100; /* For variable fonts, ensure lightest weight */
+  font-stretch: normal;
+  font-style: normal;
+}
+
+/* Add custom underline with spacing */
+.find-out-more a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -6px; /* More spacing between text and underline */
+  left: 0;
+  background-color: #1d2a29;
+  transition: all 0.3s ease;
 }
 
 .find-out-more a:hover {
   opacity: 0.7;
+}
+
+/* Only show underline on hover */
+.find-out-more a:hover::after {
+  bottom: -8px; /* Slightly more spacing on hover */
 }
 
 /* Hotels section */
