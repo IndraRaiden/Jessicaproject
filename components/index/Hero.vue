@@ -117,7 +117,7 @@ const toggleSidebar = () => {
 .hero-text-overlay h2 {
   font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 0.8rem;
-  font-weight: 600; /* SEMIBOLD as per specifications */
+  font-weight: 400; /* Reduced boldness from 600 to 400 */
   color: rgba(255, 255, 255, 0.7);
   letter-spacing: 0.6em !important; /* Increased letter spacing applied directly in CSS */
   text-transform: uppercase; /* CAPSLOCK: SIM */

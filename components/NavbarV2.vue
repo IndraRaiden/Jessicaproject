@@ -15,11 +15,12 @@
           
           <!-- Navigation links in a horizontal layout -->
           <div class="nav-links">
+            <NuxtLink to="/foodnbeverage" class="nav-link">FOOD & BEVERAGE</NuxtLink>
+            <NuxtLink to="/hotels" class="nav-link">HOTELS</NuxtLink>
             <NuxtLink to="/about" class="nav-link">ABOUT OARA</NuxtLink>
             <NuxtLink to="/team" class="nav-link">TEAM</NuxtLink>
-            <NuxtLink to="/methodology" class="nav-link">METHODOLOGY</NuxtLink>
             <NuxtLink to="/contact" class="nav-link">CONTACT US</NuxtLink>
-            <NuxtLink to="/foodnbeverage" class="nav-link">FOOD & BEVERAGE</NuxtLink>
+            <div class="sidebar-toggle" @click="toggleSidebar">+</div>
           </div>
           
           <!-- Mobile menu button -->
@@ -33,11 +34,11 @@
       
       <!-- Mobile menu -->
       <div class="mobile-menu" :class="{ 'open': mobileMenuOpen }">
+        <NuxtLink to="/foodnbeverage" class="mobile-nav-link" @click="closeMobileMenu">FOOD & BEVERAGE</NuxtLink>
+        <NuxtLink to="/hotels" class="mobile-nav-link" @click="closeMobileMenu">HOTELS</NuxtLink>
         <NuxtLink to="/about" class="mobile-nav-link" @click="closeMobileMenu">ABOUT OARA</NuxtLink>
         <NuxtLink to="/team" class="mobile-nav-link" @click="closeMobileMenu">TEAM</NuxtLink>
-        <NuxtLink to="/methodology" class="mobile-nav-link" @click="closeMobileMenu">METHODOLOGY</NuxtLink>
         <NuxtLink to="/contact" class="mobile-nav-link" @click="closeMobileMenu">CONTACT US</NuxtLink>
-        <NuxtLink to="/foodnbeverage" class="mobile-nav-link" @click="closeMobileMenu">FOOD & BEVERAGE</NuxtLink>
       </div>
     </div>
   </div>
@@ -47,9 +48,12 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import { useRouter } from 'vue-router';
 
+const emit = defineEmits(['toggle-sidebar']);
+
 const router = useRouter();
 const isScrolled = ref(false);
 const mobileMenuOpen = ref(false);
+const sidebarOpen = ref(false);
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 10;
@@ -64,6 +68,11 @@ const toggleMobileMenu = () => {
 const closeMobileMenu = () => {
   mobileMenuOpen.value = false;
   document.body.style.overflow = '';
+};
+
+const toggleSidebar = () => {
+  // Emit an event that can be listened to by the parent component
+  emit('toggle-sidebar');
 };
 
 const navigateTo = (route) => {
@@ -144,6 +153,7 @@ onBeforeUnmount(() => {
 .nav-links {
   display: flex;
   gap: 30px;
+  align-items: center;
 }
 
 .nav-link {
@@ -239,6 +249,26 @@ onBeforeUnmount(() => {
   opacity: 0.8;
 }
 
+.sidebar-toggle {
+  font-size: 2.5rem;
+  font-weight: 400;
+  cursor: pointer;
+  color: #29332e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+  transform: rotate(0deg);
+  transition: transform 0.6s ease;
+  width: 40px;
+  height: 40px;
+  line-height: 0.7;
+}
+
+.sidebar-toggle:hover {
+  transform: rotate(90deg);
+}
+
 /* Media queries for responsiveness */
 @media (max-width: 992px) {
   .nav-links {
@@ -265,6 +295,10 @@ onBeforeUnmount(() => {
   
   #oara-logo {
     width: 100px;
+  }
+  
+  .sidebar-toggle {
+    display: none;
   }
 }
 </style>

@@ -49,23 +49,23 @@
           
 
           <div class="hotels-list">
-            <a @click.prevent="navigateTo('/hotels/equinox-chicago')" class="hotel-item">EQUINOX HOTEL, CHICAGO</a>
-            <a @click.prevent="navigateTo('/hotels/equinox-houston')" class="hotel-item">EQUINOX HOTEL, HOUSTON</a>
-            <a @click.prevent="navigateTo('/hotels/legendre-paris')" class="hotel-item">LEGENDRE 40, PARIS</a>
-            <a @click.prevent="navigateTo('/hotels/edition-tampa')" class="hotel-item">EDITION HOTEL, TAMPA</a>
-            <a @click.prevent="navigateTo('/hotels/emmons-ny')" class="hotel-item">EMMONS HOTEL, NY</a>
-            <a @click.prevent="navigateTo('/hotels/w-escapes-gramado')" class="hotel-item">W ESCAPES GRAMADO</a>
-            <a @click.prevent="navigateTo('/hotels/w-residences-gramado')" class="hotel-item">W THE RESIDENCES GRAMADO</a>
-            <a @click.prevent="navigateTo('/hotels/w-residence-sao-paulo')" class="hotel-item">W THE RESIDENCE, SÃO PAULO</a>
-            <a @click.prevent="navigateTo('/hotels/hilton-garden-inn')" class="hotel-item">HILTON GARDEN INN</a>
-            <a @click.prevent="navigateTo('/hotels/holiday-inn-rio')" class="hotel-item">HOLIDAY INN PORTO MARAVILHA,<br>RIO DE JANEIRO</a>
-            <a @click.prevent="navigateTo('/hotels/transamerica-fit')" class="hotel-item">TRANSAMERICA FIT CONCEPT</a>
-            <a @click.prevent="navigateTo('/hotels/hard-rock-sao-paulo')" class="hotel-item">HARD ROCK HOTEL, SÃO PAULO</a>
-            <a @click.prevent="navigateTo('/hotels/hard-rock-gramado')" class="hotel-item">HARD ROCK HOTEL, GRAMADO</a>
-            <a @click.prevent="navigateTo('/hotels/hard-rock-caldas-novas')" class="hotel-item">HARD ROCK HOTEL,<br>CALDAS NOVAS</a>
-            <a @click.prevent="navigateTo('/hotels/pensacola')" class="hotel-item">PENSACOLA HOTEL</a>
-            <a @click.prevent="navigateTo('/hotels/sheraton-santos')" class="hotel-item">SHERATON SANTOS</a>
-            <a @click.prevent="navigateTo('/hotels/westin-jekyll-island')" class="hotel-item">WESTIN HOTELS<br>JEKYLL ISLAND</a>
+            <a @click.prevent="navigateTo('/equinox-hotel-chicago')" class="hotel-item">EQUINOX HOTEL, CHICAGO</a>
+            <a @click.prevent="navigateTo('/equinox-hotel-houston')" class="hotel-item">EQUINOX HOTEL, HOUSTON</a>
+            <a @click.prevent="navigateTo('/legendre-40-paris')" class="hotel-item">LEGENDRE 40, PARIS</a>
+            <a @click.prevent="navigateTo('/edition-hotel-tampa')" class="hotel-item">EDITION HOTEL, TAMPA</a>
+            <a @click.prevent="navigateTo('/emmons-hotel-ny')" class="hotel-item">EMMONS HOTEL, NY</a>
+            <a @click.prevent="navigateTo('/w-escapes-gramado')" class="hotel-item">W ESCAPES GRAMADO</a>
+            <a @click.prevent="navigateTo('/w-residences-gramado')" class="hotel-item">W THE RESIDENCES GRAMADO</a>
+            <a @click.prevent="navigateTo('/w-residence-sao-paulo')" class="hotel-item">W THE RESIDENCE, SÃO PAULO</a>
+            <a @click.prevent="navigateTo('/hilton-garden-inn')" class="hotel-item">HILTON GARDEN INN</a>
+            <a @click.prevent="navigateTo('/holiday-inn-porto-maravilha')" class="hotel-item">HOLIDAY INN PORTO MARAVILHA,<br>RIO DE JANEIRO</a>
+            <a @click.prevent="navigateTo('/transamerica-fit-concept')" class="hotel-item">TRANSAMERICA FIT CONCEPT</a>
+            <a @click.prevent="navigateTo('/hard-rock-sao-paulo')" class="hotel-item">HARD ROCK HOTEL, SÃO PAULO</a>
+            <a @click.prevent="navigateTo('/hard-rock-gramado')" class="hotel-item">HARD ROCK HOTEL, GRAMADO</a>
+            <a @click.prevent="navigateTo('/hard-rock-caldas-novas')" class="hotel-item">HARD ROCK HOTEL, CALDAS NOVAS</a>
+            <a @click.prevent="navigateTo('/pensacola-hotel')" class="hotel-item">PENSACOLA HOTEL</a>
+            <a @click.prevent="navigateTo('/sheraton-santos')" class="hotel-item">SHERATON SANTOS</a>
+            <a @click.prevent="navigateTo('/westin-jekyll-island')" class="hotel-item">WESTIN HOTELS JEKYLL ISLAND</a>
             <a @click.prevent="navigateTo('/hotels')" class="hotel-item see-all">See all Hotels ></a>
           </div>
         </div>
@@ -141,10 +141,11 @@ const navigateTo = (route) => {
   width: 100%;
   height: 100vh;
   background-color: #f2eee3;
-  z-index: 1000;
+  z-index: 2000;
   transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   overflow-y: auto;
   overflow-x: hidden; /* Prevent horizontal scrollbar */
+  display: block;
 }
 
 .sidebar.open {

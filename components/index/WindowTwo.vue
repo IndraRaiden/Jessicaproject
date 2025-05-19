@@ -156,9 +156,10 @@ onUnmounted(() => {
   position: absolute;
   width: 100%;
   height: 1px;
-  bottom: -6px; /* More spacing between text and underline */
+  bottom: -10px; /* Increased spacing between text and underline */
   left: 0;
   background-color: #1d2a29;
+  opacity: 0; /* Hide underline by default */
   transition: all 0.3s ease;
 }
 
@@ -168,7 +169,8 @@ onUnmounted(() => {
 
 /* Only show underline on hover */
 .find-out-more a:hover::after {
-  bottom: -8px; /* Slightly more spacing on hover */
+  opacity: 1; /* Show underline on hover */
+  bottom: -10px; /* Maintain consistent spacing on hover */
 }
 
 /* Hotels section */

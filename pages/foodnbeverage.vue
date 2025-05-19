@@ -1,7 +1,8 @@
 <template>
-  <div class="page-background"></div>
   <div class="foodnbeverage-page">
-    <NavbarV2 />
+    <div class="page-background"></div>
+    <NavbarV2 @toggle-sidebar="toggleSidebar" />
+    <Sidebar :isOpen="sidebarOpen" @close="closeSidebar" />
     <div class="hero-image-container">
       <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=100" alt="Food and Beverage Hero" class="hero-image" />
     </div>
@@ -64,27 +65,49 @@
   </div>
 </template>
 
-<script setup>
-import { onMounted } from 'vue';
-import { useRouter } from 'vue-router';
+<script>
 import Footer from '~/components/Footer.vue';
 import NavbarV2 from '~/components/NavbarV2.vue';
+import Sidebar from '~/components/index/Sidebar.vue';
 
-definePageMeta({
-  layout: 'food'
-});
-
-const router = useRouter();
-
-const navigateToProject = (route) => {
-  // Use window.location for a hard navigation that ensures full page reload
-  window.location.href = route;
+export default {
+  components: {
+    NavbarV2,
+    Sidebar,
+    Footer
+  },
+  layout: 'food',
+  data() {
+    return {
+      sidebarOpen: false
+    };
+  },
+  methods: {
+    toggleSidebar() {
+      this.sidebarOpen = !this.sidebarOpen;
+    },
+    closeSidebar() {
+      this.sidebarOpen = false;
+    },
+    navigateToProject(route) {
+      // Use window.location for a hard navigation that ensures full page reload
+      window.location.href = route;
+    }
+  },
+  mounted() {
+    // Add event listener for the Escape key
+    document.addEventListener('keydown', (e) => {
+      // Close sidebar with Escape key
+      if (e.key === 'Escape' && this.sidebarOpen) {
+        this.closeSidebar();
+      }
+    });
+  },
+  beforeDestroy() {
+    // Clean up event listener
+    document.removeEventListener('keydown', this.handleKeyDown);
+  }
 };
-
-onMounted(() => {
-  // Animation or initialization logic can be added here
-  // Title is now set globally in nuxt.config.js
-});
 </script>
 
 <style scoped>

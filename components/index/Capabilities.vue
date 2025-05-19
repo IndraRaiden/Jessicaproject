@@ -56,18 +56,27 @@
         <p class="capability-description">We create environments that balance form, function and guest experience.</p>
         
         <div class="capability-item">
-          <span>Architecture & Interior Design</span>
-          <span class="read-more">read more →</span>
+          <span>Interior Design</span>
+          <span class="read-more" @click="toggleContent('interior')">↓</span>
+        </div>
+        <div class="capability-content" v-if="expandedItems.interior">
+          <p>We craft tailored environments that blend bold aesthetics with seamless operations, ensuring spaces inspire and perform.</p>
         </div>
         
         <div class="capability-item">
           <span>FF&E Design and Specification Package</span>
-          <span class="read-more">read more →</span>
+          <span class="read-more" @click="toggleContent('ffe')">↓</span>
+        </div>
+        <div class="capability-content" v-if="expandedItems.ffe">
+          <p>We identify and source furnishings and equipment that align precisely with the design vision and operational needs.</p>
         </div>
         
         <div class="capability-item">
           <span>Back-of-House Optimization & Design</span>
-          <span class="read-more">read more →</span>
+          <span class="read-more" @click="toggleContent('backofhouse')">↓</span>
+        </div>
+        <div class="capability-content" v-if="expandedItems.backofhouse">
+          <p>We streamline service-area layouts to enhance workflow, safety and staff productivity.</p>
         </div>
       </div>
       
@@ -78,17 +87,26 @@
         
         <div class="capability-item">
           <span>Brand Strategy & Experience Design</span>
-          <span class="read-more">read more →</span>
+          <span class="read-more" @click="toggleContent('brandstrategy')">↓</span>
+        </div>
+        <div class="capability-content" v-if="expandedItems.brandstrategy">
+          <p>We articulate compelling brand stories and design guest journeys that foster loyalty and differentiation.</p>
         </div>
         
         <div class="capability-item">
           <span>Placemaking, Spatial Concepts & Storytelling</span>
-          <span class="read-more">read more →</span>
+          <span class="read-more" @click="toggleContent('placemaking')">↓</span>
+        </div>
+        <div class="capability-content" v-if="expandedItems.placemaking">
+          <p>We develop site-specific concepts that weave local culture into immersive destination experiences.</p>
         </div>
         
         <div class="capability-item">
           <span>Service Design</span>
-          <span class="read-more">read more →</span>
+          <span class="read-more" @click="toggleContent('service')">↓</span>
+        </div>
+        <div class="capability-content" v-if="expandedItems.service">
+          <p>We design service frameworks that align guest journeys with operational efficiency and brand promise.</p>
         </div>
       </div>
       
@@ -99,17 +117,26 @@
         
         <div class="capability-item">
           <span>Owners Representation & Operator Interface</span>
-          <span class="read-more">read more →</span>
+          <span class="read-more" @click="toggleContent('owners')">↓</span>
+        </div>
+        <div class="capability-content" v-if="expandedItems.owners">
+          <p>We advocate for owners' interests and coordinate with operators to synchronize goals and execution.</p>
         </div>
         
         <div class="capability-item">
           <span>Architecture & Interiors Peer Review</span>
-          <span class="read-more">read more →</span>
+          <span class="read-more" @click="toggleContent('peerreview')">↓</span>
+        </div>
+        <div class="capability-content" v-if="expandedItems.peerreview">
+          <p>We evaluate design proposals against best practices, optimizing quality and compliance from concept through delivery.</p>
         </div>
         
         <div class="capability-item">
           <span>Advisory & Design Guidelines</span>
-          <span class="read-more">read more →</span>
+          <span class="read-more" @click="toggleContent('advisory')">↓</span>
+        </div>
+        <div class="capability-content" v-if="expandedItems.advisory">
+          <p>We provide strategic counsel and develop design guidelines that ensure consistency and excellence at every project phase.</p>
         </div>
       </div>
     </div>
@@ -122,7 +149,18 @@ export default {
   data() {
     return {
       currentTestimonial: 1,
-      totalTestimonials: 6
+      totalTestimonials: 6,
+      expandedItems: {
+        interior: false,
+        ffe: false,
+        backofhouse: false,
+        brandstrategy: false,
+        placemaking: false,
+        service: false,
+        owners: false,
+        peerreview: false,
+        advisory: false
+      }
     }
   },
   mounted() {
@@ -197,6 +235,11 @@ export default {
         prevIndex = this.totalTestimonials;
       }
       this.showTestimonial(prevIndex);
+    },
+    
+    toggleContent(itemId) {
+      // Toggle the expanded state of the clicked item
+      this.expandedItems[itemId] = !this.expandedItems[itemId];
     }
   }
 }
@@ -380,16 +423,41 @@ export default {
 
 .read-more {
   font-family: 'Be Vietnam Pro', sans-serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #333;
   cursor: pointer;
   font-weight: 600; /* Semi-bold */
-  letter-spacing: 220%; /* Spacing 220 - exact specification */
-  text-transform: uppercase; /* CAPSLOCK: SIM */
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-block;
 }
 
 .read-more:hover {
-  text-decoration: underline;
+  color: #000;
+  transform: translateY(2px);
+}
+
+/* Expandable content styling */
+.capability-content {
+  padding: 1rem 0;
+  margin-left: 1rem;
+  border-left: 2px solid rgba(0, 0, 0, 0.1);
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  max-width: 90%;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.capability-content p {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive adjustments */
@@ -406,6 +474,12 @@ export default {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
+  }
+  
+  .capability-content {
+    margin-left: 0;
+    padding-left: 1rem;
+    max-width: 100%;
   }
   
   .testimonial {
