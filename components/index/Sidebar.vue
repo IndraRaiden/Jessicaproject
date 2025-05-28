@@ -11,38 +11,46 @@
       
       <div class="hospitality-text">
         <div class="horizontal-line top-line"></div>
-        <h2 style="letter-spacing: 0.6em !important;">HOSPITALITY DESIGN + STRATEGY</h2>
+        <h2 style="letter-spacing: 0.6em !important;">{{ translations[currentLanguage].heroText }}</h2>
         <div class="horizontal-line bottom-line"></div>
       </div>
       
       <div class="sidebar-layout">
+        <!-- Language switcher -->
+        <div class="sidebar-language-switcher">
+          <button @click="toggleLanguage" class="sidebar-language-btn">
+            <span class="sidebar-language-icon">🌐</span>
+            <span class="sidebar-language-text">{{ currentLanguage === 'en' ? 'Português' : 'English' }}</span>
+          </button>
+        </div>
+        
         <!-- Main Navigation -->
         <div class="nav-section">
 
           <div class="nav-group">
             <div class="nav-links">
               <div class="nav-column hotels-column">
-                <a @click.prevent="navigateTo('/hotels')" class="nav-link hotels-link">HOTELS</a>
+                <a @click.prevent="navigateTo('/hotels')" class="nav-link hotels-link">{{ translations[currentLanguage].hotels }}</a>
               </div>
               
               <div class="nav-column food-column">
-                <a @click.prevent="navigateTo('/foodnbeverage')" class="nav-link food-link">FOOD</a>
+                <a @click.prevent="navigateTo('/foodnbeverage')" class="nav-link food-link">{{ translations[currentLanguage].food }}</a>
                 <div class="food-list">
                   <a @click.prevent="navigateTo('/matador-room')" class="food-item">MATADOR ROOM,<br>JEAN GEORGES</a>
                   <a @click.prevent="navigateTo('/the-street')" class="food-item">THE STREET,<br>SOUTH SEAPORT, NY</a>
                   <a @click.prevent="navigateTo('/council-oak')" class="food-item">COUNCIL OAK, GRAMADO</a>
                   <a @click.prevent="navigateTo('/shinsegae-food-hall')" class="food-item">SHINSEGAE FOOD HALL,<br>DAEGON</a>
                   <a @click.prevent="navigateTo('/hyatt-regency')" class="food-item">HYATT REGENCY,<br>SIGNATURE RESTAURANT</a>
-                  <a @click.prevent="navigateTo('/foodnbeverage')" class="food-item see-all">See all Food ></a>
+                  <a @click.prevent="navigateTo('/foodnbeverage')" class="food-item see-all">{{ translations[currentLanguage].seeAllFood }} ></a>
                 </div>
               </div>
               
               <div class="nav-column cultural-column">
-                <a @click.prevent="navigateTo('/santuaries-and-cultural')" class="nav-link sanctuaries-link">CULTURAL</a>
+                <a @click.prevent="navigateTo('/santuaries-and-cultural')" class="nav-link sanctuaries-link">{{ translations[currentLanguage].cultural }}</a>
               </div>
               
               <div class="nav-column about-column">
-                <a @click.prevent="navigateTo('/about')" class="nav-link about-link">ABOUT & SERVICES</a>
+                <a @click.prevent="navigateTo('/about')" class="nav-link about-link">{{ translations[currentLanguage].about }}</a>
               </div>
             </div>
           </div>
@@ -84,7 +92,7 @@
           
           <div class="social-links" style="margin-top: 15px;">
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" style="color: #29332e !important;">INSTAGRAM</a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" style="color: #29332e !important;">LINKEDIN</a>
+            <a href="https://www.linkedin.com/in/jessicalianza?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" class="social-link" style="color: #29332e !important;">LINKEDIN</a>
           </div>
         </div>
       </div>
@@ -94,6 +102,7 @@
 
 <script setup>
 import { useRouter } from 'vue-router';
+import { ref, reactive, onMounted } from 'vue';
 
 const router = useRouter();
 const props = defineProps({
@@ -105,8 +114,48 @@ const props = defineProps({
 
 const emit = defineEmits(['close']);
 
+// Language state
+const currentLanguage = ref('en');
+
+// Translations object
+const translations = reactive({
+  en: {
+    heroText: 'HOSPITALITY DESIGN + STRATEGY',
+    hotels: 'HOTELS',
+    food: 'FOOD',
+    cultural: 'CULTURAL',
+    about: 'ABOUT & SERVICES',
+    seeAllFood: 'See all Food'
+  },
+  pt: {
+    heroText: 'DESIGN E ESTRATÉGIA DE HOSPITALIDADE',
+    hotels: 'HOTÉIS',
+    food: 'GASTRONOMIA',
+    cultural: 'CULTURAL',
+    about: 'SOBRE & SERVIÇOS',
+    seeAllFood: 'Ver todos os restaurantes'
+  }
+});
+
+// Check for saved language preference on component mount
+onMounted(() => {
+  if (process.client) {
+    const savedLanguage = localStorage.getItem('preferredLanguage');
+    if (savedLanguage) {
+      currentLanguage.value = savedLanguage;
+    }
+  }
+});
+
 const closeSidebar = () => {
   emit('close');
+}
+
+// Toggle language function
+const toggleLanguage = () => {
+  currentLanguage.value = currentLanguage.value === 'en' ? 'pt' : 'en';
+  // Store language preference in localStorage for persistence
+  localStorage.setItem('preferredLanguage', currentLanguage.value);
 };
 
 const navigateTo = (route) => {
@@ -446,6 +495,62 @@ const navigateTo = (route) => {
   font-size: 0.9rem;
   color: #29332e;
   margin-bottom: 0.3rem;
+}
+
+/* Language switcher styles */
+.sidebar-language-switcher {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.sidebar-language-btn {
+  background-color: transparent;
+  color: #29332e;
+  border: 1px solid #a67c52;
+  border-radius: 30px;
+  padding: 8px 16px;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar-language-icon {
+  font-size: 0.9rem;
+}
+
+.sidebar-language-text {
+  letter-spacing: 0.05em;
+  position: relative;
+  z-index: 2;
+}
+
+.sidebar-language-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(166, 124, 82, 0.1);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.sidebar-language-btn:hover {
+  color: #a67c52;
+}
+
+.sidebar-language-btn:hover::before {
+  transform: translateX(0);
 }
 
 .contact-links {

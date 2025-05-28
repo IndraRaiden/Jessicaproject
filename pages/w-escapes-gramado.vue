@@ -26,7 +26,7 @@
           <h2 class="section-title">W ESCAPES GRAMADO. REDEFINING MOUNTAIN LUXURY...</h2>
           
           <div class="image-container">
-            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="W Escapes Gramado exterior" class="feature-image" />
+            <img src="~/public/hotels/walpinscape/Captura de pantalla 2025-05-27 193602.png" alt="W Escapes Gramado exterior" class="feature-image" />
           </div>
           
           <div class="content-footer">
@@ -38,11 +38,31 @@
         <div class="content-section">
           <div class="image-grid">
             <div class="grid-item">
-              <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Hotel image 1" />
+              <img src="~/public/hotels/walpinscape/Captura de pantalla 2025-05-27 193734.png" alt="W Escapes Lobby" />
             </div>
             
             <div class="grid-item">
-              <img src="https://images.unsplash.com/photo-1562778612-e1e0cda9915c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Hotel image 2" />
+              <img src="~/public/hotels/walpinscape/Captura de pantalla 2025-05-27 193748.png" alt="W Escapes Suite" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/walpinscape/Captura de pantalla 2025-05-27 193819.png" alt="W Escapes Pool" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/walpinscape/Captura de pantalla 2025-05-27 194143.png" alt="W Escapes Restaurant" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/walpinscape/Captura de pantalla 2025-05-27 194312.png" alt="W Escapes Lounge" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/walpinscape/Captura de pantalla 2025-05-27 194517.png" alt="W Escapes Spa" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/walpinscape/Captura de pantalla 2025-05-27 194544.png" alt="W Escapes Mountain View" />
             </div>
           </div>
         </div>

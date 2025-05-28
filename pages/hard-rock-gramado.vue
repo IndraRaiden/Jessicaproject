@@ -26,7 +26,7 @@
           <h2 class="section-title">HARD ROCK HOTEL, GRAMADO. VIBRANT MOUNTAIN HOSPITALITY...</h2>
           
           <div class="image-container">
-            <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Hard Rock Hotel Gramado exterior" class="feature-image" />
+            <img src="~/public/hotels/hardrockgrimaldo/Captura de pantalla 2025-05-27 191941.png" alt="Hard Rock Hotel Gramado exterior" class="feature-image" />
           </div>
           
           <div class="content-footer">
@@ -38,11 +38,35 @@
         <div class="content-section">
           <div class="image-grid">
             <div class="grid-item">
-              <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Hotel image 1" />
+              <img src="~/public/hotels/hardrockgrimaldo/Captura de pantalla 2025-05-27 192020.png" alt="Hard Rock Hotel Exterior View" />
             </div>
             
             <div class="grid-item">
-              <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Hotel image 2" />
+              <img src="~/public/hotels/hardrockgrimaldo/Captura de pantalla 2025-05-27 192049.png" alt="Hard Rock Hotel Lobby" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/hardrockgrimaldo/Captura de pantalla 2025-05-27 192115.png" alt="Hard Rock Hotel Room" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/hardrockgrimaldo/Captura de pantalla 2025-05-27 192140.png" alt="Hard Rock Hotel Pool" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/hardrockgrimaldo/Captura de pantalla 2025-05-27 192156.png" alt="Hard Rock Hotel Restaurant" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/hardrockgrimaldo/Captura de pantalla 2025-05-27 192222.png" alt="Hard Rock Hotel Bar" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/hardrockgrimaldo/Captura de pantalla 2025-05-27 192259.png" alt="Hard Rock Hotel Spa" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/hardrockgrimaldo/Captura de pantalla 2025-05-27 192325.png" alt="Hard Rock Hotel Entertainment" />
             </div>
           </div>
         </div>

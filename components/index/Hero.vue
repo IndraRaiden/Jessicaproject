@@ -13,6 +13,13 @@
         />
       </div>
       
+      <!-- Language switcher -->
+      <div class="language-switcher">
+        <button @click="toggleLanguage" class="language-btn">
+          <span class="language-text">{{ currentLanguage === 'en' ? 'PT' : 'EN' }}</span>
+        </button>
+      </div>
+      
       <!-- Logo overlay on video (positioned above the text) -->
       <div class="logo-overlay">
         <svg id="oara-logo" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1227.7 534.5">
@@ -26,7 +33,7 @@
 
       <div class="hero-text-overlay">
         <div class="horizontal-line top-line"></div>
-        <h2 style="letter-spacing: 0.6em !important;">HOSPITALITY DESIGN + STRATEGY</h2>
+        <h2 style="letter-spacing: 0.6em !important;">{{ translations[currentLanguage].heroText }}</h2>
         <div class="horizontal-line bottom-line"></div>
       </div>
     </div>
@@ -34,9 +41,37 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, reactive } from 'vue';
 
 const emit = defineEmits(['toggle-sidebar']);
+
+// Language state
+const currentLanguage = ref('en');
+
+// Translations object
+const translations = reactive({
+  en: {
+    heroText: 'HOSPITALITY DESIGN + STRATEGY'
+  },
+  pt: {
+    heroText: 'DESIGN E ESTRATÉGIA DE HOSPITALIDADE'
+  }
+});
+
+// Toggle language function
+const toggleLanguage = () => {
+  currentLanguage.value = currentLanguage.value === 'en' ? 'pt' : 'en';
+  // Store language preference in localStorage for persistence
+  localStorage.setItem('preferredLanguage', currentLanguage.value);
+};
+
+// Check for saved language preference on component mount
+if (process.client) {
+  const savedLanguage = localStorage.getItem('preferredLanguage');
+  if (savedLanguage) {
+    currentLanguage.value = savedLanguage;
+  }
+}
 
 const toggleSidebar = () => {
   emit('toggle-sidebar');
@@ -173,6 +208,60 @@ const toggleSidebar = () => {
   transform: translateY(-50%) rotate(90deg);
 }
 
+/* Language switcher styles */
+.language-switcher {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 20;
+}
+
+.language-btn {
+  background-color: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.language-text {
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  position: relative;
+  z-index: 2;
+}
+
+.language-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.language-btn:hover {
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+.language-btn:hover::before {
+  transform: translateY(0);
+}
+
 /* Media query for mobile devices */
 @media (max-width: 768px) {
   .header {
@@ -206,6 +295,17 @@ const toggleSidebar = () => {
   }
   
   .hero-text-overlay h2 {
+    font-size: 0.7rem;
+  }
+  
+  .language-switcher {
+    top: 20px;
+    right: 20px;
+  }
+  
+  .language-btn {
+    width: 36px;
+    height: 36px;
     font-size: 0.7rem;
   }
   
