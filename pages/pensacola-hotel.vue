@@ -26,7 +26,7 @@
           <h2 class="section-title">PENSACOLA HOTEL. REDEFINING BEACHFRONT LUXURY...</h2>
           
           <div class="image-container">
-            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Pensacola Hotel exterior" class="feature-image" />
+            <img src="~/public/hotels/pensacola/51.png" alt="Pensacola Hotel exterior" class="feature-image" />
           </div>
           
           <div class="content-footer">
@@ -38,11 +38,35 @@
         <div class="content-section">
           <div class="image-grid">
             <div class="grid-item">
-              <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Hotel image 1" />
+              <img src="~/public/hotels/pensacola/52.png" alt="Pensacola Hotel Lobby" />
             </div>
             
             <div class="grid-item">
-              <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Hotel image 2" />
+              <img src="~/public/hotels/pensacola/53.png" alt="Pensacola Hotel Suite" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/pensacola/54.png" alt="Pensacola Hotel Room" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/pensacola/55.png" alt="Pensacola Hotel Bathroom" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/pensacola/56.png" alt="Pensacola Hotel Restaurant" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/pensacola/57.png" alt="Pensacola Hotel Pool" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/pensacola/58.png" alt="Pensacola Hotel Beach View" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/pensacola/59.png" alt="Pensacola Hotel Spa" />
             </div>
           </div>
         </div>

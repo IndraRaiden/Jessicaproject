@@ -26,7 +26,7 @@
           <h2 class="section-title">SHERATON SANTOS. SOPHISTICATED COASTAL HOSPITALITY...</h2>
           
           <div class="image-container">
-            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Sheraton Santos exterior" class="feature-image" />
+            <img src="~/public/hotels/sheraton/74.png" alt="Sheraton Santos exterior" class="feature-image" />
           </div>
           
           <div class="content-footer">
@@ -38,11 +38,11 @@
         <div class="content-section">
           <div class="image-grid">
             <div class="grid-item">
-              <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Hotel image 1" />
+              <img src="~/public/hotels/sheraton/75.png" alt="Sheraton Santos Lobby" />
             </div>
             
             <div class="grid-item">
-              <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Hotel image 2" />
+              <img src="~/public/hotels/sheraton/76.png" alt="Sheraton Santos Suite" />
             </div>
           </div>
         </div>

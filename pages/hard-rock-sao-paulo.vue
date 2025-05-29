@@ -26,7 +26,7 @@
           <h2 class="section-title">HARD ROCK HOTEL, SÃO PAULO. VIBRANT URBAN HOSPITALITY...</h2>
           
           <div class="image-container">
-            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Hard Rock Hotel São Paulo exterior" class="feature-image" />
+            <img src="~/public/hotels/hardrocksaopaulo/68.png" alt="Hard Rock Hotel São Paulo exterior" class="feature-image" />
           </div>
           
           <div class="content-footer">
@@ -38,11 +38,23 @@
         <div class="content-section">
           <div class="image-grid">
             <div class="grid-item">
-              <img src="https://images.unsplash.com/photo-1621275471769-e6aa344546d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Hotel image 1" />
+              <img src="~/public/hotels/hardrocksaopaulo/69.png" alt="Hard Rock São Paulo Lobby" />
             </div>
             
             <div class="grid-item">
-              <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Hotel image 2" />
+              <img src="~/public/hotels/hardrocksaopaulo/70.png" alt="Hard Rock São Paulo Suite" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/hardrocksaopaulo/71.png" alt="Hard Rock São Paulo Restaurant" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/hardrocksaopaulo/72.png" alt="Hard Rock São Paulo Bar" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/hardrocksaopaulo/73.png" alt="Hard Rock São Paulo Pool" />
             </div>
           </div>
         </div>

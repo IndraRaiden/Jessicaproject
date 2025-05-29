@@ -26,7 +26,7 @@
           <h2 class="section-title">THE STREET. URBAN DINING EXPERIENCE...</h2>
           
           <div class="image-container">
-            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="The Street interior" class="feature-image" />
+            <img src="~/public/restaurants/thestreet/47.png" alt="The Street interior" class="feature-image" />
           </div>
           
           <div class="content-footer">
@@ -38,11 +38,15 @@
         <div class="content-section">
           <div class="image-grid">
             <div class="grid-item">
-              <img src="https://images.unsplash.com/photo-1515669097368-22e68427d265?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Food image 1" />
+              <img src="~/public/restaurants/thestreet/48.png" alt="The Street Dining Area" />
             </div>
             
             <div class="grid-item">
-              <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Food image 2" />
+              <img src="~/public/restaurants/thestreet/49.png" alt="The Street Bar" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/restaurants/thestreet/50.png" alt="The Street Cuisine" />
             </div>
           </div>
         </div>
