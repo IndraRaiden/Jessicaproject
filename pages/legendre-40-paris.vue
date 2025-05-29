@@ -26,7 +26,7 @@
           <h2 class="section-title">LEGENDRE 40, PARIS. SOPHISTICATED HOSPITALITY EXPERIENCE...</h2>
           
           <div class="image-container">
-            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Legendre 40 Paris interior" class="feature-image" />
+            <img src="~/public/hotels/legendre/39.png" alt="Legendre 40 Paris interior" class="feature-image" />
           </div>
           
           <div class="content-footer">
@@ -38,11 +38,31 @@
         <div class="content-section">
           <div class="image-grid">
             <div class="grid-item">
-              <img src="https://images.unsplash.com/photo-1549294413-26f195471c9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Hotel image 1" />
+              <img src="~/public/hotels/legendre/40.png" alt="Legendre 40 Lobby" />
             </div>
             
             <div class="grid-item">
-              <img src="https://images.unsplash.com/photo-1519690889869-e705e59f72e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Hotel image 2" />
+              <img src="~/public/hotels/legendre/41.png" alt="Legendre 40 Suite" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/legendre/42.png" alt="Legendre 40 Bedroom" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/legendre/43.png" alt="Legendre 40 Bathroom" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/legendre/44.png" alt="Legendre 40 Dining" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/legendre/45.png" alt="Legendre 40 Lounge" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/legendre/46.png" alt="Legendre 40 Exterior" />
             </div>
           </div>
         </div>

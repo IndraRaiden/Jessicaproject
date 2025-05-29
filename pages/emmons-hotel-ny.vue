@@ -26,7 +26,7 @@
           <h2 class="section-title">EMMONS HOTEL, NY. SOPHISTICATED URBAN HOSPITALITY EXPERIENCE...</h2>
           
           <div class="image-container">
-            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Emmons Hotel NY interior" class="feature-image" />
+            <img src="~/public/hotels/emmons/Angulo_01.jpg" alt="Emmons Hotel NY interior" class="feature-image" />
           </div>
           
           <div class="content-footer">
@@ -38,11 +38,31 @@
         <div class="content-section">
           <div class="image-grid">
             <div class="grid-item">
-              <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Hotel image 1" />
+              <img src="~/public/hotels/emmons/Angulo_02.jpg" alt="Emmons Hotel Lounge" />
             </div>
             
             <div class="grid-item">
-              <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Hotel image 2" />
+              <img src="~/public/hotels/emmons/Angulo_03.jpg" alt="Emmons Hotel Suite" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/emmons/DET 1.jpg" alt="Emmons Hotel Detail 1" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/emmons/DET 2.jpg" alt="Emmons Hotel Detail 2" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/emmons/DET 3.jpg" alt="Emmons Hotel Detail 3" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/emmons/DET 4.jpg" alt="Emmons Hotel Detail 4" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/emmons/DET 5.jpg" alt="Emmons Hotel Detail 5" />
             </div>
           </div>
         </div>

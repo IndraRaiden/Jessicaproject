@@ -26,7 +26,7 @@
           <h2 class="section-title">MATADOR ROOM. SOPHISTICATED DINING EXPERIENCE...</h2>
           
           <div class="image-container">
-            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Matador Room interior" class="feature-image" />
+            <img src="~/public/restaurants/elmatadorroom/16.png" alt="Matador Room interior" class="feature-image" />
           </div>
           
           <div class="content-footer">
@@ -38,11 +38,15 @@
         <div class="content-section">
           <div class="image-grid">
             <div class="grid-item">
-              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Food image 1" />
+              <img src="~/public/restaurants/elmatadorroom/17.png" alt="Matador Room Dining Area" />
             </div>
             
             <div class="grid-item">
-              <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Food image 2" />
+              <img src="~/public/restaurants/elmatadorroom/18.png" alt="Matador Room Bar" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/restaurants/elmatadorroom/19.png" alt="Matador Room Cuisine" />
             </div>
           </div>
         </div>

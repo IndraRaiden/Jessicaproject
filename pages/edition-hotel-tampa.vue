@@ -26,7 +26,7 @@
           <h2 class="section-title">EDITION HOTEL, TAMPA. SOPHISTICATED HOSPITALITY EXPERIENCE...</h2>
           
           <div class="image-container">
-            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Edition Hotel Tampa interior" class="feature-image" />
+            <img src="~/public/hotels/editionhotel/Captura de pantalla 2025-05-28 234932.png" alt="Edition Hotel Tampa interior" class="feature-image" />
           </div>
           
           <div class="content-footer">
@@ -38,11 +38,19 @@
         <div class="content-section">
           <div class="image-grid">
             <div class="grid-item">
-              <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Hotel image 1" />
+              <img src="~/public/hotels/editionhotel/Captura de pantalla 2025-05-28 234958.png" alt="Edition Hotel Lobby" />
             </div>
             
             <div class="grid-item">
-              <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Hotel image 2" />
+              <img src="~/public/hotels/editionhotel/Captura de pantalla 2025-05-28 235013.png" alt="Edition Hotel Room" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/editionhotel/Captura de pantalla 2025-05-28 235024.png" alt="Edition Hotel Restaurant" />
+            </div>
+            
+            <div class="grid-item">
+              <img src="~/public/hotels/editionhotel/Captura de pantalla 2025-05-28 235037.png" alt="Edition Hotel Pool" />
             </div>
           </div>
         </div>
