@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="footer-columns">
       <div class="footer-column">
-        <h3>About us</h3>
+        <h3><a href="/about">About us</a></h3>
         <ul>
           <li><a href="/about">meet the Founder</a></li>
           <li><a href="/about">our team</a></li>
@@ -11,7 +11,7 @@
       </div>
 
       <div class="footer-column">
-        <h3>Services</h3>
+        <h3><a href="/services">Services</a></h3>
         <ul>
           <li><a href="/services">Design</a></li>
           <li><a href="/services">Estrategy</a></li>
@@ -20,7 +20,7 @@
       </div>
 
       <div class="footer-column">
-        <h3>Portfolio</h3>
+        <h3><a href="/hotels">Portfolio</a></h3>
         <ul>
           <li><a href="/hotels">Hotels</a></li>
           <li><a href="/foodnbeverage">Food</a></li>
@@ -29,7 +29,7 @@
       </div>
 
       <div class="footer-column">
-        <h3>Contact us</h3>
+        <h3><a href="/about">Contact us</a></h3>
         <a href="mailto:hello@weareoara.com" class="email">hello@weareoara.com</a>
         <div class="contact-info">
           <p>+1 646 651 7126 | New York</p>
@@ -52,7 +52,7 @@
   font-family: 'Be Vietnam Pro', sans-serif;
   position: relative;
   z-index: 10;
-  margin-top: 60px;
+  margin-top: 0;
 }
 
 .footer-columns {
@@ -72,6 +72,16 @@
   font-weight: 600;
   margin-bottom: 20px;
   color: #000;
+}
+
+.footer-column h3 a {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.footer-column h3 a:hover {
+  color: #666;
 }
 
 .footer-column ul {
