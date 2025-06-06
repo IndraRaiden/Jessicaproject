@@ -32,9 +32,7 @@
       </div>
 
       <div class="hero-text-overlay">
-        <div class="horizontal-line top-line"></div>
         <h2 style="letter-spacing: 0.6em !important;">{{ translations[currentLanguage].heroText }}</h2>
-        <div class="horizontal-line bottom-line"></div>
       </div>
     </div>
   </div>
@@ -51,10 +49,10 @@ const currentLanguage = ref('en');
 // Translations object
 const translations = reactive({
   en: {
-    heroText: 'HOSPITALITY DESIGN + STRATEGY'
+    heroText: ''
   },
   pt: {
-    heroText: 'DESIGN E ESTRATÉGIA DE HOSPITALIDADE'
+    heroText: ''
   }
 });
 

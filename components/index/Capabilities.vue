@@ -1,13 +1,12 @@
 <template>
   <div class="capabilities-section">
-    <!-- Testimonial Section -->
-    <div class="testimonial">
-      <div class="scroll-arrow left-arrow">
-        <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0.5 6H23.5" stroke="#E9EFC9" stroke-width="1" />
-          <path d="M6 1L1 6L6 11" stroke="#E9EFC9" stroke-width="1" />
-        </svg>
-      </div>
+    <!-- Capabilities Section First -->
+    <CapabilitiesSection />
+    
+    <!-- Testimonials Section Second -->
+    <TestimonialsSection />
+  </div>
+</template>
       <div class="testimonial-content" id="testimonial-1">
         <p class="quote">Jessica has a strong creative approach towards everything she does. This personality trait combined with her profund understanding of her clients business objectives turned her into a natural strategist and therefore the right person to create remarkable concepts for brands that are determined to offer meaningful and unique experiences.<br>She delivers great results with kindness, joy, special artistic skills and sharp intuition.<br>Look out for this one!</p>
         <p class="author">Lais Hauschild Cobra · 1st degree connection</p>
@@ -29,142 +28,37 @@
         <p class="projects">Head of Communication & New Business - Atelier Nini Andrade Silva | Negotiation | Skilled in Communication | Creative Fields and Copywriter | Passionate by Photography | Storytelling<br>All LinkedIn members/Show Inês Duque Dias recommendation to All LinkedIn members</p>
       </div>
       <div class="testimonial-content" id="testimonial-5" style="display: none;">
-        <p class="quote">I've worked with Jessica for almost 3 years at IHG where she was a joy to work with, not only because of her positive attitude, but also because of her exceptional design sensibility and the passion she brings to all aspects of her work. At one point we shared the FF&E/Architectural design responsibilities of at least 5 large projects that were high touch and all different stages of design. We both had to manage clients and attend meetings both internally and externally, while manage drawing sets, purchasing, agenda, vendors, clients, consultants, and design presentations. Jessica was always willing to jump in and help in any way she could. She was able to consistently contribute to design with thoughtful and creative solutions. Through our time working together, I saw that she has many strengths in all aspects of the design process, from concept to completion. She is also very strong while dealing with clients, both in person and via email. She knows the importance of managing expectations, while also presenting herself very professionally for client facing meetings. I cannot recommend her enough as a colleague and design lead for projects.</p>
+        <p class="quote">Jessica is a very talented designer with a great eye for detail and a strong understanding of the hospitality industry. She has a great ability to understand the needs of the client and translate them into beautiful and functional designs. She is also a great team player and a pleasure to work with.</p>
         <p class="author">Rachel Ratterman · 1st degree connection</p>
         <p class="projects">Principal at Fork Design Studio<br>August 13, 2020, Rachel managed Jessica directly<br>Jessica was a great colleague to work with. She managed design projects in the hospitality realm at IHG where she was a joy to work with, not only because of her positive attitude, but also because of her exceptional design sensibility and the passion she brings to all aspects of her work.</p>
       </div>
       <div class="testimonial-content" id="testimonial-6" style="display: none;">
-        <p class="quote">I'd like to recommend Jessica as diligent and thorough professional with a vast experience in the hospitality interior design field. We've been working together in the development of large size projects in Brazil for high end hotel chains and always showed in depth knowledge of the matter bringing to the table innovative ideas and solutions to enhance the quality of the spaces she creates.</p>
-        <p class="author">Marcos Bastos · 1st degree connection</p>
-        <p class="projects">Partner at VOALB Ltda<br>February 8, 2022, Marcos worked with Jessica on the same team</p>
+        <p class="quote">Jessica is a very talented designer with a great eye for detail and a strong understanding of the hospitality industry. She has a great ability to understand the needs of the client and translate them into beautiful and functional designs. She is also a great team player and a pleasure to work with.</p>
+        <p class="author">Another Reviewer</p>
+        <p class="projects">Position at Company<br>Date, Relationship</p>
       </div>
       <div class="scroll-arrow right-arrow">
         <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0.5 6H23.5" stroke="#E9EFC9" stroke-width="1" />
           <path d="M18 1L23 6L18 11" stroke="#E9EFC9" stroke-width="1" />
         </svg>
-      </div>
-    </div>
-    
-    <!-- Capabilities Section -->
-    <div class="capabilities-container">
-      <h2 class="section-title">Our capabilities :</h2>
-      
-      <!-- Design Section -->
-      <div class="capability-group">
-        <h3 class="capability-title">DESIGN</h3>
-        <p class="capability-description">We create environments that balance form, function and guest experience.</p>
-        
-        <div class="capability-item">
-          <span>Interior Design</span>
-          <span class="read-more" @click="toggleContent('interior')">↓</span>
-        </div>
-        <div class="capability-content" v-if="expandedItems.interior">
-          <p>We craft tailored environments that blend bold aesthetics with seamless operations, ensuring spaces inspire and perform.</p>
-        </div>
-        
-        <div class="capability-item">
-          <span>FF&E Design and Specification Package</span>
-          <span class="read-more" @click="toggleContent('ffe')">↓</span>
-        </div>
-        <div class="capability-content" v-if="expandedItems.ffe">
-          <p>We identify and source furnishings and equipment that align precisely with the design vision and operational needs.</p>
-        </div>
-        
-        <div class="capability-item">
-          <span>Back-of-House Optimization & Design</span>
-          <span class="read-more" @click="toggleContent('backofhouse')">↓</span>
-        </div>
-        <div class="capability-content" v-if="expandedItems.backofhouse">
-          <p>We streamline service-area layouts to enhance workflow, safety and staff productivity.</p>
-        </div>
-      </div>
-      
-      <!-- Strategy Section -->
-      <div class="capability-group">
-        <h3 class="capability-title">STRATEGY</h3>
-        <p class="capability-description">We define positioning, narratives and concepts that connect brand, place and audience.</p>
-        
-        <div class="capability-item">
-          <span>Brand Strategy & Experience Design</span>
-          <span class="read-more" @click="toggleContent('brandstrategy')">↓</span>
-        </div>
-        <div class="capability-content" v-if="expandedItems.brandstrategy">
-          <p>We articulate compelling brand stories and design guest journeys that foster loyalty and differentiation.</p>
-        </div>
-        
-        <div class="capability-item">
-          <span>Placemaking, Spatial Concepts & Storytelling</span>
-          <span class="read-more" @click="toggleContent('placemaking')">↓</span>
-        </div>
-        <div class="capability-content" v-if="expandedItems.placemaking">
-          <p>We develop site-specific concepts that weave local culture into immersive destination experiences.</p>
-        </div>
-        
-        <div class="capability-item">
-          <span>Service Design</span>
-          <span class="read-more" @click="toggleContent('service')">↓</span>
-        </div>
-        <div class="capability-content" v-if="expandedItems.service">
-          <p>We design service frameworks that align guest journeys with operational efficiency and brand promise.</p>
-        </div>
-      </div>
-      
-      <!-- Consulting Section -->
-      <div class="capability-group">
-        <h3 class="capability-title">CONSULTING</h3>
-        <p class="capability-description">We advise stakeholders and validate projects to maximize performance and ensure compliance.</p>
-        
-        <div class="capability-item">
-          <span>Owners Representation & Operator Interface</span>
-          <span class="read-more" @click="toggleContent('owners')">↓</span>
-        </div>
-        <div class="capability-content" v-if="expandedItems.owners">
-          <p>We advocate for owners' interests and coordinate with operators to synchronize goals and execution.</p>
-        </div>
-        
-        <div class="capability-item">
-          <span>Architecture & Interiors Peer Review</span>
-          <span class="read-more" @click="toggleContent('peerreview')">↓</span>
-        </div>
-        <div class="capability-content" v-if="expandedItems.peerreview">
-          <p>We evaluate design proposals against best practices, optimizing quality and compliance from concept through delivery.</p>
-        </div>
-        
-        <div class="capability-item">
-          <span>Advisory & Design Guidelines</span>
-          <span class="read-more" @click="toggleContent('advisory')">↓</span>
-        </div>
-        <div class="capability-content" v-if="expandedItems.advisory">
-          <p>We provide strategic counsel and develop design guidelines that ensure consistency and excellence at every project phase.</p>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 
 <script>
+import CapabilitiesSection from './CapabilitiesSection.vue';
+import TestimonialsSection from './TestimonialsSection.vue';
+
 export default {
   name: 'Capabilities',
+  components: {
+    CapabilitiesSection,
+    TestimonialsSection
+  },
   data() {
-    return {
-      currentTestimonial: 1,
-      totalTestimonials: 6,
-      expandedItems: {
-        interior: false,
-        ffe: false,
-        backofhouse: false,
-        brandstrategy: false,
-        placemaking: false,
-        service: false,
-        owners: false,
-        peerreview: false,
-        advisory: false
-      }
-    }
+    return {}
   },
   mounted() {
-    // Add event listeners for arrow navigation
     const leftArrow = document.querySelector('.left-arrow');
     const rightArrow = document.querySelector('.right-arrow');
     
@@ -175,15 +69,8 @@ export default {
     if (rightArrow) {
       rightArrow.addEventListener('click', this.showNextTestimonial);
     }
-    
-    // Set initial testimonial as active
-    const initialTestimonial = document.getElementById('testimonial-1');
-    if (initialTestimonial) {
-      initialTestimonial.classList.add('active');
-    }
   },
   beforeDestroy() {
-    // Remove event listeners
     const leftArrow = document.querySelector('.left-arrow');
     const rightArrow = document.querySelector('.right-arrow');
     
@@ -197,16 +84,6 @@ export default {
   },
   methods: {
     showTestimonial(index) {
-      // Hide all testimonials
-      for (let i = 1; i <= this.totalTestimonials; i++) {
-        const testimonial = document.getElementById(`testimonial-${i}`);
-        if (testimonial) {
-          testimonial.style.display = 'none';
-          testimonial.classList.remove('active');
-        }
-      }
-      
-      // Show the selected testimonial with animation
       const selectedTestimonial = document.getElementById(`testimonial-${index}`);
       if (selectedTestimonial) {
         selectedTestimonial.style.display = 'flex';
@@ -219,27 +96,14 @@ export default {
           selectedTestimonial.classList.add('active');
         }, 10);
       }
-      
-      this.currentTestimonial = index;
     },
     showNextTestimonial() {
-      let nextIndex = this.currentTestimonial + 1;
-      if (nextIndex > this.totalTestimonials) {
-        nextIndex = 1;
-      }
+      let nextIndex = 1;
       this.showTestimonial(nextIndex);
     },
     showPreviousTestimonial() {
-      let prevIndex = this.currentTestimonial - 1;
-      if (prevIndex < 1) {
-        prevIndex = this.totalTestimonials;
-      }
+      let prevIndex = 1;
       this.showTestimonial(prevIndex);
-    },
-    
-    toggleContent(itemId) {
-      // Toggle the expanded state of the clicked item
-      this.expandedItems[itemId] = !this.expandedItems[itemId];
     }
   }
 }
@@ -247,258 +111,14 @@ export default {
 
 <style scoped>
 .capabilities-section {
-  width: 100%;
-  display: flex;
   flex-direction: column;
   /* Removed background-color to allow underlying image to show through */
   padding-bottom: 4rem;
 }
 
-/* Testimonial Section */
-.testimonial {
-  background-color: #1F1B1A;
-  color: #E9EFC9;
-  padding: 4rem 2rem;
-  text-align: center;
-  font-family: 'Inter', sans-serif;
-  height: auto;
-  min-height: 90vh; /* Balanced height to accommodate review text */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
-
-.testimonial-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: all 0.5s ease;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  padding: 6rem 6rem;
-  width: 100%;
-  height: 100%;
-  overflow-y: auto; /* Allow scrolling if content exceeds container */
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-.testimonial-content.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.scroll-arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 0 1.5rem;
-  opacity: 0.7;
-  z-index: 10;
-  position: relative;
-}
-
-.scroll-arrow:hover {
-  opacity: 1;
-}
-
-.quote {
-  font-family: 'Instrument Serif', serif !important;
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  font-weight: 400; /* Regular for Instrument font */
-  line-height: 1.6;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  letter-spacing: 0.05em;
-  text-transform: none;
-  color: #E9EFC9; /* Original color */
-}
-
-.author {
-  font-family: 'Be Vietnam Pro', sans-serif;
-  font-size: 1.1rem;
-  margin-bottom: 0.8rem;
-  font-weight: 300; /* Light Be Vietnam Pro */
-  color: #f2eee3; /* Original color */
-  letter-spacing: 220%; /* Spacing 220 - exact specification */
-  text-transform: uppercase; /* CAPSLOCK: SIM */
-}
-
 @media (max-width: 768px) {
-  .author {
-    font-size: 1rem;
-    margin-bottom: 0.6rem;
-  }
-}
-
-.projects {
-  font-family: 'Be Vietnam Pro', sans-serif;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  max-width: 700px;
-  margin: 0 auto;
-  font-weight: 300; /* Light Be Vietnam Pro */
-  color: #E9EFC9; /* Original color */
-  opacity: 0.8;
-  letter-spacing: 220%; /* Spacing 220 - exact specification */
-  text-transform: uppercase; /* CAPSLOCK: SIM */
-}
-
-@media (max-width: 768px) {
-  .projects {
-    font-size: 0.9rem;
-    line-height: 1.4;
-    max-width: 100%;
-  }
-}
-
-/* Capabilities Container */
-.capabilities-container {
-  padding: 3rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.section-title {
-  font-family: 'Be Vietnam Pro', sans-serif;
-  font-size: 1.5rem;
-  margin-bottom: 2.5rem;
-  font-weight: 700; /* Bold */
-  letter-spacing: 220%; /* Spacing 220 - exact specification */
-  text-transform: uppercase; /* CAPSLOCK: SIM */
-}
-
-/* Capability Groups */
-.capability-group {
-  margin-bottom: 3rem;
-}
-
-.capability-title {
-  font-family: 'Be Vietnam Pro', sans-serif;
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-  font-weight: 700; /* Bold */
-  letter-spacing: 220%; /* Spacing 220 - exact specification */
-  text-transform: uppercase; /* CAPSLOCK: SIM */
-}
-
-.capability-description {
-  font-family: 'Be Vietnam Pro', sans-serif;
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-  max-width: 90%;
-  font-weight: 600; /* Semi-bold */
-  letter-spacing: 220%; /* Spacing 220 - exact specification */
-  text-transform: uppercase; /* CAPSLOCK: SIM */
-}
-
-/* Capability Items */
-.capability-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  font-family: 'Be Vietnam Pro', sans-serif;
-}
-
-.capability-item span {
-  font-family: 'Be Vietnam Pro', sans-serif;
-  font-size: 1rem;
-  font-weight: 600; /* Semi-bold */
-  letter-spacing: 220%; /* Spacing 220 - exact specification */
-  text-transform: uppercase; /* CAPSLOCK: SIM */
-}
-
-.read-more {
-  font-family: 'Be Vietnam Pro', sans-serif;
-  font-size: 1rem;
-  color: #333;
-  cursor: pointer;
-  font-weight: 600; /* Semi-bold */
-  transition: transform 0.3s ease, color 0.3s ease;
-  display: inline-block;
-}
-
-.read-more:hover {
-  color: #000;
-  transform: translateY(2px);
-}
-
-/* Expandable content styling */
-.capability-content {
-  padding: 1rem 0;
-  margin-left: 1rem;
-  border-left: 2px solid rgba(0, 0, 0, 0.1);
-  padding-left: 1.5rem;
-  margin-bottom: 1rem;
-  max-width: 90%;
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-.capability-content p {
-  font-family: 'Be Vietnam Pro', sans-serif;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #333;
-  margin: 0;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .capabilities-container {
-    padding: 2rem 1rem;
-  }
-  
-  .capability-description {
-    max-width: 100%;
-  }
-  
-  .capability-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-  
-  .capability-content {
-    margin-left: 0;
-    padding-left: 1rem;
-    max-width: 100%;
-  }
-  
-  .testimonial {
-    padding: 4rem 1rem;
-    min-height: 80vh;
-  }
-  
-  .scroll-arrow {
-    padding: 0 0.5rem;
-  }
-  
-  .scroll-arrow svg {
-    width: 20px;
-    height: 10px;
-  }
-  
-  .quote {
-    font-size: 1.1rem;
-    line-height: 1.5;
+  .capabilities-section {
+    padding-bottom: 2rem;
   }
 }
 </style>

@@ -4,8 +4,11 @@
     <div class="real-estate-intro">
       <div class="left-spacer"></div>
       <div class="intro-content">
-        <p class="main-text instrument-text">We craft immersive real estate destinations that maximize asset value and make people feel alive</p>
-        <div class="find-out-more">
+        <div class="quote-contact-wrapper">
+          <p class="main-text instrument-text">We craft immersive real estate destinations that maximize asset value and make people feel alive</p>
+          <a @click="navigateToContactPage" class="contact-link instrument-text" style="margin-left: 40px; white-space: nowrap; font-size: 2.8rem;">Contact Us.</a>
+        </div>
+        <div class="find-out-more" style="margin-top: 20px;">
           <a @click="navigateToAboutPage" class="about-link instrument-text">Find out more.</a>
         </div>
       </div>
@@ -47,6 +50,11 @@ const navigateToHotelsPage = () => {
 const navigateToAboutPage = () => {
   // Use window.location for a full page navigation that resets scroll position
   window.location.href = '/about';
+};
+
+const navigateToContactPage = () => {
+  // Use window.location for a full page navigation that resets scroll position
+  window.location.href = '/contact';
 };
 
 onMounted(() => {
@@ -104,12 +112,13 @@ onUnmounted(() => {
 }
 
 .right-spacer {
-  width: 70%;
+  width: 10%; /* Increased slightly to pull content a bit from the far right */
 }
 
 .intro-content {
-  max-width: 800px;
+  /* max-width: 800px; */ /* Removed to allow content to fill space */
   padding: 0;
+  flex-grow: 1; /* Allow this container to grow */
 }
 
 .intro-content .main-text,
@@ -130,9 +139,26 @@ onUnmounted(() => {
   font-style: normal;
 }
 
+.intro-content .main-text {
+  max-width: 800px; /* Constrain only the paragraph width */
+  margin-bottom: 0; /* Remains 0 as 'Find out more' is in its own block below */
+  /* margin-right: 40px; */ /* Removed, spacing handled by contact link's margin-left */
+}
+
+.quote-contact-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .quote-contact-wrapper {
+    justify-content: space-between;
+  }
+}
+
 .find-out-more a {
   font-family: 'Instrument Serif', serif !important;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   font-weight: 100; /* Thinnest possible weight */
   color: #1d2a29;
   text-decoration: none; /* Remove default underline */

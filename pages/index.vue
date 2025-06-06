@@ -18,8 +18,11 @@
     <!-- WindowFive Component -->
     <WindowFive />
     
-    <!-- Capabilities Component -->
-    <Capabilities />
+    <!-- Capabilities Section -->
+    <CapabilitiesSection />
+    
+    <!-- Testimonials Section -->
+    <TestimonialsSection />
 
     <!-- CTA component removed from main index -->
 
@@ -35,7 +38,8 @@ import WindowTwo from '~/components/index/WindowTwo.vue';
 import WindowThree from '~/components/index/WindowThree.vue';
 import WindowFour from '~/components/index/WindowFour.vue';
 import WindowFive from '~/components/index/WindowFive.vue';
-import Capabilities from '~/components/index/Capabilities.vue';
+import CapabilitiesSection from '~/components/index/CapabilitiesSection.vue';
+import TestimonialsSection from '~/components/index/TestimonialsSection.vue';
 import Footer from '~/components/Footer.vue';
 
 export default {
@@ -46,7 +50,8 @@ export default {
     WindowThree,
     WindowFour,
     WindowFive,
-    Capabilities,
+    CapabilitiesSection,
+    TestimonialsSection,
     Footer
   },
   data() {
