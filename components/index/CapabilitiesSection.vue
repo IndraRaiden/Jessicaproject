@@ -1,41 +1,38 @@
 <template>
   <div class="capabilities-container">
-    <h2 class="section-title">Our capabilities :</h2>
+    <h2 class="section-title">Our services :</h2>
     
-    <div class="horizontal-capability-layout">
+    <div class="services-description">
+      <p>We deliver a true 360° approach, transforming real estate into immersive destinations through rigorous, brand-led placemaking and the creativity of soulful design</p>
+    </div>
+    
+    <div class="capability-groups">
       <!-- Design Section -->
       <div class="capability-group">
-        <h3 class="capability-main-title" @click="setActiveCapability('design')" style="cursor: pointer;">DESIGN</h3>
+        <h3 class="capability-main-title" @click="setActiveCapability('design')" :class="{ 'active': activeCapabilityGroup === 'design' }">
+          DESIGN
+          <span class="toggle-icon">{{ activeCapabilityGroup === 'design' ? '-' : '+' }}</span>
+        </h3>
         <div class="capability-group-content" :class="{ 'expanded': activeCapabilityGroup === 'design' }">
-          <p class="capability-main-description">We create environments that balance form, function and guest experience.</p>
+          <p class="capability-main-description">WE CREATE ENVIRONMENTS THAT BALANCE FORM, FUNCTION AND GUEST EXPERIENCE.</p>
           
-          <div class="capability-dropdown">
-            <div class="capability-item" @click="toggleItem('concept')">
-              <span>Concept Development</span>
-              <span class="dropdown-icon">{{ expandedItems.concept ? '▲' : '▼' }}</span>
-            </div>
-            <div class="capability-content" :class="{ 'expanded': expandedItems.concept }">
+          <div class="capability-content">
+            <div class="capability-item">
+              <h4>CONCEPT DEVELOPMENT</h4>
               <p>We craft distinctive design narratives that align with brand values and resonate with target audiences.</p>
+              <a href="#" class="read-more">Read More</a>
             </div>
-          </div>
-          
-          <div class="capability-dropdown">
-            <div class="capability-item" @click="toggleItem('space')">
-              <span>Space Planning</span>
-              <span class="dropdown-icon">{{ expandedItems.space ? '▲' : '▼' }}</span>
-            </div>
-            <div class="capability-content" :class="{ 'expanded': expandedItems.space }">
+            
+            <div class="capability-item">
+              <h4>SPACE PLANNING</h4>
               <p>We optimize spatial flow and functionality to create intuitive, engaging guest experiences.</p>
+              <a href="#" class="read-more">Read More</a>
             </div>
-          </div>
-          
-          <div class="capability-dropdown">
-            <div class="capability-item" @click="toggleItem('backofhouse')">
-              <span>Back of House Optimization & Design</span>
-              <span class="dropdown-icon">{{ expandedItems.backofhouse ? '▲' : '▼' }}</span>
-            </div>
-            <div class="capability-content" :class="{ 'expanded': expandedItems.backofhouse }">
+            
+            <div class="capability-item">
+              <h4>BACK OF HOUSE OPTIMIZATION & DESIGN</h4>
               <p>We streamline service-area layouts to enhance workflow, safety and staff productivity.</p>
+              <a href="#" class="read-more">Read More</a>
             </div>
           </div>
         </div>
@@ -43,81 +40,66 @@
       
       <!-- Strategy Section -->
       <div class="capability-group">
-        <h3 class="capability-main-title" @click="setActiveCapability('strategy')" style="cursor: pointer;">STRATEGY</h3>
+        <h3 class="capability-main-title" @click="setActiveCapability('strategy')" :class="{ 'active': activeCapabilityGroup === 'strategy' }">
+          STRATEGY
+          <span class="toggle-icon">{{ activeCapabilityGroup === 'strategy' ? '-' : '+' }}</span>
+        </h3>
         <div class="capability-group-content" :class="{ 'expanded': activeCapabilityGroup === 'strategy' }">
-          <p class="capability-main-description">We define positioning, narratives and concepts that connect brand, place and audience.</p>
+          <p class="capability-main-description">WE DEFINE POSITIONING, NARRATIVES AND CONCEPTS THAT CONNECT BRAND, PLACE AND AUDIENCE.</p>
           
-          <div class="capability-dropdown">
-            <div class="capability-item" @click="toggleItem('brand')">
-              <span>Brand Integration & Experience Design</span>
-              <span class="dropdown-icon">{{ expandedItems.brand ? '▲' : '▼' }}</span>
-            </div>
-            <div class="capability-content" :class="{ 'expanded': expandedItems.brand }">
+          <div class="capability-content">
+            <div class="capability-item">
+              <h4>BRAND INTEGRATION & EXPERIENCE DESIGN</h4>
               <p>We translate brand values into physical environments that deliver consistent, memorable experiences.</p>
+              <a href="#" class="read-more">Read More</a>
             </div>
-          </div>
-          
-          <div class="capability-dropdown">
-            <div class="capability-item" @click="toggleItem('market')">
-              <span>Market Positioning & Placemaking</span>
-              <span class="dropdown-icon">{{ expandedItems.market ? '▲' : '▼' }}</span>
-            </div>
-            <div class="capability-content" :class="{ 'expanded': expandedItems.market }">
+            
+            <div class="capability-item">
+              <h4>MARKET POSITIONING & PLACEMAKING</h4>
               <p>We identify competitive advantages and create distinctive experiences that capture target audiences.</p>
+              <a href="#" class="read-more">Read More</a>
             </div>
-          </div>
-          
-          <div class="capability-dropdown">
-            <div class="capability-item" @click="toggleItem('service')">
-              <span>Service Design</span>
-              <span class="dropdown-icon">{{ expandedItems.service ? '▲' : '▼' }}</span>
-            </div>
-            <div class="capability-content" :class="{ 'expanded': expandedItems.service }">
+            
+            <div class="capability-item">
+              <h4>SERVICE DESIGN</h4>
               <p>We design service frameworks that align guest journeys with operational efficiency and brand promise.</p>
+              <a href="#" class="read-more">Read More</a>
             </div>
           </div>
         </div>
       </div>
       
-      <!-- Consulting Section -->
+      <!-- Consultancy Section -->
       <div class="capability-group">
-        <h3 class="capability-main-title" @click="setActiveCapability('consultancy')" style="cursor: pointer;">CONSULTANCY</h3>
+        <h3 class="capability-main-title" @click="setActiveCapability('consultancy')" :class="{ 'active': activeCapabilityGroup === 'consultancy' }">
+          CONSULTANCY
+          <span class="toggle-icon">{{ activeCapabilityGroup === 'consultancy' ? '-' : '+' }}</span>
+        </h3>
         <div class="capability-group-content" :class="{ 'expanded': activeCapabilityGroup === 'consultancy' }">
-          <p class="capability-main-description">We advise stakeholders and validate projects to maximize performance and ensure compliance.</p>
+          <p class="capability-main-description">WE ADVISE STAKEHOLDERS AND VALIDATE PROJECTS TO MAXIMIZE PERFORMANCE AND ENSURE COMPLIANCE.</p>
           
-          <div class="capability-dropdown">
-            <div class="capability-item" @click="toggleItem('technical')">
-              <span>Technical Review & Compliance</span>
-              <span class="dropdown-icon">{{ expandedItems.technical ? '▲' : '▼' }}</span>
-            </div>
-            <div class="capability-content" :class="{ 'expanded': expandedItems.technical }">
+          <div class="capability-content">
+            <div class="capability-item">
+              <h4>TECHNICAL REVIEW & COMPLIANCE</h4>
               <p>We evaluate designs against brand standards, building codes and operational requirements to ensure feasibility.</p>
+              <a href="#" class="read-more">Read More</a>
             </div>
-          </div>
-          
-          <div class="capability-dropdown">
-            <div class="capability-item" @click="toggleItem('implementation')">
-              <span>Implementation Support</span>
-              <span class="dropdown-icon">{{ expandedItems.implementation ? '▲' : '▼' }}</span>
-            </div>
-            <div class="capability-content" :class="{ 'expanded': expandedItems.implementation }">
+            
+            <div class="capability-item">
+              <h4>IMPLEMENTATION SUPPORT</h4>
               <p>We provide guidance throughout construction and installation to maintain design integrity and quality.</p>
+              <a href="#" class="read-more">Read More</a>
             </div>
-          </div>
-          
-          <div class="capability-dropdown">
-            <div class="capability-item" @click="toggleItem('advisory')">
-              <span>Strategic Design Advisory</span>
-              <span class="dropdown-icon">{{ expandedItems.advisory ? '▲' : '▼' }}</span>
-            </div>
-            <div class="capability-content" :class="{ 'expanded': expandedItems.advisory }">
+            
+            <div class="capability-item">
+              <h4>STRATEGIC DESIGN ADVISORY</h4>
               <p>We provide strategic counsel and develop design guidelines that ensure consistency and excellence at every project phase.</p>
+              <a href="#" class="read-more">Read More</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -126,34 +108,12 @@ export default {
   name: 'CapabilitiesSection',
   data() {
     return {
-      expandedItems: {
-        concept: false,
-        space: false,
-        backofhouse: false,
-        brand: false,
-        market: false,
-        service: false,
-        technical: false,
-        implementation: false,
-        advisory: false
-      },
       activeCapabilityGroup: null
     };
   },
   methods: {
-    toggleItem(item) {
-      this.expandedItems[item] = !this.expandedItems[item];
-    },
-    setActiveCapability(groupName) {
-      if (this.activeCapabilityGroup === groupName) {
-        this.activeCapabilityGroup = null; // Collapse if already active
-      } else {
-        this.activeCapabilityGroup = groupName; // Expand new group
-      }
-      // Reset all individual dropdowns when the main group changes or collapses
-      Object.keys(this.expandedItems).forEach(key => {
-        this.expandedItems[key] = false;
-      });
+    setActiveCapability(capability) {
+      this.activeCapabilityGroup = this.activeCapabilityGroup === capability ? null : capability;
     }
   }
 };
@@ -163,168 +123,139 @@ export default {
 /* Ensure Be Vietnam Pro is loaded, e.g., in nuxt.config.js or a global CSS file */
 .capabilities-container {
   font-family: 'Be Vietnam Pro', sans-serif;
-  padding: 4rem 2rem;
-  max-width: 1300px;
+  padding: 4rem 0; /* No horizontal padding to extend to edges */
+  max-width: 100%; /* Full width */
   margin: 0 auto;
   width: 100%;
 }
 
 .section-title {
-  font-size: 1.5rem; /* Corresponds to 'OUR CAPABILITIES :' */
-  margin-bottom: 2.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
   font-weight: 700;
-  letter-spacing: 220%; 
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #000; /* Black text as per left side of image */
-  text-align: center; /* Center the main title */
+  color: #000;
+  text-align: center;
 }
 
-.horizontal-capability-layout {
+.services-description {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  padding: 0 1rem;
+}
+
+.services-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.capability-groups {
+  width: 100%;
   display: flex;
-  flex-direction: column; /* Stack groups vertically */
-  gap: 3rem; /* Vertical gap between groups */
-  /* align-items: center; /* Groups will self-center if they have max-width and margin:auto */
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .capability-group {
-  width: 100%; /* Each group takes full width of its container */
-  max-width: 900px; /* Constrain width for readability on large screens */
-  margin-left: auto; /* Center the group */
-  margin-right: auto; /* Center the group */
-  padding: 2rem;
-  border-radius: 16px;
-  /* background-color: #f8f8f7; /* REMOVED */
-  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* REMOVED */
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 8px;
 }
 
 .capability-main-title {
-  font-size: 2rem; /* Slightly larger */
-  margin-bottom: 0.75rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  letter-spacing: 220%;
   text-transform: uppercase;
   color: #000;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
 }
 
-.capability-main-description {
-  font-size: 1.2rem; /* Slightly larger */
-  margin-bottom: 2rem;
-  font-weight: 600;
-  letter-spacing: 220%;
-  text-transform: uppercase;
+.capability-main-title:hover {
+  color: #333;
+}
+
+.capability-main-title.active {
   color: #000;
-  max-width: 95%; /* Slightly wider */
+  font-weight: 800;
+}
+
+.toggle-icon {
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
 .capability-group-content {
   max-height: 0;
-  opacity: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out 0.1s, padding-top 0.5s ease-in-out, padding-bottom 0.5s ease-in-out;
-  padding-top: 0;
-  padding-bottom: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease, margin 0.5s ease;
+  opacity: 0;
+  margin-top: 0;
 }
 
 .capability-group-content.expanded {
-  max-height: 1200px; /* Adjust if content is taller */
+  max-height: 2000px; /* Large enough to contain all content */
   opacity: 1;
-  padding-top: 1.5rem; /* Add some space when expanded */
-  padding-bottom: 1rem;
+  margin-top: 1.5rem;
 }
 
-.capability-dropdown {
-  width: 100%;
-  margin-bottom: 0.5rem;
-}
-
-.capability-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  width: 100%;
-  box-sizing: border-box;
-  cursor: pointer;
-  background-color: #f9f9f9;
-  transition: background-color 0.3s ease;
-}
-
-.capability-item:hover {
-  background-color: #f0f0f0;
-}
-
-.capability-item span:first-child {
-  font-size: 1rem;
+.capability-main-description {
+  font-size: 1.2rem;
   font-weight: 600;
-  letter-spacing: 220%;
-  text-transform: uppercase;
-  color: #000;
-  word-wrap: break-word;
-  hyphens: auto;
-  max-width: 90%;
-}
-
-.dropdown-icon {
-  font-size: 0.85rem;
-  color: #666;
-  transition: transform 0.3s ease;
-}
-
-.capability-item:hover .dropdown-icon {
-  color: #333;
+  line-height: 1.4;
+  margin-bottom: 2rem;
 }
 
 .capability-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out, padding 0.3s ease;
-  font-size: 0.95rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.capability-item {
+  margin-bottom: 1.5rem;
+}
+
+.capability-item h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.capability-item p {
+  font-size: 0.85rem;
   line-height: 1.5;
-  color: #333;
-  opacity: 0.9;
-  max-width: 100%;
-  padding: 0;
-  border-left: 1px solid rgba(0, 0, 0, 0.1);
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-  background-color: white;
+  margin-bottom: 0.5rem;
 }
 
-.capability-content.expanded {
-  max-height: 200px; /* Adjust based on your content */
-  padding: 1rem;
+.read-more {
+  font-size: 0.8rem;
+  color: #000;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 0.5rem;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
-  .capabilities-container {
-    padding: 2rem 1rem;
-  }
-  .horizontal-capability-layout {
+  .capability-headers {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
   }
-  .capability-group {
+  
+  .capability-content-area {
+    flex-direction: column;
+  }
+  
+  .capability-column {
     width: 100%;
     margin-bottom: 2rem;
-  }
-  .capability-main-description {
-    max-width: 100%;
-  }
-  .capability-content {
-    padding-left: 0.5rem;
   }
 }
 </style>

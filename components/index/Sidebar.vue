@@ -305,6 +305,49 @@ const navigateTo = (route) => {
 </script>
 
 <style scoped>
+/* Services grid styles */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  width: 100%;
+  padding: 1rem 0;
+  margin: 0 -1.5rem; /* Negative margin to extend beyond container */
+  width: calc(100% + 3rem); /* Compensate for the negative margins */
+}
+
+.service-column {
+  width: 100%;
+  padding: 0 1.5rem; /* Add padding to maintain readability */
+}
+
+.service-category {
+  font-size: 2rem; /* Increased font size */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  width: 100%; /* Ensure full width */
+}
+
+.service-item {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.service-item h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.service-description {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
 :root {
   --dark-green: #28332d; /* Dark green color as specified */
   --cream-bg: #FEF6E4; /* Cream background color for sidebar items */
@@ -330,11 +373,11 @@ const navigateTo = (route) => {
 
 .sidebar-content {
   width: 100%;
-  margin: 0;
-  padding: 3rem 4rem;
   height: 100%;
-  display: flex;
-  flex-direction: column;
+  overflow-y: auto;
+  padding: 2rem 1rem; /* Reduced horizontal padding to extend content */
+  position: relative;
+  background-color: #FEF6E4; /* Cream background color */
 }
 
 /* Sidebar Menu Container Styles */
