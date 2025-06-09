@@ -5,108 +5,114 @@
     <div class="horizontal-capability-layout">
       <!-- Design Section -->
       <div class="capability-group">
-        <h3 class="capability-main-title">DESIGN</h3>
-        <p class="capability-main-description">We create environments that balance form, function and guest experience.</p>
-        
-        <div class="capability-dropdown">
-          <div class="capability-item" @click="toggleItem('concept')">
-            <span>Concept Development</span>
-            <span class="dropdown-icon">{{ expandedItems.concept ? '▲' : '▼' }}</span>
+        <h3 class="capability-main-title" @click="setActiveCapability('design')" style="cursor: pointer;">DESIGN</h3>
+        <div class="capability-group-content" :class="{ 'expanded': activeCapabilityGroup === 'design' }">
+          <p class="capability-main-description">We create environments that balance form, function and guest experience.</p>
+          
+          <div class="capability-dropdown">
+            <div class="capability-item" @click="toggleItem('concept')">
+              <span>Concept Development</span>
+              <span class="dropdown-icon">{{ expandedItems.concept ? '▲' : '▼' }}</span>
+            </div>
+            <div class="capability-content" :class="{ 'expanded': expandedItems.concept }">
+              <p>We craft distinctive design narratives that align with brand values and resonate with target audiences.</p>
+            </div>
           </div>
-          <div class="capability-content" :class="{ 'expanded': expandedItems.concept }">
-            <p>We craft distinctive design narratives that align with brand values and resonate with target audiences.</p>
+          
+          <div class="capability-dropdown">
+            <div class="capability-item" @click="toggleItem('space')">
+              <span>Space Planning</span>
+              <span class="dropdown-icon">{{ expandedItems.space ? '▲' : '▼' }}</span>
+            </div>
+            <div class="capability-content" :class="{ 'expanded': expandedItems.space }">
+              <p>We optimize spatial flow and functionality to create intuitive, engaging guest experiences.</p>
+            </div>
           </div>
-        </div>
-        
-        <div class="capability-dropdown">
-          <div class="capability-item" @click="toggleItem('space')">
-            <span>Space Planning</span>
-            <span class="dropdown-icon">{{ expandedItems.space ? '▲' : '▼' }}</span>
-          </div>
-          <div class="capability-content" :class="{ 'expanded': expandedItems.space }">
-            <p>We optimize spatial flow and functionality to create intuitive, engaging guest experiences.</p>
-          </div>
-        </div>
-        
-        <div class="capability-dropdown">
-          <div class="capability-item" @click="toggleItem('backofhouse')">
-            <span>Back of House Optimization & Design</span>
-            <span class="dropdown-icon">{{ expandedItems.backofhouse ? '▲' : '▼' }}</span>
-          </div>
-          <div class="capability-content" :class="{ 'expanded': expandedItems.backofhouse }">
-            <p>We streamline service-area layouts to enhance workflow, safety and staff productivity.</p>
+          
+          <div class="capability-dropdown">
+            <div class="capability-item" @click="toggleItem('backofhouse')">
+              <span>Back of House Optimization & Design</span>
+              <span class="dropdown-icon">{{ expandedItems.backofhouse ? '▲' : '▼' }}</span>
+            </div>
+            <div class="capability-content" :class="{ 'expanded': expandedItems.backofhouse }">
+              <p>We streamline service-area layouts to enhance workflow, safety and staff productivity.</p>
+            </div>
           </div>
         </div>
       </div>
       
       <!-- Strategy Section -->
       <div class="capability-group">
-        <h3 class="capability-main-title">STRATEGY</h3>
-        <p class="capability-main-description">We define positioning, narratives and concepts that connect brand, place and audience.</p>
-        
-        <div class="capability-dropdown">
-          <div class="capability-item" @click="toggleItem('brand')">
-            <span>Brand Integration & Experience Design</span>
-            <span class="dropdown-icon">{{ expandedItems.brand ? '▲' : '▼' }}</span>
+        <h3 class="capability-main-title" @click="setActiveCapability('strategy')" style="cursor: pointer;">STRATEGY</h3>
+        <div class="capability-group-content" :class="{ 'expanded': activeCapabilityGroup === 'strategy' }">
+          <p class="capability-main-description">We define positioning, narratives and concepts that connect brand, place and audience.</p>
+          
+          <div class="capability-dropdown">
+            <div class="capability-item" @click="toggleItem('brand')">
+              <span>Brand Integration & Experience Design</span>
+              <span class="dropdown-icon">{{ expandedItems.brand ? '▲' : '▼' }}</span>
+            </div>
+            <div class="capability-content" :class="{ 'expanded': expandedItems.brand }">
+              <p>We translate brand values into physical environments that deliver consistent, memorable experiences.</p>
+            </div>
           </div>
-          <div class="capability-content" :class="{ 'expanded': expandedItems.brand }">
-            <p>We translate brand values into physical environments that deliver consistent, memorable experiences.</p>
+          
+          <div class="capability-dropdown">
+            <div class="capability-item" @click="toggleItem('market')">
+              <span>Market Positioning & Placemaking</span>
+              <span class="dropdown-icon">{{ expandedItems.market ? '▲' : '▼' }}</span>
+            </div>
+            <div class="capability-content" :class="{ 'expanded': expandedItems.market }">
+              <p>We identify competitive advantages and create distinctive experiences that capture target audiences.</p>
+            </div>
           </div>
-        </div>
-        
-        <div class="capability-dropdown">
-          <div class="capability-item" @click="toggleItem('market')">
-            <span>Market Positioning & Placemaking</span>
-            <span class="dropdown-icon">{{ expandedItems.market ? '▲' : '▼' }}</span>
-          </div>
-          <div class="capability-content" :class="{ 'expanded': expandedItems.market }">
-            <p>We identify competitive advantages and create distinctive experiences that capture target audiences.</p>
-          </div>
-        </div>
-        
-        <div class="capability-dropdown">
-          <div class="capability-item" @click="toggleItem('service')">
-            <span>Service Design</span>
-            <span class="dropdown-icon">{{ expandedItems.service ? '▲' : '▼' }}</span>
-          </div>
-          <div class="capability-content" :class="{ 'expanded': expandedItems.service }">
-            <p>We design service frameworks that align guest journeys with operational efficiency and brand promise.</p>
+          
+          <div class="capability-dropdown">
+            <div class="capability-item" @click="toggleItem('service')">
+              <span>Service Design</span>
+              <span class="dropdown-icon">{{ expandedItems.service ? '▲' : '▼' }}</span>
+            </div>
+            <div class="capability-content" :class="{ 'expanded': expandedItems.service }">
+              <p>We design service frameworks that align guest journeys with operational efficiency and brand promise.</p>
+            </div>
           </div>
         </div>
       </div>
       
       <!-- Consulting Section -->
       <div class="capability-group">
-        <h3 class="capability-main-title">CONSULTANCY</h3>
-        <p class="capability-main-description">We advise stakeholders and validate projects to maximize performance and ensure compliance.</p>
-        
-        <div class="capability-dropdown">
-          <div class="capability-item" @click="toggleItem('technical')">
-            <span>Technical Review & Compliance</span>
-            <span class="dropdown-icon">{{ expandedItems.technical ? '▲' : '▼' }}</span>
+        <h3 class="capability-main-title" @click="setActiveCapability('consultancy')" style="cursor: pointer;">CONSULTANCY</h3>
+        <div class="capability-group-content" :class="{ 'expanded': activeCapabilityGroup === 'consultancy' }">
+          <p class="capability-main-description">We advise stakeholders and validate projects to maximize performance and ensure compliance.</p>
+          
+          <div class="capability-dropdown">
+            <div class="capability-item" @click="toggleItem('technical')">
+              <span>Technical Review & Compliance</span>
+              <span class="dropdown-icon">{{ expandedItems.technical ? '▲' : '▼' }}</span>
+            </div>
+            <div class="capability-content" :class="{ 'expanded': expandedItems.technical }">
+              <p>We evaluate designs against brand standards, building codes and operational requirements to ensure feasibility.</p>
+            </div>
           </div>
-          <div class="capability-content" :class="{ 'expanded': expandedItems.technical }">
-            <p>We evaluate designs against brand standards, building codes and operational requirements to ensure feasibility.</p>
+          
+          <div class="capability-dropdown">
+            <div class="capability-item" @click="toggleItem('implementation')">
+              <span>Implementation Support</span>
+              <span class="dropdown-icon">{{ expandedItems.implementation ? '▲' : '▼' }}</span>
+            </div>
+            <div class="capability-content" :class="{ 'expanded': expandedItems.implementation }">
+              <p>We provide guidance throughout construction and installation to maintain design integrity and quality.</p>
+            </div>
           </div>
-        </div>
-        
-        <div class="capability-dropdown">
-          <div class="capability-item" @click="toggleItem('implementation')">
-            <span>Implementation Support</span>
-            <span class="dropdown-icon">{{ expandedItems.implementation ? '▲' : '▼' }}</span>
-          </div>
-          <div class="capability-content" :class="{ 'expanded': expandedItems.implementation }">
-            <p>We provide guidance throughout construction and installation to maintain design integrity and quality.</p>
-          </div>
-        </div>
-        
-        <div class="capability-dropdown">
-          <div class="capability-item" @click="toggleItem('advisory')">
-            <span>Strategic Design Advisory</span>
-            <span class="dropdown-icon">{{ expandedItems.advisory ? '▲' : '▼' }}</span>
-          </div>
-          <div class="capability-content" :class="{ 'expanded': expandedItems.advisory }">
-            <p>We provide strategic counsel and develop design guidelines that ensure consistency and excellence at every project phase.</p>
+          
+          <div class="capability-dropdown">
+            <div class="capability-item" @click="toggleItem('advisory')">
+              <span>Strategic Design Advisory</span>
+              <span class="dropdown-icon">{{ expandedItems.advisory ? '▲' : '▼' }}</span>
+            </div>
+            <div class="capability-content" :class="{ 'expanded': expandedItems.advisory }">
+              <p>We provide strategic counsel and develop design guidelines that ensure consistency and excellence at every project phase.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -130,12 +136,24 @@ export default {
         technical: false,
         implementation: false,
         advisory: false
-      }
+      },
+      activeCapabilityGroup: null
     };
   },
   methods: {
     toggleItem(item) {
       this.expandedItems[item] = !this.expandedItems[item];
+    },
+    setActiveCapability(groupName) {
+      if (this.activeCapabilityGroup === groupName) {
+        this.activeCapabilityGroup = null; // Collapse if already active
+      } else {
+        this.activeCapabilityGroup = groupName; // Expand new group
+      }
+      // Reset all individual dropdowns when the main group changes or collapses
+      Object.keys(this.expandedItems).forEach(key => {
+        this.expandedItems[key] = false;
+      });
     }
   }
 };
@@ -158,24 +176,28 @@ export default {
   letter-spacing: 220%; 
   text-transform: uppercase;
   color: #000; /* Black text as per left side of image */
+  text-align: center; /* Center the main title */
 }
 
 .horizontal-capability-layout {
   display: flex;
-  flex-direction: row;
-  gap: 2.5rem; /* Slightly more space between columns */
-  justify-content: space-between;
+  flex-direction: column; /* Stack groups vertically */
+  gap: 3rem; /* Vertical gap between groups */
+  /* align-items: center; /* Groups will self-center if they have max-width and margin:auto */
 }
 
 .capability-group {
-  width: 32%; /* Slightly wider */
+  width: 100%; /* Each group takes full width of its container */
+  max-width: 900px; /* Constrain width for readability on large screens */
+  margin-left: auto; /* Center the group */
+  margin-right: auto; /* Center the group */
   padding: 2rem;
   border-radius: 16px;
+  /* background-color: #f8f8f7; /* REMOVED */
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* REMOVED */
   display: flex;
   flex-direction: column;
-  min-height: 400px; /* Set minimum height */
-  box-sizing: border-box; /* Include padding in width calculation */
-  overflow: hidden; /* Prevent content from overflowing */
+  box-sizing: border-box;
 }
 
 .capability-main-title {
@@ -195,6 +217,22 @@ export default {
   text-transform: uppercase;
   color: #000;
   max-width: 95%; /* Slightly wider */
+}
+
+.capability-group-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out 0.1s, padding-top 0.5s ease-in-out, padding-bottom 0.5s ease-in-out;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.capability-group-content.expanded {
+  max-height: 1200px; /* Adjust if content is taller */
+  opacity: 1;
+  padding-top: 1.5rem; /* Add some space when expanded */
+  padding-bottom: 1rem;
 }
 
 .capability-dropdown {
