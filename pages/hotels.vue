@@ -1,7 +1,8 @@
 <template>
   <div>
     <div class="page-background"></div>
-    <NavbarV2 />
+    <NavbarV2 @toggle-sidebar="toggleSidebar" />
+    <SidebarIndex :isOpen="sidebarOpen" @close="closeSidebar" />
     <div class="hotels-container">
       <div class="hotels-header">
         <h1>HOTELS</h1>
@@ -203,9 +204,27 @@
 </template>
 
 <script setup>
-import { onMounted, nextTick } from 'vue';
+import { ref, onMounted, nextTick } from 'vue';
 import Footer from '../components/Footer.vue';
 import NavbarV2 from '../components/NavbarV2.vue';
+import SidebarIndex from '../components/index/Sidebar.vue';
+
+// Sidebar state
+const sidebarOpen = ref(false);
+
+// Toggle sidebar function
+const toggleSidebar = (state) => {
+  if (state !== undefined) {
+    sidebarOpen.value = state;
+  } else {
+    sidebarOpen.value = !sidebarOpen.value;
+  }
+};
+
+// Close sidebar function
+const closeSidebar = () => {
+  sidebarOpen.value = false;
+};
 
 onMounted(async () => {
   // Force a DOM update and ensure all components are properly mounted

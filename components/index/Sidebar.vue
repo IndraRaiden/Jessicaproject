@@ -26,56 +26,170 @@
         
         <!-- Main Navigation -->
         <div class="nav-section">
-
-          <div class="nav-group">
-            <div class="nav-links">
-              <div class="nav-column hotels-column">
-                <a @click.prevent="navigateTo('/hotels')" class="nav-link hotels-link">{{ translations[currentLanguage].hotels }}</a>
-              </div>
-              
-              <div class="nav-column food-column">
-                <a @click.prevent="navigateTo('/foodnbeverage')" class="nav-link food-link">{{ translations[currentLanguage].food }}</a>
-                <div class="food-list">
-                  <a @click.prevent="navigateTo('/matador-room')" class="food-item">MATADOR ROOM,<br>JEAN GEORGES</a>
-                  <a @click.prevent="navigateTo('/the-street')" class="food-item">THE STREET,<br>SOUTH SEAPORT, NY</a>
-                  <a @click.prevent="navigateTo('/council-oak')" class="food-item">COUNCIL OAK, GRAMADO</a>
-                  <a @click.prevent="navigateTo('/shinsegae-food-hall')" class="food-item">SHINSEGAE FOOD HALL,<br>DAEGON</a>
-                  <a @click.prevent="navigateTo('/hyatt-regency')" class="food-item">HYATT REGENCY,<br>SIGNATURE RESTAURANT</a>
-                  <a @click.prevent="navigateTo('/foodnbeverage')" class="food-item see-all">{{ translations[currentLanguage].seeAllFood }} ></a>
+          <!-- New Sidebar Menu Items -->
+          <div class="sidebar-menu-container">
+            <div class="sidebar-item" @click="toggleSection('about')">
+              <div class="sidebar-header">
+                <h2>ABOUT OARA</h2>
+                <div class="arrow-container">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" :class="['dropdown-arrow', { 'rotated': openSections.about }]">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
                 </div>
               </div>
-              
-              <div class="nav-column cultural-column">
-                <a @click.prevent="navigateTo('/santuaries-and-cultural')" class="nav-link sanctuaries-link">{{ translations[currentLanguage].cultural }}</a>
+              <div v-if="openSections.about" class="section-content">
+                <div class="about-content">
+                  <p>The hospitality design and strategy partner founded by a visionary leader with deep roots in architecture, interiors, branding, and hospitality – born of deep expertise in architecture, interiors, branding and global F&B – from New York to São Paulo, Europe to Southeast Asia.</p>
+                  <p>We deliver a true 360° approach, transforming real estate into immersive destinations through rigorous, brand-led placemaking and the creativity of soulful design. By honoring each project's narrative and rhythm, we reimagine space to unlock value – amplifying returns, shaping perception and sparking genuine connection.</p>
+                  <div class="founder-section">
+                    <h3>Meet the founder</h3>
+                    <div class="founder-image-container">
+                      <img src="/about/founder-placeholder.svg" alt="Jessica Lianza - Founder" class="founder-image">
+                      <div class="founder-caption">Global CEO</div>
+                    </div>
+                    <p>Jessica Lianza moves between structure and soul. Raised in São Paulo by an Israeli psychologist mother and a Brazilian Italian father who managed buildings and people, she was immersed early on in the emotional and operational layers of how we live. Her world has always balanced the visible and invisible – the architecture of feeling, the precision of systems. At 14, a psychosomatic illness led her inward. Yoga, stillness, and the rituals of well-being became her compass. That inward turn was the start of a life devoted to designing spaces that offer care, clarity, and presence.</p>
+                    <p>Born in New York and shaped by four cultures, Jessica's instinct is global and her gaze, personal. She's guided architecture, interior design, service innovation, and project management across São Paulo, New York, London, and Southeast Asia – always seeking to understand how people move through space and how space moves people. Her time in ecological schools and remote retreats sharpened a sensitivity that remains central to her work.</p>
+                    <p>Over the past 15 years, she has led hospitality, cultural, and residential projects across four continents, working with names like Gerber Collection, W Hotels, Edition, Hilton, and Hard Rock, as well as quieter, deeply personal ventures where story, memory, and experience guide every line. From narrative to layout, operations to atmosphere, Jessica designs places meant to last – spaces that make us feel human.</p>
+                  </div>
+                </div>
               </div>
-              
-              <div class="nav-column about-column">
-                <a @click.prevent="navigateTo('/about')" class="nav-link about-link">{{ translations[currentLanguage].about }}</a>
+            </div>
+            
+            <div class="sidebar-item" @click="toggleSection('portfolio')">
+              <div class="sidebar-header">
+                <h2>PORTFÓLIO</h2>
+                <div class="arrow-container">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" :class="['dropdown-arrow', { 'rotated': openSections.portfolio }]">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <div v-if="openSections.portfolio" class="section-content portfolio-content">
+                <!-- Hotels section -->
+                <div class="portfolio-section">
+                  <h3 @click="navigateTo('/hotels')" style="cursor: pointer;">{{ translations[currentLanguage].hotels }}</h3>
+                  <div class="portfolio-links">
+                    <a @click.prevent="navigateTo('/equinox-hotel-chicago')" class="portfolio-link">EQUINOX HOTEL, CHICAGO</a>
+                    <a @click.prevent="navigateTo('/equinox-hotel-houston')" class="portfolio-link">EQUINOX HOTEL, HOUSTON</a>
+                    <a @click.prevent="navigateTo('/legendre-40-paris')" class="portfolio-link">LEGENDRE 40, PARIS</a>
+                    <a @click.prevent="navigateTo('/edition-hotel-tampa')" class="portfolio-link">EDITION HOTEL, TAMPA</a>
+                    <a @click.prevent="navigateTo('/emmons-hotel-ny')" class="portfolio-link">EMMONS HOTEL, NY</a>
+                    <a @click.prevent="navigateTo('/w-escapes-gramado')" class="portfolio-link">W ESCAPES GRAMADO</a>
+                    <a @click.prevent="navigateTo('/w-residences-gramado')" class="portfolio-link">W THE RESIDENCES GRAMADO</a>
+                    <a @click.prevent="navigateTo('/w-residence-sao-paulo')" class="portfolio-link">W THE RESIDENCE, SÃO PAULO</a>
+                    <a @click.prevent="navigateTo('/hilton-garden-inn')" class="portfolio-link">HILTON GARDEN INN</a>
+                    <a @click.prevent="navigateTo('/holiday-inn-porto-maravilha')" class="portfolio-link">HOLIDAY INN PORTO MARAVILHA, RIO DE JANEIRO</a>
+                    <a @click.prevent="navigateTo('/transamerica-fit-concept')" class="portfolio-link">TRANSAMERICA FIT CONCEPT</a>
+                    <a @click.prevent="navigateTo('/hard-rock-sao-paulo')" class="portfolio-link">HARD ROCK HOTEL, SÃO PAULO</a>
+                    <a @click.prevent="navigateTo('/hard-rock-gramado')" class="portfolio-link">HARD ROCK HOTEL, GRAMADO</a>
+                    <a @click.prevent="navigateTo('/hard-rock-caldas-novas')" class="portfolio-link">HARD ROCK HOTEL, CALDAS NOVAS</a>
+                    <a @click.prevent="navigateTo('/pensacola-hotel')" class="portfolio-link">PENSACOLA HOTEL</a>
+                    <a @click.prevent="navigateTo('/sheraton-santos')" class="portfolio-link">SHERATON SANTOS</a>
+                    <a @click.prevent="navigateTo('/westin-jekyll-island')" class="portfolio-link">WESTIN HOTELS JEKYLL ISLAND</a>
+                    <a @click.prevent="navigateTo('/hotels')" class="portfolio-link see-all">See all Hotels ></a>
+                  </div>
+                </div>
+                
+                <!-- Food section -->
+                <div class="portfolio-section">
+                  <h3>{{ translations[currentLanguage].food }}</h3>
+                  <div class="portfolio-links">
+                    <a @click.prevent="navigateTo('/matador-room')" class="portfolio-link">MATADOR ROOM, JEAN GEORGES</a>
+                    <a @click.prevent="navigateTo('/the-street')" class="portfolio-link">THE STREET, SOUTH SEAPORT, NY</a>
+                    <a @click.prevent="navigateTo('/council-oak')" class="portfolio-link">COUNCIL OAK, GRAMADO</a>
+                    <a @click.prevent="navigateTo('/shinsegae-food-hall')" class="portfolio-link">SHINSEGAE FOOD HALL, DAEGON</a>
+                    <a @click.prevent="navigateTo('/hyatt-regency')" class="portfolio-link">HYATT REGENCY, SIGNATURE RESTAURANT</a>
+                    <a @click.prevent="navigateTo('/foodnbeverage')" class="portfolio-link see-all">{{ translations[currentLanguage].seeAllFood }} ></a>
+                  </div>
+                </div>
+                
+
+              </div>
+            </div>
+            
+            <div class="sidebar-item" @click="toggleSection('services')">
+              <div class="sidebar-header">
+                <h2>SERVICES</h2>
+                <div class="arrow-container">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" :class="['dropdown-arrow', { 'rotated': openSections.services }]">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <div class="service-description">
+                <p>We deliver a true 360° approach, transforming real estate into immersive destinations through rigorous, brand-led placemaking and the creativity of soulful design</p>
+              </div>
+              <div v-if="openSections.services" class="section-content">
+                <div class="services-grid">
+                  <!-- Design Column -->
+                  <div class="service-column">
+                    <h3 class="service-category">DESIGN</h3>
+                    <p class="service-description">WE CREATE ENVIRONMENTS THAT BALANCE FORM, FUNCTION AND GUEST EXPERIENCE.</p>
+                    
+                    <div class="service-item">
+                      <h4>CONCEPT DEVELOPMENT</h4>
+                      <a href="#" class="read-more">Read More</a>
+                    </div>
+                    
+                    <div class="service-item">
+                      <h4>SPACE PLANNING</h4>
+                      <a href="#" class="read-more">Read More</a>
+                    </div>
+                    
+                    <div class="service-item">
+                      <h4>BACK OF HOUSE OPTIMIZATION & DESIGN</h4>
+                      <a href="#" class="read-more">Read More</a>
+                    </div>
+                  </div>
+                  
+                  <!-- Strategy Column -->
+                  <div class="service-column">
+                    <h3 class="service-category">STRATEGY</h3>
+                    <p class="service-description">WE DEFINE POSITIONING, NARRATIVES AND CONCEPTS THAT CONNECT BRAND, PLACE AND AUDIENCE.</p>
+                    
+                    <div class="service-item">
+                      <h4>BRAND INTEGRATION & EXPERIENCE DESIGN</h4>
+                      <a href="#" class="read-more">Read More</a>
+                    </div>
+                    
+                    <div class="service-item">
+                      <h4>MARKET POSITIONING & PLACEMAKING</h4>
+                      <a href="#" class="read-more">Read More</a>
+                    </div>
+                    
+                    <div class="service-item">
+                      <h4>SERVICE DESIGN</h4>
+                      <a href="#" class="read-more">Read More</a>
+                    </div>
+                  </div>
+                  
+                  <!-- Consultancy Column -->
+                  <div class="service-column">
+                    <h3 class="service-category">CONSULTANCY</h3>
+                    <p class="service-description">WE ADVISE STAKEHOLDERS AND VALIDATE PROJECTS TO MAXIMIZE PERFORMANCE AND ENSURE COMPLIANCE.</p>
+                    
+                    <div class="service-item">
+                      <h4>TECHNICAL REVIEW & COMPLIANCE</h4>
+                      <a href="#" class="read-more">Read More</a>
+                    </div>
+                    
+                    <div class="service-item">
+                      <h4>IMPLEMENTATION SUPPORT</h4>
+                      <a href="#" class="read-more">Read More</a>
+                    </div>
+                    
+                    <div class="service-item">
+                      <h4>STRATEGIC DESIGN ADVISORY</h4>
+                      <a href="#" class="read-more">Read More</a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           
 
-          <div class="hotels-list">
-            <a @click.prevent="navigateTo('/equinox-hotel-chicago')" class="hotel-item">EQUINOX HOTEL, CHICAGO</a>
-            <a @click.prevent="navigateTo('/equinox-hotel-houston')" class="hotel-item">EQUINOX HOTEL, HOUSTON</a>
-            <a @click.prevent="navigateTo('/legendre-40-paris')" class="hotel-item">LEGENDRE 40, PARIS</a>
-            <a @click.prevent="navigateTo('/edition-hotel-tampa')" class="hotel-item">EDITION HOTEL, TAMPA</a>
-            <a @click.prevent="navigateTo('/emmons-hotel-ny')" class="hotel-item">EMMONS HOTEL, NY</a>
-            <a @click.prevent="navigateTo('/w-escapes-gramado')" class="hotel-item">W ESCAPES GRAMADO</a>
-            <a @click.prevent="navigateTo('/w-residences-gramado')" class="hotel-item">W THE RESIDENCES GRAMADO</a>
-            <a @click.prevent="navigateTo('/w-residence-sao-paulo')" class="hotel-item">W THE RESIDENCE, SÃO PAULO</a>
-            <a @click.prevent="navigateTo('/hilton-garden-inn')" class="hotel-item">HILTON GARDEN INN</a>
-            <a @click.prevent="navigateTo('/holiday-inn-porto-maravilha')" class="hotel-item">HOLIDAY INN PORTO MARAVILHA,<br>RIO DE JANEIRO</a>
-            <a @click.prevent="navigateTo('/transamerica-fit-concept')" class="hotel-item">TRANSAMERICA FIT CONCEPT</a>
-            <a @click.prevent="navigateTo('/hard-rock-sao-paulo')" class="hotel-item">HARD ROCK HOTEL, SÃO PAULO</a>
-            <a @click.prevent="navigateTo('/hard-rock-gramado')" class="hotel-item">HARD ROCK HOTEL, GRAMADO</a>
-            <a @click.prevent="navigateTo('/hard-rock-caldas-novas')" class="hotel-item">HARD ROCK HOTEL, CALDAS NOVAS</a>
-            <a @click.prevent="navigateTo('/pensacola-hotel')" class="hotel-item">PENSACOLA HOTEL</a>
-            <a @click.prevent="navigateTo('/sheraton-santos')" class="hotel-item">SHERATON SANTOS</a>
-            <a @click.prevent="navigateTo('/westin-jekyll-island')" class="hotel-item">WESTIN HOTELS JEKYLL ISLAND</a>
-            <a @click.prevent="navigateTo('/hotels')" class="hotel-item see-all">See all Hotels ></a>
-          </div>
+
         </div>
         
         <!-- Contact Information -->
@@ -90,7 +204,7 @@
             </div>
           </div>
           
-          <div class="social-links" style="margin-top: 15px;">
+          <div class="social-links" style="margin-top: 15px; display: flex; gap: 30px;">
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" style="color: #29332e !important;">INSTAGRAM</a>
             <a href="https://www.linkedin.com/in/jessicalianza?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" class="social-link" style="color: #29332e !important;">LINKEDIN</a>
           </div>
@@ -113,6 +227,18 @@ const props = defineProps({
 });
 
 const emit = defineEmits(['close']);
+
+// Dropdown sections state
+const openSections = reactive({
+  about: false,
+  portfolio: false,
+  services: false
+});
+
+// Toggle section method
+const toggleSection = (section) => {
+  openSections[section] = !openSections[section];
+};
 
 // Language state
 const currentLanguage = ref('en');
@@ -181,6 +307,7 @@ const navigateTo = (route) => {
 <style scoped>
 :root {
   --dark-green: #28332d; /* Dark green color as specified */
+  --cream-bg: #FEF6E4; /* Cream background color for sidebar items */
 }
 
 .sidebar {
@@ -208,6 +335,234 @@ const navigateTo = (route) => {
   height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+/* Sidebar Menu Container Styles */
+.sidebar-menu-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1px;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+.sidebar-item {
+  background-color: var(--cream-bg);
+  border-radius: 16px;
+  padding: 2.2rem 2.5rem;
+  margin-bottom: 1px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.sidebar-header h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin: 0;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.dropdown-arrow {
+  width: 32px;
+  height: 32px;
+  stroke-width: 2px;
+  stroke: #000;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-arrow.rotated {
+  transform: rotate(180deg);
+}
+
+.section-content {
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.about-content {
+  color: #29332e;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.about-content p {
+  margin-bottom: 1.2rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.founder-section {
+  margin-top: 1.5rem;
+}
+
+.founder-section h3 {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+  color: #29332e;
+}
+
+.founder-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 240px;
+  margin: 0 0 1.5rem 0;
+}
+
+.founder-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.founder-caption {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem;
+  color: #29332e;
+  margin-top: 0.5rem;
+}
+
+.service-description {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-top: 1.2rem;
+  max-width: 80%;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-weight: 400;
+  color: #000;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 0.5rem 0;
+}
+
+.service-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.service-category {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #29332e;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.service-column .service-description {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  padding: 0;
+  max-width: 100%;
+}
+
+.service-item {
+  margin-bottom: 1rem;
+  border-top: 1px solid rgba(41, 51, 46, 0.2);
+  padding-top: 0.8rem;
+}
+
+.service-item h4 {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #29332e;
+  margin-bottom: 0.5rem;
+}
+
+.read-more {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 0.75rem;
+  color: #29332e;
+  text-decoration: none;
+  display: block;
+  margin-top: 0.3rem;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+.service-description p {
+  margin: 0;
+}
+
+.section-content {
+  padding-top: 1rem;
+  overflow: hidden;
+  animation: slideDown 0.3s ease-in-out;
+}
+
+/* Portfolio content styles */
+.portfolio-content {
+  padding: 1rem 0;
+}
+
+.portfolio-section {
+  margin-bottom: 1.5rem;
+}
+
+.portfolio-section h3 {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #000;
+}
+
+.portfolio-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.5rem;
+}
+
+.portfolio-link {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 0.9rem;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  display: block;
+  padding: 0.4rem 0;
+  cursor: pointer;
+}
+
+.portfolio-link:hover {
+  color: #555;
+  text-decoration: underline;
+}
+
+.portfolio-link.see-all {
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+@keyframes slideDown {
+  from { max-height: 0; opacity: 0; }
+  to { max-height: 500px; opacity: 1; }
 }
 
 .header {
@@ -482,12 +837,15 @@ const navigateTo = (route) => {
 
 .contact-section {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
   border-top: 1px solid #ddd;
   padding-top: 2rem;
+  padding-left: 0;
   padding-bottom: 3rem;
   margin-bottom: 3rem;
+  max-width: 90%;
 }
 
 .contact-info p {

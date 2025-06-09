@@ -45,7 +45,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue';
 import { useRouter } from 'vue-router';
 
 const emit = defineEmits(['toggle-sidebar']);
@@ -71,17 +71,52 @@ const closeMobileMenu = () => {
 };
 
 const toggleSidebar = () => {
-  // Emit an event that can be listened to by the parent component
-  emit('toggle-sidebar');
+  // Close mobile menu when sidebar is toggled
+  closeMobileMenu();
+  
+  // Toggle sidebar state and emit event with the new state
+  sidebarOpen.value = !sidebarOpen.value;
+  emit('toggle-sidebar', sidebarOpen.value);
 };
 
 const navigateTo = (route) => {
-  if (router) {
-    router.push(route);
-  } else {
-    window.location.href = route;
-  }
+  // Close mobile menu first
   closeMobileMenu();
+  
+  // Emit toggle-sidebar with false to ensure sidebar is closed
+  emit('toggle-sidebar', false);
+  
+  // Use nextTick to ensure DOM updates before navigation
+  nextTick(() => {
+    // Use router with proper error handling
+    if (router) {
+      // Check if we're navigating to the current route
+      const currentPath = router.currentRoute.value.path;
+      if (route === currentPath) {
+        // If navigating to current route, force a refresh
+        window.location.href = route;
+        return;
+      }
+      
+      router.push(route).catch(error => {
+        if (error.name !== 'NavigationDuplicated') {
+          console.error('Navigation error:', error);
+          // Try alternative navigation method if router fails
+          window.location.href = route;
+        } else {
+          // Force reload on navigation duplicated error
+          window.location.href = route;
+        }
+      });
+    } else {
+      window.location.href = route;
+    }
+    
+    // Ensure scroll position is reset after navigation with a slight delay
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
+  });
 };
 
 onMounted(() => {

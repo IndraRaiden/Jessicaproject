@@ -86,13 +86,41 @@ export default {
       document.body.style.overflow = '';
     },
     navigateTo(route) {
-      // Use router if available, fallback to window.location
-      if (this.$router) {
-        this.$router.push(route);
-      } else {
-        window.location.href = route;
-      }
+      // Close mobile menu first
       this.closeMobileMenu();
+      // Close sidebar if open
+      this.closeSidebar();
+      
+      // Use nextTick to ensure DOM updates before navigation
+      this.$nextTick(() => {
+        // Use router with proper error handling
+        if (this.$router) {
+          // Force a hard navigation to ensure page re-renders
+          if (route === this.$route.path) {
+            // If navigating to current route, force a refresh
+            window.location.href = route;
+            return;
+          }
+          
+          this.$router.push(route).catch(error => {
+            if (error.name !== 'NavigationDuplicated') {
+              console.error('Navigation error:', error);
+              // Try alternative navigation method if router fails
+              window.location.href = route;
+            } else {
+              // Force reload on navigation duplicated error
+              window.location.href = route;
+            }
+          });
+        } else {
+          window.location.href = route;
+        }
+        
+        // Ensure scroll position is reset after navigation
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+        }, 100);
+      });
     }
   }
 };

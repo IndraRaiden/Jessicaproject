@@ -7,7 +7,8 @@
         <div class="hero-background">
           <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Architecture Desk" class="desk-image" />
         </div>
-        <Navbar />
+        <Navbar @toggle-sidebar="toggleSidebar" />
+        <SidebarIndex :isOpen="sidebarOpen" @close="closeSidebar" />
       </div>
       
       <!-- About Content Section -->
@@ -207,7 +208,25 @@
 <script setup>
 import { ref, onMounted, nextTick } from 'vue';
 import Navbar from '~/components/Navbar.vue';
+import SidebarIndex from '~/components/index/Sidebar.vue';
 import Footer from '~/components/Footer.vue';
+
+// Sidebar state
+const sidebarOpen = ref(false);
+
+// Toggle sidebar function
+const toggleSidebar = (state) => {
+  if (state !== undefined) {
+    sidebarOpen.value = state;
+  } else {
+    sidebarOpen.value = !sidebarOpen.value;
+  }
+};
+
+// Close sidebar function
+const closeSidebar = () => {
+  sidebarOpen.value = false;
+};
 
 // Create a reactive array to track which descriptions are expanded
 const expandedItems = ref(Array(9).fill(false));
