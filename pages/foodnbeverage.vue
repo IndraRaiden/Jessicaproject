@@ -1,7 +1,7 @@
 <template>
   <div class="foodnbeverage-page">
     <div class="page-background"></div>
-    <NavbarV2 @toggle-sidebar="toggleSidebar" />
+    <Navbar @toggle-sidebar="toggleSidebar" />
     <Sidebar :isOpen="sidebarOpen" @close="closeSidebar" />
     <div class="hero-image-container">
       <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=100" alt="Food and Beverage Hero" class="hero-image" />
@@ -67,7 +67,7 @@
 
 <script>
 import Footer from '~/components/Footer.vue';
-import NavbarV2 from '~/components/NavbarV2.vue';
+import Navbar from '~/components/Navbar.vue';
 import Sidebar from '~/components/index/Sidebar.vue';
 
 export default {

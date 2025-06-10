@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="page-background"></div>
-    <NavbarV2 />
+    <Navbar />
     <div class="project-page">
       <div class="project-header">
         <div class="project-meta">
@@ -59,7 +59,7 @@
 <script setup>
 import { onMounted, nextTick } from 'vue';
 import Footer from '../components/Footer.vue';
-import NavbarV2 from '../components/NavbarV2.vue';
+import Navbar from '../components/Navbar.vue';
 
 onMounted(async () => {
   // Force a DOM update and ensure all components are properly mounted

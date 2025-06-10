@@ -1,12 +1,12 @@
 <template>
   <div class="layout-container">
-    <NavbarV2 />
+    <Navbar />
     <slot />
   </div>
 </template>
 
 <script setup>
-import NavbarV2 from '~/components/NavbarV2.vue';
+import Navbar from '~/components/Navbar.vue';
 // Food layout now with NavbarV2, used for food and beverage pages
 </script>
 

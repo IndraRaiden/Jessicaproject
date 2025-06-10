@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="page-background"></div>
-    <NavbarV2 @toggle-sidebar="toggleSidebar" />
+    <Navbar @toggle-sidebar="toggleSidebar" />
     <SidebarIndex :isOpen="sidebarOpen" @close="closeSidebar" />
     <div class="hotels-container">
       <div class="hotels-header">
@@ -206,7 +206,7 @@
 <script setup>
 import { ref, onMounted, nextTick } from 'vue';
 import Footer from '../components/Footer.vue';
-import NavbarV2 from '../components/NavbarV2.vue';
+import Navbar from '../components/Navbar.vue';
 import SidebarIndex from '../components/index/Sidebar.vue';
 
 // Sidebar state

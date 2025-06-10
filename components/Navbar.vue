@@ -14,10 +14,9 @@
           
           <!-- Navigation links in a horizontal layout -->
           <div class="nav-links">
+            <NuxtLink to="/foodnbeverage" class="nav-link">FOOD & BEVERAGE</NuxtLink>
+            <NuxtLink to="/hotels" class="nav-link">HOTELS</NuxtLink>
             <NuxtLink to="/about" class="nav-link">ABOUT OARA</NuxtLink>
-            <NuxtLink to="/team" class="nav-link">TEAM</NuxtLink>
-            <NuxtLink to="/methodology" class="nav-link">METHODOLOGY</NuxtLink>
-            <NuxtLink to="/contact" class="nav-link">CONTACT US</NuxtLink>
             <div class="sidebar-toggle" @click="toggleSidebar">+</div>
           </div>
           
@@ -32,10 +31,9 @@
       
       <!-- Mobile menu -->
       <div class="mobile-menu" :class="{ 'open': mobileMenuOpen }">
+        <NuxtLink to="/foodnbeverage" class="mobile-nav-link" @click="closeMobileMenu">FOOD & BEVERAGE</NuxtLink>
+        <NuxtLink to="/hotels" class="mobile-nav-link" @click="closeMobileMenu">HOTELS</NuxtLink>
         <NuxtLink to="/about" class="mobile-nav-link" @click="closeMobileMenu">ABOUT OARA</NuxtLink>
-        <NuxtLink to="/team" class="mobile-nav-link" @click="closeMobileMenu">TEAM</NuxtLink>
-        <NuxtLink to="/methodology" class="mobile-nav-link" @click="closeMobileMenu">METHODOLOGY</NuxtLink>
-        <NuxtLink to="/contact" class="mobile-nav-link" @click="closeMobileMenu">CONTACT US</NuxtLink>
       </div>
     </div>
     <SidebarIndex :isOpen="sidebarOpen" @close="closeSidebar" />

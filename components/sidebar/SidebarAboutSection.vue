@@ -1,0 +1,131 @@
+<template>
+  <div class="sidebar-item" @click="toggleSection">
+    <div class="sidebar-header">
+      <h2>ABOUT OARA</h2>
+      <div class="arrow-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" :class="['dropdown-arrow', { 'rotated': isOpen }]">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+    </div>
+    <div v-if="isOpen" class="section-content">
+      <div class="about-content">
+        <p>The hospitality design and strategy partner founded by a visionary leader with deep roots in architecture, interiors, branding, and hospitality – born of deep expertise in architecture, interiors, branding and global F&B – from New York to São Paulo, Europe to Southeast Asia.</p>
+        <p>We deliver a true 360° approach, transforming real estate into immersive destinations through rigorous, brand-led placemaking and the creativity of soulful design. By honoring each project's narrative and rhythm, we reimagine space to unlock value – amplifying returns, shaping perception and sparking genuine connection.</p>
+        <div class="founder-section">
+          <h3>Meet the founder</h3>
+          <div class="founder-image-container">
+            <img src="/about/founder-placeholder.svg" alt="Jessica Lianza - Founder" class="founder-image">
+            <div class="founder-caption">Global CEO</div>
+          </div>
+          <p>Jessica Lianza moves between structure and soul. Raised in São Paulo by an Israeli psychologist mother and a Brazilian Italian father who managed buildings and people, she was immersed early on in the emotional and operational layers of how we live. Her world has always balanced the visible and invisible – the architecture of feeling, the precision of systems. At 14, a psychosomatic illness led her inward. Yoga, stillness, and the rituals of well-being became her compass. That inward turn was the start of a life devoted to designing spaces that offer care, clarity, and presence.</p>
+          <p>Born in New York and shaped by four cultures, Jessica's instinct is global and her gaze, personal. She's guided architecture, interior design, service innovation, and project management across São Paulo, New York, London, and Southeast Asia – always seeking to understand how people move through space and how space moves people. Her time in ecological schools and remote retreats sharpened a sensitivity that remains central to her work.</p>
+          <p>Over the past 15 years, she has led hospitality, cultural, and residential projects across four continents, working with names like Gerber Collection, W Hotels, Edition, Hilton, and Hard Rock, as well as quieter, deeply personal ventures where story, memory, and experience guide every line. From narrative to layout, operations to atmosphere, Jessica designs places meant to last – spaces that make us feel human.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { ref } from 'vue';
+
+const isOpen = ref(false);
+
+const toggleSection = () => {
+  isOpen.value = !isOpen.value;
+};
+</script>
+
+<style scoped>
+.sidebar-item {
+  background-color: var(--cream-bg, #FEF6E4);
+  border-radius: 16px;
+  padding: 2.2rem 2.5rem;
+  margin-bottom: 1px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.sidebar-header h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin: 0;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.dropdown-arrow {
+  width: 32px;
+  height: 32px;
+  stroke-width: 2px;
+  stroke: #000;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-arrow.rotated {
+  transform: rotate(180deg);
+}
+
+.section-content {
+  padding: 1.5rem 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.about-content {
+  color: #29332e;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.about-content p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.founder-section {
+  margin-top: 1.5rem;
+}
+
+.founder-section h3 {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+  color: #29332e;
+}
+
+.founder-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 0 2rem 0;
+}
+
+.founder-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.founder-caption {
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+  color: #29332e;
+  margin-top: 0.8rem;
+}
+</style>
