@@ -157,7 +157,7 @@ const toggleSection = () => {
 
 .service-category {
   font-family: 'Space Mono', monospace;
-  font-size: 1.2rem;
+  font-size: 1.4rem; /* Larger category title */
   font-weight: 400;
   color: #29332e;
   margin-bottom: 0.5rem;
@@ -168,44 +168,35 @@ const toggleSection = () => {
 }
 
 .service-column .service-description {
-  font-size: 0.8rem;
-  line-height: 1.4;
-  font-weight: 500;
-  margin-bottom: 1.5rem;
-  padding: 0;
-  width: 100%;
-  height: 5rem; /* Fixed height for consistent spacing */
-  display: flex;
-  align-items: flex-start;
+  font-size: 1.1rem; /* Larger description */
+  line-height: 1.6; /* Adjusted line height */
+  height: auto; /* Allow dynamic height */
+  min-height: 5rem; /* Maintain minimum spacing */
 }
 
 .service-item {
-  margin-bottom: 1rem;
+  height: auto; /* Allow content to grow */
+  padding-top: 1rem;
   border-top: 1px solid rgba(41, 51, 46, 0.2);
-  padding-top: 0.8rem;
-  display: flex;
-  flex-direction: column;
-  height: 5.5rem; /* Fixed height for consistent spacing */
-  justify-content: space-between;
+  margin-bottom: 1.5rem; /* Extra spacing */
 }
 
 .service-item h4 {
+  font-size: 1rem; /* Larger item title */
+  line-height: 1.4;
+  height: auto; /* Remove fixed height */
+  -webkit-line-clamp: unset; /* Allow full lines */
   font-family: 'Be Vietnam Pro', sans-serif;
-  font-size: 0.8rem;
   font-weight: 500;
   color: #29332e;
   margin-bottom: 0.5rem;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
   overflow: hidden;
-  line-height: 1.3;
-  height: 2.6rem; /* Fixed height for consistent spacing */
 }
 
 .read-more {
+  font-size: 0.95rem; /* Bigger read-more link */
   font-family: 'Be Vietnam Pro', sans-serif;
-  font-size: 0.75rem;
   color: #29332e;
   text-decoration: none;
   display: block;
@@ -254,13 +245,11 @@ const toggleSection = () => {
   }
   
   .service-column .service-description {
-    font-size: 0.75rem;
-    height: auto;
+    font-size: 0.9rem;
     min-height: 4rem;
   }
   
   .service-item {
-    height: auto;
     min-height: 5rem;
   }
   

@@ -159,8 +159,9 @@ const navigateTo = (route) => {
 
 /* Sidebar layout styles */
 .sidebar-layout {
-  max-width: 700px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: none; /* Remove fixed width to allow full expansion */
+  margin: 0; /* Remove automatic centering */
 }
 
 .sidebar-menu-container {
