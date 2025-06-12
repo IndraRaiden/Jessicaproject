@@ -36,14 +36,20 @@
       
       <!-- Food section -->
       <div class="portfolio-section">
-        <h3 @click.stop="$emit('navigate', '/foodnbeverage')" style="cursor: pointer;">{{ translations[currentLanguage].food }}</h3>
+        <h3 style="cursor: pointer;">
+          <NuxtLink to="/foodnbeverage" @click.stop style="color: inherit; text-decoration: none;">
+            {{ translations[currentLanguage].food }}
+          </NuxtLink>
+        </h3>
         <div class="portfolio-links">
           <a @click.stop.prevent="$emit('navigate', '/matador-room')" class="portfolio-link">MATADOR ROOM, JEAN GEORGES</a>
           <a @click.stop.prevent="$emit('navigate', '/the-street')" class="portfolio-link">THE STREET, SOUTH SEAPORT, NY</a>
           <a @click.stop.prevent="$emit('navigate', '/council-oak')" class="portfolio-link">COUNCIL OAK, GRAMADO</a>
           <a @click.stop.prevent="$emit('navigate', '/shinsegae-food-hall')" class="portfolio-link">SHINSEGAE FOOD HALL, DAEGON</a>
           <a @click.stop.prevent="$emit('navigate', '/hyatt-regency')" class="portfolio-link">HYATT REGENCY, SIGNATURE RESTAURANT</a>
-          <a @click.stop.prevent="$emit('navigate', '/foodnbeverage')" class="portfolio-link see-all">{{ translations[currentLanguage].seeAllFood }} ></a>
+          <NuxtLink to="/foodnbeverage" class="portfolio-link see-all" @click.stop style="text-decoration: none; color: inherit;">
+            {{ translations[currentLanguage].seeAllFood }} >
+          </NuxtLink>
         </div>
       </div>
     </div>
@@ -134,6 +140,11 @@ const toggleSection = () => {
   font-weight: 600;
   margin-bottom: 0.8rem;
   color: #000;
+}
+
+.portfolio-section h3 a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .portfolio-links {

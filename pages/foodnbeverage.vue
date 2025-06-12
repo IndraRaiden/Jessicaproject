@@ -72,7 +72,7 @@ import Sidebar from '~/components/index/Sidebar.vue';
 
 export default {
   components: {
-    NavbarV2,
+    Navbar,
     Sidebar,
     Footer
   },
@@ -136,7 +136,7 @@ export default {
 .hero-image-container {
   width: 100%;
   height: 80vh;
-  margin-top: 70px; /* Added margin for the NavbarV2 */
+  margin-top: 70px; /* Added margin for the Navbar */
   overflow: hidden;
   position: relative;
 }
