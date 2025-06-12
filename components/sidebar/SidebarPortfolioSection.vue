@@ -36,7 +36,7 @@
       
       <!-- Food section -->
       <div class="portfolio-section">
-        <h3>{{ translations[currentLanguage].food }}</h3>
+        <h3 @click.stop="$emit('navigate', '/foodnbeverage')" style="cursor: pointer;">{{ translations[currentLanguage].food }}</h3>
         <div class="portfolio-links">
           <a @click.stop.prevent="$emit('navigate', '/matador-room')" class="portfolio-link">MATADOR ROOM, JEAN GEORGES</a>
           <a @click.stop.prevent="$emit('navigate', '/the-street')" class="portfolio-link">THE STREET, SOUTH SEAPORT, NY</a>

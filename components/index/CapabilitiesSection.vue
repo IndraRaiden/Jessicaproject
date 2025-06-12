@@ -154,8 +154,20 @@ export default {
 .capability-groups {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* mobile/tablet: stack groups */
   gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .capability-groups {
+    flex-direction: row; /* desktop: 3 columns side-by-side */
+    gap: 3rem; /* keep generous space between columns */
+  }
+
+  .capability-group {
+    flex: 0 0 33.333%; /* fixed one-third width, no shrinking */
+    max-width: 33.333%;
+  }
 }
 
 .capability-group {
