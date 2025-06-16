@@ -152,7 +152,8 @@ const navigateTo = (route) => {
   width: 100%;
   height: 100%;
   overflow-y: auto;
-  padding: 2rem 1rem; /* Reduced horizontal padding to extend content */
+  /* Increased horizontal padding for better breathing space */
+  padding: 2.5rem 2rem;
   position: relative;
   background-color: #FEF6E4; /* Cream background color */
 }
@@ -168,12 +169,21 @@ const navigateTo = (route) => {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  gap: 0.75rem; /* Slightly tighter gap to reduce excessive vertical whitespace */
+  margin-bottom: 1.5rem;
 }
 
 .nav-section {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Ensure consistent left alignment */
+.sidebar-layout,
+.sidebar-menu-container,
+.nav-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 /* All component-specific styles have been moved to their respective component files */

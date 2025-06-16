@@ -123,7 +123,8 @@ export default {
 /* Ensure Be Vietnam Pro is loaded, e.g., in nuxt.config.js or a global CSS file */
 .capabilities-container {
   font-family: 'Be Vietnam Pro', sans-serif;
-  padding: 4rem 0; /* No horizontal padding to extend to edges */
+  /* Added horizontal padding for better breathing room */
+  padding: 4rem 2rem;
   max-width: 100%; /* Full width */
   margin: 0 auto;
   width: 100%;
@@ -160,13 +161,23 @@ export default {
 
 @media (min-width: 1024px) {
   .capability-groups {
-    flex-direction: row; /* desktop: 3 columns side-by-side */
-    gap: 3rem; /* keep generous space between columns */
+    /* Display three columns side by side on desktop */
+    flex-direction: row;
+    /* Slightly reduce gap between columns */
+    gap: 2rem;
   }
 
-  .capability-group {
-    flex: 0 0 33.333%; /* fixed one-third width, no shrinking */
-    max-width: 33.333%;
+  /* Narrower widths for Design and Strategy */
+  .capability-group:nth-child(1),
+  .capability-group:nth-child(2) {
+    flex: 0 0 24%;
+    max-width: 24%;
+  }
+
+  /* Wider width for Consultancy */
+  .capability-group:nth-child(3) {
+    flex: 0 0 48%;
+    max-width: 48%;
   }
 }
 
@@ -183,7 +194,9 @@ export default {
   color: #000;
   cursor: pointer;
   display: flex;
-  justify-content: space-between;
+  /* Center the main titles */
+  justify-content: center;
+  gap: 0.5rem;
   align-items: center;
   margin-bottom: 0.5rem;
   transition: color 0.3s ease;
@@ -226,7 +239,8 @@ export default {
 
 .capability-content {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* Stack capability items vertically */
+  grid-template-columns: 1fr;
   gap: 2rem;
 }
 
