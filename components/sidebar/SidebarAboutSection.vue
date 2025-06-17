@@ -39,23 +39,24 @@ const toggleSection = () => {
 
 <style scoped>
 .sidebar-item {
-  background-color: var(--cream-bg, #FEF6E4);
-  border-radius: 16px;
-  padding: 2.2rem 2.5rem;
-  margin-bottom: 1px;
+  padding: 0.5rem 0;
+  width: 100%;
+  margin-bottom: 0.5rem;
   transition: all 0.3s ease;
   cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .sidebar-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  position: relative;
   align-items: center;
   width: 100%;
 }
 
 .sidebar-header h2 {
+  flex: 1;
+  text-align: center;
   font-size: 2.2rem;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -71,6 +72,13 @@ const toggleSection = () => {
   stroke-width: 2px;
   stroke: #000;
   transition: transform 0.3s ease;
+}
+
+.arrow-container {
+  position: absolute;
+  right: 0;
+  position: absolute;
+  right: 0;
 }
 
 .dropdown-arrow.rotated {

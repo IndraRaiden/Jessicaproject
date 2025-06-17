@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar-item" @click="toggleSection">
     <div class="sidebar-header">
-      <h2>PORTFÓLIO</h2>
+      <h2>PROJECTS</h2>
       <div class="arrow-container">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" :class="['dropdown-arrow', { 'rotated': isOpen }]">
           <polyline points="6 9 12 15 18 9"></polyline>
@@ -81,23 +81,24 @@ const toggleSection = () => {
 
 <style scoped>
 .sidebar-item {
-  background-color: var(--cream-bg, #FEF6E4);
-  border-radius: 16px;
-  padding: 2.2rem 2.5rem;
-  margin-bottom: 1px;
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
   transition: all 0.3s ease;
   cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  width: 100%;
 }
 
 .sidebar-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  position: relative;
   align-items: center;
   width: 100%;
 }
 
 .sidebar-header h2 {
+  flex: 1;
+  text-align: center;
   font-size: 2.2rem;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -115,6 +116,11 @@ const toggleSection = () => {
   transition: transform 0.3s ease;
 }
 
+.arrow-container {
+  position: absolute;
+  right: 0;
+}
+
 .dropdown-arrow.rotated {
   transform: rotate(180deg);
 }
@@ -128,6 +134,16 @@ const toggleSection = () => {
 /* Portfolio content styles */
 .portfolio-content {
   padding: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+/* Stack sections on small screens */
+@media (max-width: 768px) {
+  .portfolio-content {
+    grid-template-columns: 1fr;
+  }
 }
 
 .portfolio-section {
@@ -149,8 +165,8 @@ const toggleSection = () => {
 
 .portfolio-links {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.4rem;
 }
 
 .portfolio-link {
