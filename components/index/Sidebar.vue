@@ -31,8 +31,9 @@
           </div>
         </div>
         
-        <!-- Contact Information -->
-        <SidebarContactSection />
+
+        <!-- Footer -->
+        <Footer />
       </div>
     </div>
   </div>
@@ -46,7 +47,7 @@ import SidebarLanguageSwitcher from '../sidebar/SidebarLanguageSwitcher.vue';
 import SidebarAboutSection from '../sidebar/SidebarAboutSection.vue';
 import SidebarPortfolioSection from '../sidebar/SidebarPortfolioSection.vue';
 import SidebarServicesSection from '../sidebar/SidebarServicesSection.vue';
-import SidebarContactSection from '../sidebar/SidebarContactSection.vue';
+import Footer from '../Footer.vue';
 
 const router = useRouter();
 const props = defineProps({
@@ -160,12 +161,17 @@ const navigateTo = (route) => {
 
 /* Sidebar layout styles */
 .sidebar-layout {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  justify-content: flex-start;
   width: 100%;
   max-width: none; /* Remove fixed width to allow full expansion */
   margin: 0; /* Remove automatic centering */
 }
 
 .sidebar-menu-container {
+  margin-bottom: 0;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -287,6 +293,7 @@ const navigateTo = (route) => {
 
 /* iOS-specific fixes */
 @supports (-webkit-touch-callout: none) {
+
   .hospitality-text h2 {
     /* Fix for iOS text rendering */
     text-rendering: optimizeLegibility;
@@ -319,4 +326,39 @@ const navigateTo = (route) => {
     }
   }
 }
+
+
+  /* Sidebar-specific footer overrides */
+  .sidebar :deep(.footer) {
+    padding: 1.5rem 0;
+    background: transparent; /* remove white background */
+  }
+  .sidebar :deep(.footer-columns) {
+    max-width: none;
+    margin: 0;
+    padding: 0 1rem; /* align with sidebar padding visually */
+  }
+  @media (max-width: 640px) {
+    .sidebar :deep(.footer-columns) {
+      padding: 0;
+    }
+  }
+
+  /* Remove bottom gap under footer */
+  .sidebar-content {
+    padding-bottom: 0 !important;
+  }
+  .sidebar :deep(.footer) {
+    padding-bottom: 0;
+  }
+/* Extra spacing to push footer down and enable scroll */
+.sidebar-content {
+  padding-bottom: 5rem !important;
+}
+
+.sidebar :deep(.footer) {
+  margin-top: 3rem;
+  padding-bottom: 2rem;
+}
+
 </style>

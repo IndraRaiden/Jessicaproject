@@ -4,7 +4,7 @@
     <div class="santuaries-section" @click="navigateToSantuariesPage">
       <div class="santuaries-image">
         <div class="title-container">
-          <div class="santuaries-title">SANTUARIES AND CULTURAL</div>
+          <div class="santuaries-title">SANCTUARIES</div>
           <div class="coming-soon">COMING SOON</div>
         </div>
         <div class="video-container">
@@ -132,7 +132,7 @@ onUnmounted(() => {
 .santuaries-title {
   font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 4.5rem;
-  font-weight: 700; /* Bold */
+  font-weight: 600; /* Semi-bold */
   color: white;
   letter-spacing: 220%; /* Spacing 220 */
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);

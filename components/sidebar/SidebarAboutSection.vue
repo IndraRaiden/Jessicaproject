@@ -1,13 +1,14 @@
 <template>
   <div class="sidebar-item" @click="toggleSection">
     <div class="sidebar-header">
-      <h2>ABOUT OARA</h2>
+      <h2>ABOUT US</h2>
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" :class="['dropdown-arrow', { 'rotated': isOpen }]">
         <polyline points="6 9 12 15 18 9"></polyline>
       </svg>
     </div>
     <div v-if="isOpen" class="section-content">
       <div class="about-content">
+        <p class="intro-text">WE ARE OARA</p>
         <p>The hospitality design and strategy partner founded by a visionary leader with deep roots in architecture, interiors, branding, and hospitality – born of deep expertise in architecture, interiors, branding and global F&B – from New York to São Paulo, Europe to Southeast Asia.</p>
         <p>We deliver a true 360° approach, transforming real estate into immersive destinations through rigorous, brand-led placemaking and the creativity of soulful design. By honoring each project's narrative and rhythm, we reimagine space to unlock value – amplifying returns, shaping perception and sparking genuine connection.</p>
         <div class="founder-section">
@@ -46,8 +47,9 @@ const toggleSection = () => {
 
 .sidebar-header {
   display: flex;
-  justify-content: center;
   position: relative;
+  justify-content: center;
+  /* removed relative positioning */
   align-items: center;
   width: 100%;
 }
@@ -70,12 +72,18 @@ const toggleSection = () => {
   stroke-width: 2px;
   stroke: #000;
   transition: transform 0.3s ease;
-}
-
-.arrow-container {
   position: absolute;
   right: 0;
   position: absolute;
+  right: 0;
+  position: absolute;
+  right: 0;
+}
+
+.arrow-container {
+  position: static;
+  right: 0;
+  position: static;
   right: 0;
 }
 
@@ -100,6 +108,12 @@ const toggleSection = () => {
   line-height: 1.7;
 }
 
+.intro-text {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
 .founder-section {
   margin-top: 1.5rem;
 }
@@ -114,7 +128,7 @@ const toggleSection = () => {
 }
 
 .founder-image-container {
-  position: relative;
+  /* removed relative positioning */
   width: 100%;
   max-width: 300px;
   margin: 0 0 2rem 0;
@@ -134,4 +148,23 @@ const toggleSection = () => {
   color: #29332e;
   margin-top: 0.8rem;
 }
+.intro-text {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-item {
+  /* removed relative positioning */
+}
+
+.section-content {
+  position: static;
+  /* top removed */
+  /* left removed */
+  width: 100%;
+  /* bg removed */
+  /* z-index removed */
+}
+
 </style>

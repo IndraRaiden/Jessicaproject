@@ -5,13 +5,13 @@
       <div class="left-spacer"></div>
       <div class="intro-content">
         <div class="quote-contact-wrapper">
-          <p class="main-text instrument-text">
-  <span class="no-wrap">We craft immersive real estate <span class="italic-text">destinations</span></span><br>
-  <span class="no-wrap">that maximize asset value and make <span class="italic-text">people feel alive</span>.</span>
-</p>
-                  </div>
+          <p class="pure-instrument-serif">
+            We craft immersive real estate destinations<br>
+            that maximize asset value and make people feel alive.
+          </p>
+        </div>
         <div class="find-out-more" style="margin-top: 20px;">
-          <a @click="navigateToAboutPage" class="about-link instrument-text" style="letter-spacing: 220%;">FIND OUT MORE</a>
+          <a @click="navigateToAboutPage" class="about-link" style="letter-spacing: 220%;">FIND OUT MORE</a>
         </div>
       </div>
       <div class="right-spacer"></div>
@@ -123,22 +123,17 @@ onUnmounted(() => {
   flex-grow: 1; /* Allow this container to grow */
 }
 
-.intro-content .main-text,
-.instrument-text {
+.pure-instrument-serif {
   font-family: 'Instrument Serif', serif !important;
-  font-size: 2.5rem;
-  font-weight: 100; /* Thinnest possible weight */
+  font-size: 2.7rem;
+  font-weight: 400;
   color: #1d2a29;
   margin-bottom: 2.5rem;
   line-height: 1.3;
-  letter-spacing: 20px; /* Spacing 20 as shown in the image */
-  text-transform: none; /* CAPSLOCK: NÃO as shown in the image */
+  letter-spacing: 0;
+  text-transform: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-shadow: none; /* Remove any text shadow that might make text appear bolder */
-  font-variation-settings: 'wght' 100; /* For variable fonts, ensure lightest weight */
-  font-stretch: normal;
-  font-style: normal;
 }
 
 .intro-content .main-text {
@@ -246,7 +241,7 @@ onUnmounted(() => {
 .hotels-title {
   font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 6rem;
-  font-weight: 700; /* Bold */
+  font-weight: 600; /* Semi-bold */
   color: white;
   letter-spacing: 220%; /* Spacing 220 */
   margin-bottom: 2rem;
@@ -301,16 +296,7 @@ onUnmounted(() => {
   /* Mobile video styling is now handled by the YoutubeEmbed component */
 }
 
-.italic-text {
-  font-family: 'Instrument Serif', serif !important;
-  font-style: italic;
-  font-weight: 400;
-  letter-spacing: inherit;
-}
-
-.no-wrap {
-  white-space: nowrap;
-}
+/* Clean and minimal styling */
 
 /* Override font for Find out more link */
 .find-out-more a {

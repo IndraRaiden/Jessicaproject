@@ -2,16 +2,15 @@
   <footer class="footer">
     <div class="footer-columns">
       <div class="footer-column">
-        <h3><a href="/about">About us</a></h3>
+        <h3><a href="/about">ABOUT US</a></h3>
         <ul>
-          <li><a href="/about">meet the Founder</a></li>
-          <li><a href="/about">our team</a></li>
-          <li><a href="/about">work with us</a></li>
+          <li><a href="/about">Meet the Founder</a></li>
+          <li><a href="/about">Work with Us</a></li>
         </ul>
       </div>
 
       <div class="footer-column">
-        <h3><a href="/services">Services</a></h3>
+        <h3><a href="/services">SERVICES</a></h3>
         <ul>
           <li><a href="/services">Design</a></li>
           <li><a href="/services">Estrategy</a></li>
@@ -20,20 +19,20 @@
       </div>
 
       <div class="footer-column">
-        <h3><a href="/hotels">Portfolio</a></h3>
+        <h3><a href="/hotels">PORTFOLIO</a></h3>
         <ul>
           <li><a href="/hotels">Hotels</a></li>
-          <li><a href="/foodnbeverage">Food</a></li>
-          <li><a href="/santuaries-and-cultural">Culture</a></li>
+          <li><a href="/foodnbeverage">Food &amp; Beverage</a></li>
+          <li><a href="/santuaries-and-cultural">Sanctuaries</a></li>
         </ul>
       </div>
 
       <div class="footer-column">
-        <h3><a href="/about">Contact us</a></h3>
-        <a href="mailto:hello@weareoara.com" class="email">hello@weareoara.com</a>
+        <h3><a href="/about">CONTACT US</a></h3>
+        <a href="mailto:info@weareoara.com" class="email">info@weareoara.com</a>
         <div class="contact-info">
-          <p>+1 646 651 7126 | New York</p>
-          <p>+55 11 xxxxx xxxx | São Paulo</p>
+          <p class="contact-line"><span class="city">NEW YORK</span><span class="phone">+1 646 651 7126</span></p>
+          <p class="contact-line"><span class="city">SÃO PAULO</span><span class="phone">+55 11 xxxxx xxxx</span></p>
         </div>
       </div>
     </div>
@@ -68,10 +67,12 @@
 }
 
 .footer-column h3 {
-  font-size: 1rem;
+  font-size: 1.44rem; /* 40% bigger */
   font-weight: 600;
   margin-bottom: 20px;
   color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.22em; /* ≈ 220 spacing */
 }
 
 .footer-column h3 a {
@@ -139,5 +140,18 @@
   .footer-column:last-child {
     margin-bottom: 0;
   }
+}
+.contact-line {
+  display: flex;
+  gap: 10px;
+}
+
+.city {
+  width: 110px; /* ensures alignment */
+  text-align: left;
+}
+
+.phone {
+  white-space: nowrap;
 }
 </style>

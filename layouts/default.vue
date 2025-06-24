@@ -1,11 +1,12 @@
 <template>
   <div class="layout-container">
     <slot />
+    <Footer />
   </div>
 </template>
 
 <script setup>
-// Default layout with no navbar, used for the index page
+// Default layout with Footer component included
 </script>
 
 <style scoped>
@@ -14,5 +15,7 @@
   padding: 0;
   width: 100%;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 </style>

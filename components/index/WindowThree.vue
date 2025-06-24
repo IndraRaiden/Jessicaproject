@@ -3,7 +3,7 @@
     <!-- Food section with image -->
     <div class="food-section" @click="navigateToFoodPage">
       <div class="food-image">
-        <div class="food-title">FOOD</div>
+        <div class="food-title">FOOD &amp; BEVERAGE</div>
         <div class="video-container">
           <YoutubeEmbed 
             videoId="e7IfmJAdhDk" 
@@ -119,7 +119,7 @@ onUnmounted(() => {
 .food-title {
   font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 4.5rem;
-  font-weight: 700; /* Bold */
+  font-weight: 600; /* Semi-bold */
   color: white;
   letter-spacing: 220%; /* Spacing 220 */
   margin-bottom: 2rem;
