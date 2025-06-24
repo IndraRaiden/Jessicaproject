@@ -12,7 +12,7 @@
       <div class="capability-group">
         <h3 class="capability-main-title" @click="setActiveCapability('design')" :class="{ 'active': activeCapabilityGroup === 'design' }">
           <span class="title-text">DESIGN</span>
-          <span class="toggle-icon">{{ activeCapabilityGroup === 'design' ? '-' : '+' }}</span>
+          <span class="toggle-icon" :class="{ 'expanded-icon': activeCapabilityGroup === 'design' }"></span>
         </h3>
         <div class="capability-group-content" :class="{ 'expanded': activeCapabilityGroup === 'design' }">
           <p class="capability-main-description">WE CREATE ENVIRONMENTS THAT BALANCE FORM, FUNCTION AND GUEST EXPERIENCE.</p>
@@ -43,7 +43,7 @@
       <div class="capability-group">
         <h3 class="capability-main-title" @click="setActiveCapability('strategy')" :class="{ 'active': activeCapabilityGroup === 'strategy' }">
           <span class="title-text">STRATEGY</span>
-          <span class="toggle-icon">{{ activeCapabilityGroup === 'strategy' ? '-' : '+' }}</span>
+          <span class="toggle-icon" :class="{ 'expanded-icon': activeCapabilityGroup === 'strategy' }"></span>
         </h3>
         <div class="capability-group-content" :class="{ 'expanded': activeCapabilityGroup === 'strategy' }">
           <p class="capability-main-description">WE DEFINE POSITIONING, NARRATIVES AND CONCEPTS THAT CONNECT BRAND, PLACE AND AUDIENCE.</p>
@@ -74,7 +74,7 @@
       <div class="capability-group">
         <h3 class="capability-main-title" @click="setActiveCapability('consultancy')" :class="{ 'active': activeCapabilityGroup === 'consultancy' }">
           <span class="title-text">CONSULTANCY</span>
-          <span class="toggle-icon">{{ activeCapabilityGroup === 'consultancy' ? '-' : '+' }}</span>
+          <span class="toggle-icon" :class="{ 'expanded-icon': activeCapabilityGroup === 'consultancy' }"></span>
         </h3>
         <div class="capability-group-content" :class="{ 'expanded': activeCapabilityGroup === 'consultancy' }">
           <p class="capability-main-description">WE ADVISE STAKEHOLDERS AND VALIDATE PROJECTS<br>TO MAXIMIZE PERFORMANCE<br>AND ENSURE COMPLIANCE.</p>
@@ -179,7 +179,7 @@ export default {
 
   /* Nudge the Design group slightly to the left */
   .capability-group:nth-child(1) {
-    margin-left: -0.5rem; /* subtle shift */
+    margin-left: -1.5rem; /* increased shift as per feedback */
   }
 }
 
@@ -239,11 +239,18 @@ export default {
 }
 
 .toggle-icon {
-  font-size: 2.4rem;
-  position: relative;
-  top: -4px;
-  text-decoration: none;
-  font-weight: 400;
+  display: inline-block;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+  margin-left: 0.3rem;
+}
+
+.toggle-icon.expanded-icon {
+  transform: rotate(-135deg);
 }
 
 .capability-group-content {

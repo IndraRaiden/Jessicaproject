@@ -142,11 +142,11 @@ export default {
 .testimonial {
   background-color: #1F1B1A;
   color: #E9EFC9;
-  padding: 4rem 2rem;
+  padding: 2rem 1rem;
   text-align: center;
   font-family: 'Inter', sans-serif;
   height: auto;
-  min-height: 90vh; /* Balanced height to accommodate review text */
+  min-height: 60vh; /* Reduced height to compact section */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -165,7 +165,7 @@ export default {
   right: 0;
   top: 0;
   bottom: 0;
-  padding: 6rem 6rem;
+  padding: 3rem 2rem;
   width: 100%;
   height: 100%;
   overflow-y: auto; /* Allow scrolling if content exceeds container */
@@ -196,21 +196,21 @@ export default {
 }
 
 .quote {
-  font-family: 'Instrument Serif', serif !important;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  font-weight: 400; /* Regular for Instrument font */
+  font-weight: 400;
   line-height: 1.6;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-  letter-spacing: 0.05em;
-  text-transform: none;
-  color: #E9EFC9; /* Original color */
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #E9EFC9;
 }
 
 .author {
-  font-family: 'Be Vietnam Pro', sans-serif;
+  font-family: 'Instrument Serif', serif !important;
   font-size: 1.1rem;
   margin-bottom: 0.8rem;
   font-weight: 300; /* Light Be Vietnam Pro */
@@ -235,12 +235,12 @@ export default {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .testimonial {
-    padding: 4rem 1rem;
-    min-height: 80vh;
+    padding: 2rem 0.8rem;
+    min-height: 50vh;
   }
   
   .testimonial-content {
-    padding: 4rem 2rem;
+    padding: 2rem 1rem;
   }
   
   .scroll-arrow {
@@ -272,6 +272,8 @@ export default {
   .quote {
     font-size: 1.5rem;
     max-width: 100%;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
   }
 
   .author {

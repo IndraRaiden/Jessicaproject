@@ -19,7 +19,7 @@
       </div>
 
       <div class="footer-column">
-        <h3><a href="/hotels">PORTFOLIO</a></h3>
+        <h3><a href="/hotels">PROJECTS</a></h3>
         <ul>
           <li><a href="/hotels">Hotels</a></li>
           <li><a href="/foodnbeverage">Food &amp; Beverage</a></li>
