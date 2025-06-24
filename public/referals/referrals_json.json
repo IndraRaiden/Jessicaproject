@@ -1,0 +1,65 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "author": "LAIS HAUSCHILD COBRA",
+      "original_text": "Jessica has a strong creative approach towards everything she does. This personality trait combined with her profund understanding of her clients business objectives turned her into a natural strategist and therefore the right person to create remarkable concepts for brands that are determined to offer meaningful and unique experiences. She delivers great results with kindness, joy, special artistic skills and sharp intuition. Look out for this one!",
+      "updated_text": "OARA brings a strong creative approach, but what truly sets its vision apart is how that creativity is always grounded in strategic intent. With a deep understanding of their clients' business ambitions, OARA acts not just as a design partner, but as a strategic consultancy, the kind that turns real estate into meaning, and ambition into legacy. They deliver with elegance, intuition, and a rare ability to weave artistic sensibility with operational intelligence.",
+      "focus_areas": ["creativity", "strategic thinking", "client understanding", "brand concepts", "meaningful experiences"]
+    },
+    {
+      "id": 2,
+      "author": "CRISTINA OPSVIK",
+      "original_text": "Jessica has a natural talent for leadership and for exposing ideas and projects to different audiences. With a keen eye to the customer and user, she proposes creative and personalized solutions, always allied to implementation and schedule.",
+      "updated_text": "Jessica has a natural talent for leadership and for translating ideas and projects to diverse audiences with clarity and purpose. With a keen eye on the guest and end user, she proposes creative, tailored solutions — always grounded in feasibility and timelines. Today, through OARA, that same vision is amplified into a multidisciplinary consultancy that brings strategy, design, and precision to the heart of every project.",
+      "focus_areas": ["leadership", "communication", "customer focus", "creative solutions", "implementation", "project management"]
+    },
+    {
+      "id": 3,
+      "author": "FERNANDA BELIZARIO SANTOS FELIZOLA",
+      "original_text": "Jessica is an excellent professional and one of the best managers I've ever had. She is passionate about her job, focused, organized and knows how to use her strengths to deliver awesome projects and create great spaces for customers. Her creativity is powerful and contagious!",
+      "updated_text": "OARA is led by one of the most passionate and sharp professionals I've worked with. Today, that same vision translates into a consultancy that unites strategic rigor with sensorial placemaking, delivering spaces that are as operationally intelligent as they are emotionally resonant. Their creative force is not only powerful, it's contagious. OARA knows how to turn vision into spatial narrative, and experience into long-term value.",
+      "focus_areas": ["management", "passion", "organization", "project delivery", "space creation", "creativity"]
+    },
+    {
+      "id": 4,
+      "author": "INÊS DUQUE DIAS",
+      "original_text": "I worked with Jessica in a great project in the field of hospitality that we are developing in São Paulo, Brazil. Regarding her professional skills, her professionalism, her high levels of commitment and her ability to lead and manage the team she is involved with. Jessica is a very organized person as well as a great creative. She has natural entrepreneurship and it's very pleasant to work with her as a team partner. Jessica's problem solver with deep knowledge, successful track record and she's a very professional project manager. I also want to highlight her personal skills as a human being. Always very kind and with a positive approach. I would definitely recommend her for any job!",
+      "updated_text": "I had the pleasure of working with Jessica on a remarkable hospitality project we're developing in São Paulo, Brazil. Her professionalism, sharp leadership, and ability to guide multidisciplinary teams were evident from day one. She brings the rare combination of structure and creativity, with a natural entrepreneurial spirit and a deep sense of commitment. Jessica is a true problem-solver — strategic, experienced, and relentlessly focused on delivery. Now, OARA embodies that same excellence: a consultancy that thinks with precision, designs with emotion, and executes with clarity. And beyond all professional brilliance, working with her is simply a joy: kind, optimistic, and always constructive. I would recommend her and OARA, without hesitation.",
+      "focus_areas": ["hospitality", "professionalism", "leadership", "team management", "problem solving", "project management", "entrepreneurship", "interpersonal skills"],
+      "location": "São Paulo, Brazil"
+    },
+    {
+      "id": 5,
+      "author": "MARCOS BATOS",
+      "original_text": "I'd like to recommend Jessica as diligent and thorough professional with a vast experience in the hospitality interior design field. We've been working together in the development of large size projects in Brazil for high end hotel chains and always showed in depth knowledge of the matter bringing to the table innovative ideas and solutions to enhance the quality of the spaces she creates.",
+      "updated_text": "I'd like to recommend OARA as a diligent and thorough consultancy with deep expertise in high-end hospitality and interior architecture. We've collaborated on large-scale developments for premium hotel groups in Brazil, and OARA consistently brings in-depth knowledge, strategic insight, and innovative solutions to elevate the quality and character of every space. Their ability to merge technical precision with conceptual creativity makes them a valuable partner in projects where excellence is non-negotiable.",
+      "focus_areas": ["hospitality interior design", "large-scale projects", "high-end hotel chains", "innovative solutions", "space quality"],
+      "location": "Brazil"
+    },
+    {
+      "id": 6,
+      "author": "RACHEL RATTERMAN",
+      "original_text": "Jessica was always willing to jump in and help in any way she could. She was able to consistently contribute to design with thoughtful and creative solutions. Through our time working together, I saw that she has many strengths in all aspects of the design process, from concept to completion. She is also very strong while dealing with clients, both in person and via email. She knows the importance of managing expectations, while also presenting herself very professionally for client facing meetings. I cannot recommend her enough as a colleague and design lead for projects.",
+      "updated_text": null,
+      "focus_areas": ["collaboration", "design solutions", "full design process", "client relations", "expectation management", "professionalism", "design leadership"]
+    }
+  ],
+  "summary": {
+    "total_testimonials": 6,
+    "key_strengths": [
+      "Creative leadership",
+      "Strategic thinking",
+      "Client relationship management",
+      "Project management",
+      "Hospitality design expertise",
+      "Problem-solving",
+      "Team leadership",
+      "Innovation",
+      "Professionalism"
+    ],
+    "industries_mentioned": ["Hospitality", "Interior Design", "Real Estate", "Hotel Chains"],
+    "locations_mentioned": ["São Paulo, Brazil", "Brazil"],
+    "company_evolution": "Testimonials show evolution from individual (Jessica) to company (OARA) branding"
+  }
+}

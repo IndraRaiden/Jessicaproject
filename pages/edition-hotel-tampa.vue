@@ -23,7 +23,17 @@
     
       <div class="project-content">
         <div class="content-section">
-          <h2 class="section-title">EDITION HOTEL, TAMPA. SOPHISTICATED HOSPITALITY EXPERIENCE...</h2>
+          <h2 class="section-title">EDITION HOTEL, TAMPA. LUXURY LIFESTYLE DESTINATION</h2>
+          
+          <div class="project-description">
+            <p>The Tampa Edition is part of Marriott's luxury lifestyle portfolio, envisioned in collaboration with hospitality icon Ian Schrager. A mixed-use development combining hotel and branded residences, the property brings together high-end hospitality and curated living across multiple F&B venues — including the Punch Room, a signature restaurant, a rooftop pool bar, and additional culinary spaces.</p>
+            <p>As part of the Roman and Williams team, Jessica worked closely with the Ian Schrager design group to define the spatial language and material palette of the project. Her contribution spanned from high-level design direction to FF&E selection for the residential units, helping to translate the Edition brand identity into layered, elegant environments that balance sophistication with approachability.</p>
+            <div class="project-meta-details">
+              <p><strong>SCOPE:</strong> Interior Design Development / Construction Documentation / Model Rooms / FF&E / Interior Detailing</p>
+              <p><strong>COMPANY:</strong> Roman and Williams</p>
+              <p><strong>CLIENT:</strong> Marriott / Ian Schrager</p>
+            </div>
+          </div>
           
           <div class="image-container">
             <img src="~/public/hotels/editionhotel/Captura de pantalla 2025-05-28 234932.png" alt="Edition Hotel Tampa interior" class="feature-image" />
@@ -147,6 +157,23 @@ onMounted(async () => {
 
 .content-section {
   margin-bottom: 8rem;
+}
+
+.project-description {
+  margin: 2rem 0;
+  max-width: 900px;
+}
+
+.project-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-meta-details {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
 }
 
 .section-title {

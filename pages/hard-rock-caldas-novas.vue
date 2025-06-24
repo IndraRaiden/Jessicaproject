@@ -23,7 +23,19 @@
     
       <div class="project-content">
         <div class="content-section">
-          <h2 class="section-title">HARD ROCK HOTEL, CALDAS NOVAS. VIBRANT THERMAL HOSPITALITY...</h2>
+          <h2 class="section-title">HARD ROCK HOTEL, CALDAS NOVAS. VIBRANT THERMAL HOSPITALITY</h2>
+          
+          <div class="project-description">
+            <p>Situated in one of Brazil's most famous thermal destinations, the Hard Rock Hotel Caldas Novas is a 300-room property that leverages the region's natural hot springs while introducing the brand's signature rock 'n' roll energy to a traditionally family-oriented market. This dual-tower development includes standard rooms and two-bedroom family suites, alongside unique destination amenities that blend Hard Rock's vibrant programming with the region's focus on thermal tourism.</p>
+            <p>As architectural and interior design consultant representing both Hard Rock Hotels and the local developer, Jessica provided guidance on room layouts, programming, and FF&E standards. Her involvement spanned concept development through construction documentation, helping adapt the brand's global standards to meet local market expectations while maintaining Hard Rock's essential identity touchpoints.</p>
+            <div class="project-meta-details">
+              <p><strong>SCOPE:</strong> Interior Design Consulting / Architectural Programming</p>
+              <p><strong>LOCATION:</strong> Caldas Novas, Goiás, Brazil</p>
+              <p><strong>COMPANY:</strong> VCI Hospitality</p>
+              <p><strong>ROOMS:</strong> 300</p>
+              <p><strong>SPECIAL FEATURES:</strong> Thermal pools, Multi-level water park, Destination spa, Family suites with rock-inspired bunk beds</p>
+            </div>
+          </div>
           
           <div class="image-container">
             <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Hard Rock Hotel Caldas Novas exterior" class="feature-image" />

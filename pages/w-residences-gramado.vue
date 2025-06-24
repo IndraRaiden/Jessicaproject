@@ -23,7 +23,20 @@
     
       <div class="project-content">
         <div class="content-section">
-          <h2 class="section-title">W THE RESIDENCES GRAMADO. EXCLUSIVE MOUNTAIN LIVING...</h2>
+          <h2 class="section-title">W THE RESIDENCES GRAMADO. BRANDED ALPINE LUXURY</h2>
+          
+          <div class="project-description">
+            <p>The W Residences Gramado development is part of a multi-venue hospitality complex in the heart of Brazil's 'European Alps' — a city known for its alpine architecture and film festivals. The residences were designed as the permanent living component of a luxury integrated resort that includes the W Escapes Gramado hotel, an extensive gastronomic village, and a branded spa.</p>
+            <p>As Design Director for KSA Architects, Jessica worked on the master concept for this W Residences project, developing the architectural and interior blueprints for the exclusive branded residential tower. The design narrative focused on blending the W brand's bold signature style with the region's alpine aesthetic, incorporating both the city's European heritage and contemporary luxury elements that appeal to cosmopolitan homeowners. Jessica led the technical detailing of the residential units, which ranged from feature-rich studios to expansive 3+ bedroom penthouses, all designed to deliver exceptional home experiences with hotel-like services.</p>
+            <div class="project-meta-details">
+              <p><strong>SCOPE:</strong> Interior Architecture / Residential Unit Planning / Brand Integration / Finish Selection</p>
+              <p><strong>LOCATION:</strong> Gramado, Brazil</p>
+              <p><strong>COMPANY:</strong> KSA Architects</p>
+              <p><strong>DEVELOPMENT:</strong> Part of a multi-venue integrated resort complex</p>
+              <p><strong>RESIDENTIAL UNITS:</strong> Studios to 3+ bedroom penthouses</p>
+              <p><strong>DESIGN CONCEPT:</strong> Blend of W brand's signature style with local alpine aesthetic</p>
+            </div>
+          </div>
           
           <div class="image-container">
             <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="W Residences Gramado exterior" class="feature-image" />
@@ -139,6 +152,23 @@ onMounted(async () => {
 
 .content-section {
   margin-bottom: 8rem;
+}
+
+.project-description {
+  margin: 2rem 0;
+  max-width: 900px;
+}
+
+.project-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-meta-details {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
 }
 
 .section-title {

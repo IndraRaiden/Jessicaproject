@@ -23,7 +23,17 @@
     
       <div class="project-content">
         <div class="content-section">
-          <h2 class="section-title">W ESCAPES GRAMADO. REDEFINING MOUNTAIN LUXURY...</h2>
+          <h2 class="section-title">W ESCAPES HOTEL, GRAMADO. RAW NATURE, SOFT EDGES, AND A SENSE OF RETURN</h2>
+          
+          <div class="project-description">
+            <p>W AlpineScape and W Residences Gramado are two interconnected developments located on the same site in southern Brazil — one dedicated to hospitality, the other to branded residential living. Both are part of a single strategic vision and operated under the same ownership.</p>
+            <p>As design lead and owner's representative, Jessica is responsible for overseeing the entire interior design process across both properties. Her scope includes design direction, coordination with project stakeholders, and contract monitoring to ensure alignment with brand standards, execution quality, and client expectations.</p>
+            <div class="project-meta-details">
+              <p><strong>SCOPE:</strong> Interior Design Strategy / Developer Consultant</p>
+              <p><strong>LOCATION:</strong> Gramado, Brazil</p>
+              <p><strong>COMPONENTS:</strong> W AlpineScape Hotel, W Residences Gramado</p>
+            </div>
+          </div>
           
           <div class="image-container">
             <img src="~/public/hotels/walpinscape/Captura de pantalla 2025-05-27 193602.png" alt="W Escapes Gramado exterior" class="feature-image" />
@@ -159,6 +169,23 @@ onMounted(async () => {
 
 .content-section {
   margin-bottom: 8rem;
+}
+
+.project-description {
+  margin: 2rem 0;
+  max-width: 900px;
+}
+
+.project-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-meta-details {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
 }
 
 .section-title {

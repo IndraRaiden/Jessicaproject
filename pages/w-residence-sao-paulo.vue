@@ -23,7 +23,18 @@
     
       <div class="project-content">
         <div class="content-section">
-          <h2 class="section-title">W THE RESIDENCE, SÃO PAULO. SOPHISTICATED URBAN LIVING...</h2>
+          <h2 class="section-title">W THE RESIDENCE, SÃO PAULO. SOPHISTICATED URBAN LIVING</h2>
+          
+          <div class="project-description">
+            <p>W The Residence São Paulo, one of the most prestigious real estate developments in Latin America, established a new benchmark for branded residences in Brazil. This residential tower offers hotel-inspired services and high-end amenities in one of the city's most coveted neighborhoods.</p>
+            <p>Jessica was hired by Eliane Pinheiro (best designer in Brazil) to create a series of only-residence spaces for this development. She led the design of the residents-only cinema, private dining room, exclusive lounges, and several other highly customized spaces where residents could host special events and gatherings without going to the public hotel areas. Using the W Hotels' brand language, she developed distinct, locally inspired environments that offered both iconic design and practical functionality, collaborating closely with zoning and operations teams to optimize the spaces for both aesthetic appeal and day-to-day use.</p>
+            <div class="project-meta-details">
+              <p><strong>SCOPE:</strong> Interior Design for Residential Amenities</p>
+              <p><strong>LOCATION:</strong> São Paulo, Brazil</p>
+              <p><strong>COMPANY:</strong> Eliane Pinheiro Design</p>
+              <p><strong>SPECIAL FEATURES:</strong> Residents-only cinema, Private dining room, Exclusive lounges, Event spaces</p>
+            </div>
+          </div>
           
           <div class="image-container">
             <img src="https://images.unsplash.com/photo-1622866306950-81d17097d458?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="W Residence São Paulo exterior" class="feature-image" />
@@ -139,6 +150,23 @@ onMounted(async () => {
 
 .content-section {
   margin-bottom: 8rem;
+}
+
+.project-description {
+  margin: 2rem 0;
+  max-width: 900px;
+}
+
+.project-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-meta-details {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
 }
 
 .section-title {

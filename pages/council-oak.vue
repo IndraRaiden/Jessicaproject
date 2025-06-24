@@ -22,7 +22,19 @@
     
       <div class="project-content">
         <div class="content-section">
-          <h2 class="section-title">COUNCIL OAK. PREMIUM STEAKHOUSE EXPERIENCE...</h2>
+          <h2 class="section-title">COUNCIL OAK. GRAMADO'S PREMIUM STEAKHOUSE</h2>
+          
+          <div class="project-description">
+            <p>Council Oak is an upscale steakhouse within the Hard Rock Hotel Gramado complex, developed as a standalone concept with its own entrance and identity. Located in a European-style resort city in Brazil's southern mountain region, this restaurant combines Hard Rock's global culinary credibility with thoughtfully localized design elements that speak to both international visitors and local clientele.</p>
+            <p>Jessica was responsible for the complete design of this specialty restaurant, from initial concept development through final detailing and FF&E. The space balances the rugged masculinity of classic American steakhouses with softer textures and ambient lighting to create an environment that feels both grand and intimate. She developed a design narrative that integrated the Hard Rock brand's cultural edge with the alpine-inspired regional architecture of Gramado, creating a distinctive experience that still connects cohesively to the broader hotel complex.</p>
+            <div class="project-meta-details">
+              <p><strong>SCOPE:</strong> Complete Restaurant Interior Design / Brand Experience Development / Lighting Design / Custom Furnishings</p>
+              <p><strong>LOCATION:</strong> Hard Rock Hotel Gramado complex, Gramado, Brazil</p>
+              <p><strong>COMPANY:</strong> KSA Architects</p>
+              <p><strong>DESIGN CONCEPT:</strong> Blend of classic American steakhouse with alpine-inspired architectural elements</p>
+              <p><strong>SPECIAL FEATURES:</strong> Standalone restaurant with dedicated entrance, integrated Hard Rock design elements</p>
+            </div>
+          </div>
           
           <div class="image-container">
             <img src="https://images.unsplash.com/photo-1514516345957-556ca7c90a34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Council Oak interior" class="feature-image" />
@@ -141,6 +153,23 @@ onMounted(async () => {
 
 .content-section {
   margin-bottom: 8rem;
+}
+
+.project-description {
+  margin: 2rem 0;
+  max-width: 900px;
+}
+
+.project-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-meta-details {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
 }
 
 .section-title {

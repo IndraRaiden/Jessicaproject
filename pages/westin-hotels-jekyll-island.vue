@@ -23,7 +23,19 @@
     
       <div class="project-content">
         <div class="content-section">
-          <h2 class="section-title">WESTIN HOTELS JEKYLL ISLAND. SOPHISTICATED ISLAND HOSPITALITY...</h2>
+          <h2 class="section-title">WESTIN HOTELS JEKYLL ISLAND. CONSERVATION MEETS COASTAL ELEGANCE</h2>
+          
+          <div class="project-description">
+            <p>Located on a protected island off the coast of Georgia, Jekyll Island represented both an opportunity and a challenge. The site's history as a conservation reserve demanded a design approach that would honor the environment while delivering on Westin's brand promise of wellbeing. As Hospitality Director for BLUR Workshop, Jessica led the project from the first conversations with the client through complete FF&E development.</p>
+            <p>The concept drew from both the natural landscape and the island's cultural identity, integrating maritime influences, nature-inspired textures, and a thoughtfully curated color palette. The design process involved working within strict conservation parameters, requiring innovative solutions to balance luxury with ecological responsibility. This approach extended from the lobby to the beachfront restaurant, guest rooms, and meeting spaces, creating a cohesive experience that fulfilled both brand standards and environmental commitments.</p>
+            <div class="project-meta-details">
+              <p><strong>SCOPE:</strong> Full Interior Design / Concept Development / FF&E Selection / Construction Administration</p>
+              <p><strong>LOCATION:</strong> Jekyll Island, Georgia</p>
+              <p><strong>COMPANY:</strong> BLUR Workshop</p>
+              <p><strong>SPECIAL CONSIDERATIONS:</strong> Conservation reserve status, Environmental restrictions, Maritime heritage</p>
+              <p><strong>DESIGN CONCEPT:</strong> Integration of maritime influences, Nature-inspired textures, Conservation-minded luxury</p>
+            </div>
+          </div>
           
           <div class="image-container">
             <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Westin Hotels Jekyll Island exterior" class="feature-image" />
@@ -139,6 +151,23 @@ onMounted(async () => {
 
 .content-section {
   margin-bottom: 8rem;
+}
+
+.project-description {
+  margin: 2rem 0;
+  max-width: 900px;
+}
+
+.project-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-meta-details {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
 }
 
 .section-title {

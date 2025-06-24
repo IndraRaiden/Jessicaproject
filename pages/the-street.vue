@@ -23,7 +23,20 @@
     
       <div class="project-content">
         <div class="content-section">
-          <h2 class="section-title">THE STREET. URBAN DINING EXPERIENCE...</h2>
+          <h2 class="section-title">THE STREET. MODERN URBAN FOOD HALL</h2>
+          
+          <div class="project-description">
+            <p>The Street is a modern interpretation of the classic food hall, designed as an anchor destination within the revitalized South Seaport district of New York City. This multi-vendor culinary destination captures the energetic spirit of Manhattan's emerging food scene while paying homage to the neighborhood's maritime heritage.</p>
+            <p>Jessica led the interior design and space planning for this complex project, which required creating a cohesive visual identity across diverse food concepts while maintaining each vendor's brand integrity. The design employs a sophisticated industrial aesthetic that references the district's waterfront history through materials like weathered metals, reclaimed woods, and nautical accents. Special attention was given to creating flexible communal dining areas that could accommodate the varying traffic patterns throughout the day, from morning coffee rushes to evening social gatherings. She developed custom lighting solutions that adapted to the space's changing needs and collaborated with local artists to create site-specific installations that tell the story of the neighborhood's evolution.</p>
+            <div class="project-meta-details">
+              <p><strong>SCOPE:</strong> Interior Architecture / Space Planning / Vendor Integration / Environmental Graphics</p>
+              <p><strong>LOCATION:</strong> South Seaport District, New York City, USA</p>
+              <p><strong>COMPANY:</strong> Howard Hughes Corporation</p>
+              <p><strong>SIZE:</strong> 12,500 square feet</p>
+              <p><strong>VENDORS:</strong> 8 specialty food concepts</p>
+              <p><strong>DESIGN CONCEPT:</strong> Industrial waterfront aesthetic with contemporary urban elements</p>
+            </div>
+          </div>
           
           <div class="image-container">
             <img src="~/public/restaurants/thestreet/47.png" alt="The Street interior" class="feature-image" />
@@ -143,6 +156,23 @@ onMounted(async () => {
 
 .content-section {
   margin-bottom: 8rem;
+}
+
+.project-description {
+  margin: 2rem 0;
+  max-width: 900px;
+}
+
+.project-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-meta-details {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
 }
 
 .section-title {

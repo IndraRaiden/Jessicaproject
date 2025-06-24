@@ -7,13 +7,23 @@
       </svg>
     </div>
     
-    <div class="testimonial-content" id="testimonial-1" v-show="currentTestimonial === 1">
-      <p class="quote">Jessica has a strong creative approach towards everything she does. This personality trait combined with her profund understanding of her clients business objectives turned her into a natural strategist and therefore the right person to create remarkable concepts for brands that are determined to offer meaningful and unique experiences.<br>She delivers great results with kindness, joy, special artistic skills and sharp intuition.<br>Look out for this one!</p>
+    <!-- Dynamically generated testimonials -->
+    <div
+      class="testimonial-content"
+      v-for="(item, index) in testimonials"
+      :key="item.id"
+      v-show="currentTestimonial === index"
+    >
+      <!-- Use updated_text when available, otherwise fallback to original_text -->
+      <p class="quote" v-html="item.updated_text || item.original_text"></p>
+      <p class="author">{{ item.author }}</p>
+      <p class="projects" v-if="item.focus_areas">{{ item.focus_areas.join(', ') }}</p>
+    </div>
+
+    <!-- This personality trait combined with her profund understanding of her clients business objectives turned her into a natural strategist and therefore the right person to create remarkable concepts for brands that are determined to offer meaningful and unique experiences.<br>She delivers great results with kindness, joy, special artistic skills and sharp intuition.<br>Look out for this one!</p>
       <p class="author">Lais Hauschild Cobra</p>
       <p class="projects">Estratégia, Branding, Consultora independente<br>July 17, 2014, Lais Hauschild worked with Jessica but they were at different companies</p>
-    </div>
-    
-    <div class="testimonial-content" id="testimonial-2" v-show="currentTestimonial === 2">
+
       <p class="quote">Jessica has a natural talent for leadership and for exposing ideas and projects to different audiences. With a keen eye to the customer and user, she proposes creative and personalized solutions, always allied to implementation and schedule.</p>
       <p class="author">Cristina Opsvik</p>
       <p class="projects">specialist in design and management | design strategist | brand architecture<br>November 15, 2019, Cristina reported directly to Jessica</p>
@@ -37,12 +47,12 @@
       <p class="projects">Principal at Fork Design Studio<br>August 13, 2020, Rachel managed Jessica directly<br>Jessica was a great colleague to work with. She managed design projects in the hospitality realm at IHG where she was a joy to work with, not only because of her positive attitude, but also because of her exceptional design sensibility and the passion she brings to all aspects of her work.</p>
     </div>
     
-    <div class="testimonial-content" id="testimonial-6" v-show="currentTestimonial === 6">
+
       <p class="quote">I'd like to recommend Jessica as diligent and thorough professional with a vast experience in the hospitality interior design field. We've been working together in the development of large size projects in Brazil for high end hotel chains and always showed in depth knowledge of the matter bringing to the table innovative ideas and solutions to enhance the quality of the spaces she creates.</p>
       <p class="author">Marcos Bastos</p>
       <p class="projects">Partner at VOALB Ltda<br>February 8, 2022, Marcos worked with Jessica on the same team</p>
-    </div>
-    
+
+-->
     <div class="scroll-arrow right-arrow" @click="nextTestimonial">
       <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0.5 6H23.5" stroke="#E9EFC9" stroke-width="1" />
@@ -57,14 +67,20 @@ export default {
   name: 'TestimonialsSection',
   data() {
     return {
-      currentTestimonial: 1,
-      totalTestimonials: 6,
+      currentTestimonial: 0,
+      testimonials: [],
       intervalId: null
     };
   },
   mounted() {
-    // Start auto-rotation of testimonials
-    this.startAutoRotation();
+    // Load testimonials JSON then start auto-rotation
+    fetch('/referals/referrals_json.json')
+      .then(r => r.json())
+      .then(data => {
+        this.testimonials = data.testimonials || [];
+        if (this.testimonials.length) this.startAutoRotation();
+      })
+      .catch(err => console.error('Failed to load testimonials JSON', err));
 
     // Add event listeners for visibility change
     document.addEventListener('visibilitychange', this.handleVisibilityChange);
@@ -80,14 +96,13 @@ export default {
   },
   methods: {
     nextTestimonial() {
-      this.currentTestimonial = this.currentTestimonial >= this.totalTestimonials 
-        ? 1 
-        : this.currentTestimonial + 1;
+      this.currentTestimonial = this.testimonials.length === 0 ? 0 : (this.currentTestimonial + 1) % this.testimonials.length;
       this.resetAutoRotation();
     },
     previousTestimonial() {
-      this.currentTestimonial = this.currentTestimonial <= 1 
-        ? this.totalTestimonials 
+      if (!this.testimonials.length) return;
+      this.currentTestimonial = this.currentTestimonial === 0
+        ? this.testimonials.length - 1
         : this.currentTestimonial - 1;
       this.resetAutoRotation();
     },

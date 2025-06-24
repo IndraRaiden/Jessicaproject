@@ -23,7 +23,21 @@
     
       <div class="project-content">
         <div class="content-section">
-          <h2 class="section-title">LEGENDRE 40, PARIS. SOPHISTICATED HOSPITALITY EXPERIENCE...</h2>
+          <h2 class="section-title">LEGENDRE 40 HOTEL, PARIS. MULTI-USE LUXURY PROPERTY</h2>
+          
+          <div class="project-description">
+            <p>A multi-use property in the 17th arrondissement of Paris, now named La Fondation, combines a five-star hotel with 58 rooms, including 3 suites and a converted office building originally designed as a parking garage. The hotel features four F&B venues, a wellness studio, and rooftop social areas, while the adjacent office building integrates café spaces, private rooms, and shared amenities, creating fluid transitions between rest, focus, and connection.</p>
+            <p>As Design Lead at Roman and Williams, Jessica oversaw the interior design development for guest rooms, signature suites, and common areas across both buildings. Her scope included spatial planning, material and finish selections, and custom detailing, translating a complex program into a cohesive experience, where function and atmosphere move fluidly between uses.</p>
+            <div class="project-meta-details">
+              <p><strong>SCOPE:</strong> Brand strategy, full interior design, and custom FF&E across hotel and office spaces</p>
+              <p><strong>LOCATION:</strong> 17th arrondissement of Paris</p>
+              <p><strong>CURRENT NAME:</strong> La Fondation</p>
+              <p><strong>COMPANY:</strong> Roman and Williams</p>
+              <p><strong>ROOMS:</strong> 58</p>
+              <p><strong>SUITES:</strong> 3</p>
+              <p><strong>FEATURES:</strong> Four F&B venues, Wellness studio, Rooftop social areas, Office building with café spaces</p>
+            </div>
+          </div>
           
           <div class="image-container">
             <img src="~/public/hotels/legendre/39.png" alt="Legendre 40 Paris interior" class="feature-image" />
@@ -159,6 +173,23 @@ onMounted(async () => {
 
 .content-section {
   margin-bottom: 8rem;
+}
+
+.project-description {
+  margin: 2rem 0;
+  max-width: 900px;
+}
+
+.project-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-meta-details {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
 }
 
 .section-title {

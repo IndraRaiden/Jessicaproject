@@ -23,7 +23,17 @@
     
       <div class="project-content">
         <div class="content-section">
-          <h2 class="section-title">HARD ROCK HOTEL, SÃO PAULO. VIBRANT URBAN HOSPITALITY...</h2>
+          <h2 class="section-title">HARD ROCK HOTEL, SÃO PAULO. REVITALIZING AN ICONIC LOCATION</h2>
+          
+          <div class="project-description">
+            <p>Located at Sumitomo building on Avenida Paulista, this Hard Rock Hotel project involved the architectural revitalization of a historical building façade and the development of a tailored interior architecture proposal.</p>
+            <p>As lead architect, Jessica designed the internal flow and spatial distribution of the venue, aligning brand guidelines with operational needs and existing structural constraints. Her role included spatial programming, coordination with Hard Rock brand standards, and participation in approval rounds with local and international stakeholders.</p>
+            <div class="project-meta-details">
+              <p><strong>SCOPE:</strong> Interior Design Direction / Brand Design Strategy / Full Interior Design</p>
+              <p><strong>LOCATION:</strong> Sumitomo building, Avenida Paulista, São Paulo</p>
+              <p><strong>SPECIAL FEATURES:</strong> Historical building façade revitalization</p>
+            </div>
+          </div>
           
           <div class="image-container">
             <img src="~/public/hotels/hardrocksaopaulo/68.png" alt="Hard Rock Hotel São Paulo exterior" class="feature-image" />
@@ -151,6 +161,23 @@ onMounted(async () => {
 
 .content-section {
   margin-bottom: 8rem;
+}
+
+.project-description {
+  margin: 2rem 0;
+  max-width: 900px;
+}
+
+.project-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-meta-details {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
 }
 
 .section-title {

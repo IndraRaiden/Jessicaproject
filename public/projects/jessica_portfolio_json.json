@@ -1,0 +1,160 @@
+{
+  "portfolio": {
+    "designer": "Jessica",
+    "testimonial": "Throughout our time working together, I saw Jessica consistently bring thoughtful and creative solutions to the table — always ready to contribute with generosity, clarity, and intention. She has a rare strength across every stage of the design process, from concept to completion, and an equally impressive ability to manage clients with professionalism and ease — both in person and over written communication. Her leadership is steady, her design thinking sharp, and her presence always elevates the room.",
+    "projects": [
+      {
+        "id": 1,
+        "name": "Equinox Hotel – Chicago",
+        "status": "NEW",
+        "scope": "Visual Interior Design / FF&E",
+        "description": "Before its expansion into hospitality, Equinox was exploring new ways to translate its performance lifestyle into physical space. Working closely with the brand's internal design team, Jessica contributed to the early conceptualization of what would later become the foundation for its hotel experience, engaging in a deep learning process to understand and translate the brand's evolving lifestyle vision into spatial concepts.",
+        "details": "The FF&E package played a central role in shaping the guest experience and anchoring the brand's narrative inside the room, a focus that guided Jessica's work during the final development phase of the Chicago hotel at Roman and Williams. She led the design and detailing of the standard guest rooms and signature suites, developing a custom FF&E package in close coordination with Equinox's creative leads to align material choices and spatial experience with the brand's high-performance identity.",
+        "company": "Roman and Williams"
+      },
+      {
+        "id": 2,
+        "name": "Equinox Hotel – Houston",
+        "status": "NEW",
+        "scope": "Visual Interior Design Direction – Social Areas",
+        "description": "As an extension of her work with the Equinox brand, Jessica as a Design Lead at Roman and Williams, contributed to the design development of the Houston project with a focus on front-of-house and social areas. Her role included refining spatial flow, material selection, lighting coordination, and the integration of functional elements such as signage, custom furniture, and circulation paths, ensuring consistency between brand narrative, operational needs, and sensory experience.",
+        "company": "Roman and Williams"
+      },
+      {
+        "id": 3,
+        "name": "Edition Hotel – Tampa",
+        "status": "NEW",
+        "scope": "Interior Design Development / Construction Documentation / Model Rooms / FF&E / Interior Detailing",
+        "description": "The Tampa Edition is part of Marriott's luxury lifestyle portfolio, envisioned in collaboration with hospitality icon Ian Schrager. A mixed-use development combining hotel and branded residences, the property brings together high-end hospitality and curated living across multiple F&B venues — including the Punch Room, a signature restaurant, a rooftop pool bar, and additional culinary spaces.",
+        "details": "As part of the Roman and Williams team, Jessica worked closely with the Ian Schrager design group to define the spatial language and material palette of the project. Her contribution spanned from high-level design direction to FF&E selection for the residential units, helping to translate the Edition brand identity into layered, elegant environments that balance sophistication with approachability.",
+        "company": "Roman and Williams",
+        "client": "Marriott / Ian Schrager"
+      },
+      {
+        "id": 4,
+        "name": "Emmons Hotel – New York",
+        "status": "NEW",
+        "scope": "Full Interior Design / Design Direction & Project Management",
+        "location": "South Brooklyn, Sheepshead Bay",
+        "description": "Located on the waterfront of South Brooklyn, the Emmons Hotel is part of a broader revitalization movement in the Sheepshead Bay area — a neighborhood once known as the Brooklyn Marina. With 58 guest rooms and a full-floor dedicated to events, the property was conceived as a lifestyle destination with strong appeal for weddings and local community gatherings, particularly among the Jewish community of nearby Manhattan Beach.",
+        "details": "Jessica, as design lead through Dash Design, oversaw the full interior direction, building a narrative around the area's nautical legacy, the elegance of Italian boats once docked nearby, and touches of local Art Deco nostalgia. Among the highlights are five specialty suites, including two designed specifically for wedding parties, one for the groom, featuring a wet bar and putting green, and one for the bride, with a soaking tub, dressing area, and private terrace, each space carefully crafted to elevate the pre-event experience.",
+        "company": "Dash Design",
+        "rooms": 58,
+        "special_features": ["Wedding suites", "Event floor", "Groom suite with wet bar and putting green", "Bride suite with soaking tub and private terrace"]
+      },
+      {
+        "id": 5,
+        "name": "LEGENDRE 40 Hotel – Paris",
+        "status": "NEW",
+        "scope": "Brand strategy, full interior design, and custom FF&E across hotel and office spaces",
+        "location": "17th arrondissement of Paris",
+        "current_name": "La Fondation",
+        "description": "A multi-use property in the 17th arrondissement of Paris, now named La Fondation, combines a five-star hotel with 58 rooms, including 3 suites and a converted office building originally designed as a parking garage. The hotel features four F&B venues, a wellness studio, and rooftop social areas, while the adjacent office building integrates café spaces, private rooms, and shared amenities, creating fluid transitions between rest, focus, and connection.",
+        "details": "As Design Lead at Roman and Williams, Jessica oversaw the interior design development for guest rooms, signature suites, and common areas across both buildings. Her scope included spatial planning, material and finish selections, and custom detailing, translating a complex program into a cohesive experience, where function and atmosphere move fluidly between uses.",
+        "company": "Roman and Williams",
+        "rooms": 58,
+        "suites": 3,
+        "features": ["Four F&B venues", "Wellness studio", "Rooftop social areas", "Office building with café spaces"]
+      },
+      {
+        "id": 6,
+        "name": "W escapes Hotel – Gramado, Brazil",
+        "status": "NEW",
+        "scope": "Interior Design Strategy / Developer Consultant",
+        "tagline": "Raw nature, soft edges, and a sense of return",
+        "location": "Gramado, Brazil",
+        "description": "W AlpineScape and W Residences Gramado are two interconnected developments located on the same site in southern Brazil — one dedicated to hospitality, the other to branded residential living. Both are part of a single strategic vision and operated under the same ownership.",
+        "details": "As design lead and owner's representative, Jessica is responsible for overseeing the entire interior design process across both properties. Her scope includes design direction, coordination with project stakeholders, and contract monitoring to ensure alignment with brand standards, execution quality, and client expectations.",
+        "components": ["W AlpineScape Hotel", "W Residences Gramado"]
+      },
+      {
+        "id": 7,
+        "name": "Pensacola Project – Florida",
+        "status": "NEW",
+        "scope": "Interior Design Direction / Brand Design Strategy / Full Interior Design",
+        "tagline": "Effortless charm, designed to last",
+        "location": "Pensacola, Florida",
+        "description": "This independent hospitality project, with over 100 rooms and branded residences, was developed in a fast-paced timeline and positioned to serve the growing Pensacola market. With no pre-existing flag, the hotel was conceived as a stand-alone brand, built from the ground up in partnership with a branding agency, based on local lifestyle insights and benchmarked business potential.",
+        "details": "Jessica led the interior design direction across all guest-facing areas, translating the brand strategy into spatial experience. The concept emphasized biophilic design and sensory richness, combining carved wood artwork, raw stone transitions, integrated landscaping, and a natural material palette to create a warm and grounded environment.",
+        "rooms": "100+",
+        "design_concept": "Biophilic design with carved wood artwork, raw stone transitions, integrated landscaping"
+      },
+      {
+        "id": 8,
+        "name": "Hard Rock Hotel – Gramado, Brazil",
+        "status": "NEW",
+        "scope": "Interior Design / Peer Review / Conceptual Narrative",
+        "location": "Gramado, Brazil",
+        "description": "With 823 guest rooms and seven F&B venues, Hard Rock Hotel Gramado was developed as a hospitality complex at the scale of a small city. Acting independently of any architecture office, Jessica led the interior design development and participate in the architectural peer review process, ensuring brand alignment and operational efficiency across all guest-facing areas, including a retail store and multiple dining concepts.",
+        "details": "The design process began with an immersive local research phase, where three narrative pillars — historical, physical, and social — were defined to guide aesthetic and functional decisions. These insights guided the definition of material palette, furniture selection, and decorative elements, including custom pieces that brought regional character into dialogue with the global identity of the brand.",
+        "rooms": 823,
+        "venues": 7,
+        "narrative_pillars": ["Historical", "Physical", "Social"],
+        "features": ["Retail store", "Multiple dining concepts"]
+      },
+      {
+        "id": 9,
+        "name": "Hard Rock Hotel – São Paulo, Brazil",
+        "status": "NEW",
+        "scope": "Interior Design Direction / Brand Design Strategy / Full Interior Design",
+        "location": "Sumitomo building, Avenida Paulista, São Paulo",
+        "description": "Located at Sumitomo building on Avenida Paulista, this Hard Rock Hotel project involved the architectural revitalization of a historical building façade and the development of a tailored interior architecture proposal.",
+        "details": "As lead architect, Jessica designed the internal flow and spatial distribution of the venue, aligning brand guidelines with operational needs and existing structural constraints. Her role included spatial programming, coordination with Hard Rock brand standards, and participation in approval rounds with local and international stakeholders.",
+        "special_notes": "Historical building façade revitalization"
+      },
+      {
+        "id": 10,
+        "name": "The Street – New York",
+        "status": "NEW",
+        "scope": "F&B Concept Development / Spatial Identity / Custom Fixture Design",
+        "tagline": "Effortless charm, designed to last",
+        "location": "Pier in South Seaport, New York City",
+        "description": "Located on a pier in South Seaport, New York City, The Street was a temporary food and beverage venue designed to bring the sensation of an indoor street, lined with distinct bars, entertainment zones, and a waterfront experience facing the Hudson River.",
+        "details": "Jessica, as a design lead at Roman and Williams, worked closely with the developer to shape the identity and layout concept for each individual venue within the space, from a live music bar focused on beer culture to a stylish tea bar at the entrance, cocktail stations, and an outdoor lounge. She contributed at both the strategic level: planning the spaces and aligning the concept, and dove deep into the detailed level, designing elements such as wooden pendant lights inspired by nautical forms, echoing the sailboats anchored nearby.",
+        "company": "Roman and Williams",
+        "venue_type": "Temporary F&B venue",
+        "features": ["Live music bar", "Tea bar", "Cocktail stations", "Outdoor lounge", "Custom nautical-inspired lighting"]
+      },
+      {
+        "id": 11,
+        "name": "Sheraton – Santos, Brazil",
+        "status": "NEW",
+        "scope": "Concept, Design Development and Construction Drawings for Club Lounge and Special Suites / Decorative Pieces, FF&E and Finishes Selection for Public Spaces",
+        "location": "Santos, Brazil",
+        "description": "As a consultant for Haman Development, Jessica was responsible for the concept, development, and construction documentation of the Club Lounge and special suites, including the presidential suite, a preferred choice for high-profile guests such as Neymar.",
+        "details": "In parallel, she led the full decorative production across the hotel's public areas, overseeing FF&E selection, finishes, and spatial styling. This included curating key visual points such as custom shelving, art placement, and material composition. along with the creation of original paintings featured in both the presidential and standard suites. A standout piece from this project was a large-scale sculptural installation suspended in the main lobby — a custom-designed ceiling artwork measuring six by three meters, designed to anchor the space with identity and scale.",
+        "company": "Haman Development (consultant)",
+        "notable_guests": ["Neymar"],
+        "custom_artwork": {
+          "original_paintings": "Presidential and standard suites",
+          "ceiling_installation": "6m x 3m sculptural artwork in main lobby"
+        }
+      },
+      {
+        "id": 12,
+        "name": "Shinsegae – Daejeon, South Korea",
+        "status": "NEW",
+        "scope": "Concept Narrative / Interior Architecture / Materiality / Visual Systems",
+        "location": "Sub-level of commercial tower, Daejeon, South Korea",
+        "description": "Located in the sub-level of a commercial tower in South Korea, the Shinsegae project was commissioned by a real estate fund backed by Samsung and LG, with the goal of transforming an entire underground footprint into two distinct experiences: a high-end food hall and a technology-driven department store.",
+        "details": "As Design Lead at Roman and Williams, Jessica co-developed a multi-layered narrative strategy that guided the design from concept to execution. The project was structured around three key axes: the cultural context of South Korea, the influence of advanced technology as a thematic thread, and the need to create spatial distinction between local cuisine, international gastronomy, and the retail tech zone. This layered approach drove every design decision, from materiality and lighting to display structure, column treatment, and wayfinding systems. Each section was given its own architectural identity while maintaining overall cohesion. Practicality and durability were also core to the process, with special attention to lighting specs, seating solutions, and ease of long-term maintenance.",
+        "company": "Roman and Williams",
+        "client": "Real estate fund backed by Samsung and LG",
+        "components": ["High-end food hall", "Technology-driven department store"],
+        "design_axes": ["Cultural context of South Korea", "Advanced technology influence", "Spatial distinction between zones"]
+      },
+      {
+        "id": 13,
+        "name": "Westin Hotels - Jekyll Island, United States",
+        "status": "NEW",
+        "scope": "Narrative Development / Pitch Strategy / Competitive Positioning",
+        "location": "Jekyll Island, United States",
+        "description": "Jessica was hired as a consultant by Dash Design to support the competitive pitch for the Westin project. She was responsible for develop the conceptual narrative and strategic framing that positioned the studio's proposal against five competing firms.",
+        "details": "This early stage work involved articulating design intent, brand alignment, and experiential differentiators in a clear and compelling way, shaping the creative direction and leading the storytelling behind the presentation. The proposal won the commission, driven by a vision that balanced brand values with contextual sensitivity and spatial potential.",
+        "company": "Dash Design (consultant)",
+        "competition": "5 competing firms",
+        "result": "Won the commission"
+      }
+    ]
+  }
+}

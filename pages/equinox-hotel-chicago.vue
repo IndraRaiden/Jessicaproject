@@ -23,7 +23,16 @@
     
       <div class="project-content">
         <div class="content-section">
-          <h2 class="section-title">EQUINOX HOTEL, CHICAGO. SOPHISTICATED HOSPITALITY EXPERIENCE...</h2>
+          <h2 class="section-title">EQUINOX HOTEL, CHICAGO. SOPHISTICATED HOSPITALITY EXPERIENCE</h2>
+          
+          <div class="project-description">
+            <p>Before its expansion into hospitality, Equinox was exploring new ways to translate its performance lifestyle into physical space. Working closely with the brand's internal design team, Jessica contributed to the early conceptualization of what would later become the foundation for its hotel experience, engaging in a deep learning process to understand and translate the brand's evolving lifestyle vision into spatial concepts.</p>
+            <p>The FF&E package played a central role in shaping the guest experience and anchoring the brand's narrative inside the room, a focus that guided Jessica's work during the final development phase of the Chicago hotel at Roman and Williams. She led the design and detailing of the standard guest rooms and signature suites, developing a custom FF&E package in close coordination with Equinox's creative leads to align material choices and spatial experience with the brand's high-performance identity.</p>
+            <div class="project-meta-details">
+              <p><strong>SCOPE:</strong> Visual Interior Design / FF&E</p>
+              <p><strong>COMPANY:</strong> Roman and Williams</p>
+            </div>
+          </div>
           
           <div class="image-container">
             <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Equinox Hotel Chicago interior" class="feature-image" />
@@ -139,6 +148,23 @@ onMounted(async () => {
 
 .content-section {
   margin-bottom: 8rem;
+}
+
+.project-description {
+  margin: 2rem 0;
+  max-width: 900px;
+}
+
+.project-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-meta-details {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
 }
 
 .section-title {

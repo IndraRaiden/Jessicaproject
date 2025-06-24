@@ -23,7 +23,19 @@
     
       <div class="project-content">
         <div class="content-section">
-          <h2 class="section-title">EMMONS HOTEL, NY. SOPHISTICATED URBAN HOSPITALITY EXPERIENCE...</h2>
+          <h2 class="section-title">EMMONS HOTEL, NY. WATERFRONT LIFESTYLE DESTINATION</h2>
+          
+          <div class="project-description">
+            <p>Located on the waterfront of South Brooklyn, the Emmons Hotel is part of a broader revitalization movement in the Sheepshead Bay area — a neighborhood once known as the Brooklyn Marina. With 58 guest rooms and a full-floor dedicated to events, the property was conceived as a lifestyle destination with strong appeal for weddings and local community gatherings, particularly among the Jewish community of nearby Manhattan Beach.</p>
+            <p>Jessica, as design lead through Dash Design, oversaw the full interior direction, building a narrative around the area's nautical legacy, the elegance of Italian boats once docked nearby, and touches of local Art Deco nostalgia. Among the highlights are five specialty suites, including two designed specifically for wedding parties, one for the groom, featuring a wet bar and putting green, and one for the bride, with a soaking tub, dressing area, and private terrace, each space carefully crafted to elevate the pre-event experience.</p>
+            <div class="project-meta-details">
+              <p><strong>SCOPE:</strong> Full Interior Design / Design Direction & Project Management</p>
+              <p><strong>LOCATION:</strong> South Brooklyn, Sheepshead Bay</p>
+              <p><strong>COMPANY:</strong> Dash Design</p>
+              <p><strong>ROOMS:</strong> 58</p>
+              <p><strong>SPECIAL FEATURES:</strong> Wedding suites, Event floor, Groom suite with wet bar and putting green, Bride suite with soaking tub and private terrace</p>
+            </div>
+          </div>
           
           <div class="image-container">
             <img src="~/public/hotels/emmons/Angulo_01.jpg" alt="Emmons Hotel NY interior" class="feature-image" />
@@ -159,6 +171,23 @@ onMounted(async () => {
 
 .content-section {
   margin-bottom: 8rem;
+}
+
+.project-description {
+  margin: 2rem 0;
+  max-width: 900px;
+}
+
+.project-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-meta-details {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
 }
 
 .section-title {

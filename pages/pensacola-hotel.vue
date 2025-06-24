@@ -23,7 +23,18 @@
     
       <div class="project-content">
         <div class="content-section">
-          <h2 class="section-title">PENSACOLA HOTEL. REDEFINING BEACHFRONT LUXURY...</h2>
+          <h2 class="section-title">PENSACOLA PROJECT, FLORIDA. EFFORTLESS CHARM, DESIGNED TO LAST</h2>
+          
+          <div class="project-description">
+            <p>This independent hospitality project, with over 100 rooms and branded residences, was developed in a fast-paced timeline and positioned to serve the growing Pensacola market. With no pre-existing flag, the hotel was conceived as a stand-alone brand, built from the ground up in partnership with a branding agency, based on local lifestyle insights and benchmarked business potential.</p>
+            <p>Jessica led the interior design direction across all guest-facing areas, translating the brand strategy into spatial experience. The concept emphasized biophilic design and sensory richness, combining carved wood artwork, raw stone transitions, integrated landscaping, and a natural material palette to create a warm and grounded environment.</p>
+            <div class="project-meta-details">
+              <p><strong>SCOPE:</strong> Interior Design Direction / Brand Design Strategy / Full Interior Design</p>
+              <p><strong>LOCATION:</strong> Pensacola, Florida</p>
+              <p><strong>ROOMS:</strong> 100+</p>
+              <p><strong>DESIGN CONCEPT:</strong> Biophilic design with carved wood artwork, raw stone transitions, integrated landscaping</p>
+            </div>
+          </div>
           
           <div class="image-container">
             <img src="~/public/hotels/pensacola/51.png" alt="Pensacola Hotel exterior" class="feature-image" />
@@ -163,6 +174,23 @@ onMounted(async () => {
 
 .content-section {
   margin-bottom: 8rem;
+}
+
+.project-description {
+  margin: 2rem 0;
+  max-width: 900px;
+}
+
+.project-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-meta-details {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
 }
 
 .section-title {

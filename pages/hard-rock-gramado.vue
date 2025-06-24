@@ -23,7 +23,20 @@
     
       <div class="project-content">
         <div class="content-section">
-          <h2 class="section-title">HARD ROCK HOTEL, GRAMADO. VIBRANT MOUNTAIN HOSPITALITY...</h2>
+          <h2 class="section-title">HARD ROCK HOTEL, GRAMADO. A HOSPITALITY COMPLEX AT CITY SCALE</h2>
+          
+          <div class="project-description">
+            <p>With 823 guest rooms and seven F&B venues, Hard Rock Hotel Gramado was developed as a hospitality complex at the scale of a small city. Acting independently of any architecture office, Jessica led the interior design development and participate in the architectural peer review process, ensuring brand alignment and operational efficiency across all guest-facing areas, including a retail store and multiple dining concepts.</p>
+            <p>The design process began with an immersive local research phase, where three narrative pillars — historical, physical, and social — were defined to guide aesthetic and functional decisions. These insights guided the definition of material palette, furniture selection, and decorative elements, including custom pieces that brought regional character into dialogue with the global identity of the brand.</p>
+            <div class="project-meta-details">
+              <p><strong>SCOPE:</strong> Interior Design / Peer Review / Conceptual Narrative</p>
+              <p><strong>LOCATION:</strong> Gramado, Brazil</p>
+              <p><strong>ROOMS:</strong> 823</p>
+              <p><strong>VENUES:</strong> 7</p>
+              <p><strong>NARRATIVE PILLARS:</strong> Historical, Physical, Social</p>
+              <p><strong>FEATURES:</strong> Retail store, Multiple dining concepts</p>
+            </div>
+          </div>
           
           <div class="image-container">
             <img src="~/public/hotels/hardrockgrimaldo/Captura de pantalla 2025-05-27 191941.png" alt="Hard Rock Hotel Gramado exterior" class="feature-image" />
@@ -163,6 +176,23 @@ onMounted(async () => {
 
 .content-section {
   margin-bottom: 8rem;
+}
+
+.project-description {
+  margin: 2rem 0;
+  max-width: 900px;
+}
+
+.project-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-meta-details {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
 }
 
 .section-title {

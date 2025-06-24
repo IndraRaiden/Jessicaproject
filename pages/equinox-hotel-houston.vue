@@ -23,7 +23,15 @@
     
       <div class="project-content">
         <div class="content-section">
-          <h2 class="section-title">EQUINOX HOTEL, HOUSTON. SOPHISTICATED HOSPITALITY EXPERIENCE...</h2>
+          <h2 class="section-title">EQUINOX HOTEL, HOUSTON. SOPHISTICATED HOSPITALITY EXPERIENCE</h2>
+          
+          <div class="project-description">
+            <p>As an extension of her work with the Equinox brand, Jessica as a Design Lead at Roman and Williams, contributed to the design development of the Houston project with a focus on front-of-house and social areas. Her role included refining spatial flow, material selection, lighting coordination, and the integration of functional elements such as signage, custom furniture, and circulation paths, ensuring consistency between brand narrative, operational needs, and sensory experience.</p>
+            <div class="project-meta-details">
+              <p><strong>SCOPE:</strong> Visual Interior Design Direction – Social Areas</p>
+              <p><strong>COMPANY:</strong> Roman and Williams</p>
+            </div>
+          </div>
           
           <div class="image-container">
             <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Equinox Hotel Houston interior" class="feature-image" />
@@ -139,6 +147,23 @@ onMounted(async () => {
 
 .content-section {
   margin-bottom: 8rem;
+}
+
+.project-description {
+  margin: 2rem 0;
+  max-width: 900px;
+}
+
+.project-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-meta-details {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
 }
 
 .section-title {

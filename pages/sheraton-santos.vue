@@ -23,7 +23,19 @@
     
       <div class="project-content">
         <div class="content-section">
-          <h2 class="section-title">SHERATON SANTOS. SOPHISTICATED COASTAL HOSPITALITY...</h2>
+          <h2 class="section-title">SHERATON SANTOS. LUXURY CLUB LOUNGE AND EXCLUSIVE SUITES</h2>
+          
+          <div class="project-description">
+            <p>As a consultant for Haman Development, Jessica was responsible for the concept, development, and construction documentation of the Club Lounge and special suites, including the presidential suite, a preferred choice for high-profile guests such as Neymar.</p>
+            <p>In parallel, she led the full decorative production across the hotel's public areas, overseeing FF&E selection, finishes, and spatial styling. This included curating key visual points such as custom shelving, art placement, and material composition, along with the creation of original paintings featured in both the presidential and standard suites. A standout piece from this project was a large-scale sculptural installation suspended in the main lobby — a custom-designed ceiling artwork measuring six by three meters, designed to anchor the space with identity and scale.</p>
+            <div class="project-meta-details">
+              <p><strong>SCOPE:</strong> Concept, Design Development and Construction Drawings for Club Lounge and Special Suites / Decorative Pieces, FF&E and Finishes Selection for Public Spaces</p>
+              <p><strong>LOCATION:</strong> Santos, Brazil</p>
+              <p><strong>COMPANY:</strong> Haman Development (consultant)</p>
+              <p><strong>NOTABLE GUESTS:</strong> Neymar</p>
+              <p><strong>CUSTOM ARTWORK:</strong> Original paintings in presidential and standard suites, 6m x 3m sculptural ceiling installation in main lobby</p>
+            </div>
+          </div>
           
           <div class="image-container">
             <img src="~/public/hotels/sheraton/74.png" alt="Sheraton Santos exterior" class="feature-image" />
@@ -139,6 +151,23 @@ onMounted(async () => {
 
 .content-section {
   margin-bottom: 8rem;
+}
+
+.project-description {
+  margin: 2rem 0;
+  max-width: 900px;
+}
+
+.project-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-meta-details {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
 }
 
 .section-title {

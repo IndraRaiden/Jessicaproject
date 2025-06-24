@@ -23,7 +23,20 @@
     
       <div class="project-content">
         <div class="content-section">
-          <h2 class="section-title">MATADOR ROOM. SOPHISTICATED DINING EXPERIENCE...</h2>
+          <h2 class="section-title">MATADOR ROOM. MICHELIN-STARRED LATIN CUISINE</h2>
+          
+          <div class="project-description">
+            <p>The Matador Room represents a seamless fusion of Jean-Georges Vongerichten's acclaimed culinary vision with Miami's mid-century glamour. Located within the historic Edition Hotel Miami Beach, this restaurant pays homage to the property's original 1950s venue of the same name, which was once a gathering place for the era's celebrities and tastemakers.</p>
+            <p>Jessica worked with Ian Schrager's design team to develop the restaurant's interior concept, which features a dramatic sunken dining room with a spectacular original chandelier as its centerpiece. The design echoes the oval supper clubs of a bygone era while introducing contemporary elements that complement Jean-Georges' Latin-inspired menu. She was responsible for the space planning, finish selection, and custom furnishing design that creates a sophisticated yet comfortable environment that transitions seamlessly from formal dining to casual bar atmosphere. The space's meticulous detailing extends from its circular banquettes to the carefully curated art program that references both Miami's cultural heritage and the building's storied past.</p>
+            <div class="project-meta-details">
+              <p><strong>SCOPE:</strong> Interior Design / Space Planning / Custom Furnishings / Art Curation</p>
+              <p><strong>LOCATION:</strong> Edition Hotel Miami Beach, Florida, USA</p>
+              <p><strong>COMPANY:</strong> Ian Schrager Company</p>
+              <p><strong>CLIENT:</strong> Jean-Georges Restaurants</p>
+              <p><strong>DESIGN CONCEPT:</strong> Mid-century modern revival with contemporary Latin influences</p>
+              <p><strong>SPECIAL FEATURES:</strong> Original historic chandelier, sunken circular dining room, indoor-outdoor transitional spaces</p>
+            </div>
+          </div>
           
           <div class="image-container">
             <img src="~/public/restaurants/elmatadorroom/16.png" alt="Matador Room interior" class="feature-image" />
@@ -143,6 +156,23 @@ onMounted(async () => {
 
 .content-section {
   margin-bottom: 8rem;
+}
+
+.project-description {
+  margin: 2rem 0;
+  max-width: 900px;
+}
+
+.project-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-meta-details {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
 }
 
 .section-title {
