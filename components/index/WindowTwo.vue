@@ -5,11 +5,13 @@
       <div class="left-spacer"></div>
       <div class="intro-content">
         <div class="quote-contact-wrapper">
-          <p class="main-text instrument-text">We craft immersive real estate destinations that maximize asset value and make people feel alive</p>
-          <a @click="navigateToContactPage" class="contact-link instrument-text" style="margin-left: 40px; white-space: nowrap; font-size: 2.8rem;">Contact Us.</a>
-        </div>
+          <p class="main-text instrument-text">
+  <span class="no-wrap">We craft immersive real estate <span class="italic-text">destinations</span></span><br>
+  <span class="no-wrap">that maximize asset value and make <span class="italic-text">people feel alive</span>.</span>
+</p>
+                  </div>
         <div class="find-out-more" style="margin-top: 20px;">
-          <a @click="navigateToAboutPage" class="about-link instrument-text">Find out more.</a>
+          <a @click="navigateToAboutPage" class="about-link instrument-text" style="letter-spacing: 220%;">FIND OUT MORE</a>
         </div>
       </div>
       <div class="right-spacer"></div>
@@ -176,27 +178,22 @@ onUnmounted(() => {
   font-style: normal;
 }
 
-/* Add custom underline with spacing */
+/* Animated underline */
 .find-out-more a::after {
   content: '';
   position: absolute;
+  left: 0;
+  bottom: -10px;
   width: 100%;
   height: 1px;
-  bottom: -10px; /* Increased spacing between text and underline */
-  left: 0;
   background-color: #1d2a29;
-  opacity: 0; /* Hide underline by default */
-  transition: all 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
-.find-out-more a:hover {
-  opacity: 0.7;
-}
-
-/* Only show underline on hover */
 .find-out-more a:hover::after {
-  opacity: 1; /* Show underline on hover */
-  bottom: -10px; /* Maintain consistent spacing on hover */
+  transform: scaleX(1);
 }
 
 /* Hotels section */
@@ -303,4 +300,24 @@ onUnmounted(() => {
   
   /* Mobile video styling is now handled by the YoutubeEmbed component */
 }
+
+.italic-text {
+  font-family: 'Instrument Serif', serif !important;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: inherit;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+/* Override font for Find out more link */
+.find-out-more a {
+  letter-spacing: 220%;
+  text-transform: uppercase;
+  font-family: 'Be Vietnam Pro', sans-serif !important;
+  font-weight: 700 !important;
+}
+
 </style>

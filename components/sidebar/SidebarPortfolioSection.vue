@@ -134,9 +134,9 @@ const toggleSection = () => {
 /* Portfolio content styles */
 .portfolio-content {
   padding: 1rem 0;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.25rem;
+  display: flex;
+  flex-direction: column; /* stack Hotels, Foods, etc. */
+  gap: 2.5rem; /* bigger separation */
 }
 
 /* Stack sections on small screens */
@@ -165,8 +165,20 @@ const toggleSection = () => {
 
 .portfolio-links {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 0.4rem;
+  grid-template-columns: repeat(5, 1fr); /* 5 uniform columns on desktop */
+  gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .portfolio-links {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .portfolio-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .portfolio-link {

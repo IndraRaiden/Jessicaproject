@@ -1,16 +1,17 @@
 <template>
   <div class="capabilities-container">
-    <h2 class="section-title">Our services :</h2>
+    <h2 class="section-title">Our services</h2>
     
     <div class="services-description">
-      <p>We deliver a true 360° approach, transforming real estate into immersive destinations through rigorous, brand-led placemaking and the creativity of soulful design</p>
+      <p>We deliver a true 360° approach, transforming real estate into immersive destinations</p>
+      <p>Through rigorous, brand-led placemaking and the creativity of soulful design.</p>
     </div>
     
     <div class="capability-groups">
       <!-- Design Section -->
       <div class="capability-group">
         <h3 class="capability-main-title" @click="setActiveCapability('design')" :class="{ 'active': activeCapabilityGroup === 'design' }">
-          DESIGN
+          <span class="title-text">DESIGN</span>
           <span class="toggle-icon">{{ activeCapabilityGroup === 'design' ? '-' : '+' }}</span>
         </h3>
         <div class="capability-group-content" :class="{ 'expanded': activeCapabilityGroup === 'design' }">
@@ -20,19 +21,19 @@
             <div class="capability-item">
               <h4>CONCEPT DEVELOPMENT</h4>
               <p>We craft distinctive design narratives that align with brand values and resonate with target audiences.</p>
-              <a href="#" class="read-more">Read More</a>
+              
             </div>
             
             <div class="capability-item">
               <h4>SPACE PLANNING</h4>
               <p>We optimize spatial flow and functionality to create intuitive, engaging guest experiences.</p>
-              <a href="#" class="read-more">Read More</a>
+              
             </div>
             
             <div class="capability-item">
               <h4>BACK OF HOUSE OPTIMIZATION & DESIGN</h4>
               <p>We streamline service-area layouts to enhance workflow, safety and staff productivity.</p>
-              <a href="#" class="read-more">Read More</a>
+              
             </div>
           </div>
         </div>
@@ -41,7 +42,7 @@
       <!-- Strategy Section -->
       <div class="capability-group">
         <h3 class="capability-main-title" @click="setActiveCapability('strategy')" :class="{ 'active': activeCapabilityGroup === 'strategy' }">
-          STRATEGY
+          <span class="title-text">STRATEGY</span>
           <span class="toggle-icon">{{ activeCapabilityGroup === 'strategy' ? '-' : '+' }}</span>
         </h3>
         <div class="capability-group-content" :class="{ 'expanded': activeCapabilityGroup === 'strategy' }">
@@ -51,19 +52,19 @@
             <div class="capability-item">
               <h4>BRAND INTEGRATION & EXPERIENCE DESIGN</h4>
               <p>We translate brand values into physical environments that deliver consistent, memorable experiences.</p>
-              <a href="#" class="read-more">Read More</a>
+              
             </div>
             
             <div class="capability-item">
               <h4>MARKET POSITIONING & PLACEMAKING</h4>
               <p>We identify competitive advantages and create distinctive experiences that capture target audiences.</p>
-              <a href="#" class="read-more">Read More</a>
+              
             </div>
             
             <div class="capability-item">
               <h4>SERVICE DESIGN</h4>
               <p>We design service frameworks that align guest journeys with operational efficiency and brand promise.</p>
-              <a href="#" class="read-more">Read More</a>
+              
             </div>
           </div>
         </div>
@@ -72,29 +73,29 @@
       <!-- Consultancy Section -->
       <div class="capability-group">
         <h3 class="capability-main-title" @click="setActiveCapability('consultancy')" :class="{ 'active': activeCapabilityGroup === 'consultancy' }">
-          CONSULTANCY
+          <span class="title-text">CONSULTANCY</span>
           <span class="toggle-icon">{{ activeCapabilityGroup === 'consultancy' ? '-' : '+' }}</span>
         </h3>
         <div class="capability-group-content" :class="{ 'expanded': activeCapabilityGroup === 'consultancy' }">
-          <p class="capability-main-description">WE ADVISE STAKEHOLDERS AND VALIDATE PROJECTS TO MAXIMIZE PERFORMANCE AND ENSURE COMPLIANCE.</p>
+          <p class="capability-main-description">WE ADVISE STAKEHOLDERS AND VALIDATE PROJECTS<br>TO MAXIMIZE PERFORMANCE<br>AND ENSURE COMPLIANCE.</p>
           
           <div class="capability-content">
             <div class="capability-item">
               <h4>TECHNICAL REVIEW & COMPLIANCE</h4>
               <p>We evaluate designs against brand standards, building codes and operational requirements to ensure feasibility.</p>
-              <a href="#" class="read-more">Read More</a>
+              
             </div>
             
             <div class="capability-item">
               <h4>IMPLEMENTATION SUPPORT</h4>
               <p>We provide guidance throughout construction and installation to maintain design integrity and quality.</p>
-              <a href="#" class="read-more">Read More</a>
+              
             </div>
             
             <div class="capability-item">
               <h4>STRATEGIC DESIGN ADVISORY</h4>
               <p>We provide strategic counsel and develop design guidelines that ensure consistency and excellence at every project phase.</p>
-              <a href="#" class="read-more">Read More</a>
+              
             </div>
           </div>
         </div>
@@ -131,7 +132,7 @@ export default {
 }
 
 .section-title {
-  font-size: 1.5rem;
+  font-size: 4rem;
   margin-bottom: 1.5rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -142,14 +143,17 @@ export default {
 
 .services-description {
   text-align: center;
-  max-width: 800px;
-  margin: 0 auto 3rem auto;
-  padding: 0 1rem;
+  max-width: 1450px;
+  margin: 2.5rem auto 2rem;
+  transform: translateX(0.5rem);
+  padding: 0;
 }
 
 .services-description p {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   line-height: 1.6;
+  color: #000;
+  text-transform: uppercase;
 }
 
 .capability-groups {
@@ -167,17 +171,15 @@ export default {
     gap: 2rem;
   }
 
-  /* Narrower widths for Design and Strategy */
-  .capability-group:nth-child(1),
-  .capability-group:nth-child(2) {
-    flex: 0 0 24%;
-    max-width: 24%;
+  /* Equal widths for all three capability groups on desktop */
+  .capability-group {
+    flex: 1 1 0;
+    max-width: 32%;
   }
 
-  /* Wider width for Consultancy */
-  .capability-group:nth-child(3) {
-    flex: 0 0 48%;
-    max-width: 48%;
+  /* Nudge the Design group slightly to the left */
+  .capability-group:nth-child(1) {
+    margin-left: -0.5rem; /* subtle shift */
   }
 }
 
@@ -188,7 +190,7 @@ export default {
 }
 
 .capability-main-title {
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   font-weight: 700;
   text-transform: uppercase;
   color: #000;
@@ -196,7 +198,7 @@ export default {
   display: flex;
   /* Center the main titles */
   justify-content: center;
-  gap: 0.5rem;
+  gap: 1rem;
   align-items: center;
   margin-bottom: 0.5rem;
   transition: color 0.3s ease;
@@ -206,13 +208,41 @@ export default {
   color: #333;
 }
 
+.capability-main-title:hover .toggle-icon {
+  text-decoration: none;
+}
+
+.title-text {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px; /* space between text and underline */
+}
+
+.title-text::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.title-text:hover::after {
+  width: 100%;
+}
+
 .capability-main-title.active {
   color: #000;
   font-weight: 800;
 }
 
 .toggle-icon {
-  font-size: 1.5rem;
+  font-size: 2.4rem;
+  position: relative;
+  top: -4px;
+  text-decoration: none;
   font-weight: 400;
 }
 
@@ -235,13 +265,19 @@ export default {
   font-weight: 600;
   line-height: 1.4;
   margin-bottom: 2rem;
+  text-align: left;
+  max-width: 42rem; /* unified line length */
+}
+
+.capability-item {
+  max-width: 42rem; /* match subtitle width */
 }
 
 .capability-content {
   display: grid;
-  /* Stack capability items vertically */
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 2.5rem;
+
 }
 
 .capability-item {
@@ -249,15 +285,16 @@ export default {
 }
 
 .capability-item h4 {
-  font-size: 0.9rem;
+  font-size: 1rem; /* unified heading size */
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 .capability-item p {
-  font-size: 0.85rem;
-  line-height: 1.5;
+  font-size: 1rem; /* unified paragraph size */
+  line-height: 1.6;
   margin-bottom: 0.5rem;
 }
 
@@ -284,4 +321,37 @@ export default {
     margin-bottom: 2rem;
   }
 }
+  /* Slightly wider subtitle for Consultancy */
+  :deep(.capability-group:nth-child(3) .capability-main-description),
+  :deep(.capability-group:nth-child(3) .capability-item) {
+    max-width: 46rem !important;
+  }
+  /*
+  * Overrides to extend text width and enlarge fonts
+  */
+  .services-description p {
+    font-size: 1.5rem;
+  }
+
+  .capability-main-title {
+    font-size: 3rem;
+  }
+
+  .capability-main-description {
+    font-size: 1.4rem;
+    max-width: 100%;
+  }
+
+  .capability-item {
+    max-width: 100%;
+  }
+
+  .capability-item h4 {
+    font-size: 1.2rem;
+  }
+
+  .capability-item p {
+    font-size: 1.1rem;
+    max-width: 100%;
+  }
 </style>

@@ -183,7 +183,7 @@ const navigateTo = (route) => {
 .nav-section {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center; /* center horizontally */
 }
 
 /* All component-specific styles have been moved to their respective component files */

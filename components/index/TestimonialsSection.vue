@@ -9,37 +9,37 @@
     
     <div class="testimonial-content" id="testimonial-1" v-show="currentTestimonial === 1">
       <p class="quote">Jessica has a strong creative approach towards everything she does. This personality trait combined with her profund understanding of her clients business objectives turned her into a natural strategist and therefore the right person to create remarkable concepts for brands that are determined to offer meaningful and unique experiences.<br>She delivers great results with kindness, joy, special artistic skills and sharp intuition.<br>Look out for this one!</p>
-      <p class="author">Lais Hauschild Cobra · 1st degree connection</p>
+      <p class="author">Lais Hauschild Cobra</p>
       <p class="projects">Estratégia, Branding, Consultora independente<br>July 17, 2014, Lais Hauschild worked with Jessica but they were at different companies</p>
     </div>
     
     <div class="testimonial-content" id="testimonial-2" v-show="currentTestimonial === 2">
       <p class="quote">Jessica has a natural talent for leadership and for exposing ideas and projects to different audiences. With a keen eye to the customer and user, she proposes creative and personalized solutions, always allied to implementation and schedule.</p>
-      <p class="author">Cristina Opsvik · 1st degree connection</p>
-      <p class="projects">specialist in design and management | design strategist | brand architecture | architecture | service and product design and management | design strategist<br>November 15, 2019, Cristina reported directly to Jessica</p>
+      <p class="author">Cristina Opsvik</p>
+      <p class="projects">specialist in design and management | design strategist | brand architecture<br>November 15, 2019, Cristina reported directly to Jessica</p>
     </div>
     
     <div class="testimonial-content" id="testimonial-3" v-show="currentTestimonial === 3">
       <p class="quote">Jessica is an excellent professional and one of the best managers I've ever had. She is passionate about her job, focused, organized and knows how to use her strengths to deliver awesome projects and create great spaces for customers. Her creativity is powerful and contagious!</p>
-      <p class="author">Fernanda Belizario Santos Felizola · 1st degree connection</p>
+      <p class="author">Fernanda Belizario Santos Felizola</p>
       <p class="projects">Head de Arquitetura na Livelo<br>November 25, 2019, Jessica reported directly to Santos</p>
     </div>
     
     <div class="testimonial-content" id="testimonial-4" v-show="currentTestimonial === 4">
       <p class="quote">I worked with Jessica in a great project in the field of hospitality that we are developing in São Paulo, Brazil.<br>Regarding her professional skills, her professionalism, her high levels of commitment and her ability to lead and manage the team she is involved with. Jessica is a very organized person as well as a great creative. She has natural entrepreneurship and it's very pleasant to work with her as a team partner.<br>Jessica's problem solver with deep knowledge, successful track record and she's a very professional project manager.<br>I also want to highlight her personal skills as a human being. Always very kind and with a positive approach.<br>I would definitely recommend her for any job!</p>
-      <p class="author">Inês Duque Dias · 1st degree connection</p>
-      <p class="projects">Head of Communication & New Business - Atelier Nini Andrade Silva | Negotiation | Skilled in Communication | Creative Fields and Copywriter | Passionate by Photography | Storytelling<br>All LinkedIn members/Show Inês Duque Dias recommendation to All LinkedIn members</p>
+      <p class="author">Inês Duque Dias</p>
+      <p class="projects">Head of Communication & New Business - Atelier Nini Andrade Silva | Negotiation | Skilled in Communication<br>November 2020, Inês collaborated with Jessica on multiple projects</p>
     </div>
     
     <div class="testimonial-content" id="testimonial-5" v-show="currentTestimonial === 5">
       <p class="quote">I've worked with Jessica for almost 3 years at IHG where she was a joy to work with, not only because of her positive attitude, but also because of her exceptional design sensibility and the passion she brings to all aspects of her work. At one point we shared the FF&E/Architectural design responsibilities of at least 5 large projects that were high touch and all different stages of design. We both had to manage clients and attend meetings both internally and externally, while manage drawing sets, purchasing, agenda, vendors, clients, consultants, and design presentations. Jessica was always willing to jump in and help in any way she could. She was able to consistently contribute to design with thoughtful and creative solutions. Through our time working together, I saw that she has many strengths in all aspects of the design process, from concept to completion. She is also very strong while dealing with clients, both in person and via email. She knows the importance of managing expectations, while also presenting herself very professionally for client facing meetings. I cannot recommend her enough as a colleague and design lead for projects.</p>
-      <p class="author">Rachel Ratterman · 1st degree connection</p>
+      <p class="author">Rachel Ratterman</p>
       <p class="projects">Principal at Fork Design Studio<br>August 13, 2020, Rachel managed Jessica directly<br>Jessica was a great colleague to work with. She managed design projects in the hospitality realm at IHG where she was a joy to work with, not only because of her positive attitude, but also because of her exceptional design sensibility and the passion she brings to all aspects of her work.</p>
     </div>
     
     <div class="testimonial-content" id="testimonial-6" v-show="currentTestimonial === 6">
       <p class="quote">I'd like to recommend Jessica as diligent and thorough professional with a vast experience in the hospitality interior design field. We've been working together in the development of large size projects in Brazil for high end hotel chains and always showed in depth knowledge of the matter bringing to the table innovative ideas and solutions to enhance the quality of the spaces she creates.</p>
-      <p class="author">Marcos Bastos · 1st degree connection</p>
+      <p class="author">Marcos Bastos</p>
       <p class="projects">Partner at VOALB Ltda<br>February 8, 2022, Marcos worked with Jessica on the same team</p>
     </div>
     
@@ -253,4 +253,18 @@ export default {
     max-width: 100%;
   }
 }
+  /* Enlarged testimonial fonts and full-width text */
+  .quote {
+    font-size: 1.5rem;
+    max-width: 100%;
+  }
+
+  .author {
+    font-size: 1.3rem;
+  }
+
+  .projects {
+    font-size: 1.1rem;
+    max-width: 100%;
+  }
 </style>
