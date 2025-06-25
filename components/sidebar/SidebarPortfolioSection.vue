@@ -22,14 +22,14 @@
           <a @click.stop.prevent="$emit('navigate', '/w-residences-gramado')" class="portfolio-link">W THE RESIDENCES GRAMADO</a>
           <a @click.stop.prevent="$emit('navigate', '/w-residence-sao-paulo')" class="portfolio-link">W THE RESIDENCE, SÃO PAULO</a>
           <a @click.stop.prevent="$emit('navigate', '/hilton-garden-inn')" class="portfolio-link">HILTON GARDEN INN</a>
-          <a @click.stop.prevent="$emit('navigate', '/holiday-inn-porto-maravilha')" class="portfolio-link">HOLIDAY INN PORTO MARAVILHA, RIO DE JANEIRO</a>
+          <a @click.stop.prevent="$emit('navigate', '/westin-jekyll-island')" class="portfolio-link">WESTIN HOTELS JEKYLL ISLAND</a>
+          <a @click.stop.prevent="$emit('navigate', '/pensacola-hotel')" class="portfolio-link">PENSACOLA HOTEL</a>
           <a @click.stop.prevent="$emit('navigate', '/transamerica-fit-concept')" class="portfolio-link">TRANSAMERICA FIT CONCEPT</a>
           <a @click.stop.prevent="$emit('navigate', '/hard-rock-sao-paulo')" class="portfolio-link">HARD ROCK HOTEL, SÃO PAULO</a>
           <a @click.stop.prevent="$emit('navigate', '/hard-rock-gramado')" class="portfolio-link">HARD ROCK HOTEL, GRAMADO</a>
           <a @click.stop.prevent="$emit('navigate', '/hard-rock-caldas-novas')" class="portfolio-link">HARD ROCK HOTEL, CALDAS NOVAS</a>
-          <a @click.stop.prevent="$emit('navigate', '/pensacola-hotel')" class="portfolio-link">PENSACOLA HOTEL</a>
+          <a @click.stop.prevent="$emit('navigate', '/holiday-inn-porto-maravilha')" class="portfolio-link">HOLIDAY INN PORTO MARAVILHA, RIO DE JANEIRO</a>
           <a @click.stop.prevent="$emit('navigate', '/sheraton-santos')" class="portfolio-link">SHERATON SANTOS</a>
-          <a @click.stop.prevent="$emit('navigate', '/westin-jekyll-island')" class="portfolio-link">WESTIN HOTELS JEKYLL ISLAND</a>
           <a @click.stop.prevent="$emit('navigate', '/hotels')" class="portfolio-link see-all">See all Hotels ></a>
         </div>
       </div>
