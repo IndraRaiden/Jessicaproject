@@ -3,7 +3,7 @@
     <!-- Food section with image -->
     <div class="food-section" @click="navigateToFoodPage">
       <div class="food-image">
-        <div class="food-title">FOOD &amp; BEVERAGE</div>
+        <div class="food-title" v-html="t('foodAndBeverage')"></div>
         <div class="video-container">
           <YoutubeEmbed 
             videoId="e7IfmJAdhDk" 
@@ -22,11 +22,15 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import { useRouter } from 'vue-router';
+import { useTranslation } from '~/composables/useTranslation';
 
 const router = useRouter();
 const windowContainer = ref(null);
 const isVisible = ref(false);
 let observer = null;
+
+// Use the global translation system
+const { currentLanguage, translations, t } = useTranslation();
 
 const navigateToFoodPage = () => {
   router.push('/foodnbeverage');

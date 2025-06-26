@@ -48,12 +48,21 @@
 <script>
 import CapabilitiesSection from './CapabilitiesSection.vue';
 import TestimonialsSection from './TestimonialsSection.vue';
+import { useTranslation } from '~/composables/useTranslation';
 
 export default {
   name: 'Capabilities',
   components: {
     CapabilitiesSection,
     TestimonialsSection
+  },
+  setup() {
+    const { currentLanguage, translations, t } = useTranslation();
+    
+    return {
+      t,
+      currentLanguage
+    };
   },
   data() {
     return {}

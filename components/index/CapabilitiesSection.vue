@@ -1,38 +1,38 @@
 <template>
   <div class="capabilities-container">
-    <h2 class="section-title">Our services</h2>
+    <h2 class="section-title">{{ t('ourServices') }}</h2>
     
     <div class="services-description">
-      <p>We deliver a true 360° approach, transforming real estate into immersive destinations</p>
-      <p>Through rigorous, brand-led placemaking and the creativity of soulful design.</p>
+      <p>{{ t('servicesDesc1') }}</p>
+      <p>{{ t('servicesDesc2') }}</p>
     </div>
     
     <div class="capability-groups">
       <!-- Design Section -->
       <div class="capability-group">
         <h3 class="capability-main-title" @click="setActiveCapability('design')" :class="{ 'active': activeCapabilityGroup === 'design' }">
-          <span class="title-text">DESIGN</span>
+          <span class="title-text">{{ t('design') }}</span>
           <span class="toggle-icon" :class="{ 'expanded-icon': activeCapabilityGroup === 'design' }"></span>
         </h3>
         <div class="capability-group-content" :class="{ 'expanded': activeCapabilityGroup === 'design' }">
-          <p class="capability-main-description">WE CREATE ENVIRONMENTS THAT BALANCE FORM, FUNCTION AND GUEST EXPERIENCE.</p>
+          <p class="capability-main-description" v-html="t('designDesc')"></p>
           
           <div class="capability-content">
             <div class="capability-item">
-              <h4>CONCEPT DEVELOPMENT</h4>
-              <p>We craft distinctive design narratives that align with brand values and resonate with target audiences.</p>
+              <h4>{{ t('conceptDevelopment') }}</h4>
+              <p>{{ t('conceptDesc') }}</p>
               
             </div>
             
             <div class="capability-item">
-              <h4>SPACE PLANNING</h4>
-              <p>We optimize spatial flow and functionality to create intuitive, engaging guest experiences.</p>
+              <h4>{{ t('spacePlanning') }}</h4>
+              <p>{{ t('spaceDesc') }}</p>
               
             </div>
             
             <div class="capability-item">
-              <h4>BACK OF HOUSE OPTIMIZATION & DESIGN</h4>
-              <p>We streamline service-area layouts to enhance workflow, safety and staff productivity.</p>
+              <h4 v-html="t('backOfHouse')"></h4>
+              <p>{{ t('backOfHouseDesc') }}</p>
               
             </div>
           </div>
@@ -42,28 +42,28 @@
       <!-- Strategy Section -->
       <div class="capability-group">
         <h3 class="capability-main-title" @click="setActiveCapability('strategy')" :class="{ 'active': activeCapabilityGroup === 'strategy' }">
-          <span class="title-text">STRATEGY</span>
+          <span class="title-text">{{ t('strategy') }}</span>
           <span class="toggle-icon" :class="{ 'expanded-icon': activeCapabilityGroup === 'strategy' }"></span>
         </h3>
         <div class="capability-group-content" :class="{ 'expanded': activeCapabilityGroup === 'strategy' }">
-          <p class="capability-main-description">WE DEFINE POSITIONING, NARRATIVES AND CONCEPTS THAT CONNECT BRAND, PLACE AND AUDIENCE.</p>
+          <p class="capability-main-description" v-html="t('strategyDesc')"></p>
           
           <div class="capability-content">
             <div class="capability-item">
-              <h4>BRAND INTEGRATION & EXPERIENCE DESIGN</h4>
-              <p>We translate brand values into physical environments that deliver consistent, memorable experiences.</p>
+              <h4 v-html="t('brandIntegration')"></h4>
+              <p>{{ t('brandDesc') }}</p>
               
             </div>
             
             <div class="capability-item">
-              <h4>MARKET POSITIONING & PLACEMAKING</h4>
-              <p>We identify competitive advantages and create distinctive experiences that capture target audiences.</p>
+              <h4 v-html="t('marketPositioning')"></h4>
+              <p>{{ t('marketDesc') }}</p>
               
             </div>
             
             <div class="capability-item">
-              <h4>SERVICE DESIGN</h4>
-              <p>We design service frameworks that align guest journeys with operational efficiency and brand promise.</p>
+              <h4>{{ t('serviceDesign') }}</h4>
+              <p>{{ t('serviceDesc') }}</p>
               
             </div>
           </div>
@@ -73,28 +73,28 @@
       <!-- Consultancy Section -->
       <div class="capability-group">
         <h3 class="capability-main-title" @click="setActiveCapability('consultancy')" :class="{ 'active': activeCapabilityGroup === 'consultancy' }">
-          <span class="title-text">CONSULTANCY</span>
+          <span class="title-text">{{ t('consultancy') }}</span>
           <span class="toggle-icon" :class="{ 'expanded-icon': activeCapabilityGroup === 'consultancy' }"></span>
         </h3>
         <div class="capability-group-content" :class="{ 'expanded': activeCapabilityGroup === 'consultancy' }">
-          <p class="capability-main-description">WE ADVISE STAKEHOLDERS AND VALIDATE PROJECTS<br>TO MAXIMIZE PERFORMANCE<br>AND ENSURE COMPLIANCE.</p>
+          <p class="capability-main-description" v-html="t('consultancyDesc')"></p>
           
           <div class="capability-content">
             <div class="capability-item">
-              <h4>TECHNICAL REVIEW & COMPLIANCE</h4>
-              <p>We evaluate designs against brand standards, building codes and operational requirements to ensure feasibility.</p>
+              <h4 v-html="t('technicalReview')"></h4>
+              <p>{{ t('technicalDesc') }}</p>
               
             </div>
             
             <div class="capability-item">
-              <h4>IMPLEMENTATION SUPPORT</h4>
-              <p>We provide guidance throughout construction and installation to maintain design integrity and quality.</p>
+              <h4>{{ t('implementationSupport') }}</h4>
+              <p>{{ t('implementationDesc') }}</p>
               
             </div>
             
             <div class="capability-item">
-              <h4>STRATEGIC DESIGN ADVISORY</h4>
-              <p>We provide strategic counsel and develop design guidelines that ensure consistency and excellence at every project phase.</p>
+              <h4>{{ t('strategicDesign') }}</h4>
+              <p>{{ t('strategicDesc') }}</p>
               
             </div>
           </div>
@@ -105,8 +105,18 @@
 </template>
 
 <script>
+import { useTranslation } from '~/composables/useTranslation';
+
 export default {
   name: 'CapabilitiesSection',
+  setup() {
+    const { currentLanguage, translations, t } = useTranslation();
+    
+    return {
+      t,
+      currentLanguage
+    };
+  },
   data() {
     return {
       activeCapabilityGroup: null

@@ -31,45 +31,19 @@
         <div class="plus-icon" @click="toggleSidebar">+</div>
       </div>
 
-      <div class="hero-text-overlay">
-        <h2 style="letter-spacing: 0.6em !important;">{{ translations[currentLanguage].heroText }}</h2>
-      </div>
+      <!-- Hero text removed as requested -->
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref, reactive } from 'vue';
+import { useTranslation } from '~/composables/useTranslation';
 
 const emit = defineEmits(['toggle-sidebar']);
 
-// Language state
-const currentLanguage = ref('en');
-
-// Translations object
-const translations = reactive({
-  en: {
-    heroText: ''
-  },
-  pt: {
-    heroText: ''
-  }
-});
-
-// Toggle language function
-const toggleLanguage = () => {
-  currentLanguage.value = currentLanguage.value === 'en' ? 'pt' : 'en';
-  // Store language preference in localStorage for persistence
-  localStorage.setItem('preferredLanguage', currentLanguage.value);
-};
-
-// Check for saved language preference on component mount
-if (process.client) {
-  const savedLanguage = localStorage.getItem('preferredLanguage');
-  if (savedLanguage) {
-    currentLanguage.value = savedLanguage;
-  }
-}
+// Use the global translation system
+const { currentLanguage, translations, toggleLanguage, t } = useTranslation();
 
 const toggleSidebar = () => {
   emit('toggle-sidebar');

@@ -4,8 +4,8 @@
     <div class="santuaries-section" @click="navigateToSantuariesPage">
       <div class="santuaries-image">
         <div class="title-container">
-          <div class="santuaries-title">SANCTUARIES</div>
-          <div class="coming-soon">COMING SOON</div>
+          <div class="santuaries-title">{{ t('sanctuaries') }}</div>
+          <div class="coming-soon">{{ t('comingSoon') }}</div>
         </div>
         <div class="video-container">
           <YoutubeEmbed 
@@ -25,11 +25,15 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import { useRouter } from 'vue-router';
+import { useTranslation } from '~/composables/useTranslation';
 
 const router = useRouter();
 const windowContainer = ref(null);
 const isVisible = ref(false);
 let observer = null;
+
+// Use the global translation system
+const { currentLanguage, translations, t } = useTranslation();
 
 const navigateToSantuariesPage = () => {
   router.push('/santuaries-and-cultural');

@@ -5,13 +5,11 @@
       <div class="left-spacer"></div>
       <div class="intro-content">
         <div class="quote-contact-wrapper">
-          <p class="pure-instrument-serif">
-            We craft immersive real estate destinations<br>
-            that maximize asset value and make people feel alive.
+          <p class="pure-instrument-serif" v-html="t('introText').replace('\n', '<br>')">
           </p>
         </div>
         <div class="find-out-more" style="margin-top: 20px;">
-          <a @click="navigateToAboutPage" class="about-link" style="letter-spacing: 220%;">FIND OUT MORE</a>
+          <a @click="navigateToAboutPage" class="about-link" style="letter-spacing: 220%;">{{ t('findOutMore') }}</a>
         </div>
       </div>
       <div class="right-spacer"></div>
@@ -20,7 +18,7 @@
     <!-- Hotels section with image -->
     <div class="hotels-section" @click="navigateToHotelsPage">
       <div class="hotels-image">
-        <div class="hotels-title">HOTELS</div>
+        <div class="hotels-title">{{ t('hotels') }}</div>
         <div class="video-container">
           <YoutubeEmbed 
             videoId="1ksLFMF-MGw" 
@@ -39,11 +37,15 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import { useRouter } from 'vue-router';
+import { useTranslation } from '~/composables/useTranslation';
 
 const router = useRouter();
 const windowContainer = ref(null);
 const isVisible = ref(false);
 let observer = null;
+
+// Use the global translation system
+const { currentLanguage, translations, t } = useTranslation();
 
 const navigateToHotelsPage = () => {
   router.push('/hotels');
