@@ -28,7 +28,9 @@
       </div>
 
       <div class="footer-column">
-        <h3><a href="/about">{{ t('footerContactTitle') }}</a></h3>
+        <h3>
+          <a href="#" @click.prevent="showContact = true">{{ t('footerContactTitle') }}</a>
+        </h3>
         <a href="mailto:info@weareoara.com" class="email">info@weareoara.com</a>
         <div class="contact-info">
           <p class="contact-line"><span class="city">NEW YORK</span><span class="phone">+1 646 651 7126</span></p>
@@ -37,11 +39,16 @@
       </div>
     </div>
   </footer>
+  <ContactUs :show="showContact" @close="showContact = false" />
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import { useTranslation } from '~/composables/useTranslation';
+import ContactUs from '~/components/modals/ContactUs.vue';
+
 const { t } = useTranslation();
+const showContact = ref(false);
 </script>
 
 <style scoped>

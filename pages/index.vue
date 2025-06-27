@@ -109,7 +109,6 @@ body {
   display: block;
   overflow: hidden;
   position: relative;
-  background-image: url('/index/background_1920x1080_F2EEE3_horizontal.png');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
