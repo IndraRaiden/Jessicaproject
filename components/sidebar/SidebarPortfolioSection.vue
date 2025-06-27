@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar-item" @click="toggleSection">
     <div class="sidebar-header">
-      <h2>PROJECTS</h2>
+      <h2>{{ t('footerProjectsTitle') }}</h2>
       <div class="arrow-container">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" :class="['dropdown-arrow', { 'rotated': isOpen }]">
           <polyline points="6 9 12 15 18 9"></polyline>
@@ -11,7 +11,7 @@
     <div v-if="isOpen" class="section-content portfolio-content">
       <!-- Hotels section -->
       <div class="portfolio-section">
-        <h3 @click.stop="$emit('navigate', '/hotels')" style="cursor: pointer;">{{ translations[currentLanguage].hotels }}</h3>
+        <h3 @click.stop="$emit('navigate', '/hotels')" style="cursor: pointer;">{{ titleHotels }}</h3>
         <div class="portfolio-links">
           <a @click.stop.prevent="$emit('navigate', '/equinox-hotel-chicago')" class="portfolio-link">EQUINOX HOTEL, CHICAGO</a>
           <a @click.stop.prevent="$emit('navigate', '/equinox-hotel-houston')" class="portfolio-link">EQUINOX HOTEL, HOUSTON</a>
@@ -38,7 +38,7 @@
       <div class="portfolio-section">
         <h3 style="cursor: pointer;">
           <NuxtLink to="/foodnbeverage" @click.stop style="color: inherit; text-decoration: none;">
-            {{ translations[currentLanguage].food }}
+            {{ titleFood }}
           </NuxtLink>
         </h3>
         <div class="portfolio-links">
@@ -58,6 +58,13 @@
 
 <script setup>
 import { ref } from 'vue';
+import { useTranslation } from '~/composables/useTranslation';
+
+import { computed } from 'vue';
+const { t } = useTranslation();
+
+const titleHotels = computed(() => t('hotels'));
+const titleFood = computed(() => t('footerProjectsFNB'));
 
 const props = defineProps({
   currentLanguage: {
@@ -154,6 +161,7 @@ const toggleSection = () => {
   font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
+  text-transform: uppercase;
   margin-bottom: 0.8rem;
   color: #000;
 }

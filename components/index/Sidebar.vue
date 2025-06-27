@@ -42,6 +42,7 @@
 <script setup>
 import { useRouter } from 'vue-router';
 import { ref, reactive, onMounted } from 'vue';
+import { useTranslation } from '~/composables/useTranslation';
 import SidebarHeader from '../sidebar/SidebarHeader.vue';
 import SidebarLanguageSwitcher from '../sidebar/SidebarLanguageSwitcher.vue';
 import SidebarAboutSection from '../sidebar/SidebarAboutSection.vue';
@@ -61,49 +62,15 @@ const emit = defineEmits(['close']);
 
 // Each component now manages its own open/closed state internally
 
-// Language state
-const currentLanguage = ref('en');
+// Use global translation composable
+const { currentLanguage, translations, toggleLanguage } = useTranslation();
 
-// Translations object
-const translations = reactive({
-  en: {
-    heroText: 'HOSPITALITY DESIGN + STRATEGY',
-    hotels: 'HOTELS',
-    food: 'FOOD',
-    cultural: 'CULTURAL',
-    about: 'ABOUT & SERVICES',
-    seeAllFood: 'See all Food'
-  },
-  pt: {
-    heroText: 'DESIGN E ESTRATÉGIA DE HOSPITALIDADE',
-    hotels: 'HOTÉIS',
-    food: 'GASTRONOMIA',
-    cultural: 'CULTURAL',
-    about: 'SOBRE & SERVIÇOS',
-    seeAllFood: 'Ver todos os restaurantes'
-  }
-});
-
-// Check for saved language preference on component mount
-onMounted(() => {
-  if (process.client) {
-    const savedLanguage = localStorage.getItem('preferredLanguage');
-    if (savedLanguage) {
-      currentLanguage.value = savedLanguage;
-    }
-  }
-});
 
 const closeSidebar = () => {
   emit('close');
 }
 
-// Toggle language function
-const toggleLanguage = () => {
-  currentLanguage.value = currentLanguage.value === 'en' ? 'pt' : 'en';
-  // Store language preference in localStorage for persistence
-  localStorage.setItem('preferredLanguage', currentLanguage.value);
-};
+// toggleLanguage is provided by composable; no additional code needed.
 
 const navigateTo = (route) => {
   // Close sidebar first

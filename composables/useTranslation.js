@@ -51,7 +51,8 @@ const translationsData = {
     footerServicesConsulting: 'Consulting',
     footerProjectsTitle: 'PROJECTS',
     footerProjectsHotels: 'Hotels',
-    footerProjectsFNB: 'Food &amp; Beverage',
+    food: 'Food',
+    footerProjectsFNB: 'FOOD & BEVERAGE',
     footerProjectsSanctuaries: 'Sanctuaries',
     footerContactTitle: 'CONTACT US'
   },
@@ -61,10 +62,12 @@ const translationsData = {
     introText: 'Criamos destinos imobiliários imersivos\nque maximizam o valor do ativo e fazem as pessoas se sentirem vivas.',
     findOutMore: 'SAIBA MAIS',
     hotels: 'HOTÉIS',
+    food: 'COMIDA',
     // WindowThree translations
-    foodAndBeverage: 'GASTRONOMIA &amp; BEBIDAS',
+    foodAndBeverage: 'COMIDA &amp; BEBIDAS',
     // WindowFour translations
     sanctuaries: 'SANTUÁRIOS',
+    footerProjectsFNB: 'GASTRONOMIA & BEBIDAS',
     comingSoon: 'EM BREVE',
     // Capabilities translations
     ourServices: 'Nossos serviços',
@@ -104,7 +107,7 @@ const translationsData = {
     footerServicesConsulting: 'Consultoria',
     footerProjectsTitle: 'PROJETOS',
     footerProjectsHotels: 'Hotéis',
-    footerProjectsFNB: 'Gastronomia &amp; Bebidas',
+    footerProjectsFNB: 'GASTRONOMIA & BEBIDAS',
     footerProjectsSanctuaries: 'Santuários',
     footerContactTitle: 'CONTATO'
   }

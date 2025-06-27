@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar-item" @click="toggleSection">
     <div class="sidebar-header">
-      <h2>OUR SERVICES</h2>
+      <h2>{{ t('ourServices') }}</h2>
       <div class="arrow-container">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" :class="['dropdown-arrow', { 'rotated': isOpen }]">
           <polyline points="6 9 12 15 18 9"></polyline>
@@ -9,69 +9,69 @@
       </div>
     </div>
     <div class="service-description">
-      <p>We deliver a true 360° approach, transforming real estate into immersive destinations through rigorous, brand-led placemaking and the creativity of soulful design</p>
+      <p>{{ t('servicesDesc1') }}</p>
     </div>
     <div v-if="isOpen" class="section-content">
       <div class="services-grid">
         <!-- Design Column -->
         <div class="service-column">
-          <h3 class="service-category">DESIGN</h3>
-          <p class="service-description">WE CREATE ENVIRONMENTS THAT BALANCE FORM, FUNCTION AND GUEST EXPERIENCE.</p>
+          <h3 class="service-category">{{ t('design') }}</h3>
+          <p class="service-description">{{ t('designDesc') }}</p>
           
           <div class="service-item">
-            <h4>CONCEPT DEVELOPMENT</h4>
+            <h4>{{ t('conceptDevelopment') }}</h4>
             <a href="#" class="read-more">Read More</a>
           </div>
           
           <div class="service-item">
-            <h4>SPACE PLANNING</h4>
+            <h4>{{ t('spacePlanning') }}</h4>
             <a href="#" class="read-more">Read More</a>
           </div>
           
           <div class="service-item">
-            <h4>BACK OF HOUSE OPTIMIZATION & DESIGN</h4>
+            <h4>{{ t('backOfHouse') }}</h4>
             <a href="#" class="read-more">Read More</a>
           </div>
         </div>
         
         <!-- Strategy Column -->
         <div class="service-column">
-          <h3 class="service-category">STRATEGY</h3>
-          <p class="service-description">WE DEFINE POSITIONING, NARRATIVES AND CONCEPTS THAT CONNECT BRAND, PLACE AND AUDIENCE.</p>
+          <h3 class="service-category">{{ t('strategy') }}</h3>
+          <p class="service-description">{{ t('strategyDesc') }}</p>
           
           <div class="service-item">
-            <h4>BRAND INTEGRATION & EXPERIENCE DESIGN</h4>
+            <h4>{{ t('brandIntegration') }}</h4>
             <a href="#" class="read-more">Read More</a>
           </div>
           
           <div class="service-item">
-            <h4>MARKET POSITIONING & PLACEMAKING</h4>
+            <h4>{{ t('marketPositioning') }}</h4>
             <a href="#" class="read-more">Read More</a>
           </div>
           
           <div class="service-item">
-            <h4>SERVICE DESIGN</h4>
+            <h4>{{ t('serviceDesign') }}</h4>
             <a href="#" class="read-more">Read More</a>
           </div>
         </div>
         
         <!-- Consultancy Column -->
         <div class="service-column">
-          <h3 class="service-category">CONSULTANCY</h3>
-          <p class="service-description">WE ADVISE STAKEHOLDERS AND VALIDATE PROJECTS TO MAXIMIZE PERFORMANCE AND ENSURE COMPLIANCE.</p>
+          <h3 class="service-category">{{ t('consultancy') }}</h3>
+          <p class="service-description">{{ t('consultancyDesc') }}</p>
           
           <div class="service-item">
-            <h4>TECHNICAL REVIEW & COMPLIANCE</h4>
+            <h4>{{ t('technicalReview') }}</h4>
             <a href="#" class="read-more">Read More</a>
           </div>
           
           <div class="service-item">
-            <h4>IMPLEMENTATION SUPPORT</h4>
+            <h4>{{ t('implementationSupport') }}</h4>
             <a href="#" class="read-more">Read More</a>
           </div>
           
           <div class="service-item">
-            <h4>STRATEGIC DESIGN ADVISORY</h4>
+            <h4>{{ t('strategicDesign') }}</h4>
             <a href="#" class="read-more">Read More</a>
           </div>
         </div>
@@ -82,7 +82,9 @@
 
 <script setup>
 import { ref } from 'vue';
+import { useTranslation } from '~/composables/useTranslation';
 
+const { t } = useTranslation();
 const isOpen = ref(false);
 
 const toggleSection = () => {
