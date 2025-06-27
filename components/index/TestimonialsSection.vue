@@ -14,7 +14,6 @@
       :key="item.id"
       v-show="currentTestimonial === index"
     >
-      <!-- Use updated_text when available, otherwise fallback to original_text -->
       <p class="quote" v-html="item.updated_text || item.original_text"></p>
       <p class="author">{{ item.author }}</p>
       <p class="projects" v-if="item.focus_areas">{{ item.focus_areas.join(', ') }}</p>
@@ -63,24 +62,50 @@
 </template>
 
 <script>
+import { useTranslation } from '~/composables/useTranslation';
+
 export default {
   name: 'TestimonialsSection',
+  setup() {
+    const { currentLanguage, toggleLanguage } = useTranslation();
+    
+    return {
+      currentLanguage,
+      toggleLanguage
+    };
+  },
   data() {
     return {
       currentTestimonial: 0,
-      testimonials: [],
+      testimonialsEn: [],
+      testimonialsPt: [],
       intervalId: null
     };
   },
+  computed: {
+    testimonials() {
+      return this.currentLanguage === 'pt' ? this.testimonialsPt : this.testimonialsEn;
+    }
+  },
   mounted() {
-    // Load testimonials JSON then start auto-rotation
+    // Load English testimonials
     fetch('/referals/referrals_json.json')
       .then(r => r.json())
       .then(data => {
-        this.testimonials = data.testimonials || [];
-        if (this.testimonials.length) this.startAutoRotation();
+        this.testimonialsEn = data.testimonials || [];
+        // If both languages loaded or current language data ready, maybe start rotation
+        if (this.testimonials.length) this.maybeStartRotation();
       })
-      .catch(err => console.error('Failed to load testimonials JSON', err));
+      .catch(err => console.error('Failed to load EN testimonials', err));
+
+    // Load Portuguese testimonials
+    fetch('/referals/referrals_json_pt.json')
+      .then(r => r.json())
+      .then(data => {
+        this.testimonialsPt = data.testimonials || [];
+        if (this.testimonials.length) this.maybeStartRotation();
+      })
+      .catch(err => console.error('Failed to load PT testimonials', err));
 
     // Add event listeners for visibility change
     document.addEventListener('visibilitychange', this.handleVisibilityChange);
@@ -118,6 +143,11 @@ export default {
         clearInterval(this.intervalId);
       }
       this.startAutoRotation();
+    },
+    maybeStartRotation() {
+      if (!this.intervalId && this.testimonials.length) {
+        this.startAutoRotation();
+      }
     },
     handleVisibilityChange() {
       // Pause auto-rotation when tab is not visible

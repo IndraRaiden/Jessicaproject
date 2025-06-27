@@ -1,0 +1,42 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "author": "LAIS HAUSCHILD COBRA",
+      "updated_text": "A OARA traz uma abordagem criativa forte, mas o que realmente diferencia sua visão é como essa criatividade está sempre fundamentada em intenção estratégica. Com um profundo entendimento das ambições comerciais de seus clientes, a OARA atua não apenas como parceira de design, mas como consultoria estratégica, o tipo que transforma imóveis em significado e ambição em legado. Eles entregam com elegância, intuição e uma rara habilidade de entrelaçar sensibilidade artística com inteligência operacional.",
+      "focus_areas": ["criatividade", "pensamento estratégico", "entendimento do cliente", "conceitos de marca", "experiências significativas"]
+    },
+    {
+      "id": 2,
+      "author": "CRISTINA OPSVIK",
+      "updated_text": "Jessica tem um talento natural para liderança e para traduzir ideias e projetos para públicos diversos com clareza e propósito. Com um olhar atento ao hóspede e ao usuário final, ela propõe soluções criativas e personalizadas — sempre fundamentadas em viabilidade e cronogramas. Hoje, através da OARA, essa mesma visão é ampliada em uma consultoria multidisciplinar que traz estratégia, design e precisão para o coração de cada projeto.",
+      "focus_areas": ["liderança", "comunicação", "foco no cliente", "soluções criativas", "implementação", "gestão de projetos"]
+    },
+    {
+      "id": 3,
+      "author": "FERNANDA BELIZARIO SANTOS FELIZOLA",
+      "updated_text": "A OARA é liderada por uma das profissionais mais apaixonadas e perspicazes com quem já trabalhei. Hoje, essa mesma visão se traduz em uma consultoria que une rigor estratégico com placemaking sensorial, entregando espaços tão operacionalmente inteligentes quanto emocionalmente ressonantes. Sua força criativa não é apenas poderosa, é contagiante. A OARA sabe como transformar visão em narrativa espacial e experiência em valor de longo prazo.",
+      "focus_areas": ["gestão", "paixão", "organização", "entrega de projetos", "criação de espaços", "criatividade"]
+    },
+    {
+      "id": 4,
+      "author": "INÊS DUQUE DIAS",
+      "updated_text": "Tive o prazer de trabalhar com Jessica em um notável projeto de hospitalidade que estamos desenvolvendo em São Paulo, Brasil. Seu profissionalismo, liderança perspicaz e capacidade de orientar equipes multidisciplinares foram evidentes desde o primeiro dia. Ela traz a rara combinação de estrutura e criatividade, com um espírito empreendedor natural e um profundo senso de compromisso. Jessica é uma verdadeira solucionadora de problemas — estratégica, experiente e incansavelmente focada na entrega. Agora, a OARA incorpora essa mesma excelência: uma consultoria que pensa com precisão, projeta com emoção e executa com clareza. E além de todo o brilhantismo profissional, trabalhar com ela é simplesmente uma alegria: gentil, otimista e sempre construtiva. Eu recomendaria ela e a OARA, sem hesitação.",
+      "focus_areas": ["hospitalidade", "profissionalismo", "liderança", "gestão de equipes", "resolução de problemas", "gestão de projetos", "empreendedorismo", "habilidades interpessoais"],
+      "location": "São Paulo, Brasil"
+    },
+    {
+      "id": 5,
+      "author": "MARCOS BATOS",
+      "updated_text": "Gostaria de recomendar a OARA como uma consultoria diligente e completa com profunda experiência em hospitalidade de alto padrão e arquitetura de interiores. Colaboramos em desenvolvimentos de grande escala para grupos hoteleiros premium no Brasil, e a OARA traz consistentemente conhecimento aprofundado, visão estratégica e soluções inovadoras para elevar a qualidade e o caráter de cada espaço. Sua capacidade de mesclar precisão técnica com criatividade conceitual os torna um parceiro valioso em projetos onde a excelência é inegociável.",
+      "focus_areas": ["design de interiores em hospitalidade", "projetos de grande escala", "redes hoteleiras de alto padrão", "soluções inovadoras", "qualidade do espaço"],
+      "location": "Brasil"
+    },
+    {
+      "id": 6,
+      "author": "RACHEL RATTERMAN",
+      "updated_text": "Jessica estava sempre disposta a ajudar de todas as formas possíveis. Ela conseguia contribuir consistentemente para o design com soluções criativas e bem pensadas. Durante nosso tempo trabalhando juntas, vi que ela tem muitos pontos fortes em todos os aspectos do processo de design, desde o conceito até a conclusão. Ela também é muito competente ao lidar com clientes, tanto pessoalmente quanto por e-mail. Ela conhece a importância de gerenciar expectativas, enquanto se apresenta de forma muito profissional em reuniões com clientes. Não posso recomendá-la o suficiente como colega e líder de design para projetos.",
+      "focus_areas": ["colaboração", "soluções de design", "processo completo de design", "relações com clientes", "gerenciamento de expectativas", "profissionalismo", "liderança em design"]
+    }
+  ]
+}

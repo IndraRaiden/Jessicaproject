@@ -16,7 +16,11 @@
       <!-- Language switcher -->
       <div class="language-switcher">
         <button @click="toggleLanguage" class="language-btn">
-          <span class="language-text">{{ currentLanguage === 'en' ? 'PT' : 'EN' }}</span>
+          <span class="language-text">
+            <span :class="{ active: currentLanguage === 'en' }">EN</span>
+            &nbsp;/&nbsp;
+            <span :class="{ active: currentLanguage === 'pt' }">PT</span>
+          </span>
         </button>
       </div>
       
@@ -183,18 +187,18 @@ const toggleSidebar = () => {
 /* Language switcher styles */
 .language-switcher {
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 80px;
+  left: 30px;
   z-index: 20;
 }
 
 .language-btn {
   background-color: transparent;
   color: white;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  border: none;
+  border-radius: 0;
+  width: auto;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -207,10 +211,17 @@ const toggleSidebar = () => {
 }
 
 .language-text {
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  position: relative;
-  z-index: 2;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+.language-text span {
+  color: #555;
+}
+.language-text .active {
+  color: #ddd;
+  font-weight: 700;
+
+  font-weight: 700;
 }
 
 .language-btn::before {
@@ -302,5 +313,8 @@ const toggleSidebar = () => {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
   }
+}
+.language-btn {
+  font-size: 1.2rem;
 }
 </style>

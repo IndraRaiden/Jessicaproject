@@ -1,17 +1,17 @@
 <template>
   <div class="capabilities-container">
-    <h2 class="section-title">{{ t('ourServices') }}</h2>
+    <h2 class="section-title" v-html="t('ourServices')"></h2>
     
     <div class="services-description">
-      <p>{{ t('servicesDesc1') }}</p>
-      <p>{{ t('servicesDesc2') }}</p>
+      <p v-html="t('servicesDesc1')"></p>
+      <p v-html="t('servicesDesc2')"></p>
     </div>
     
     <div class="capability-groups">
       <!-- Design Section -->
       <div class="capability-group">
         <h3 class="capability-main-title" @click="setActiveCapability('design')" :class="{ 'active': activeCapabilityGroup === 'design' }">
-          <span class="title-text">{{ t('design') }}</span>
+          <span class="title-text" v-html="t('design')"></span>
           <span class="toggle-icon" :class="{ 'expanded-icon': activeCapabilityGroup === 'design' }"></span>
         </h3>
         <div class="capability-group-content" :class="{ 'expanded': activeCapabilityGroup === 'design' }">
@@ -19,20 +19,20 @@
           
           <div class="capability-content">
             <div class="capability-item">
-              <h4>{{ t('conceptDevelopment') }}</h4>
-              <p>{{ t('conceptDesc') }}</p>
+              <h4 v-html="t('conceptDevelopment')"></h4>
+              <p v-html="t('conceptDesc')"></p>
               
             </div>
             
             <div class="capability-item">
-              <h4>{{ t('spacePlanning') }}</h4>
-              <p>{{ t('spaceDesc') }}</p>
+              <h4 v-html="t('spacePlanning')"></h4>
+              <p v-html="t('spaceDesc')"></p>
               
             </div>
             
             <div class="capability-item">
               <h4 v-html="t('backOfHouse')"></h4>
-              <p>{{ t('backOfHouseDesc') }}</p>
+              <p v-html="t('backOfHouseDesc')"></p>
               
             </div>
           </div>
@@ -42,7 +42,7 @@
       <!-- Strategy Section -->
       <div class="capability-group">
         <h3 class="capability-main-title" @click="setActiveCapability('strategy')" :class="{ 'active': activeCapabilityGroup === 'strategy' }">
-          <span class="title-text">{{ t('strategy') }}</span>
+          <span class="title-text" v-html="t('strategy')"></span>
           <span class="toggle-icon" :class="{ 'expanded-icon': activeCapabilityGroup === 'strategy' }"></span>
         </h3>
         <div class="capability-group-content" :class="{ 'expanded': activeCapabilityGroup === 'strategy' }">
@@ -51,19 +51,19 @@
           <div class="capability-content">
             <div class="capability-item">
               <h4 v-html="t('brandIntegration')"></h4>
-              <p>{{ t('brandDesc') }}</p>
+              <p v-html="t('brandDesc')"></p>
               
             </div>
             
             <div class="capability-item">
               <h4 v-html="t('marketPositioning')"></h4>
-              <p>{{ t('marketDesc') }}</p>
+              <p v-html="t('marketDesc')"></p>
               
             </div>
             
             <div class="capability-item">
-              <h4>{{ t('serviceDesign') }}</h4>
-              <p>{{ t('serviceDesc') }}</p>
+              <h4 v-html="t('serviceDesign')"></h4>
+              <p v-html="t('serviceDesc')"></p>
               
             </div>
           </div>
@@ -73,7 +73,7 @@
       <!-- Consultancy Section -->
       <div class="capability-group">
         <h3 class="capability-main-title" @click="setActiveCapability('consultancy')" :class="{ 'active': activeCapabilityGroup === 'consultancy' }">
-          <span class="title-text">{{ t('consultancy') }}</span>
+          <span class="title-text" v-html="t('consultancy')"></span>
           <span class="toggle-icon" :class="{ 'expanded-icon': activeCapabilityGroup === 'consultancy' }"></span>
         </h3>
         <div class="capability-group-content" :class="{ 'expanded': activeCapabilityGroup === 'consultancy' }">
@@ -82,19 +82,19 @@
           <div class="capability-content">
             <div class="capability-item">
               <h4 v-html="t('technicalReview')"></h4>
-              <p>{{ t('technicalDesc') }}</p>
+              <p v-html="t('technicalDesc')"></p>
               
             </div>
             
             <div class="capability-item">
-              <h4>{{ t('implementationSupport') }}</h4>
-              <p>{{ t('implementationDesc') }}</p>
+              <h4 v-html="t('implementationSupport')"></h4>
+              <p v-html="t('implementationDesc')"></p>
               
             </div>
             
             <div class="capability-item">
-              <h4>{{ t('strategicDesign') }}</h4>
-              <p>{{ t('strategicDesc') }}</p>
+              <h4 v-html="t('strategicDesign')"></h4>
+              <p v-html="t('strategicDesc')"></p>
               
             </div>
           </div>

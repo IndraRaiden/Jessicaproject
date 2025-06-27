@@ -2,33 +2,33 @@
   <footer class="footer">
     <div class="footer-columns">
       <div class="footer-column">
-        <h3><a href="/about">ABOUT US</a></h3>
+        <h3><a href="/about">{{ t('footerAboutTitle') }}</a></h3>
         <ul>
-          <li><a href="/about">Meet the Founder</a></li>
-          <li><a href="/about">Work with Us</a></li>
+          <li><a href="/about">{{ t('footerAboutMeetFounder') }}</a></li>
+          <li><a href="/about">{{ t('footerAboutWorkWithUs') }}</a></li>
         </ul>
       </div>
 
       <div class="footer-column">
-        <h3><a href="/services">SERVICES</a></h3>
+        <h3><a href="/services">{{ t('footerServicesTitle') }}</a></h3>
         <ul>
-          <li><a href="/services">Design</a></li>
-          <li><a href="/services">Estrategy</a></li>
-          <li><a href="/services">Consulting</a></li>
+          <li><a href="/services">{{ t('footerServicesDesign') }}</a></li>
+          <li><a href="/services">{{ t('footerServicesStrategy') }}</a></li>
+          <li><a href="/services">{{ t('footerServicesConsulting') }}</a></li>
         </ul>
       </div>
 
       <div class="footer-column">
-        <h3><a href="/hotels">PROJECTS</a></h3>
+        <h3><a href="/hotels">{{ t('footerProjectsTitle') }}</a></h3>
         <ul>
-          <li><a href="/hotels">Hotels</a></li>
-          <li><a href="/foodnbeverage">Food &amp; Beverage</a></li>
-          <li><a href="/santuaries-and-cultural">Sanctuaries</a></li>
+          <li><a href="/hotels">{{ t('footerProjectsHotels') }}</a></li>
+          <li><a href="/foodnbeverage" v-html="t('footerProjectsFNB')"></a></li>
+          <li><a href="/santuaries-and-cultural">{{ t('footerProjectsSanctuaries') }}</a></li>
         </ul>
       </div>
 
       <div class="footer-column">
-        <h3><a href="/about">CONTACT US</a></h3>
+        <h3><a href="/about">{{ t('footerContactTitle') }}</a></h3>
         <a href="mailto:info@weareoara.com" class="email">info@weareoara.com</a>
         <div class="contact-info">
           <p class="contact-line"><span class="city">NEW YORK</span><span class="phone">+1 646 651 7126</span></p>
@@ -40,7 +40,8 @@
 </template>
 
 <script setup>
-// Footer component with contact information and social links
+import { useTranslation } from '~/composables/useTranslation';
+const { t } = useTranslation();
 </script>
 
 <style scoped>
