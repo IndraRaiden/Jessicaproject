@@ -178,18 +178,18 @@ export default {
     /* Display three columns side by side on desktop */
     flex-direction: row;
     /* Slightly reduce gap between columns */
-    gap: 2rem;
+    gap: 0;
   }
 
   /* Equal widths for all three capability groups on desktop */
   .capability-group {
     flex: 1 1 0;
-    max-width: 32%;
+    max-width: none;
   }
 
-  /* Nudge the Design group slightly to the left */
+  /* Remove previous left nudge so all groups align flush with edges */
   .capability-group:nth-child(1) {
-    margin-left: -1.5rem; /* increased shift as per feedback */
+    margin-left: 0;
   }
 }
 
@@ -233,14 +233,20 @@ export default {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 0;
+  width: 100%;
   height: 2px;
   background-color: currentColor;
-  transition: width 0.3s ease;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
 
-.title-text:hover::after {
-  width: 100%;
+.capability-main-title:hover .title-text::after {
+  transform: scaleX(1);
+}
+
+.capability-main-title.active .title-text::after {
+  transform: scaleX(1);
 }
 
 .capability-main-title.active {

@@ -22,7 +22,7 @@
         <h3><a href="/hotels">{{ t('footerProjectsTitle') }}</a></h3>
         <ul>
           <li><a href="/hotels">{{ t('footerProjectsHotels') }}</a></li>
-          <li><a href="/foodnbeverage" v-html="t('footerProjectsFNB')"></a></li>
+          <li><a href="/foodnbeverage" v-html="footerFnb"></a></li>
           <li><a href="/santuaries-and-cultural">{{ t('footerProjectsSanctuaries') }}</a></li>
         </ul>
       </div>
@@ -43,12 +43,22 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import { useTranslation } from '~/composables/useTranslation';
 import ContactUs from '~/components/modals/ContactUs.vue';
 
 const { t } = useTranslation();
 const showContact = ref(false);
+
+// Convert "FOOD & BEVERAGE" to "Food & Beverage" only for footer display
+const footerFnb = computed(() => {
+  const original = t('footerProjectsFNB');
+  return original
+    .toLowerCase()
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+});
 </script>
 
 <style scoped>
@@ -87,6 +97,27 @@ const showContact = ref(false);
   text-decoration: none;
   color: #000;
   transition: color 0.3s ease;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+/* Underline animation */
+.footer-column h3 a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.footer-column h3 a:hover::after {
+  transform: scaleX(1);
 }
 
 .footer-column h3 a:hover {

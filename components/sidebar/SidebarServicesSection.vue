@@ -132,7 +132,7 @@ const toggleSection = () => {
 
 .arrow-container {
   position: absolute;
-  right: 0;
+  right: -0.75rem;
 }
 
 .dropdown-arrow.rotated {
@@ -150,8 +150,8 @@ const toggleSection = () => {
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  padding: 1rem 0;
+  gap: 0;
+  padding: 0;
   width: 100%; /* Full width */
 }
 

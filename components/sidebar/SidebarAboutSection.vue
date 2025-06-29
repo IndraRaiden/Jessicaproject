@@ -98,7 +98,7 @@ const toggleSection = () => {
 }
 
 .section-content {
-  padding: 1.5rem 0;
+  padding: 0;
   font-size: 1.1rem;
   line-height: 1.6;
 }
@@ -180,7 +180,7 @@ const toggleSection = () => {
 .founder-info {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .founder-text {

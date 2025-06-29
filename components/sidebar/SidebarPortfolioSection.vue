@@ -133,17 +133,17 @@ const toggleSection = () => {
 }
 
 .section-content {
-  padding: 1.5rem 0;
+  padding: 0;
   font-size: 1.1rem;
   line-height: 1.6;
 }
 
 /* Portfolio content styles */
 .portfolio-content {
-  padding: 1rem 0;
+  padding: 0;
   display: flex;
   flex-direction: column; /* stack Hotels, Foods, etc. */
-  gap: 2.5rem; /* bigger separation */
+  gap: 1.5rem; /* bigger separation */
 }
 
 /* Stack sections on small screens */
@@ -174,7 +174,7 @@ const toggleSection = () => {
 .portfolio-links {
   display: grid;
   grid-template-columns: repeat(5, 1fr); /* 5 uniform columns on desktop */
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 @media (max-width: 1024px) {

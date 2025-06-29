@@ -134,6 +134,25 @@ onUnmounted(() => {
   position: relative;
   z-index: 1; /* Ensure title appears above the video */
   text-transform: uppercase; /* CAPSLOCK: SIM */
+  padding-bottom: 4px;
+}
+
+/* Underline effect */
+.food-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.food-section:hover .food-title::after {
+  transform: scaleX(1);
 }
 
 .food-section:hover .food-title {
